@@ -1,0 +1,22 @@
+[ebrowse-hs "ebrowse 5.0" " -x" () ()][ebrowse-ts [ebrowse-cs "abstractFeature" () 0"abstractFeature.h" "class abstractFeature {" 172"abstractFeature.cpp" ]
+()()
+([ebrowse-ms "abstractFeature" () 0 () "   abstractFeature(const abstractFeature& orig);" 229 0  () "::abstractFeature(const abstractFeature& orig) {" 207]
+[ebrowse-ms "abstractFeature" () 0 () "    abstractFeature();" 202 0  () "abstractFeature::abstractFeature() {" 163]
+[ebrowse-ms "~abstractFeature" () 1 () "    virtual ~abstractFeature()" 284 0  () "abstractFeature::~abstractFeature()" 271]
+)
+()
+()
+()
+()
+()()
+][ebrowse-ts [ebrowse-cs "*Globals*" () 0() () 0"abstractFeature.h" ]
+()()
+()
+()
+()
+([ebrowse-ms "ABSTRACTFEATURE_H" () 512 () () 0 0  () "#define	ABSTRACTFEATURE_H
+" 148]
+)
+()
+()()
+]
