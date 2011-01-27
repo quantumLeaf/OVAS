@@ -10,6 +10,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/testOVAS.dir/GeoSequence.cpp.o"
   "CMakeFiles/testOVAS.dir/GeoSphere.cpp.o"
   "CMakeFiles/testOVAS.dir/Volume4D.cpp.o"
+  "CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.o"
   "testOVAS.pdb"
   "testOVAS"
 )

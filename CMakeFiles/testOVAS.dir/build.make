@@ -313,6 +313,30 @@ CMakeFiles/testOVAS.dir/Volume4D.cpp.o.provides: CMakeFiles/testOVAS.dir/Volume4
 CMakeFiles/testOVAS.dir/Volume4D.cpp.o.provides.build: CMakeFiles/testOVAS.dir/Volume4D.cpp.o
 .PHONY : CMakeFiles/testOVAS.dir/Volume4D.cpp.o.provides.build
 
+CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.o: CMakeFiles/testOVAS.dir/flags.make
+CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.o: MetaballsVol4D.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/zoizoi/psyforge/OVAS/CMakeFiles $(CMAKE_PROGRESS_12)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.o -c /home/zoizoi/psyforge/OVAS/MetaballsVol4D.cpp
+
+CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/zoizoi/psyforge/OVAS/MetaballsVol4D.cpp > CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.i
+
+CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/zoizoi/psyforge/OVAS/MetaballsVol4D.cpp -o CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.s
+
+CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.o.requires:
+.PHONY : CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.o.requires
+
+CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.o.provides: CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.o.requires
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.o.provides.build
+.PHONY : CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.o.provides
+
+CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.o.provides.build: CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.o
+.PHONY : CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.o.provides.build
+
 # Object files for target testOVAS
 testOVAS_OBJECTS = \
 "CMakeFiles/testOVAS.dir/testOVAS.cpp.o" \
@@ -325,7 +349,8 @@ testOVAS_OBJECTS = \
 "CMakeFiles/testOVAS.dir/StepToParamConverter.cpp.o" \
 "CMakeFiles/testOVAS.dir/GeoSequence.cpp.o" \
 "CMakeFiles/testOVAS.dir/GeoSphere.cpp.o" \
-"CMakeFiles/testOVAS.dir/Volume4D.cpp.o"
+"CMakeFiles/testOVAS.dir/Volume4D.cpp.o" \
+"CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.o"
 
 # External object files for target testOVAS
 testOVAS_EXTERNAL_OBJECTS =
@@ -341,6 +366,7 @@ testOVAS: CMakeFiles/testOVAS.dir/StepToParamConverter.cpp.o
 testOVAS: CMakeFiles/testOVAS.dir/GeoSequence.cpp.o
 testOVAS: CMakeFiles/testOVAS.dir/GeoSphere.cpp.o
 testOVAS: CMakeFiles/testOVAS.dir/Volume4D.cpp.o
+testOVAS: CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.o
 testOVAS: /usr/local/lib/vtk-5.7/libvtkWidgets.a
 testOVAS: /usr/local/lib/vtk-5.7/libvtkRendering.a
 testOVAS: /usr/local/lib/vtk-5.7/libvtkHybrid.a
@@ -391,6 +417,7 @@ CMakeFiles/testOVAS.dir/requires: CMakeFiles/testOVAS.dir/StepToParamConverter.c
 CMakeFiles/testOVAS.dir/requires: CMakeFiles/testOVAS.dir/GeoSequence.cpp.o.requires
 CMakeFiles/testOVAS.dir/requires: CMakeFiles/testOVAS.dir/GeoSphere.cpp.o.requires
 CMakeFiles/testOVAS.dir/requires: CMakeFiles/testOVAS.dir/Volume4D.cpp.o.requires
+CMakeFiles/testOVAS.dir/requires: CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.o.requires
 .PHONY : CMakeFiles/testOVAS.dir/requires
 
 CMakeFiles/testOVAS.dir/clean:

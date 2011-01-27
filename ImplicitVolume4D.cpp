@@ -7,8 +7,8 @@
 
 #include "ImplicitVolume4D.h"
 
-ImplicitVolume4D::ImplicitVolume4D() {
-    
+ImplicitVolume4D::ImplicitVolume4D(int xdim, int ydim, int zdim, int numSteps):Volume4D(xdim,ydim,zdim,numSteps) {
+ 
 }
 
 ImplicitVolume4D::ImplicitVolume4D(const ImplicitVolume4D& orig) {

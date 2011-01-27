@@ -279,6 +279,30 @@ ImplicitVolume4D.cpp.s:
 	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/ImplicitVolume4D.cpp.s
 .PHONY : ImplicitVolume4D.cpp.s
 
+MetaballsVol4D.o: MetaballsVol4D.cpp.o
+.PHONY : MetaballsVol4D.o
+
+# target to build an object file
+MetaballsVol4D.cpp.o:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.o
+.PHONY : MetaballsVol4D.cpp.o
+
+MetaballsVol4D.i: MetaballsVol4D.cpp.i
+.PHONY : MetaballsVol4D.i
+
+# target to preprocess a source file
+MetaballsVol4D.cpp.i:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.i
+.PHONY : MetaballsVol4D.cpp.i
+
+MetaballsVol4D.s: MetaballsVol4D.cpp.s
+.PHONY : MetaballsVol4D.s
+
+# target to generate assembly for a file
+MetaballsVol4D.cpp.s:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.s
+.PHONY : MetaballsVol4D.cpp.s
+
 StepToParamConverter.o: StepToParamConverter.cpp.o
 .PHONY : StepToParamConverter.o
 
@@ -405,6 +429,9 @@ help:
 	@echo "... ImplicitVolume4D.o"
 	@echo "... ImplicitVolume4D.i"
 	@echo "... ImplicitVolume4D.s"
+	@echo "... MetaballsVol4D.o"
+	@echo "... MetaballsVol4D.i"
+	@echo "... MetaballsVol4D.s"
 	@echo "... StepToParamConverter.o"
 	@echo "... StepToParamConverter.i"
 	@echo "... StepToParamConverter.s"

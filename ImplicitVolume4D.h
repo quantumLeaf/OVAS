@@ -15,13 +15,19 @@
 #include <vector>
 #include <sstream>
 
-class ImplicitVolume4D {
+class ImplicitVolume4D : Volume4D{
 public:
-    ImplicitVolume4D();
+    ImplicitVolume4D(){};
+    ImplicitVolume4D(int xdim, int ydim, int zdidma,int numSteps);
     ImplicitVolume4D(const ImplicitVolume4D& orig);
     virtual ~ImplicitVolume4D();
-private:
+    virtual float getVoxelValue(int x,int y,int z,int step){ return 0;}
+    
+    
 
+
+private:
+    int xdim,ydim,zdim;
 };
 
 #endif	/* IMPLICITVOLUME4D_H */

@@ -7,7 +7,7 @@
 
 #ifndef VTKESSENTIALS_H
 #define	VTKESSENTIALS_H
-
+#include <vtkImageData.h>
 
 
 #endif	/* VTKESSENTIALS_H */

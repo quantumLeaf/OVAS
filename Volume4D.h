@@ -12,15 +12,18 @@
 
 class Volume4D {
 public:
-    Volume4D();
+    Volume4D(){};
+    Volume4D(int xdim, int ydim, int zdim,int numSteps);
     Volume4D(const Volume4D& orig);
     virtual ~Volume4D();
-    void setToStep(int Step);
+    virtual void setToStep(int Step);
     void setStepConverter(StepToParamConverter* sc);
+    virtual float getVoxelValue(int x,int y,int z,int step){ return 0;}
     
 private:
     StepToParamConverter* stepConverter;
-///    vtkImageData vtkVol;
+    vtkImageData* vtkVol;
+    int xDim,yDim,zDim;
     
 };
 

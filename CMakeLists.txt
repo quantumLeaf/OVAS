@@ -22,8 +22,7 @@ include_directories (${VAS_SOURCE_DIR})
 
 
 ADD_EXECUTABLE(testOVAS testOVAS.cpp Analyser4D.cpp abstractFeature.cpp  Feature.cpp      ImplicitVolume4D.cpp
-Analyser3D.cpp       GeoPoint.cpp     StepToParamConverter.cpp
-       GeoSequence.cpp  
-       GeoSphere.cpp    Volume4D.cpp
+Analyser3D.cpp GeoPoint.cpp     StepToParamConverter.cpp
+       GeoSequence.cpp GeoSphere.cpp    Volume4D.cpp MetaballsVol4D
 ) 
 TARGET_LINK_LIBRARIES(testOVAS vtkWidgets vtkRendering vtkHybrid)

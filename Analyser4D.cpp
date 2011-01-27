@@ -15,6 +15,7 @@ Analyser4D::Analyser4D() {
     temporalChangeWeight = 0;
     geoSphere=new GeoSphere();
     
+    
 }
 
 Analyser4D::Analyser4D(const Analyser4D& orig) {
@@ -110,7 +111,6 @@ void Analyser4D::loadConfig(string filename) {
                 stepConverter=new StepToParamConverter(startParam,endParam,numSteps);
                 cout<<"iframes start "<<startParam<<" end "<<endParam<<" steps "<<numSteps<<endl;
             }
-
         }
     }
 }
