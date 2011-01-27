@@ -22,8 +22,7 @@ int main(int argc, char** argv) {
     //a4d->setVolume(iVol4D);
     //a4d->setAreaWeight(1);
     a4d->loadConfig("./ovas.config");
-    Volume4D* m=new MetaballsVol4D(1,1,1,1,2);
-    a4d->setVolume((Volume4D)m);
+    
     
 
     

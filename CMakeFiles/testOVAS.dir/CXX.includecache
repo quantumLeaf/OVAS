@@ -6,6 +6,24 @@
 
 #IncludeRegexTransform: 
 
+/home/zoizoi/psyforge/OVAS/Analyser3D.cpp
+Analyser3D.h
+/home/zoizoi/psyforge/OVAS/Analyser3D.h
+
+/home/zoizoi/psyforge/OVAS/Analyser3D.h
+Feature.h
+/home/zoizoi/psyforge/OVAS/Feature.h
+GeoSequence.h
+/home/zoizoi/psyforge/OVAS/GeoSequence.h
+
+/home/zoizoi/psyforge/OVAS/Analyser4D.cpp
+Analyser4D.h
+/home/zoizoi/psyforge/OVAS/Analyser4D.h
+GeoSphere.h
+/home/zoizoi/psyforge/OVAS/GeoSphere.h
+Analyser3D.h
+/home/zoizoi/psyforge/OVAS/Analyser3D.h
+
 /home/zoizoi/psyforge/OVAS/Analyser4D.h
 Volume4D.h
 /home/zoizoi/psyforge/OVAS/Volume4D.h
@@ -21,8 +39,20 @@ sstream
 -
 GeoSphere.h
 /home/zoizoi/psyforge/OVAS/GeoSphere.h
+MetaballsVol4D.h
+/home/zoizoi/psyforge/OVAS/MetaballsVol4D.h
+
+/home/zoizoi/psyforge/OVAS/Feature.cpp
+Feature.h
+/home/zoizoi/psyforge/OVAS/Feature.h
+
+/home/zoizoi/psyforge/OVAS/Feature.h
 
 /home/zoizoi/psyforge/OVAS/GeoPoint.h
+
+/home/zoizoi/psyforge/OVAS/GeoSequence.h
+GeoSphere.h
+/home/zoizoi/psyforge/OVAS/GeoSphere.h
 
 /home/zoizoi/psyforge/OVAS/GeoSphere.h
 stdlib.h
@@ -59,16 +89,6 @@ StepToParamConverter.h
 /home/zoizoi/psyforge/OVAS/StepToParamConverter.h
 vtkEssentials.h
 /home/zoizoi/psyforge/OVAS/vtkEssentials.h
-
-/home/zoizoi/psyforge/OVAS/testOVAS.cpp
-cstdlib
--
-Analyser4D.h
-/home/zoizoi/psyforge/OVAS/Analyser4D.h
-ImplicitVolume4D.h
-/home/zoizoi/psyforge/OVAS/ImplicitVolume4D.h
-MetaballsVol4D.h
-/home/zoizoi/psyforge/OVAS/MetaballsVol4D.h
 
 /home/zoizoi/psyforge/OVAS/vtkEssentials.h
 vtkImageData.h

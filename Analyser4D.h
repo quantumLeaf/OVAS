@@ -14,6 +14,7 @@
 #include <vector>
 #include <sstream>
 #include "GeoSphere.h"
+#include "MetaballsVol4D.h"
 using namespace std;
 class Analyser4D {
 public:
@@ -23,7 +24,7 @@ public:
     void initFeatures();
     void initAnalyser3D(int step);
     void evalEach3D();
-    bool setVolume(Volume4D vol);
+    void setVolume(Volume4D* vol);
     void setAreaWeight(float weight);
     void setTopologyWeight(float weight);
     void setTemporalChangeWeight(float weight);
@@ -31,10 +32,11 @@ public:
     void loadConfig(string filename);
 private:
     int step;
-    Volume4D vol4D;
+    Volume4D* vol4D;
     float areaWeight,topologyWeight,temporalChangeWeight,curvatureWeight;
     StepToParamConverter* stepConverter;
     GeoSphere* geoSphere;
+    int dims,numSteps;
 };
 
 #endif	/* ANALYSER4D_H */

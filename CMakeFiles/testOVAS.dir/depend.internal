@@ -9,10 +9,15 @@ CMakeFiles/testOVAS.dir/Analyser3D.cpp.o
  /home/zoizoi/psyforge/OVAS/GeoSequence.h
  /home/zoizoi/psyforge/OVAS/GeoSphere.h
 CMakeFiles/testOVAS.dir/Analyser4D.cpp.o
+ /home/zoizoi/psyforge/OVAS/Analyser3D.h
  /home/zoizoi/psyforge/OVAS/Analyser4D.cpp
  /home/zoizoi/psyforge/OVAS/Analyser4D.h
+ /home/zoizoi/psyforge/OVAS/Feature.h
  /home/zoizoi/psyforge/OVAS/GeoPoint.h
+ /home/zoizoi/psyforge/OVAS/GeoSequence.h
  /home/zoizoi/psyforge/OVAS/GeoSphere.h
+ /home/zoizoi/psyforge/OVAS/ImplicitVolume4D.h
+ /home/zoizoi/psyforge/OVAS/MetaballsVol4D.h
  /home/zoizoi/psyforge/OVAS/StepToParamConverter.h
  /home/zoizoi/psyforge/OVAS/Volume4D.h
  /home/zoizoi/psyforge/OVAS/vtkEssentials.h

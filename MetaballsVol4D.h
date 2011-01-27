@@ -11,7 +11,7 @@
 #include "ImplicitVolume4D.h"
 
 
-class MetaballsVol4D : ImplicitVolume4D {
+class MetaballsVol4D : public ImplicitVolume4D {
 public:
     MetaballsVol4D(int,int,int,int,float);
     MetaballsVol4D(const MetaballsVol4D& orig);

@@ -15,7 +15,7 @@
 #include <vector>
 #include <sstream>
 
-class ImplicitVolume4D : Volume4D{
+class ImplicitVolume4D : public Volume4D{
 public:
     ImplicitVolume4D(){};
     ImplicitVolume4D(int xdim, int ydim, int zdidma,int numSteps);

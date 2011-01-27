@@ -8,10 +8,15 @@ CMakeFiles/testOVAS.dir/Analyser3D.cpp.o: GeoPoint.h
 CMakeFiles/testOVAS.dir/Analyser3D.cpp.o: GeoSequence.h
 CMakeFiles/testOVAS.dir/Analyser3D.cpp.o: GeoSphere.h
 
+CMakeFiles/testOVAS.dir/Analyser4D.cpp.o: Analyser3D.h
 CMakeFiles/testOVAS.dir/Analyser4D.cpp.o: Analyser4D.cpp
 CMakeFiles/testOVAS.dir/Analyser4D.cpp.o: Analyser4D.h
+CMakeFiles/testOVAS.dir/Analyser4D.cpp.o: Feature.h
 CMakeFiles/testOVAS.dir/Analyser4D.cpp.o: GeoPoint.h
+CMakeFiles/testOVAS.dir/Analyser4D.cpp.o: GeoSequence.h
 CMakeFiles/testOVAS.dir/Analyser4D.cpp.o: GeoSphere.h
+CMakeFiles/testOVAS.dir/Analyser4D.cpp.o: ImplicitVolume4D.h
+CMakeFiles/testOVAS.dir/Analyser4D.cpp.o: MetaballsVol4D.h
 CMakeFiles/testOVAS.dir/Analyser4D.cpp.o: StepToParamConverter.h
 CMakeFiles/testOVAS.dir/Analyser4D.cpp.o: Volume4D.h
 CMakeFiles/testOVAS.dir/Analyser4D.cpp.o: vtkEssentials.h

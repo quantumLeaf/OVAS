@@ -13,7 +13,9 @@ public:
     Feature();
     Feature(const Feature& orig);
     virtual ~Feature();
-    void scoreThisFrame(float* data);
+    virtual void scoreThisFrame(float* data);
+    virtual void initFeature();
+
 private:
     //vtkActor* actors;
     float** scoreData;
