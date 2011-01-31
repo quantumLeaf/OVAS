@@ -16,3 +16,8 @@ AreaFeature::AreaFeature(const AreaFeature& orig) {
 AreaFeature::~AreaFeature() {
 }
 
+float AreaFeature::scoreThisFrame(FrameBuffer* data){
+
+    //TD add logtomax area
+    float count=countColour(1,1,1,data);
+}

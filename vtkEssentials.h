@@ -8,6 +8,11 @@
 #ifndef VTKESSENTIALS_H
 #define	VTKESSENTIALS_H
 #include <vtkImageData.h>
+#include <vtkRenderer.h>
+#include <vtkActor.h>
+#include <vtkRenderWindow.h>
+#include <vtkCamera.h>
+#include <vtkSmartPointer.h>
 
 
 #endif	/* VTKESSENTIALS_H */

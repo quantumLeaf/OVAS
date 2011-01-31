@@ -7,14 +7,118 @@
                    kind="SOURCE_LOGICAL_FOLDER">
       <itemPath>Analyser3D.h</itemPath>
       <itemPath>Analyser4D.h</itemPath>
+      <itemPath>AreaFeature.h</itemPath>
       <itemPath>Feature.h</itemPath>
       <itemPath>GeoPoint.h</itemPath>
       <itemPath>GeoSequence.h</itemPath>
       <itemPath>GeoSphere.h</itemPath>
       <itemPath>ImplicitVolume4D.h</itemPath>
+      <itemPath>MetaballsVol4D.h</itemPath>
       <itemPath>StepToParamConverter.h</itemPath>
       <itemPath>Volume4D.h</itemPath>
       <itemPath>vtkEssentials.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="OVAS" displayName="OVAS" projectFiles="true">
+      <logicalFolder name="CMakeFiles"
+                     displayName="CMakeFiles"
+                     projectFiles="true"
+                     kind="SOURCE_LOGICAL_FOLDER">
+        <logicalFolder name="CMakeTmp"
+                       displayName="CMakeTmp"
+                       projectFiles="true"
+                       kind="SOURCE_LOGICAL_FOLDER">
+          <logicalFolder name="CMakeFiles"
+                         displayName="CMakeFiles"
+                         projectFiles="true"
+                         kind="SOURCE_LOGICAL_FOLDER">
+            <logicalFolder name="cmTryCompileExec.dir"
+                           displayName="cmTryCompileExec.dir"
+                           projectFiles="true"
+                           kind="SOURCE_LOGICAL_FOLDER">
+            </logicalFolder>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="CompilerIdC"
+                       displayName="CompilerIdC"
+                       projectFiles="true"
+                       kind="SOURCE_LOGICAL_FOLDER">
+          <itemPath>CMakeFiles/CompilerIdC/CMakeCCompilerId.c</itemPath>
+          <itemPath>CMakeFiles/CompilerIdC/a.out</itemPath>
+        </logicalFolder>
+        <logicalFolder name="CompilerIdCXX"
+                       displayName="CompilerIdCXX"
+                       projectFiles="true"
+                       kind="SOURCE_LOGICAL_FOLDER">
+          <itemPath>CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp</itemPath>
+          <itemPath>CMakeFiles/CompilerIdCXX/a.out</itemPath>
+        </logicalFolder>
+        <logicalFolder name="testOVAS.dir"
+                       displayName="testOVAS.dir"
+                       projectFiles="true"
+                       kind="SOURCE_LOGICAL_FOLDER">
+          <itemPath>CMakeFiles/testOVAS.dir/CXX.includecache</itemPath>
+          <itemPath>CMakeFiles/testOVAS.dir/DependInfo.cmake</itemPath>
+          <itemPath>CMakeFiles/testOVAS.dir/build.make</itemPath>
+          <itemPath>CMakeFiles/testOVAS.dir/cmake_clean.cmake</itemPath>
+          <itemPath>CMakeFiles/testOVAS.dir/depend.internal</itemPath>
+          <itemPath>CMakeFiles/testOVAS.dir/depend.make</itemPath>
+          <itemPath>CMakeFiles/testOVAS.dir/flags.make</itemPath>
+          <itemPath>CMakeFiles/testOVAS.dir/link.txt</itemPath>
+          <itemPath>CMakeFiles/testOVAS.dir/progress.make</itemPath>
+        </logicalFolder>
+        <itemPath>CMakeFiles/CMakeCCompiler.cmake</itemPath>
+        <itemPath>CMakeFiles/CMakeCXXCompiler.cmake</itemPath>
+        <itemPath>CMakeFiles/CMakeDetermineCompilerABI_C.bin</itemPath>
+        <itemPath>CMakeFiles/CMakeDetermineCompilerABI_CXX.bin</itemPath>
+        <itemPath>CMakeFiles/CMakeDirectoryInformation.cmake</itemPath>
+        <itemPath>CMakeFiles/CMakeOutput.log</itemPath>
+        <itemPath>CMakeFiles/CMakeSystem.cmake</itemPath>
+        <itemPath>CMakeFiles/Makefile.cmake</itemPath>
+        <itemPath>CMakeFiles/Makefile2</itemPath>
+        <itemPath>CMakeFiles/TargetDirectories.txt</itemPath>
+        <itemPath>CMakeFiles/cmake.check_cache</itemPath>
+        <itemPath>CMakeFiles/progress.marks</itemPath>
+      </logicalFolder>
+      <logicalFolder name="dist"
+                     displayName="dist"
+                     projectFiles="true"
+                     kind="SOURCE_LOGICAL_FOLDER">
+        <logicalFolder name="Debug"
+                       displayName="Debug"
+                       projectFiles="true"
+                       kind="SOURCE_LOGICAL_FOLDER">
+          <logicalFolder name="GNU-Linux-x86"
+                         displayName="GNU-Linux-x86"
+                         projectFiles="true"
+                         kind="SOURCE_LOGICAL_FOLDER">
+            <itemPath>dist/Debug/GNU-Linux-x86/ovas</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="sphereData"
+                     displayName="sphereData"
+                     projectFiles="true"
+                     kind="SOURCE_LOGICAL_FOLDER">
+        <itemPath>sphereData/spherei1</itemPath>
+        <itemPath>sphereData/spherei2</itemPath>
+        <itemPath>sphereData/spherei3</itemPath>
+        <itemPath>sphereData/spheret1</itemPath>
+        <itemPath>sphereData/spheret2</itemPath>
+        <itemPath>sphereData/spheret3</itemPath>
+      </logicalFolder>
+      <itemPath>Analyser4D.cpp.u1conflict</itemPath>
+      <itemPath>BROWSE</itemPath>
+      <itemPath>CMakeCache.txt</itemPath>
+      <itemPath>CMakeLists.txt</itemPath>
+      <itemPath>Makefile</itemPath>
+      <itemPath>README</itemPath>
+      <itemPath>abstractFeature.cpp</itemPath>
+      <itemPath>abstractFeature.h</itemPath>
+      <itemPath>cmake_install.cmake</itemPath>
+      <itemPath>code.zip</itemPath>
+      <itemPath>implicitVol1.data</itemPath>
+      <itemPath>ovas.config</itemPath>
+      <itemPath>testOVAS</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -27,11 +131,13 @@
                    kind="SOURCE_LOGICAL_FOLDER">
       <itemPath>Analyser3D.cpp</itemPath>
       <itemPath>Analyser4D.cpp</itemPath>
+      <itemPath>AreaFeature.cpp</itemPath>
       <itemPath>Feature.cpp</itemPath>
       <itemPath>GeoPoint.cpp</itemPath>
       <itemPath>GeoSequence.cpp</itemPath>
       <itemPath>GeoSphere.cpp</itemPath>
       <itemPath>ImplicitVolume4D.cpp</itemPath>
+      <itemPath>MetaballsVol4D.cpp</itemPath>
       <itemPath>StepToParamConverter.cpp</itemPath>
       <itemPath>Volume4D.cpp</itemPath>
     </logicalFolder>
@@ -46,8 +152,13 @@
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
+    <itemPath>FrameBuffer.cpp</itemPath>
+    <itemPath>FrameBuffer.h</itemPath>
     <itemPath>testOVAS.cpp</itemPath>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="Debug" type="1">

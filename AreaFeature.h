@@ -17,7 +17,7 @@ public:
     AreaFeature(const AreaFeature& orig);
     virtual ~AreaFeature();
     void initFeature();
-    void scoreThisFrame(float* data);
+    float scoreThisFrame(float* data);
 private:
 
 };

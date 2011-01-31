@@ -5,23 +5,16 @@ CMakeFiles/testOVAS.dir/Analyser3D.cpp.o
  /home/zoizoi/psyforge/OVAS/Analyser3D.cpp
  /home/zoizoi/psyforge/OVAS/Analyser3D.h
  /home/zoizoi/psyforge/OVAS/Feature.h
+ /home/zoizoi/psyforge/OVAS/FrameBuffer.h
  /home/zoizoi/psyforge/OVAS/GeoPoint.h
  /home/zoizoi/psyforge/OVAS/GeoSequence.h
  /home/zoizoi/psyforge/OVAS/GeoSphere.h
-CMakeFiles/testOVAS.dir/Analyser4D.cpp.o
- /home/zoizoi/psyforge/OVAS/Analyser3D.h
- /home/zoizoi/psyforge/OVAS/Analyser4D.cpp
- /home/zoizoi/psyforge/OVAS/Analyser4D.h
- /home/zoizoi/psyforge/OVAS/Feature.h
- /home/zoizoi/psyforge/OVAS/GeoPoint.h
- /home/zoizoi/psyforge/OVAS/GeoSequence.h
- /home/zoizoi/psyforge/OVAS/GeoSphere.h
- /home/zoizoi/psyforge/OVAS/ImplicitVolume4D.h
- /home/zoizoi/psyforge/OVAS/MetaballsVol4D.h
- /home/zoizoi/psyforge/OVAS/StepToParamConverter.h
- /home/zoizoi/psyforge/OVAS/Volume4D.h
  /home/zoizoi/psyforge/OVAS/vtkEssentials.h
  /usr/local/include/vtk-5.7/vtkABI.h
+ /usr/local/include/vtk-5.7/vtkActor.h
+ /usr/local/include/vtk-5.7/vtkActorCollection.h
+ /usr/local/include/vtk-5.7/vtkCamera.h
+ /usr/local/include/vtk-5.7/vtkCollection.h
  /usr/local/include/vtk-5.7/vtkConfigure.h
  /usr/local/include/vtk-5.7/vtkDataObject.h
  /usr/local/include/vtk-5.7/vtkDataSet.h
@@ -33,16 +26,111 @@ CMakeFiles/testOVAS.dir/Analyser4D.cpp.o
  /usr/local/include/vtk-5.7/vtkOStreamWrapper.h
  /usr/local/include/vtk-5.7/vtkObject.h
  /usr/local/include/vtk-5.7/vtkObjectBase.h
+ /usr/local/include/vtk-5.7/vtkProp.h
+ /usr/local/include/vtk-5.7/vtkProp3D.h
+ /usr/local/include/vtk-5.7/vtkPropCollection.h
+ /usr/local/include/vtk-5.7/vtkRenderWindow.h
+ /usr/local/include/vtk-5.7/vtkRenderer.h
  /usr/local/include/vtk-5.7/vtkSetGet.h
+ /usr/local/include/vtk-5.7/vtkSmartPointer.h
+ /usr/local/include/vtk-5.7/vtkSmartPointerBase.h
  /usr/local/include/vtk-5.7/vtkStructuredData.h
  /usr/local/include/vtk-5.7/vtkSystemIncludes.h
  /usr/local/include/vtk-5.7/vtkTimeStamp.h
  /usr/local/include/vtk-5.7/vtkType.h
+ /usr/local/include/vtk-5.7/vtkViewport.h
+ /usr/local/include/vtk-5.7/vtkVolume.h
+ /usr/local/include/vtk-5.7/vtkVolumeCollection.h
  /usr/local/include/vtk-5.7/vtkWeakPointerBase.h
  /usr/local/include/vtk-5.7/vtkWin32Header.h
+ /usr/local/include/vtk-5.7/vtkWindow.h
+CMakeFiles/testOVAS.dir/Analyser4D.cpp.o
+ /home/zoizoi/psyforge/OVAS/Analyser3D.h
+ /home/zoizoi/psyforge/OVAS/Analyser4D.cpp
+ /home/zoizoi/psyforge/OVAS/Analyser4D.h
+ /home/zoizoi/psyforge/OVAS/Feature.h
+ /home/zoizoi/psyforge/OVAS/FrameBuffer.h
+ /home/zoizoi/psyforge/OVAS/GeoPoint.h
+ /home/zoizoi/psyforge/OVAS/GeoSequence.h
+ /home/zoizoi/psyforge/OVAS/GeoSphere.h
+ /home/zoizoi/psyforge/OVAS/ImplicitVolume4D.h
+ /home/zoizoi/psyforge/OVAS/MetaballsVol4D.h
+ /home/zoizoi/psyforge/OVAS/StepToParamConverter.h
+ /home/zoizoi/psyforge/OVAS/Volume4D.h
+ /home/zoizoi/psyforge/OVAS/vtkEssentials.h
+ /usr/local/include/vtk-5.7/vtkABI.h
+ /usr/local/include/vtk-5.7/vtkActor.h
+ /usr/local/include/vtk-5.7/vtkActorCollection.h
+ /usr/local/include/vtk-5.7/vtkCamera.h
+ /usr/local/include/vtk-5.7/vtkCollection.h
+ /usr/local/include/vtk-5.7/vtkConfigure.h
+ /usr/local/include/vtk-5.7/vtkDataObject.h
+ /usr/local/include/vtk-5.7/vtkDataSet.h
+ /usr/local/include/vtk-5.7/vtkIOStream.h
+ /usr/local/include/vtk-5.7/vtkIOStreamFwd.h
+ /usr/local/include/vtk-5.7/vtkImageData.h
+ /usr/local/include/vtk-5.7/vtkIndent.h
+ /usr/local/include/vtk-5.7/vtkOStrStreamWrapper.h
+ /usr/local/include/vtk-5.7/vtkOStreamWrapper.h
+ /usr/local/include/vtk-5.7/vtkObject.h
+ /usr/local/include/vtk-5.7/vtkObjectBase.h
+ /usr/local/include/vtk-5.7/vtkProp.h
+ /usr/local/include/vtk-5.7/vtkProp3D.h
+ /usr/local/include/vtk-5.7/vtkPropCollection.h
+ /usr/local/include/vtk-5.7/vtkRenderWindow.h
+ /usr/local/include/vtk-5.7/vtkRenderer.h
+ /usr/local/include/vtk-5.7/vtkSetGet.h
+ /usr/local/include/vtk-5.7/vtkSmartPointer.h
+ /usr/local/include/vtk-5.7/vtkSmartPointerBase.h
+ /usr/local/include/vtk-5.7/vtkStructuredData.h
+ /usr/local/include/vtk-5.7/vtkSystemIncludes.h
+ /usr/local/include/vtk-5.7/vtkTimeStamp.h
+ /usr/local/include/vtk-5.7/vtkType.h
+ /usr/local/include/vtk-5.7/vtkViewport.h
+ /usr/local/include/vtk-5.7/vtkVolume.h
+ /usr/local/include/vtk-5.7/vtkVolumeCollection.h
+ /usr/local/include/vtk-5.7/vtkWeakPointerBase.h
+ /usr/local/include/vtk-5.7/vtkWin32Header.h
+ /usr/local/include/vtk-5.7/vtkWindow.h
 CMakeFiles/testOVAS.dir/Feature.cpp.o
  /home/zoizoi/psyforge/OVAS/Feature.cpp
  /home/zoizoi/psyforge/OVAS/Feature.h
+ /home/zoizoi/psyforge/OVAS/FrameBuffer.h
+ /home/zoizoi/psyforge/OVAS/vtkEssentials.h
+ /usr/local/include/vtk-5.7/vtkABI.h
+ /usr/local/include/vtk-5.7/vtkActor.h
+ /usr/local/include/vtk-5.7/vtkActorCollection.h
+ /usr/local/include/vtk-5.7/vtkCamera.h
+ /usr/local/include/vtk-5.7/vtkCollection.h
+ /usr/local/include/vtk-5.7/vtkConfigure.h
+ /usr/local/include/vtk-5.7/vtkDataObject.h
+ /usr/local/include/vtk-5.7/vtkDataSet.h
+ /usr/local/include/vtk-5.7/vtkIOStream.h
+ /usr/local/include/vtk-5.7/vtkIOStreamFwd.h
+ /usr/local/include/vtk-5.7/vtkImageData.h
+ /usr/local/include/vtk-5.7/vtkIndent.h
+ /usr/local/include/vtk-5.7/vtkOStrStreamWrapper.h
+ /usr/local/include/vtk-5.7/vtkOStreamWrapper.h
+ /usr/local/include/vtk-5.7/vtkObject.h
+ /usr/local/include/vtk-5.7/vtkObjectBase.h
+ /usr/local/include/vtk-5.7/vtkProp.h
+ /usr/local/include/vtk-5.7/vtkProp3D.h
+ /usr/local/include/vtk-5.7/vtkPropCollection.h
+ /usr/local/include/vtk-5.7/vtkRenderWindow.h
+ /usr/local/include/vtk-5.7/vtkRenderer.h
+ /usr/local/include/vtk-5.7/vtkSetGet.h
+ /usr/local/include/vtk-5.7/vtkSmartPointer.h
+ /usr/local/include/vtk-5.7/vtkSmartPointerBase.h
+ /usr/local/include/vtk-5.7/vtkStructuredData.h
+ /usr/local/include/vtk-5.7/vtkSystemIncludes.h
+ /usr/local/include/vtk-5.7/vtkTimeStamp.h
+ /usr/local/include/vtk-5.7/vtkType.h
+ /usr/local/include/vtk-5.7/vtkViewport.h
+ /usr/local/include/vtk-5.7/vtkVolume.h
+ /usr/local/include/vtk-5.7/vtkVolumeCollection.h
+ /usr/local/include/vtk-5.7/vtkWeakPointerBase.h
+ /usr/local/include/vtk-5.7/vtkWin32Header.h
+ /usr/local/include/vtk-5.7/vtkWindow.h
 CMakeFiles/testOVAS.dir/GeoPoint.cpp.o
  /home/zoizoi/psyforge/OVAS/GeoPoint.cpp
  /home/zoizoi/psyforge/OVAS/GeoPoint.h
@@ -62,6 +150,10 @@ CMakeFiles/testOVAS.dir/ImplicitVolume4D.cpp.o
  /home/zoizoi/psyforge/OVAS/Volume4D.h
  /home/zoizoi/psyforge/OVAS/vtkEssentials.h
  /usr/local/include/vtk-5.7/vtkABI.h
+ /usr/local/include/vtk-5.7/vtkActor.h
+ /usr/local/include/vtk-5.7/vtkActorCollection.h
+ /usr/local/include/vtk-5.7/vtkCamera.h
+ /usr/local/include/vtk-5.7/vtkCollection.h
  /usr/local/include/vtk-5.7/vtkConfigure.h
  /usr/local/include/vtk-5.7/vtkDataObject.h
  /usr/local/include/vtk-5.7/vtkDataSet.h
@@ -73,13 +165,24 @@ CMakeFiles/testOVAS.dir/ImplicitVolume4D.cpp.o
  /usr/local/include/vtk-5.7/vtkOStreamWrapper.h
  /usr/local/include/vtk-5.7/vtkObject.h
  /usr/local/include/vtk-5.7/vtkObjectBase.h
+ /usr/local/include/vtk-5.7/vtkProp.h
+ /usr/local/include/vtk-5.7/vtkProp3D.h
+ /usr/local/include/vtk-5.7/vtkPropCollection.h
+ /usr/local/include/vtk-5.7/vtkRenderWindow.h
+ /usr/local/include/vtk-5.7/vtkRenderer.h
  /usr/local/include/vtk-5.7/vtkSetGet.h
+ /usr/local/include/vtk-5.7/vtkSmartPointer.h
+ /usr/local/include/vtk-5.7/vtkSmartPointerBase.h
  /usr/local/include/vtk-5.7/vtkStructuredData.h
  /usr/local/include/vtk-5.7/vtkSystemIncludes.h
  /usr/local/include/vtk-5.7/vtkTimeStamp.h
  /usr/local/include/vtk-5.7/vtkType.h
+ /usr/local/include/vtk-5.7/vtkViewport.h
+ /usr/local/include/vtk-5.7/vtkVolume.h
+ /usr/local/include/vtk-5.7/vtkVolumeCollection.h
  /usr/local/include/vtk-5.7/vtkWeakPointerBase.h
  /usr/local/include/vtk-5.7/vtkWin32Header.h
+ /usr/local/include/vtk-5.7/vtkWindow.h
 CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.o
  /home/zoizoi/psyforge/OVAS/ImplicitVolume4D.h
  /home/zoizoi/psyforge/OVAS/MetaballsVol4D.cpp
@@ -88,6 +191,10 @@ CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.o
  /home/zoizoi/psyforge/OVAS/Volume4D.h
  /home/zoizoi/psyforge/OVAS/vtkEssentials.h
  /usr/local/include/vtk-5.7/vtkABI.h
+ /usr/local/include/vtk-5.7/vtkActor.h
+ /usr/local/include/vtk-5.7/vtkActorCollection.h
+ /usr/local/include/vtk-5.7/vtkCamera.h
+ /usr/local/include/vtk-5.7/vtkCollection.h
  /usr/local/include/vtk-5.7/vtkConfigure.h
  /usr/local/include/vtk-5.7/vtkDataObject.h
  /usr/local/include/vtk-5.7/vtkDataSet.h
@@ -99,13 +206,24 @@ CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.o
  /usr/local/include/vtk-5.7/vtkOStreamWrapper.h
  /usr/local/include/vtk-5.7/vtkObject.h
  /usr/local/include/vtk-5.7/vtkObjectBase.h
+ /usr/local/include/vtk-5.7/vtkProp.h
+ /usr/local/include/vtk-5.7/vtkProp3D.h
+ /usr/local/include/vtk-5.7/vtkPropCollection.h
+ /usr/local/include/vtk-5.7/vtkRenderWindow.h
+ /usr/local/include/vtk-5.7/vtkRenderer.h
  /usr/local/include/vtk-5.7/vtkSetGet.h
+ /usr/local/include/vtk-5.7/vtkSmartPointer.h
+ /usr/local/include/vtk-5.7/vtkSmartPointerBase.h
  /usr/local/include/vtk-5.7/vtkStructuredData.h
  /usr/local/include/vtk-5.7/vtkSystemIncludes.h
  /usr/local/include/vtk-5.7/vtkTimeStamp.h
  /usr/local/include/vtk-5.7/vtkType.h
+ /usr/local/include/vtk-5.7/vtkViewport.h
+ /usr/local/include/vtk-5.7/vtkVolume.h
+ /usr/local/include/vtk-5.7/vtkVolumeCollection.h
  /usr/local/include/vtk-5.7/vtkWeakPointerBase.h
  /usr/local/include/vtk-5.7/vtkWin32Header.h
+ /usr/local/include/vtk-5.7/vtkWindow.h
 CMakeFiles/testOVAS.dir/StepToParamConverter.cpp.o
  /home/zoizoi/psyforge/OVAS/StepToParamConverter.cpp
  /home/zoizoi/psyforge/OVAS/StepToParamConverter.h
@@ -115,6 +233,10 @@ CMakeFiles/testOVAS.dir/Volume4D.cpp.o
  /home/zoizoi/psyforge/OVAS/Volume4D.h
  /home/zoizoi/psyforge/OVAS/vtkEssentials.h
  /usr/local/include/vtk-5.7/vtkABI.h
+ /usr/local/include/vtk-5.7/vtkActor.h
+ /usr/local/include/vtk-5.7/vtkActorCollection.h
+ /usr/local/include/vtk-5.7/vtkCamera.h
+ /usr/local/include/vtk-5.7/vtkCollection.h
  /usr/local/include/vtk-5.7/vtkConfigure.h
  /usr/local/include/vtk-5.7/vtkDataObject.h
  /usr/local/include/vtk-5.7/vtkDataSet.h
@@ -126,13 +248,24 @@ CMakeFiles/testOVAS.dir/Volume4D.cpp.o
  /usr/local/include/vtk-5.7/vtkOStreamWrapper.h
  /usr/local/include/vtk-5.7/vtkObject.h
  /usr/local/include/vtk-5.7/vtkObjectBase.h
+ /usr/local/include/vtk-5.7/vtkProp.h
+ /usr/local/include/vtk-5.7/vtkProp3D.h
+ /usr/local/include/vtk-5.7/vtkPropCollection.h
+ /usr/local/include/vtk-5.7/vtkRenderWindow.h
+ /usr/local/include/vtk-5.7/vtkRenderer.h
  /usr/local/include/vtk-5.7/vtkSetGet.h
+ /usr/local/include/vtk-5.7/vtkSmartPointer.h
+ /usr/local/include/vtk-5.7/vtkSmartPointerBase.h
  /usr/local/include/vtk-5.7/vtkStructuredData.h
  /usr/local/include/vtk-5.7/vtkSystemIncludes.h
  /usr/local/include/vtk-5.7/vtkTimeStamp.h
  /usr/local/include/vtk-5.7/vtkType.h
+ /usr/local/include/vtk-5.7/vtkViewport.h
+ /usr/local/include/vtk-5.7/vtkVolume.h
+ /usr/local/include/vtk-5.7/vtkVolumeCollection.h
  /usr/local/include/vtk-5.7/vtkWeakPointerBase.h
  /usr/local/include/vtk-5.7/vtkWin32Header.h
+ /usr/local/include/vtk-5.7/vtkWindow.h
 CMakeFiles/testOVAS.dir/abstractFeature.cpp.o
  /home/zoizoi/psyforge/OVAS/abstractFeature.cpp
  /home/zoizoi/psyforge/OVAS/abstractFeature.h
@@ -147,6 +280,10 @@ CMakeFiles/testOVAS.dir/testOVAS.cpp.o
  /home/zoizoi/psyforge/OVAS/testOVAS.cpp
  /home/zoizoi/psyforge/OVAS/vtkEssentials.h
  /usr/local/include/vtk-5.7/vtkABI.h
+ /usr/local/include/vtk-5.7/vtkActor.h
+ /usr/local/include/vtk-5.7/vtkActorCollection.h
+ /usr/local/include/vtk-5.7/vtkCamera.h
+ /usr/local/include/vtk-5.7/vtkCollection.h
  /usr/local/include/vtk-5.7/vtkConfigure.h
  /usr/local/include/vtk-5.7/vtkDataObject.h
  /usr/local/include/vtk-5.7/vtkDataSet.h
@@ -158,10 +295,21 @@ CMakeFiles/testOVAS.dir/testOVAS.cpp.o
  /usr/local/include/vtk-5.7/vtkOStreamWrapper.h
  /usr/local/include/vtk-5.7/vtkObject.h
  /usr/local/include/vtk-5.7/vtkObjectBase.h
+ /usr/local/include/vtk-5.7/vtkProp.h
+ /usr/local/include/vtk-5.7/vtkProp3D.h
+ /usr/local/include/vtk-5.7/vtkPropCollection.h
+ /usr/local/include/vtk-5.7/vtkRenderWindow.h
+ /usr/local/include/vtk-5.7/vtkRenderer.h
  /usr/local/include/vtk-5.7/vtkSetGet.h
+ /usr/local/include/vtk-5.7/vtkSmartPointer.h
+ /usr/local/include/vtk-5.7/vtkSmartPointerBase.h
  /usr/local/include/vtk-5.7/vtkStructuredData.h
  /usr/local/include/vtk-5.7/vtkSystemIncludes.h
  /usr/local/include/vtk-5.7/vtkTimeStamp.h
  /usr/local/include/vtk-5.7/vtkType.h
+ /usr/local/include/vtk-5.7/vtkViewport.h
+ /usr/local/include/vtk-5.7/vtkVolume.h
+ /usr/local/include/vtk-5.7/vtkVolumeCollection.h
  /usr/local/include/vtk-5.7/vtkWeakPointerBase.h
  /usr/local/include/vtk-5.7/vtkWin32Header.h
+ /usr/local/include/vtk-5.7/vtkWindow.h

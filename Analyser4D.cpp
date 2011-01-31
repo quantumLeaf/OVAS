@@ -70,7 +70,8 @@ void Analyser4D::loadConfig(string filename) {
             lineStream >> command;
             if (command == "new") {
                 cout << " new" << endl;
-                
+
+                float wCurv,wtChange;
                 string gsfilename;
                 string screenRend;
                 string showInterest;
@@ -78,9 +79,11 @@ void Analyser4D::loadConfig(string filename) {
                 float wArea = 1;
                 float wbsize = 0; //.25;
                 float wTop = 0; //.75;
-                lineStream >> dims >> gsfilename >> screenRend >> showInterest >> ignoreAreaOnCriticalFrameStr >> wArea >> wbsize >> wTop;
+                lineStream >> dims >> gsfilename >> screenRend >> showInterest >> ignoreAreaOnCriticalFrameStr >> wArea >> wbsize >> wTop >> wCurv >> wtChange;
                 areaWeight = wArea;
                 topologyWeight = wTop;
+                curvatureWeight = wCurv;
+                temporalChangeWeight = wtChange;
 
 
                 if (screenRend == "onScreen") {
@@ -129,4 +132,19 @@ void Analyser4D::loadConfig(string filename) {
 
 void Analyser4D::setVolume(Volume4D* vol){
     vol4D=vol;
+}
+
+void Analyser4D::analyse(){
+    if(areaWeight!=0){
+        cout<<"td reg feature"<<endl;
+    }
+    if(topologyWeight!=0){
+        cout<<"td reg feature"<<endl;
+    }
+    if(curvatureWeight!=0){
+        cout<<"td reg feature"<<endl;
+    }
+    if(temporalChangeWeight!=0){
+        cout<<"td reg feature"<<endl;
+    }
 }

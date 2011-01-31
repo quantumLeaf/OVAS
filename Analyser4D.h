@@ -30,6 +30,7 @@ public:
     void setTemporalChangeWeight(float weight);
     void setCurvatureWeight(float weight);
     void loadConfig(string filename);
+    void analyse();
 private:
     int step;
     Volume4D* vol4D;
