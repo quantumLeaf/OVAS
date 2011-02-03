@@ -7,7 +7,7 @@
 
 #ifndef ANALYSER4D_H
 #define	ANALYSER4D_H
-#include "Volume4D.h"
+
 #include <stdio.h>
 #include <iostream>
 #include <fstream>
@@ -15,6 +15,7 @@
 #include <sstream>
 #include "GeoSphere.h"
 #include "MetaballsVol4D.h"
+#include "Analyser3D.h"
 using namespace std;
 class Analyser4D {
 public:
@@ -34,6 +35,7 @@ public:
 private:
     int step;
     Volume4D* vol4D;
+    Analyser3D* a3d;
     float areaWeight,topologyWeight,temporalChangeWeight,curvatureWeight;
     StepToParamConverter* stepConverter;
     GeoSphere* geoSphere;

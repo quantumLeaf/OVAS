@@ -16,3 +16,9 @@ Analyser3D::Analyser3D(const Analyser3D& orig) {
 Analyser3D::~Analyser3D() {
 }
 
+void Analyser3D::evalEachView(){
+    
+}
+
+
+

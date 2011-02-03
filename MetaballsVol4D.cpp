@@ -18,6 +18,7 @@ MetaballsVol4D::~MetaballsVol4D() {
 }
 
 float MetaballsVol4D::getVoxelValue(int x, int y, int z, int step){
+   
     return 1;
 }
 

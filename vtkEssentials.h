@@ -13,6 +13,8 @@
 #include <vtkRenderWindow.h>
 #include <vtkCamera.h>
 #include <vtkSmartPointer.h>
+#include <vtkContourFilter.h>
+#include <vtkPolyDataMapper.h>
 
 
 #endif	/* VTKESSENTIALS_H */

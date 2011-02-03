@@ -15,6 +15,7 @@ Analyser4D::Analyser4D() {
     curvatureWeight = 0;
     temporalChangeWeight = 0;
     geoSphere=new GeoSphere();
+    a3d=new Analyser3D();
     
     
 }
@@ -113,7 +114,7 @@ void Analyser4D::loadConfig(string filename) {
              if (command == "iframes") {
                  
                  float startParam=0,endParam=0;
-                 int numSteps=0;
+                 
                 lineStream >> startParam >> endParam >> numSteps;
                 stepConverter=new StepToParamConverter(startParam,endParam,numSteps);
                 cout<<"iframes start "<<startParam<<" end "<<endParam<<" steps "<<numSteps<<endl;
@@ -146,5 +147,13 @@ void Analyser4D::analyse(){
     }
     if(temporalChangeWeight!=0){
         cout<<"td reg feature"<<endl;
+    }
+    cout<<"analysing all "<<numSteps<<"steps"<<endl;
+    for(int i=0;i<numSteps;i++){
+        vol4D->setToStep(i);
+        
+        a3d->setDataActor(vol4D->getCurrentVolActor());
+
+        a3d->evalEachView();
     }
 }

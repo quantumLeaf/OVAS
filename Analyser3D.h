@@ -17,9 +17,16 @@ public:
     virtual ~Analyser3D();
     void initFeatures();
     void evalEachView();
+    void setDataActor(vtkActor* da){
+        dataActor=da;
+    }
+    vtkSmartPointer<vtkActor> getDataActor(){
+        return dataActor;
+    }
 private:
     Feature* listOfFeatures;
     GeoSequence geoSequence;
+    vtkSmartPointer<vtkActor> dataActor;
     
 
 };
