@@ -9,25 +9,27 @@
 #define	ANALYSER3D_H
 #include "Feature.h"
 #include "GeoSequence.h"
-
+#include "GeoSphere.h"
+#include "ViewEvaluator.h"
 class Analyser3D {
 public:
     Analyser3D();
+    Analyser3D(GeoSphere* gs);
     Analyser3D(const Analyser3D& orig);
     virtual ~Analyser3D();
     void initFeatures();
     void evalEachView();
-    void setDataActor(vtkActor* da){
-        dataActor=da;
+    
+    void setViewEvaluator(ViewEvaluator* ve){
+        viewEvaluator=ve;
     }
-    vtkSmartPointer<vtkActor> getDataActor(){
-        return dataActor;
-    }
+
+    
 private:
     Feature* listOfFeatures;
-    GeoSequence geoSequence;
-    vtkSmartPointer<vtkActor> dataActor;
+    GeoSequence* geoSequence;
     
+    ViewEvaluator* viewEvaluator;
 
 };
 

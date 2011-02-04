@@ -82,6 +82,7 @@ bool GeoSphere::loadGeoSphereFile(string filename){
     }
     //delete []views;
     views = extdNbrs;
+    cout<<"created Geophere with nv:"<<n_vertices<<endl;
 }
 
 void GeoSphere::outputInfo(){

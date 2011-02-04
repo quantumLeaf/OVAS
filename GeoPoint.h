@@ -18,6 +18,15 @@ public:
     int index;
     int neighbours[36];
     int neighbourCount;
+    float getx(){
+        return x;
+    }
+    float gety(){
+        return y;
+    }
+    float getz(){
+        return z;
+    }
 private:
 
 };

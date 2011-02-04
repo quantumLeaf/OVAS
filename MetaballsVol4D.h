@@ -9,6 +9,8 @@
 #define	METABALLSVOL4D_H
 
 #include "ImplicitVolume4D.h"
+#include <vnl/vnl_matrix.h>
+#include <vnl/vnl_vector.h>
 
 
 class MetaballsVol4D : public ImplicitVolume4D {

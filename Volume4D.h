@@ -19,8 +19,21 @@ public:
     virtual void setToStep(int Step);
     void setStepConverter(StepToParamConverter* sc);
     virtual float getVoxelValue(int x,int y,int z,int step){ return 0;}
-    vtkSmartPointer<vtkActor> getCurrentVolActor();
+    void updateActor();
+    vtkSmartPointer<vtkActor> getVolActor(){
+        return volActor;
+    }
+    int getXDim(){
+        return xDim;
+    }
+    int getYDim(){
+        return yDim;
+    }
+    int getZDim(){
+        return zDim;
+    }
 private:
+    vtkSmartPointer<vtkActor> volActor;
     StepToParamConverter* stepConverter;
     vtkSmartPointer<vtkImageData> vtkVol;
     vtkSmartPointer<vtkContourFilter> contourer;

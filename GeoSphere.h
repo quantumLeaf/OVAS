@@ -21,6 +21,14 @@ public:
     virtual ~GeoSphere();
     bool loadGeoSphereFile(string filename);
     void outputInfo();
+    int getNumVs(){
+        return n_vertices;
+    }
+    GeoPoint* getView(int i){
+        return views[i];
+    }
+
+   
 private:
     int n_vertices;
     int n_faces;

@@ -16,6 +16,7 @@
 #include "GeoSphere.h"
 #include "MetaballsVol4D.h"
 #include "Analyser3D.h"
+#include "FeatureWeights.h"
 using namespace std;
 class Analyser4D {
 public:
@@ -36,7 +37,8 @@ private:
     int step;
     Volume4D* vol4D;
     Analyser3D* a3d;
-    float areaWeight,topologyWeight,temporalChangeWeight,curvatureWeight;
+    FeatureWeights* featureWeights;
+    ViewEvaluator* viewEvaluator;
     StepToParamConverter* stepConverter;
     GeoSphere* geoSphere;
     int dims,numSteps;

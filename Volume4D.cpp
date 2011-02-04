@@ -15,6 +15,13 @@ Volume4D::Volume4D(int x,int y,int z, int s):xDim(x),yDim(y),zDim(z){
     vtkVol->SetOrigin(0, 0, 0);
     vtkVol->SetSpacing(sp, sp, sp);
     isoVal=new float(5);
+    volActor = vtkSmartPointer<vtkActor>::New();
+    contourer->SetInput(vtkVol);
+    contourer->SetValue(0,*isoVal);
+    contourer->Update();
+    vtkSmartPointer<vtkPolyDataMapper> mapper=vtkSmartPointer<vtkPolyDataMapper>::New();
+    mapper->SetInput(contourer->GetOutput());
+    volActor->SetMapper(mapper);
    
 }
 
@@ -42,20 +49,8 @@ void Volume4D::setToStep(int step){
     
 }
 
-vtkSmartPointer<vtkActor> Volume4D::getCurrentVolActor(){
-
-    vtkSmartPointer<vtkActor> actor = vtkSmartPointer<vtkActor>::New();
-    contourer->SetInput(vtkVol);
-    contourer->SetValue(0,*isoVal);
+void Volume4D::updateActor(){
     contourer->Update();
-    
-    vtkSmartPointer<vtkPolyDataMapper> mapper=vtkSmartPointer<vtkPolyDataMapper>::New();
-
-    mapper->SetInput(contourer->GetOutput());
-    
-    actor->SetMapper(mapper);
-    
-    return actor;
 }
 
 

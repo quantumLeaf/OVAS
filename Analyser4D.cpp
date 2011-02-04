@@ -8,15 +8,13 @@
 #include "Analyser4D.h"
 #include "GeoSphere.h"
 #include "Analyser3D.h"
+#include "ViewEvaluator.h"
 
 Analyser4D::Analyser4D() {
-    areaWeight = 0;
-    topologyWeight = 0;
-    curvatureWeight = 0;
-    temporalChangeWeight = 0;
-    geoSphere=new GeoSphere();
-    a3d=new Analyser3D();
     
+    geoSphere=new GeoSphere();
+    featureWeights=new FeatureWeights();
+    viewEvaluator=new ViewEvaluator(featureWeights,vol4D);
     
 }
 
@@ -35,23 +33,6 @@ void Analyser4D::initAnalyser3D(int step) {
 }
 
 void Analyser4D::evalEach3D() {
-
-}
-
-void Analyser4D::setAreaWeight(float weight) {
-    areaWeight = weight;
-}
-
-void Analyser4D::setTemporalChangeWeight(float weight) {
-    temporalChangeWeight = weight;
-}
-
-void Analyser4D::setTopologyWeight(float weight) {
-    topologyWeight = weight;
-}
-
-void Analyser4D::setCurvatureWeight(float weight) {
-    curvatureWeight = weight;
 
 }
 
@@ -81,17 +62,16 @@ void Analyser4D::loadConfig(string filename) {
                 float wbsize = 0; //.25;
                 float wTop = 0; //.75;
                 lineStream >> dims >> gsfilename >> screenRend >> showInterest >> ignoreAreaOnCriticalFrameStr >> wArea >> wbsize >> wTop >> wCurv >> wtChange;
-                areaWeight = wArea;
-                topologyWeight = wTop;
-                curvatureWeight = wCurv;
-                temporalChangeWeight = wtChange;
+
+                featureWeights->areaWeight=wArea;
+                featureWeights->topologyWeight = wTop;
+                featureWeights->curvatureWeight = wCurv;
+                featureWeights->temporalChangeWeight = wtChange;
 
 
                 if (screenRend == "onScreen") {
-                    //frame->screenRendOn = true;
-                } else {
-                    //frame->screenRendOn = false;
-                }
+                    viewEvaluator->setScreenRenderOn();
+                } 
                 if (ignoreAreaOnCriticalFrameStr == "ignoreAreaOnCriticalFrame") {
                     //frame->ignoreAreaOnCriticalFrame = true;
                     cout << "TODOignoreAreaOnCriticalFrame is On" << endl;
@@ -108,7 +88,9 @@ void Analyser4D::loadConfig(string filename) {
                 geoSphere->loadGeoSphereFile(gsfilename);
                 //frame->initFrame(dims, rsphere);
 
-
+                //move to init
+                a3d=new Analyser3D(geoSphere);
+                a3d->setViewEvaluator(viewEvaluator);
 
             }
              if (command == "iframes") {
@@ -136,23 +118,12 @@ void Analyser4D::setVolume(Volume4D* vol){
 }
 
 void Analyser4D::analyse(){
-    if(areaWeight!=0){
-        cout<<"td reg feature"<<endl;
-    }
-    if(topologyWeight!=0){
-        cout<<"td reg feature"<<endl;
-    }
-    if(curvatureWeight!=0){
-        cout<<"td reg feature"<<endl;
-    }
-    if(temporalChangeWeight!=0){
-        cout<<"td reg feature"<<endl;
-    }
+   
     cout<<"analysing all "<<numSteps<<"steps"<<endl;
     for(int i=0;i<numSteps;i++){
         vol4D->setToStep(i);
         
-        a3d->setDataActor(vol4D->getCurrentVolActor());
+        vol4D->updateActor();
 
         a3d->evalEachView();
     }
