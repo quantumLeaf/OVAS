@@ -23,6 +23,7 @@ public:
     Analyser4D();
     Analyser4D(const Analyser4D& orig);
     virtual ~Analyser4D();
+    void init();
     void initFeatures();
     void initAnalyser3D(int step);
     void evalEach3D();
@@ -31,10 +32,15 @@ public:
     void setTopologyWeight(float weight);
     void setTemporalChangeWeight(float weight);
     void setCurvatureWeight(float weight);
-    void loadConfig(string filename);
-    void analyse();
+     void analyse();
+    void testDepts();
+
+    void setFile(string _filename){
+        filename=new string(_filename);
+    }
 private:
     int step;
+    string* filename;
     Volume4D* vol4D;
     Analyser3D* a3d;
     FeatureWeights* featureWeights;
@@ -42,6 +48,8 @@ private:
     StepToParamConverter* stepConverter;
     GeoSphere* geoSphere;
     int dims,numSteps;
+    void loadConfig(string filename);
+   
 };
 
 #endif	/* ANALYSER4D_H */

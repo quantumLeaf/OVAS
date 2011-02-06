@@ -12,25 +12,32 @@
 #include "vtkEssentials.h"
 #include "Volume4D.h"
 #include "GeoPoint.h"
+#include "testVol4D.h"
+#include "FeatureWeights.h"
+#include "Analyser4D.h"
+
 
 
 class ViewEvaluator {
 public:
     ViewEvaluator();
     ViewEvaluator(const ViewEvaluator& orig);
-    ViewEvaluator(FeatureWeights* fw,Volume4D* v);
+    ViewEvaluator(Analyser4D* a);
     void setDataActor(vtkActor* da){
         dataActor=da;
     }
     virtual ~ViewEvaluator();
     void evaluate(GeoPoint* view);
+    void renderThisView(GeoPoint* view);
     void setScreenRenderOn(){
         onScreen=true;
     }
-private:
-    FeatureWeights* featureWeights;
-    vtkSmartPointer<vtkActor> dataActor;
     Volume4D* vol;
+    FeatureWeights* featureWeights;
+private:
+    Analyser4D* a4d;
+    vtkSmartPointer<vtkActor> dataActor;
+    
     vtkSmartPointer<vtkRenderer> renderer;
     vtkSmartPointer<vtkRenderWindow> renderWindow;
     bool onScreen;

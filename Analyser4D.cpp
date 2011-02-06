@@ -6,22 +6,35 @@
  */
 
 #include "Analyser4D.h"
-#include "GeoSphere.h"
-#include "Analyser3D.h"
-#include "ViewEvaluator.h"
 
 Analyser4D::Analyser4D() {
-    
-    geoSphere=new GeoSphere();
-    featureWeights=new FeatureWeights();
-    viewEvaluator=new ViewEvaluator(featureWeights,vol4D);
-    
+
+    geoSphere = new GeoSphere();
+    featureWeights = new FeatureWeights(this);
+    viewEvaluator = new ViewEvaluator(this);
+    vol4D=new Volume4D(this);
+    a3d = new Analyser3D(this);
+    filename = new string("");
+    cout<<"vol is "<<vol4D<<endl;
+    cout<<"vevol is "<<viewEvaluator->vol<<endl;
+
+
+
 }
 
 Analyser4D::Analyser4D(const Analyser4D& orig) {
 }
 
 Analyser4D::~Analyser4D() {
+}
+
+void Analyser4D::init() {
+    cout << "init with fn " << *filename << endl;
+    if (*filename != "") {
+        loadConfig(*filename);
+    }
+    a3d->init();
+
 }
 
 void Analyser4D::initFeatures() {
@@ -37,10 +50,10 @@ void Analyser4D::evalEach3D() {
 }
 
 void Analyser4D::loadConfig(string filename) {
-    cout << "loading config file " << filename << endl;
+    cout << "\tloading config file " << filename << endl;
 
     ifstream inf;
-  
+
     inf.open(filename.c_str());
     string line;
 
@@ -52,8 +65,7 @@ void Analyser4D::loadConfig(string filename) {
             lineStream >> command;
             if (command == "new") {
                 cout << " new" << endl;
-
-                float wCurv,wtChange;
+                float wCurv, wtChange;
                 string gsfilename;
                 string screenRend;
                 string showInterest;
@@ -63,15 +75,14 @@ void Analyser4D::loadConfig(string filename) {
                 float wTop = 0; //.75;
                 lineStream >> dims >> gsfilename >> screenRend >> showInterest >> ignoreAreaOnCriticalFrameStr >> wArea >> wbsize >> wTop >> wCurv >> wtChange;
 
-                featureWeights->areaWeight=wArea;
+                featureWeights->areaWeight = wArea;
                 featureWeights->topologyWeight = wTop;
                 featureWeights->curvatureWeight = wCurv;
                 featureWeights->temporalChangeWeight = wtChange;
 
-
                 if (screenRend == "onScreen") {
                     viewEvaluator->setScreenRenderOn();
-                } 
+                }
                 if (ignoreAreaOnCriticalFrameStr == "ignoreAreaOnCriticalFrame") {
                     //frame->ignoreAreaOnCriticalFrame = true;
                     cout << "TODOignoreAreaOnCriticalFrame is On" << endl;
@@ -80,51 +91,55 @@ void Analyser4D::loadConfig(string filename) {
                 }
 
                 if (showInterest == "showInterest") {
-                    //frame->showInterestInOutput = true;
-                } else {
-                    //frame->showInterestInOutput = false;
                 }
-                gsfilename="./sphereData/"+gsfilename;
+                gsfilename = "./sphereData/" + gsfilename;
                 geoSphere->loadGeoSphereFile(gsfilename);
-                //frame->initFrame(dims, rsphere);
-
-                //move to init
-                a3d=new Analyser3D(geoSphere);
-                a3d->setViewEvaluator(viewEvaluator);
-
             }
-             if (command == "iframes") {
-                 
-                 float startParam=0,endParam=0;
-                 
+            if (command == "iframes") {
+
+                float startParam = 0, endParam = 0;
+
                 lineStream >> startParam >> endParam >> numSteps;
-                stepConverter=new StepToParamConverter(startParam,endParam,numSteps);
-                cout<<"iframes start "<<startParam<<" end "<<endParam<<" steps "<<numSteps<<endl;
+                stepConverter = new StepToParamConverter(startParam, endParam, numSteps);
+                cout << "\tiframes start " << startParam << " end " << endParam << " steps " << numSteps << endl;
             }
             if (command == "metaballs") {
                 float twist;
-                lineStream >>twist;
-                cout<<"New Metaballs twist:"<<twist<<endl;
-                 MetaballsVol4D* vol=new MetaballsVol4D(dims,dims,dims,numSteps,twist);
-                 vol->setStepConverter(stepConverter);
-                 setVolume(vol);
-             }
+                lineStream >> twist;
+                cout << "\tNew Metaballs twist:" << twist << endl;
+                //MetaballsVol4D*
+                Volume4D* vol = dynamic_cast<Volume4D*> (new MetaballsVol4D(dims, dims, dims, numSteps, twist));
+                vol->setStepConverter(stepConverter);
+                setVolume(vol);
+                cout<<"v is "<<a3d->viewEvaluator->vol<<endl;
+    cout<<"v is "<<viewEvaluator->vol<<endl;
+               
+                
+            }
         }
     }
 }
 
-void Analyser4D::setVolume(Volume4D* vol){
-    vol4D=vol;
+void Analyser4D::setVolume(Volume4D* vol) {
+    vol4D = vol;
+
+//    cout<<"vol is "<<vol4D<<endl;
+//    cout<<"set vol in a3dvevol is "<<a3d->viewEvaluator->vol<<endl;
+//    cout<<"vevol is "<<viewEvaluator->vol<<endl;
+
 }
 
-void Analyser4D::analyse(){
-   
-    cout<<"analysing all "<<numSteps<<"steps"<<endl;
-    for(int i=0;i<numSteps;i++){
+void Analyser4D::analyse() {
+    init();
+    cout << "analysing all " << numSteps << "steps" << endl;
+    for (int i = 0; i < numSteps; i++) {
         vol4D->setToStep(i);
-        
         vol4D->updateActor();
-
+        
         a3d->evalEachView();
     }
+}
+
+void Analyser4D::testDepts() {
+
 }

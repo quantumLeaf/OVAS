@@ -17,11 +17,9 @@ using namespace std;
  */
 int main(int argc, char** argv) {
 
+    
     Analyser4D* a4d=new Analyser4D;
-    //ImplicitVolume4D iVol4D=new ImplicitVolume4D("implicitVol1.data");
-    //a4d->setVolume(iVol4D);
-    //a4d->setAreaWeight(1);
-    a4d->loadConfig("./ovas.config");
+    a4d->setFile("./ovas.config");
     a4d->analyse();
     
 

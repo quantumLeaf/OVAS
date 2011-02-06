@@ -11,12 +11,8 @@ GeoSequence::GeoSequence() {
 }
 
 GeoSequence::GeoSequence(GeoSphere* gs){
-    viewList=new std::list<GeoPoint*>();
+    gsp=gs;
 
-    
-    for(int i=0;i<gs->getNumVs();i++){
-        viewList->push_back(gs->getView(i));
-    }
 }
 
 GeoSequence::GeoSequence(const GeoSequence& orig) {
@@ -25,5 +21,13 @@ GeoSequence::GeoSequence(const GeoSequence& orig) {
 GeoSequence::~GeoSequence() {
 }
 
+void GeoSequence::init(){
+    viewList=new std::list<GeoPoint*>();
+    for(int i=0;i<gsp->getNumVs();i++){
+        GeoPoint* view=gsp->getView(i);
+        //cout<<"getting from spere "<<view->getx()<<" "<<view->gety()<<" "<<view->getz()<<" "<<endl;
+        viewList->push_back(gsp->getView(i));
+    }
+}
 
 

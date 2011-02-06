@@ -14,22 +14,24 @@
 class Analyser3D {
 public:
     Analyser3D();
-    Analyser3D(GeoSphere* gs);
+    Analyser3D(Analyser4D* a);
     Analyser3D(const Analyser3D& orig);
     virtual ~Analyser3D();
+    void init();
     void initFeatures();
     void evalEachView();
     
     void setViewEvaluator(ViewEvaluator* ve){
         viewEvaluator=ve;
+        
     }
 
-    
+    ViewEvaluator* viewEvaluator;
 private:
     Feature* listOfFeatures;
     GeoSequence* geoSequence;
     
-    ViewEvaluator* viewEvaluator;
+    
 
 };
 

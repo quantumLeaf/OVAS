@@ -10,6 +10,7 @@
 
 class GeoPoint {
 public:
+    GeoPoint(int i,float x,float y,float z);
     GeoPoint(int i);
     GeoPoint(const GeoPoint& orig);
     virtual ~GeoPoint();

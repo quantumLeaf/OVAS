@@ -11,7 +11,12 @@ GeoPoint::GeoPoint(int i) {
     index = i;
     neighbourCount = 0;
 }
-
+GeoPoint::GeoPoint(int i, float _x, float _y, float _z){
+    x=_x;y=_y;z=_z;
+    index = i;
+    neighbourCount = 0;
+    
+}
 GeoPoint::GeoPoint(const GeoPoint& orig) {
 }
 

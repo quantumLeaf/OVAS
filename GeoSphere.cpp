@@ -49,9 +49,11 @@ bool GeoSphere::loadGeoSphereFile(string filename){
     //for each vertex
     for (int i = 0; i < n_vertices; i++) {
 
-        views[i] = new GeoPoint(i);
-        extdNbrs[i] = new GeoPoint(i);
+        views[i] = new GeoPoint(i,vertices[3 * i],vertices[3 * i+1],vertices[3 * i+2]);
+        
+        extdNbrs[i] = new GeoPoint(i,vertices[3 * i],vertices[3 * i+1],vertices[3 * i+2]);
     	//TD convert to use vtk cells?
+        
 
         //and for each face add neighbours to geopoint for that vertex
         for (int j = 0; j < n_faces - 1; j++) {
@@ -68,7 +70,9 @@ bool GeoSphere::loadGeoSphereFile(string filename){
                 views[i]->addNeighbour(faces[3 * j + 1]);
             }
         }
+        
     }
+   
 
     for (int i = 0; i < n_vertices; i++) {
 
@@ -80,9 +84,12 @@ bool GeoSphere::loadGeoSphereFile(string filename){
             }
         }
     }
+     
     //delete []views;
     views = extdNbrs;
     cout<<"created Geophere with nv:"<<n_vertices<<endl;
+    
+     
 }
 
 void GeoSphere::outputInfo(){

@@ -6,15 +6,13 @@
  */
 
 #include "ViewEvaluator.h"
-#include "FeatureWeights.h"
-#include "Volume4D.h"
+
 
 ViewEvaluator::ViewEvaluator() {
 }
 
-ViewEvaluator::ViewEvaluator(FeatureWeights* fw,Volume4D* v) {
-    featureWeights=fw;
-    vol=v;
+ViewEvaluator::ViewEvaluator(Analyser4D* a) {
+    a4d=a;
     renderer=vtkSmartPointer<vtkRenderer>::New();
     renderWindow=vtkSmartPointer<vtkRenderWindow>::New();
     renderer->SetBackground(0, 0, 0);
@@ -33,12 +31,21 @@ ViewEvaluator::~ViewEvaluator() {
 }
 
 void ViewEvaluator::evaluate(GeoPoint* view){
+   
+}
+
+
+void ViewEvaluator::renderThisView(GeoPoint* view){
     camera->SetFocalPoint(0.5, 0.5, 0.5);
     camera->SetParallelProjection(1);
     camera->SetClippingRange(0,8);
     float viewRange = 3;
-    camera->SetPosition(viewRange * view->getx(), viewRange * view->gety(), viewRange *  view->getz());
-    renderWindow->Render();
     
+//    testVol4D* tv=new testVol4D();
+//    tv->testCVal(vol);
+//    renderer->AddActor(vol->getVolActor());
+    //tv->testActor(vol->getVolActor());
+    //cout<<"from "<<view->getx()<<" "<<view->gety()<<" "<<view->getz()<<" "<<endl;
+    camera->SetPosition(viewRange * view->getx(), viewRange * view->gety(), viewRange *  view->getz());
+   // renderWindow->Render();
 }
-

@@ -22,16 +22,10 @@ public:
     void updateActor();
     vtkSmartPointer<vtkActor> getVolActor(){
         return volActor;
+        //vtkSmartPointer<vtkActor> ac= vtkSmartPointer<vtkActor>::New();
+        //return ac;
     }
-    int getXDim(){
-        return xDim;
-    }
-    int getYDim(){
-        return yDim;
-    }
-    int getZDim(){
-        return zDim;
-    }
+   
 protected:
     vtkSmartPointer<vtkActor> volActor;
     StepToParamConverter* stepConverter;

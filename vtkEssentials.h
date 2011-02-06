@@ -15,6 +15,10 @@
 #include <vtkSmartPointer.h>
 #include <vtkContourFilter.h>
 #include <vtkPolyDataMapper.h>
+#include <vtkConeSource.h>
+#include <vtkPolyData.h>
+#include <vtkRenderWindowInteractor.h>
+
 
 
 #endif	/* VTKESSENTIALS_H */

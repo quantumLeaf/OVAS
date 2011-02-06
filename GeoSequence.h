@@ -16,12 +16,13 @@ public:
     GeoSequence(GeoSphere* gs);
     GeoSequence(const GeoSequence& orig);
     virtual ~GeoSequence();
-
+    void init();
    
     std::list<GeoPoint*>* getViewList(){
         return viewList;
     }
 private:
+    GeoSphere* gsp;
     std::list<GeoPoint*>* viewList;
     std::list<GeoPoint*>::iterator it;
 };

@@ -6,15 +6,17 @@
  */
 
 #include "Volume4D.h"
+#include "testVol4D.h"
 
 Volume4D::Volume4D(int x,int y,int z, int s):xDim(x),yDim(y),zDim(z){
+    cout<<"\t>Creating Vol4D"<<endl;
     contourer = vtkSmartPointer<vtkContourFilter>::New();
     vtkVol=vtkSmartPointer<vtkImageData>::New();
     vtkVol->SetDimensions(xDim, yDim, zDim);
     float sp = (float) 1.0 / (xDim - 1);
     vtkVol->SetOrigin(0, 0, 0);
     vtkVol->SetSpacing(sp, sp, sp);
-    isoVal=new float(5);
+    isoVal=new float(0.1);
     volActor = vtkSmartPointer<vtkActor>::New();
     contourer->SetInput(vtkVol);
     contourer->SetValue(0,*isoVal);
@@ -40,7 +42,7 @@ void Volume4D::setToStep(int step){
         for (int j = 0; j < yDim; j++) {
             for (int i = 0; i < xDim; i++) {
                 float val=getVoxelValue(i,j,k,step);
-                //cout<<i<<" "<<j<<" "<<k<<" "<<endl;
+               
                 vtkVol->SetScalarComponentFromFloat(i, j, k, 0, val);
                 
             }
@@ -52,6 +54,5 @@ void Volume4D::setToStep(int step){
 void Volume4D::updateActor(){
     contourer->Update();
 }
-
 
 
