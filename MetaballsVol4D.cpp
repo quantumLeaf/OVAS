@@ -7,7 +7,7 @@
 
 #include "MetaballsVol4D.h"
 
-MetaballsVol4D::MetaballsVol4D(int xDim, int yDim, int zDim, int numSteps, float twist):ImplicitVolume4D(xDim,yDim,zDim,numSteps),twist(twist) {
+MetaballsVol4D::MetaballsVol4D(int xDim, int yDim, int zDim, int numSteps, float twist) : ImplicitVolume4D(xDim, yDim, zDim, numSteps), twist(twist) {
 
 }
 
@@ -17,12 +17,11 @@ MetaballsVol4D::MetaballsVol4D(const MetaballsVol4D& orig) {
 MetaballsVol4D::~MetaballsVol4D() {
 }
 
-float MetaballsVol4D::getVoxelValue(int x, int y, int z, int step){
-     float uberTwist=3.0;
-   // frame->uberTime=frame->tvStart;
-     
-    size_t noCenters=5;
-    float spread=0.3;
+float MetaballsVol4D::getVoxelValue(int x, int y, int z, int step) {
+    float uberTwist = 3.0;
+    float time = stepConverter->getParamForStep(step);
+    int noCenters = 5;
+    float spread = 0.3;
     std::vector<float> centres(3 * noCenters);
     for (size_t i = 0; i < noCenters; i++) {
         centres[3 * i + 0] = 0.5 + spread * sin(time + sin(0.1 * time) * i);
@@ -33,16 +32,12 @@ float MetaballsVol4D::getVoxelValue(int x, int y, int z, int step){
         //cout<<" C "<<centres[3 * i + 2]<<" "<<endl;
     }
 
-    int xDim=getXDim();
-    int yDim=getYDim();
-    int zDim=getZDim();
-
-
     float twist = uberTwist * sin(0.1f * time);
 
     for (int k = 0; k < zDim; k++) {
         for (int j = 0; j < yDim; j++) {
             for (int i = 0; i < xDim; i++) {
+                cout<<"in the space"<<i<<j<<k<<endl;
                 vnl_vector<float> p(3);
                 p[0] = (float) i / xDim;
                 p[1] = (float) j / yDim;
@@ -83,7 +78,7 @@ float MetaballsVol4D::getVoxelValue(int x, int y, int z, int step){
                 //vnl_vector<float> rp=(rotM1*rotM2*p)/2-0.5;
                 vnl_vector<float> rp = p;
                 float s = 0.0;
-                for (int ind = 0; ind < (int)noCenters; ind++) {
+                for (int ind = 0; ind < (int) noCenters; ind++) {
                     vnl_vector<float> centrei(3);
                     centrei[0] = centres[3 * ind + 0];
                     centrei[1] = centres[3 * ind + 1];
@@ -100,11 +95,11 @@ float MetaballsVol4D::getVoxelValue(int x, int y, int z, int step){
 
                 float val = s; //vol->GetScalarComponentAsFloat(i, j, k, 0);
                 //                    /index = i + j * (yDim) + k * (xDim * yDim);
-//                if(k==16&&j==16&&i==16){
-//                    cout<<" at323232 "<<val<<endl;
-//                }
+                //                if(k==16&&j==16&&i==16){
+                //                    cout<<" at323232 "<<val<<endl;
+                //                }
                 //   if(val<0.000001) val=0;
-                vol->SetScalarComponentFromFloat(i, j, k, 0, val);
+                vtkVol->SetScalarComponentFromFloat(i, j, k, 0, val);
 
             }
         }

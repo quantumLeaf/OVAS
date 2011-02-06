@@ -8,6 +8,7 @@
 #ifndef STEPTOPARAMCONVERTER_H
 #define	STEPTOPARAMCONVERTER_H
 
+//make static?
 class StepToParamConverter {
 public:
     StepToParamConverter(float start, float end, int number);

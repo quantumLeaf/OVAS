@@ -32,14 +32,14 @@ public:
     int getZDim(){
         return zDim;
     }
-private:
+protected:
     vtkSmartPointer<vtkActor> volActor;
     StepToParamConverter* stepConverter;
     vtkSmartPointer<vtkImageData> vtkVol;
     vtkSmartPointer<vtkContourFilter> contourer;
     float* isoVal;
     int xDim,yDim,zDim;
-    
+   
 };
 
 #endif	/* VOLUME4D_H */
