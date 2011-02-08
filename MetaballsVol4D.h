@@ -15,7 +15,7 @@
 
 class MetaballsVol4D : public ImplicitVolume4D {
 public:
-    MetaballsVol4D(int,int,int,int,float);
+    MetaballsVol4D(OVASControl* oc,float);
     MetaballsVol4D(const MetaballsVol4D& orig);
     virtual ~MetaballsVol4D();
     float getVoxelValue(int x, int y, int z, int step);

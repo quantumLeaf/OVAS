@@ -17,7 +17,9 @@
 #include "MetaballsVol4D.h"
 #include "Analyser3D.h"
 #include "FeatureWeights.h"
+#include "OVASControl.h"
 using namespace std;
+
 class Analyser4D {
 public:
     Analyser4D();
@@ -32,24 +34,20 @@ public:
     void setTopologyWeight(float weight);
     void setTemporalChangeWeight(float weight);
     void setCurvatureWeight(float weight);
-     void analyse();
+    void analyse();
     void testDepts();
 
-    void setFile(string _filename){
-        filename=new string(_filename);
+    void setFile(string _filename) {
+        oc->filename = new string(_filename);
     }
+
+
 private:
     int step;
-    string* filename;
-    Volume4D* vol4D;
-    Analyser3D* a3d;
-    FeatureWeights* featureWeights;
-    ViewEvaluator* viewEvaluator;
-    StepToParamConverter* stepConverter;
-    GeoSphere* geoSphere;
-    int dims,numSteps;
+    OVASControl* oc;
+    int dims, numSteps;
     void loadConfig(string filename);
-   
+
 };
 
 #endif	/* ANALYSER4D_H */

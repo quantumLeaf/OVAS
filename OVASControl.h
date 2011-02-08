@@ -7,14 +7,61 @@
 
 #ifndef OVASCONTROL_H
 #define	OVASCONTROL_H
+#include <stdio.h>
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <sstream>
+#include "vtkEssentials.h"
+#include "Feature.h"
+class GeoSequence;
+class GeoSphere;
+class Volume4D;
+class Analyser3D;
+class FeatureWeights;
+class StepToParamConverter;
+class ViewEvaluator;
 
+using namespace std;
 class OVASControl {
 public:
     OVASControl();
     OVASControl(const OVASControl& orig);
     virtual ~OVASControl();
-private:
 
+    void setFile(string _filename){
+        filename=new string(_filename);
+    }
+
+    void setGeoSequence(GeoSequence* pointer){
+        geoSequence=pointer;
+    }
+    void setGeoSphere(GeoSphere* pointer){
+        geoSphere=pointer;
+    }
+    void setVolume4D(Volume4D* pointer){
+        volume4D=pointer;
+    }
+   
+    void setStepToParamConverter(StepToParamConverter* pointer){
+        stepToParamConverter=pointer;
+    }
+    void setViewEvaluator(ViewEvaluator* pointer){
+        viewEvaluator=pointer;
+    }
+
+    int xDim,yDim,zDim,numSteps;
+    vtkSmartPointer<vtkActor> volActor;
+    GeoSequence* geoSequence;
+    string* filename;
+    Volume4D* volume4D;
+    Analyser3D* a3d;
+    vector<Feature*>* features;
+    ViewEvaluator* viewEvaluator;
+    StepToParamConverter* stepToParamConverter;
+    GeoSphere* geoSphere;
+private:
+    
 };
 
 #endif	/* OVASCONTROL_H */

@@ -11,26 +11,24 @@
 #include "GeoSequence.h"
 #include "GeoSphere.h"
 #include "ViewEvaluator.h"
+#include "OVASControl.h"
 class Analyser3D {
 public:
     Analyser3D();
-    Analyser3D(Analyser4D* a);
+    Analyser3D(OVASControl* o){
+        oc=o;
+    };
     Analyser3D(const Analyser3D& orig);
     virtual ~Analyser3D();
     void init();
     void initFeatures();
     void evalEachView();
-    
-    void setViewEvaluator(ViewEvaluator* ve){
-        viewEvaluator=ve;
-        
-    }
 
-    ViewEvaluator* viewEvaluator;
+    
 private:
     Feature* listOfFeatures;
-    GeoSequence* geoSequence;
-    
+    OVASControl* oc;
+
     
 
 };

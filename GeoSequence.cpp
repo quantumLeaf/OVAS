@@ -22,12 +22,15 @@ GeoSequence::~GeoSequence() {
 }
 
 void GeoSequence::init(){
+  
     viewList=new std::list<GeoPoint*>();
+
     for(int i=0;i<gsp->getNumVs();i++){
         GeoPoint* view=gsp->getView(i);
         //cout<<"getting from spere "<<view->getx()<<" "<<view->gety()<<" "<<view->getz()<<" "<<endl;
         viewList->push_back(gsp->getView(i));
     }
+  
 }
 
 

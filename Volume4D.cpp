@@ -7,24 +7,32 @@
 
 #include "Volume4D.h"
 #include "testVol4D.h"
-
-Volume4D::Volume4D(int x,int y,int z, int s):xDim(x),yDim(y),zDim(z){
+Volume4D::Volume4D(){
+    
+}
+Volume4D::Volume4D(OVASControl* o){
+    oc=o;
+    oc->volActor=vtkSmartPointer<vtkActor>::New();
+                
     cout<<"\t>Creating Vol4D"<<endl;
     contourer = vtkSmartPointer<vtkContourFilter>::New();
     vtkVol=vtkSmartPointer<vtkImageData>::New();
-    vtkVol->SetDimensions(xDim, yDim, zDim);
-    float sp = (float) 1.0 / (xDim - 1);
+    vtkVol->SetDimensions(oc->xDim, oc->yDim, oc->zDim);
+    float sp = (float) 1.0 / (oc->xDim - 1);
     vtkVol->SetOrigin(0, 0, 0);
     vtkVol->SetSpacing(sp, sp, sp);
-    isoVal=new float(0.1);
-    volActor = vtkSmartPointer<vtkActor>::New();
+    isoVal=new float(3.1);
     contourer->SetInput(vtkVol);
     contourer->SetValue(0,*isoVal);
     contourer->Update();
     vtkSmartPointer<vtkPolyDataMapper> mapper=vtkSmartPointer<vtkPolyDataMapper>::New();
     mapper->SetInput(contourer->GetOutput());
-    volActor->SetMapper(mapper);
-   
+    oc->volActor->SetMapper(mapper);
+    oc->volActor->GetProperty()->SetAmbient(1);
+    oc->volActor->GetProperty()->SetDiffuse(0); //SetShading(0);
+    oc->volActor->GetProperty()->SetSpecular(0); //SetShading(0);
+    oc->volActor->GetProperty()->SetInterpolationToFlat();
+     
 }
 
 Volume4D::Volume4D(const Volume4D& orig) {
@@ -32,15 +40,12 @@ Volume4D::Volume4D(const Volume4D& orig) {
 
 Volume4D::~Volume4D() {
 }
-void Volume4D::setStepConverter(StepToParamConverter* sc){
-    stepConverter=sc;
-}
 
 void Volume4D::setToStep(int step){
     cout<<"setting vol to step "<<step<<endl;
-    for (int k = 0; k < zDim; k++) {
-        for (int j = 0; j < yDim; j++) {
-            for (int i = 0; i < xDim; i++) {
+    for (int k = 0; k < oc->zDim; k++) {
+        for (int j = 0; j < oc->yDim; j++) {
+            for (int i = 0; i < oc->xDim; i++) {
                 float val=getVoxelValue(i,j,k,step);
                
                 vtkVol->SetScalarComponentFromFloat(i, j, k, 0, val);
@@ -48,11 +53,14 @@ void Volume4D::setToStep(int step){
             }
         }
     }
-    
+    contourer->Update();
+    contourer->Modified();
+
 }
 
 void Volume4D::updateActor(){
     contourer->Update();
+    contourer->Modified();
 }
 
 

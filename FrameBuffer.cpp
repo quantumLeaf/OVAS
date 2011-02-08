@@ -5,20 +5,17 @@
  * Created on 30 January 2011, 20:29
  */
 
+#include <vtkWindow.h>
+
 #include "FrameBuffer.h"
 
-FrameBuffer::FrameBuffer() {
+FrameBuffer::FrameBuffer(vtkSmartPointer<vtkRenderWindow> _renderWindow) {
+    renderWindow=_renderWindow;
+    size=renderWindow->GetSize();
+    int len = size[0] * size[1];
 }
 
 FrameBuffer::FrameBuffer(const FrameBuffer& orig) {
 }
 
-FrameBuffer::~FrameBuffer() {
-}
-void FrameBuffer::SetLen(int* len) {
-    this->len = len;
-}
-int* FrameBuffer::GetLen() const {
-    return len;
-}
 

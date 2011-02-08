@@ -7,32 +7,33 @@
 
 #ifndef FRAMEBUFFER_H
 #define	FRAMEBUFFER_H
+#include "vtkEssentials.h"
 
 class FrameBuffer {
 public:
-    FrameBuffer();
+    FrameBuffer(vtkSmartPointer<vtkRenderWindow> renderWindow);
     FrameBuffer(const FrameBuffer& orig);
-    virtual ~FrameBuffer();
-  
-    int* GetLen() const{
-        return len;
+    virtual ~FrameBuffer(){
+        delete data;
     };
-    void SetSize(int* size) {
-        this->size = size;
+
+    void grabData(){
+        data = renderWindow->GetRGBAPixelData(0, 0, (size[0] - 1), (size[1] - 1), 0);
     }
-    int* GetSize() const {
-        return size;
-    }
-    void SetData(float* data) {
-        this->data = data;
-    }
-    float* GetData() const {
+    
+    float* getData(){
         return data;
     }
+
+    int getLen(){
+        return len;
+    }
+
 private:
+    vtkSmartPointer<vtkRenderWindow> renderWindow;
     float* data;
-    int* len;
     int* size;
+    int len;
 };
 
 #endif	/* FRAMEBUFFER_H */

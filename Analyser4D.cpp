@@ -8,18 +8,14 @@
 #include "Analyser4D.h"
 
 Analyser4D::Analyser4D() {
-
-    geoSphere = new GeoSphere();
-    featureWeights = new FeatureWeights(this);
-    viewEvaluator = new ViewEvaluator(this);
-    vol4D=new Volume4D(this);
-    a3d = new Analyser3D(this);
-    filename = new string("");
-    cout<<"vol is "<<vol4D<<endl;
-    cout<<"vevol is "<<viewEvaluator->vol<<endl;
-
-
-
+    oc=new OVASControl();
+    oc->geoSphere = new GeoSphere();
+    oc->geoSequence=new GeoSequence(oc->geoSphere);
+    oc->features=new vector<Feature*>();
+    oc->viewEvaluator = new ViewEvaluator(oc);
+   // oc->volume4D=new Volume4D(oc);
+    oc->a3d = new Analyser3D(oc);
+    oc->filename = new string("");
 }
 
 Analyser4D::Analyser4D(const Analyser4D& orig) {
@@ -29,11 +25,11 @@ Analyser4D::~Analyser4D() {
 }
 
 void Analyser4D::init() {
-    cout << "init with fn " << *filename << endl;
-    if (*filename != "") {
-        loadConfig(*filename);
+    cout << "init with fn " << *oc->filename << endl;
+    if (*oc->filename != "") {
+        loadConfig(*oc->filename);
     }
-    a3d->init();
+    oc->a3d->init();
 
 }
 
@@ -75,13 +71,14 @@ void Analyser4D::loadConfig(string filename) {
                 float wTop = 0; //.75;
                 lineStream >> dims >> gsfilename >> screenRend >> showInterest >> ignoreAreaOnCriticalFrameStr >> wArea >> wbsize >> wTop >> wCurv >> wtChange;
 
-                featureWeights->areaWeight = wArea;
-                featureWeights->topologyWeight = wTop;
-                featureWeights->curvatureWeight = wCurv;
-                featureWeights->temporalChangeWeight = wtChange;
+
+                oc->features->push_back(new Feature(wArea));
+                oc->features->push_back(new Feature(wTop));
+                oc->features->push_back(new Feature(wCurv));
+                oc->features->push_back(new Feature(wtChange));
 
                 if (screenRend == "onScreen") {
-                    viewEvaluator->setScreenRenderOn();
+                    oc->viewEvaluator->setScreenRenderOn();
                 }
                 if (ignoreAreaOnCriticalFrameStr == "ignoreAreaOnCriticalFrame") {
                     //frame->ignoreAreaOnCriticalFrame = true;
@@ -93,14 +90,14 @@ void Analyser4D::loadConfig(string filename) {
                 if (showInterest == "showInterest") {
                 }
                 gsfilename = "./sphereData/" + gsfilename;
-                geoSphere->loadGeoSphereFile(gsfilename);
+                oc->geoSphere->loadGeoSphereFile(gsfilename);
             }
             if (command == "iframes") {
 
                 float startParam = 0, endParam = 0;
 
                 lineStream >> startParam >> endParam >> numSteps;
-                stepConverter = new StepToParamConverter(startParam, endParam, numSteps);
+                oc->stepToParamConverter = new StepToParamConverter(startParam, endParam, numSteps);
                 cout << "\tiframes start " << startParam << " end " << endParam << " steps " << numSteps << endl;
             }
             if (command == "metaballs") {
@@ -108,35 +105,26 @@ void Analyser4D::loadConfig(string filename) {
                 lineStream >> twist;
                 cout << "\tNew Metaballs twist:" << twist << endl;
                 //MetaballsVol4D*
-                Volume4D* vol = dynamic_cast<Volume4D*> (new MetaballsVol4D(dims, dims, dims, numSteps, twist));
-                vol->setStepConverter(stepConverter);
-                setVolume(vol);
-                cout<<"v is "<<a3d->viewEvaluator->vol<<endl;
-    cout<<"v is "<<viewEvaluator->vol<<endl;
-               
-                
+                 
+                oc->numSteps=numSteps;
+                oc->xDim=oc->yDim=oc->zDim=dims;
+                oc->volume4D = dynamic_cast<Volume4D*> (new MetaballsVol4D(oc,twist));
+
+    
+
             }
         }
     }
 }
 
-void Analyser4D::setVolume(Volume4D* vol) {
-    vol4D = vol;
-
-//    cout<<"vol is "<<vol4D<<endl;
-//    cout<<"set vol in a3dvevol is "<<a3d->viewEvaluator->vol<<endl;
-//    cout<<"vevol is "<<viewEvaluator->vol<<endl;
-
-}
-
 void Analyser4D::analyse() {
     init();
+  
     cout << "analysing all " << numSteps << "steps" << endl;
     for (int i = 0; i < numSteps; i++) {
-        vol4D->setToStep(i);
-        vol4D->updateActor();
-        
-        a3d->evalEachView();
+        oc->volume4D->setToStep(i);
+        oc->volume4D->updateActor();      
+        oc->a3d->evalEachView();
     }
 }
 

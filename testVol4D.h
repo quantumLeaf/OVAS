@@ -18,6 +18,7 @@ public:
     virtual ~testVol4D();
     bool testCVal(Volume4D* v);
     bool testActor(vtkSmartPointer<vtkActor> actor);
+    bool testRenderWindow(vtkSmartPointer<vtkRenderWindow>);
 private:
 
 };

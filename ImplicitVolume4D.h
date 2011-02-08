@@ -17,8 +17,8 @@
 
 class ImplicitVolume4D : public Volume4D{
 public:
-    ImplicitVolume4D(){};
-    ImplicitVolume4D(int xdim, int ydim, int zdidma,int numSteps);
+    ImplicitVolume4D();
+    ImplicitVolume4D(OVASControl* oc);
     ImplicitVolume4D(const ImplicitVolume4D& orig);
     virtual ~ImplicitVolume4D();
     virtual float getVoxelValue(int x,int y,int z,int step){ return 0;}

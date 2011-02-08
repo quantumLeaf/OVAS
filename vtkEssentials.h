@@ -18,7 +18,7 @@
 #include <vtkConeSource.h>
 #include <vtkPolyData.h>
 #include <vtkRenderWindowInteractor.h>
-
+#include <vtkProperty.h>
 
 
 #endif	/* VTKESSENTIALS_H */

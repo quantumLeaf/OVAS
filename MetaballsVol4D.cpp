@@ -6,8 +6,9 @@
  */
 
 #include "MetaballsVol4D.h"
-
-MetaballsVol4D::MetaballsVol4D(int xDim, int yDim, int zDim, int numSteps, float twist) : ImplicitVolume4D(xDim, yDim, zDim, numSteps), twist(twist) {
+#include "testVol4D.h"
+MetaballsVol4D::MetaballsVol4D(OVASControl* oc, float twist) : ImplicitVolume4D(oc), twist(twist) {
+//xDim(xDim),yDim(yDim),zDim(zDim),oc(oc),numSteps(numSteps)
 
 }
 
@@ -18,9 +19,9 @@ MetaballsVol4D::~MetaballsVol4D() {
 }
 
 float MetaballsVol4D::getVoxelValue(int x, int y, int z, int step) {
-
+    
     float uberTwist = 3.0;
-    float time = stepConverter->getParamForStep(step);
+    float time = oc->stepToParamConverter->getParamForStep(step);
     int noCenters = 5;
     float spread = 0.3;
     std::vector<float> centres(3 * noCenters);
@@ -37,9 +38,9 @@ float MetaballsVol4D::getVoxelValue(int x, int y, int z, int step) {
     int i=x;int j=y;int k=z;
 
     vnl_vector<float> p(3);
-    p[0] = (float) i / xDim;
-    p[1] = (float) j / yDim;
-    p[2] = (float) k / zDim;
+    p[0] = (float) i / oc->xDim;
+    p[1] = (float) j / oc->yDim;
+    p[2] = (float) k / oc->zDim;
 
     p = p * 2.0 - 1;
 

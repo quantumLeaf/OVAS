@@ -7,26 +7,44 @@
 
 #ifndef FEATURE_H
 #define	FEATURE_H
-#include <vtkActor.h>
 #include <vector>
 #include "vtkEssentials.h"
 #include "FrameBuffer.h"
+#include "GeoPoint.h"
 
+//enum FeatureType {Area, Topology, TemporalChange, Curvature};
 
 class Feature {
 public:
-    Feature();
+
+    Feature(float weight);
     Feature(const Feature& orig);
     virtual ~Feature();
-    virtual void scoreThisFrame(float* data){};
+    
     virtual void initFeature(){};
-    void addActor(vtkActor*);
-    void renderActors(vtkRenderer* ren);
-    virtual int countColour(float r, float g, float b, FrameBuffer* data);
+    void addActor(vtkSmartPointer<vtkActor> actor){
+        actors.push_back(actor);
+    }
+    void readyRenderer(vtkSmartPointer<vtkRenderer> _renderer);
+    void climbDown();
+    int scoreFeature(GeoPoint* view);
+    
+    int countColour(float r, float g, float b, FrameBuffer* data);
+    int countColour(FrameBuffer* data){
+        countColour(colourR,colourG,colourB,data);
+    }
+    int a;
 private:
+    int rawScore;
+    FrameBuffer* framebuffer;
+    vtkSmartPointer<vtkCamera> camera;
+    vtkSmartPointer<vtkRenderer> renderer;
+    float weight;
+  //  FeatureType type;
     //vtkActor* actors;
     float** scoreData;
-    std::vector<vtkActor*> Actors;
+    float colourR,colourB,colourG;
+    std::vector< vtkSmartPointer<vtkActor> > actors;
 
     
 

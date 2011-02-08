@@ -6,8 +6,10 @@
  */
 
 #include "Feature.h"
+#include "testVol4D.h"
 
-Feature::Feature() {
+Feature::Feature(float weight) : weight(weight) {
+
 }
 
 Feature::Feature(const Feature& orig) {
@@ -16,27 +18,42 @@ Feature::Feature(const Feature& orig) {
 Feature::~Feature() {
 }
 
-void Feature::addActor(vtkActor* actor) {
-    Actors.push_back(actor);
-}
-
-void Feature::renderActors(vtkRenderer* renderer) {
-    std::vector<vtkActor*>::const_iterator it;
-    for (it = Actors.begin(); it != Actors.end(); it++) {
+void Feature::readyRenderer(vtkSmartPointer<vtkRenderer> _renderer) {
+    
+    renderer = _renderer;
+    camera=renderer->GetActiveCamera();
+    std::vector< vtkSmartPointer<vtkActor> >::iterator it;
+    for (it = actors.begin(); it != actors.end(); it++) {
         renderer->AddActor((*it));
     }
+    framebuffer=new FrameBuffer(renderer->GetRenderWindow());
+}
+void Feature::climbDown() {
 
+    std::vector< vtkSmartPointer<vtkActor> >::const_iterator it;
+    for (it = actors.begin(); it != actors.end(); it++) {
+        renderer->RemoveActor((*it));
+    }
+    delete framebuffer;
+}
+int Feature::scoreFeature(GeoPoint* view) {
+    float viewRange = 3;
+    camera->SetPosition(viewRange * view->getx(), viewRange * view->gety(), viewRange *  view->getz());
+    renderer->Render();
+    return countColour(framebuffer);
 
 }
+
 
 int Feature::countColour(float r, float g, float b, FrameBuffer* fb) {
 
     int count = 0;
-    int* len=fb->GetLen();
-    float* data=fb->GetData();
-    for (int i = 0; i < *len; i++) {
+    int len = fb->getLen();
+    cout<<" len is "<<len<<endl;
+    fb->grabData();
+    float* data = fb->getData();
+    for (int i = 0; i < len; i++) {
         int j = i * 4;
-        //if (fabs(data[j] - data[j + 1]) < 0.001 && fabs(data[j] - data[j + 2]) < 0.001 && data[j] > 0.001) {
         if (data[j] == r && data[j + 1] == g && data[j + 2] == b) {
             count++;
         }
