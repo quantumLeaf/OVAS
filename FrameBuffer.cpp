@@ -11,8 +11,6 @@
 
 FrameBuffer::FrameBuffer(vtkSmartPointer<vtkRenderWindow> _renderWindow) {
     renderWindow=_renderWindow;
-    size=renderWindow->GetSize();
-    int len = size[0] * size[1];
 }
 
 FrameBuffer::FrameBuffer(const FrameBuffer& orig) {

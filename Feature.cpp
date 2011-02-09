@@ -19,15 +19,17 @@ Feature::~Feature() {
 }
 
 void Feature::readyRenderer(vtkSmartPointer<vtkRenderer> _renderer) {
-    
+
     renderer = _renderer;
-    camera=renderer->GetActiveCamera();
+    renderWindow = renderer->GetRenderWindow();
+    camera = renderer->GetActiveCamera();
     std::vector< vtkSmartPointer<vtkActor> >::iterator it;
     for (it = actors.begin(); it != actors.end(); it++) {
         renderer->AddActor((*it));
     }
-    framebuffer=new FrameBuffer(renderer->GetRenderWindow());
+    framebuffer = new FrameBuffer(renderer->GetRenderWindow());
 }
+
 void Feature::climbDown() {
 
     std::vector< vtkSmartPointer<vtkActor> >::const_iterator it;
@@ -36,21 +38,20 @@ void Feature::climbDown() {
     }
     delete framebuffer;
 }
+
 int Feature::scoreFeature(GeoPoint* view) {
     float viewRange = 3;
-    camera->SetPosition(viewRange * view->getx(), viewRange * view->gety(), viewRange *  view->getz());
-    renderer->Render();
+    camera->SetPosition(viewRange * view->getx(), viewRange * view->gety(), viewRange * view->getz());
+    renderWindow->Render();
+    int* size = renderWindow->GetSize();
     return countColour(framebuffer);
-
 }
 
-
 int Feature::countColour(float r, float g, float b, FrameBuffer* fb) {
+    fb->grabData();
 
     int count = 0;
     int len = fb->getLen();
-    cout<<" len is "<<len<<endl;
-    fb->grabData();
     float* data = fb->getData();
     for (int i = 0; i < len; i++) {
         int j = i * 4;
@@ -58,6 +59,7 @@ int Feature::countColour(float r, float g, float b, FrameBuffer* fb) {
             count++;
         }
     }
+    fb->delData();
 
     return count;
 

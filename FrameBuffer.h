@@ -13,20 +13,27 @@ class FrameBuffer {
 public:
     FrameBuffer(vtkSmartPointer<vtkRenderWindow> renderWindow);
     FrameBuffer(const FrameBuffer& orig);
-    virtual ~FrameBuffer(){
+
+    virtual ~FrameBuffer() {
         delete data;
     };
 
-    void grabData(){
+    void grabData() {
+        size = renderWindow->GetSize();
+        len = size[0] * size[1];
         data = renderWindow->GetRGBAPixelData(0, 0, (size[0] - 1), (size[1] - 1), 0);
     }
-    
-    float* getData(){
+
+    float* getData() {
         return data;
     }
 
-    int getLen(){
+    int getLen() {
         return len;
+    }
+
+    void delData(){
+        delete data;
     }
 
 private:

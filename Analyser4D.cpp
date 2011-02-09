@@ -109,9 +109,6 @@ void Analyser4D::loadConfig(string filename) {
                 oc->numSteps=numSteps;
                 oc->xDim=oc->yDim=oc->zDim=dims;
                 oc->volume4D = dynamic_cast<Volume4D*> (new MetaballsVol4D(oc,twist));
-
-    
-
             }
         }
     }

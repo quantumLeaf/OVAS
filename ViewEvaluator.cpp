@@ -59,7 +59,7 @@ void ViewEvaluator::evaluate(GeoPoint* view){
         
         Feature* a=*(it);
         int score=a->scoreFeature(view);
-        
+        cout<<" view score "<<score<<endl;
         //wierd this doesnt work:
 //        ViewEvaluator.cpp:48: error: request for member ‘scoreFeature’ in ‘* it.__gnu_cxx::__normal_iterator<_Iterator, _Container>::operator-> [with _Iterator = Feature**, _Container = std::vector<Feature*, std::allocator<Feature*> >]()’, which is of non-class type ‘Feature*’
 //make[2]: *** [CMakeFiles/testOVAS.dir/ViewEvaluator.cpp.o] Error 1

@@ -39,6 +39,7 @@ private:
     FrameBuffer* framebuffer;
     vtkSmartPointer<vtkCamera> camera;
     vtkSmartPointer<vtkRenderer> renderer;
+    vtkSmartPointer<vtkRenderWindow> renderWindow;
     float weight;
   //  FeatureType type;
     //vtkActor* actors;

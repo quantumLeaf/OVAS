@@ -19,6 +19,7 @@ public:
     bool testCVal(Volume4D* v);
     bool testActor(vtkSmartPointer<vtkActor> actor);
     bool testRenderWindow(vtkSmartPointer<vtkRenderWindow>);
+    bool testRenderer(vtkSmartPointer<vtkRenderer>);
 private:
 
 };
