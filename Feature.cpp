@@ -5,11 +5,19 @@
  * Created on 23 January 2011, 18:28
  */
 
+#include <limits>
+
 #include "Feature.h"
 #include "testVol4D.h"
 
-Feature::Feature(float weight) : weight(weight) {
 
+
+Feature::Feature(){
+    
+    ArrayTools::allocate2DArray(oc->geoSphere->getNumVs(),oc->numSteps);
+}
+Feature::Feature(float weight,OVASControl* o) : weight(weight),oc(o) {
+    Feature();
 }
 
 Feature::Feature(const Feature& orig) {

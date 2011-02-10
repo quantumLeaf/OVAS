@@ -13,19 +13,21 @@
 #include <vector>
 #include <sstream>
 #include "vtkEssentials.h"
-#include "Feature.h"
+
 class GeoSequence;
 class GeoSphere;
 class Volume4D;
 class Analyser3D;
-class FeatureWeights;
+class Feature;
 class StepToParamConverter;
 class ViewEvaluator;
 
 using namespace std;
 class OVASControl {
 public:
-    OVASControl();
+    OVASControl(){
+        currentStep=currentView=0;
+    };
     OVASControl(const OVASControl& orig);
     virtual ~OVASControl();
 
@@ -60,6 +62,8 @@ public:
     ViewEvaluator* viewEvaluator;
     StepToParamConverter* stepToParamConverter;
     GeoSphere* geoSphere;
+    int currentStep;
+    int currentView;
 private:
     
 };

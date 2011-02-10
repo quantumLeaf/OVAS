@@ -35,7 +35,7 @@ public:
         onScreen=true;
     }
     Volume4D* vol;
-    FeatureWeights* featureWeights;
+    
 private:
     
     vtkSmartPointer<vtkCamera> camera;

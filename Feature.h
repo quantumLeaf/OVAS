@@ -8,16 +8,20 @@
 #ifndef FEATURE_H
 #define	FEATURE_H
 #include <vector>
+
+#include "OVASControl.h"
 #include "vtkEssentials.h"
 #include "FrameBuffer.h"
 #include "GeoPoint.h"
-
+#include "GeoSphere.h"
+#include "arraytools.h"
 //enum FeatureType {Area, Topology, TemporalChange, Curvature};
-
+using namespace std;
 class Feature {
 public:
 
-    Feature(float weight);
+    Feature();
+    Feature(float weight,OVASControl*);
     Feature(const Feature& orig);
     virtual ~Feature();
     
@@ -27,7 +31,7 @@ public:
     }
     void readyRenderer(vtkSmartPointer<vtkRenderer> _renderer);
     void climbDown();
-    int scoreFeature(GeoPoint* view);
+    virtual int scoreFeature(GeoPoint* view);
     
     int countColour(float r, float g, float b, FrameBuffer* data);
     int countColour(FrameBuffer* data){
@@ -41,6 +45,9 @@ private:
     vtkSmartPointer<vtkRenderer> renderer;
     vtkSmartPointer<vtkRenderWindow> renderWindow;
     float weight;
+    
+    OVASControl* oc;
+    int** intScoreData;
   //  FeatureType type;
     //vtkActor* actors;
     float** scoreData;

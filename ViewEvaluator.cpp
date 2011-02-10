@@ -42,30 +42,21 @@ void ViewEvaluator::readyFeatures(){
     vector<Feature*>::iterator it;
     for (it=oc->features->begin();it!=oc->features->end();it++){
         Feature* a=*(it);
-        a->readyRenderer(renderer);
+        (*it)->readyRenderer(renderer);
      }
 }
 
 void ViewEvaluator::climbDownFeatures(){
     vector<Feature*>::iterator it;
     for (it=oc->features->begin();it!=oc->features->end();it++){
-        Feature* a=*(it);
-        a->climbDown();
+        (*it)->climbDown();
      }
 }
 void ViewEvaluator::evaluate(GeoPoint* view){
     vector<Feature*>::iterator it;
     for (it=oc->features->begin();it!=oc->features->end();it++){
-        
-        Feature* a=*(it);
-        int score=a->scoreFeature(view);
-        cout<<" view score "<<score<<endl;
-        //wierd this doesnt work:
-//        ViewEvaluator.cpp:48: error: request for member ‘scoreFeature’ in ‘* it.__gnu_cxx::__normal_iterator<_Iterator, _Container>::operator-> [with _Iterator = Feature**, _Container = std::vector<Feature*, std::allocator<Feature*> >]()’, which is of non-class type ‘Feature*’
-//make[2]: *** [CMakeFiles/testOVAS.dir/ViewEvaluator.cpp.o] Error 1
-//make[1]: *** [CMakeFiles/testOVAS.dir/all] Error 2
-
-        //int score=*(it)->scoreFeature(view);
+        int score=(*it)->scoreFeature(view);
+       
         
     }
 

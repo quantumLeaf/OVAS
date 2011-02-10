@@ -9,10 +9,7 @@
 #include "GeoSphere.h"
 #include "MetaballsVol4D.h"
 #include "Analyser3D.h"
-#include "FeatureWeights.h"
-OVASControl::OVASControl() {
-    
-}
+#include "Feature.h"
 
 OVASControl::OVASControl(const OVASControl& orig) {
 }

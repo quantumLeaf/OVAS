@@ -69,13 +69,12 @@ void Analyser4D::loadConfig(string filename) {
                 float wArea = 1;
                 float wbsize = 0; //.25;
                 float wTop = 0; //.75;
-                lineStream >> dims >> gsfilename >> screenRend >> showInterest >> ignoreAreaOnCriticalFrameStr >> wArea >> wbsize >> wTop >> wCurv >> wtChange;
-
-
-                oc->features->push_back(new Feature(wArea));
-                oc->features->push_back(new Feature(wTop));
-                oc->features->push_back(new Feature(wCurv));
-                oc->features->push_back(new Feature(wtChange));
+                lineStream >> dims >> gsfilename >> screenRend >> wArea >> wbsize >> wTop >> wCurv >> wtChange;
+                
+                oc->features->push_back(new Feature(wArea,oc));
+                oc->features->push_back(new Feature(wTop,oc));
+                oc->features->push_back(new Feature(wCurv,oc));
+                oc->features->push_back(new TemporalChangeFeature(wtChange,oc));
 
                 if (screenRend == "onScreen") {
                     oc->viewEvaluator->setScreenRenderOn();

@@ -15,7 +15,7 @@ public:
     FrameBuffer(const FrameBuffer& orig);
 
     virtual ~FrameBuffer() {
-        delete data;
+       // delete data;
     };
 
     void grabData() {
