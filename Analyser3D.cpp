@@ -28,8 +28,10 @@ void Analyser3D::evalEachView() {
     int i = 0;
     view = viewList->begin();
      oc->viewEvaluator->readyFeatures();
+
     for (view = viewList->begin(); view != viewList->end(); view++) {
         oc->viewEvaluator->evaluate((*view));
+        
     }
      oc->viewEvaluator->climbDownFeatures();
      

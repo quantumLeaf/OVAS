@@ -19,40 +19,50 @@ class GeoSphere;
 class Volume4D;
 class Analyser3D;
 class Feature;
+class AreaFeature;
 class StepToParamConverter;
 class ViewEvaluator;
 
 using namespace std;
+
 class OVASControl {
 public:
-    OVASControl(){
-        currentStep=currentView=0;
+
+    OVASControl() {
+        currentStep = currentView = 0;
+        AreaDone = new bool[numSteps];
+        for (int i = 0; i < numSteps; i++) {
+            AreaDone[i] = false;
+        }
     };
     OVASControl(const OVASControl& orig);
     virtual ~OVASControl();
 
-    void setFile(string _filename){
-        filename=new string(_filename);
+    void setFile(string _filename) {
+        filename = new string(_filename);
     }
 
-    void setGeoSequence(GeoSequence* pointer){
-        geoSequence=pointer;
-    }
-    void setGeoSphere(GeoSphere* pointer){
-        geoSphere=pointer;
-    }
-    void setVolume4D(Volume4D* pointer){
-        volume4D=pointer;
-    }
-   
-    void setStepToParamConverter(StepToParamConverter* pointer){
-        stepToParamConverter=pointer;
-    }
-    void setViewEvaluator(ViewEvaluator* pointer){
-        viewEvaluator=pointer;
+    void setGeoSequence(GeoSequence* pointer) {
+        geoSequence = pointer;
     }
 
-    int xDim,yDim,zDim,numSteps;
+    void setGeoSphere(GeoSphere* pointer) {
+        geoSphere = pointer;
+    }
+
+    void setVolume4D(Volume4D* pointer) {
+        volume4D = pointer;
+    }
+
+    void setStepToParamConverter(StepToParamConverter* pointer) {
+        stepToParamConverter = pointer;
+    }
+
+    void setViewEvaluator(ViewEvaluator* pointer) {
+        viewEvaluator = pointer;
+    }
+
+    int xDim, yDim, zDim, numSteps;
     vtkSmartPointer<vtkActor> volActor;
     GeoSequence* geoSequence;
     string* filename;
@@ -64,8 +74,10 @@ public:
     GeoSphere* geoSphere;
     int currentStep;
     int currentView;
+    bool* AreaDone;
+    AreaFeature* areaFeature;
 private:
-    
+
 };
 
 #endif	/* OVASCONTROL_H */

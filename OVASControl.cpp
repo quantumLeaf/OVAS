@@ -10,6 +10,7 @@
 #include "MetaballsVol4D.h"
 #include "Analyser3D.h"
 #include "Feature.h"
+#include "AreaFeature.h"
 
 OVASControl::OVASControl(const OVASControl& orig) {
 }

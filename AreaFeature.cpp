@@ -7,17 +7,19 @@
 
 #include "AreaFeature.h"
 
-AreaFeature::AreaFeature() {
+AreaFeature::AreaFeature(float weight,OVASControl* oc):Feature(weight,oc) {
+    AreaFeature();
+    oc->areaFeature=this;
+    
 }
 
+AreaFeature::AreaFeature(){
+    
+    
+}
 AreaFeature::AreaFeature(const AreaFeature& orig) {
 }
 
 AreaFeature::~AreaFeature() {
 }
 
-float AreaFeature::scoreThisFrame(FrameBuffer* data){
-
-    //TD add logtomax area
-    float count=countColour(1,1,1,data);
-}

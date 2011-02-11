@@ -13,11 +13,21 @@
 
 
 Feature::Feature(){
-    
-    ArrayTools::allocate2DArray(oc->geoSphere->getNumVs(),oc->numSteps);
+   
 }
 Feature::Feature(float weight,OVASControl* o) : weight(weight),oc(o) {
-    Feature();
+   
+    scoreData=ArrayTools::allocate2DArray<float>(oc->numSteps,oc->geoSphere->getNumVs());
+    for(int i=0;i<oc->numSteps;i++){
+        for(int j=0;j<oc->geoSphere->getNumVs();j++){
+            scoreData[i][j]=0;
+        }
+    }
+    cout<<" scd "<<oc->numSteps<<" "<<oc->geoSphere->getNumVs()<<" "<<scoreData<<endl;
+    colourB=1;
+    colourG=0;
+    colourR=0;
+ //   Feature();
 }
 
 Feature::Feature(const Feature& orig) {
@@ -47,12 +57,12 @@ void Feature::climbDown() {
     delete framebuffer;
 }
 
-int Feature::scoreFeature(GeoPoint* view) {
+void Feature::scoreFeature(GeoPoint* view) {
     float viewRange = 3;
     camera->SetPosition(viewRange * view->getx(), viewRange * view->gety(), viewRange * view->getz());
     renderWindow->Render();
     int* size = renderWindow->GetSize();
-    return countColour(framebuffer);
+    scoreData[oc->currentStep][oc->currentView]=countColour(framebuffer);
 }
 
 int Feature::countColour(float r, float g, float b, FrameBuffer* fb) {

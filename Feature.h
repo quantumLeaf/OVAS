@@ -31,29 +31,35 @@ public:
     }
     void readyRenderer(vtkSmartPointer<vtkRenderer> _renderer);
     void climbDown();
-    virtual int scoreFeature(GeoPoint* view);
+    virtual void scoreFeature(GeoPoint* view);
     
     int countColour(float r, float g, float b, FrameBuffer* data);
     int countColour(FrameBuffer* data){
         countColour(colourR,colourG,colourB,data);
     }
     int a;
+    int** intScoreData;
 private:
     int rawScore;
-    FrameBuffer* framebuffer;
+    
     vtkSmartPointer<vtkCamera> camera;
     vtkSmartPointer<vtkRenderer> renderer;
     vtkSmartPointer<vtkRenderWindow> renderWindow;
     float weight;
     
-    OVASControl* oc;
-    int** intScoreData;
+    
+    
   //  FeatureType type;
     //vtkActor* actors;
-    float** scoreData;
-    float colourR,colourB,colourG;
+    
     std::vector< vtkSmartPointer<vtkActor> > actors;
+    
+protected:
+    FrameBuffer* framebuffer;
+    OVASControl* oc;
+    float** scoreData;
 
+    float colourR,colourB,colourG;
     
 
     

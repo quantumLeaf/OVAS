@@ -14,9 +14,9 @@ public:
     TemporalChangeFeature(float weight,OVASControl*);
     TemporalChangeFeature(const TemporalChangeFeature& orig);
     virtual ~TemporalChangeFeature();
-    int scoreFeature(GeoPoint* view);
+    void scoreFeature(GeoPoint* view);
 private:
-
+    int** intAreaData;
 };
 
 #endif	/* TEMPORALCHANGEFEATURE_H */

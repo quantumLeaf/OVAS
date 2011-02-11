@@ -13,13 +13,18 @@
 
 class AreaFeature : public Feature {
 public:
+    AreaFeature(float weight,OVASControl* oc);
+    AreaFeature(const AreaFeature& orig);   
     AreaFeature();
-    AreaFeature(const AreaFeature& orig);
-    virtual ~AreaFeature();
-    void initFeature();
-    float scoreThisFrame(float* data);
-private:
 
+    virtual ~AreaFeature();
+    
+    void scoreFeature(GeoPoint* View){
+        Feature::scoreFeature(View);
+        oc->AreaDone[oc->currentStep]=true;
+    }
+private:
+    
 };
 
 #endif	/* AREAFEATURE_H */

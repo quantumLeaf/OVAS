@@ -59,6 +59,15 @@ void Analyser4D::loadConfig(string filename) {
             istringstream lineStream(line);
             string command;
             lineStream >> command;
+            if (command == "iframes") {
+
+                float startParam = 0, endParam = 0;
+
+                lineStream >> startParam >> endParam >> numSteps;
+                oc->stepToParamConverter = new StepToParamConverter(startParam, endParam, numSteps);
+                cout << "\tiframes start " << startParam << " end " << endParam << " steps " << numSteps << endl;
+                oc->numSteps=numSteps;
+            }
             if (command == "new") {
                 cout << " new" << endl;
                 float wCurv, wtChange;
@@ -70,12 +79,17 @@ void Analyser4D::loadConfig(string filename) {
                 float wbsize = 0; //.25;
                 float wTop = 0; //.75;
                 lineStream >> dims >> gsfilename >> screenRend >> wArea >> wbsize >> wTop >> wCurv >> wtChange;
-                
-                oc->features->push_back(new Feature(wArea,oc));
-                oc->features->push_back(new Feature(wTop,oc));
-                oc->features->push_back(new Feature(wCurv,oc));
-                oc->features->push_back(new TemporalChangeFeature(wtChange,oc));
 
+                gsfilename = "./sphereData/" + gsfilename;
+                oc->geoSphere->loadGeoSphereFile(gsfilename);
+                
+                cout<<" is "<<oc->geoSphere->getNumVs()<<endl;
+    
+
+                oc->features->push_back(new Feature(wArea,oc));
+            //    oc->features->push_back(new Feature(wTop,oc));
+             //   oc->features->push_back(new Feature(wCurv,oc));
+                oc->features->push_back(new TemporalChangeFeature(wtChange,oc));
                 if (screenRend == "onScreen") {
                     oc->viewEvaluator->setScreenRenderOn();
                 }
@@ -88,17 +102,9 @@ void Analyser4D::loadConfig(string filename) {
 
                 if (showInterest == "showInterest") {
                 }
-                gsfilename = "./sphereData/" + gsfilename;
-                oc->geoSphere->loadGeoSphereFile(gsfilename);
+                
             }
-            if (command == "iframes") {
-
-                float startParam = 0, endParam = 0;
-
-                lineStream >> startParam >> endParam >> numSteps;
-                oc->stepToParamConverter = new StepToParamConverter(startParam, endParam, numSteps);
-                cout << "\tiframes start " << startParam << " end " << endParam << " steps " << numSteps << endl;
-            }
+            
             if (command == "metaballs") {
                 float twist;
                 lineStream >> twist;
@@ -121,6 +127,7 @@ void Analyser4D::analyse() {
         oc->volume4D->setToStep(i);
         oc->volume4D->updateActor();      
         oc->a3d->evalEachView();
+        oc->currentStep++;
     }
 }
 
