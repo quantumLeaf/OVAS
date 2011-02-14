@@ -28,6 +28,16 @@ public:
     float getz(){
         return z;
     }
+    boost::numeric::ublas::vector<float> getUblasVector(){
+        boost::numeric::ublas::vector<float> uvec(3);
+        uvec(0)=x;
+        uvec(1)=y;
+        uvec(2)=z;
+        return uvec;
+
+    }
+
+
 private:
 
 };

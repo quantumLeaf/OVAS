@@ -47,6 +47,7 @@ void ViewEvaluator::readyFeatures(){
 }
 
 void ViewEvaluator::climbDownFeatures(){
+    oc->currentView=0;
     vector<Feature*>::iterator it;
     for (it=oc->features->begin();it!=oc->features->end();it++){
         (*it)->climbDown();
@@ -54,12 +55,13 @@ void ViewEvaluator::climbDownFeatures(){
 }
 void ViewEvaluator::evaluate(GeoPoint* view){
     vector<Feature*>::iterator it;
-    oc->currentView++;
+    
     for (it=oc->features->begin();it!=oc->features->end();it++){
         (*it)->scoreFeature(view);
 
         
     }
+    oc->currentView++;
 
    
 }

@@ -38,17 +38,23 @@ void TemporalChangeFeature::scoreFeature(GeoPoint* view) {
     //    if(oc->AreaDone[oc->currentStep]==false){
     //        Feature::scoreFeature(view);
     //    }
-    intScoreData[0][1]=3;
-    intAreaData[oc->currentStep][oc->currentView] = countColour(framebuffer);
-    
-    if (oc->currentStep == 0) {
-        intScoreData[oc->currentStep][oc->currentView] = 0;
-    } else {
-        int dArea = intAreaData[oc->currentStep][oc->currentView] - intAreaData[oc->currentStep - 1][oc->currentView];
-        intScoreData[oc->currentStep][oc->currentView] = abs(dArea);
-        cout<<" stored scpre "<<dArea<<endl;
-    }
 
+    
+    int result,dArea;
+    if (oc->currentStep == 0) {
+        result=0;
+    } else {
+
+        //#TD does not recycle area calc #inefficiency
+        int area=countColour(framebuffer);
+        intAreaData[oc->currentStep][oc->currentView]=area;
+        int prevArea=intAreaData[oc->currentStep-1][oc->currentView];
+        dArea = area-prevArea;
+        result = abs(dArea);
+        cout<<" elevated "<<dArea<<" from "<< oc->currentStep <<" " << oc->currentView  <<" "<<area<< " "<<prevArea<<endl;
+     }
+    //intScoreData[oc->currentStep][oc->currentView]=result;
+         
 
 }
 

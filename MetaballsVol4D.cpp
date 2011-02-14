@@ -48,7 +48,7 @@ float MetaballsVol4D::getVoxelValue(int x, int y, int z, int step) {
     float rot2 = 0.7 * twist * p[1];
     vnl_matrix<float> rotM1(3, 3);
     vnl_matrix<float> rotM2(3, 3);
-
+    
 
     rotM1(0, 0) = cos(rot1);
     rotM1(0, 1) = -sin(rot1);
