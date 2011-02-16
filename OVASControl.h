@@ -75,6 +75,7 @@ public:
     int currentStep;
     int currentView;
     bool* AreaDone;
+    int* path;
     AreaFeature* areaFeature;
 private:
 

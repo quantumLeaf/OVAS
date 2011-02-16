@@ -37,15 +37,11 @@ public:
     int countColour(FrameBuffer* data){
         countColour(colourR,colourG,colourB,data);
     }
+    float* getEvaluatedStepData(int step);
     int a;
     int** intScoreData;
 private:
-    int rawScore;
     
-    vtkSmartPointer<vtkCamera> camera;
-    vtkSmartPointer<vtkRenderer> renderer;
-    vtkSmartPointer<vtkRenderWindow> renderWindow;
-    float weight;
     
     
     
@@ -55,6 +51,10 @@ private:
     std::vector< vtkSmartPointer<vtkActor> > actors;
     
 protected:
+    vtkSmartPointer<vtkCamera> camera;
+    vtkSmartPointer<vtkRenderer> renderer;
+    vtkSmartPointer<vtkRenderWindow> renderWindow;
+    float weight;
     FrameBuffer* framebuffer;
     OVASControl* oc;
     float** scoreData;

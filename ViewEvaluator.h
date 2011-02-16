@@ -30,6 +30,7 @@ public:
     void climbDownFeatures();
     void init();
     void evaluate(GeoPoint* view);
+    void outputView(GeoPoint* view, string filename);
     void renderThisView(GeoPoint* view);
     void setScreenRenderOn(){
         onScreen=true;

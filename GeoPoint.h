@@ -7,6 +7,7 @@
 
 #ifndef _GEOPOINT_H
 #define	_GEOPOINT_H
+#include <boost/numeric/ublas/vector.hpp>
 
 class GeoPoint {
 public:
@@ -28,6 +29,7 @@ public:
     float getz(){
         return z;
     }
+    
     boost::numeric::ublas::vector<float> getUblasVector(){
         boost::numeric::ublas::vector<float> uvec(3);
         uvec(0)=x;

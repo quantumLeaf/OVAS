@@ -36,7 +36,9 @@ public:
     void setTemporalChangeWeight(float weight);
     void setCurvatureWeight(float weight);
     void analyse();
-    void testDepts();
+    void findOptimalPath();
+
+    void outputView(int view, char* filename);
 
     void setFile(string _filename) {
         oc->filename = new string(_filename);

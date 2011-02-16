@@ -39,7 +39,10 @@ void TemporalChangeFeature::scoreFeature(GeoPoint* view) {
     //        Feature::scoreFeature(view);
     //    }
 
-    
+    float viewRange = 3;
+    camera->SetPosition(viewRange * view->getx(), viewRange * view->gety(), viewRange * view->getz());
+    renderWindow->Render();
+        
     int result,dArea;
     if (oc->currentStep == 0) {
         result=0;
@@ -51,10 +54,10 @@ void TemporalChangeFeature::scoreFeature(GeoPoint* view) {
         int prevArea=intAreaData[oc->currentStep-1][oc->currentView];
         dArea = area-prevArea;
         result = abs(dArea);
-        cout<<" elevated "<<dArea<<" from "<< oc->currentStep <<" " << oc->currentView  <<" "<<area<< " "<<prevArea<<endl;
+       //cout<<" elevated "<<dArea<<" from "<< oc->currentStep <<" " << oc->currentView  <<" "<<area<< " "<<prevArea<<endl;
      }
-    //intScoreData[oc->currentStep][oc->currentView]=result;
-         
+    scoreData[oc->currentStep][oc->currentView]=result;
+        
 
 }
 

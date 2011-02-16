@@ -61,8 +61,9 @@ void Feature::scoreFeature(GeoPoint* view) {
     float viewRange = 3;
     camera->SetPosition(viewRange * view->getx(), viewRange * view->gety(), viewRange * view->getz());
     renderWindow->Render();
-    int* size = renderWindow->GetSize();
+    //int* size = renderWindow->GetSize();
     scoreData[oc->currentStep][oc->currentView]=countColour(framebuffer);
+    cout<<" scpre "<<oc->currentStep<<" "<<oc->currentView<<" "<<scoreData[oc->currentStep][oc->currentView]<<endl;
 }
 
 int Feature::countColour(float r, float g, float b, FrameBuffer* fb) {
@@ -81,4 +82,14 @@ int Feature::countColour(float r, float g, float b, FrameBuffer* fb) {
 
     return count;
 
+}
+
+float* Feature::getEvaluatedStepData(int step){
+    float* data=new float[oc->geoSphere->getNumVs()];
+    for(int i=0;i<oc->geoSphere->getNumVs();i++){
+        
+        data[i]=scoreData[step][i]*weight;
+        //cout<<" the data this "<<scoreData[step][i]<<" w here "<<weight<<endl;
+    }
+    return data;
 }

@@ -26,10 +26,11 @@ void InfoSheet::outputInfoData(const char* filename) {
     of.open(filename);
 
     of << oc->numSteps << " " << oc->geoSphere->getNumVs() << endl;
+    
     for (int i = 0; i < currentInfoTs; i++) {
-
         for (int j = 0; j < oc->geoSphere->getNumVs(); j++) {
             of << info[i][j] << " ";
+            //cout<< "output"<<info[i][j]<<endl;
         }
         of << endl;
     }
@@ -43,9 +44,17 @@ void InfoSheet::loadInfo(const char* filename) {
 
     inf.open(filename);
     assert(inf.is_open());
-    inf >> oc->numSteps >> oc->geoSphere->getNumVs();
-
+    int numViews=oc->geoSphere->getNumVs();
+    inf >> oc->numSteps >> (numViews);
+    oc->geoSphere->setNumViews(numViews);
     cout << " discovered oc->numSteps nvs " << oc->numSteps << " " << oc->geoSphere->getNumVs() << endl;
+    ArrayTools::free2DArray(info);
+    ArrayTools::free2DArray(nextViewIndex);
+    ArrayTools::free2DArray(maxInfo);
+
+    this->info = ArrayTools::allocate2DArray<float>(oc->numSteps, oc->geoSphere->getNumVs());
+    nextViewIndex = ArrayTools::allocate3DArray<float>(oc->numSteps, oc->geoSphere->getNumVs(), this->numRegions);
+    this->maxInfo = ArrayTools::allocate3DArray<float>(oc->numSteps, oc->geoSphere->getNumVs(), this->numRegions);
 
     for (int i = 0; i < oc->numSteps; i++) {
         for (int j = 0; j < oc->geoSphere->getNumVs(); j++) {
@@ -59,7 +68,7 @@ void InfoSheet::loadInfo(const char* filename) {
 bool InfoSheet::validTransition(GeoPoint* fromV, GeoPoint* toV, GeoPoint* prevV) {
     //transition prevV->fromV->toV
     bool cond = false;
-    if (fromV == 276 && prevV == 0 && toV == 0) cond = true;
+   
     if (prevV == toV) return false;
 
     namespace ub = boost::numeric::ublas;
@@ -102,7 +111,7 @@ int* InfoSheet::findPath() {
     float maxInfoStart = 0;
     path = new int[oc->numSteps];
     for (int v = 0; v < oc->geoSphere->getNumVs(); v++) {
-        for (int r = 0; r < views[v]->neighbourCount; r++) {
+        for (int r = 0; r < oc->geoSphere->getView(v)->neighbourCount; r++) {
             if (maxInfo[0][v][r] > maxInfoStart) {
                 maxInfoStart = maxInfo[0][v][r];
                 pos = v;
@@ -113,7 +122,7 @@ int* InfoSheet::findPath() {
     }
     // cout<<" found pos "<<pos<<" and reg "<<reg<<endl;
     for (int i = 0; i < oc->numSteps; i++) {
-        cout << "step " << i << " pos " << pos << " from n:" << reg << " " << views[pos]->neighbours[reg] << endl;
+        cout << "step " << i << " pos " << pos << " from n:" << reg << " " << oc->geoSphere->getView(pos)->neighbours[reg] << endl;
 
         path[i] = pos;
         //cout<<"new ivr "<<i<<" "<<pos<<" "<<reg<<endl;
@@ -128,28 +137,6 @@ int* InfoSheet::findPath() {
 
     return path;
 }
-//void InfoSheet::calcMaxInfo() {
-//    for (int v = 0; v < oc->geoSphere->getNumVs(); v++) {
-//        maxInfo[oc->numSteps - 1][v] = info[oc->numSteps - 1][v];
-//    }
-//    for (int i = oc->numSteps - 2; i>-1; i--) {
-//        for (int v = 0; v < oc->geoSphere->getNumVs(); v++) {
-//            for (int k = 0; k < oc->geoSphere->getNumVs(); k++) {
-//                float pathInfo;
-//                if(this->validTransition(v,k)){
-//                 pathInfo=info[i][v]+maxInfo[i+1][k];
-//                }
-//                else{
-//                    pathInfo=0;
-//                }
-//                if(pathInfo>maxInfo[i][v]){
-//                    maxInfo[i][v]=pathInfo;
-//                    nextViewIndex[i][v]=k;
-//                }
-//            }
-//        }
-//    }
-//}
 
 void InfoSheet::calcMaxInfo() {
     
@@ -163,30 +150,30 @@ void InfoSheet::calcMaxInfo() {
     for (int i = oc->numSteps - 2; i>-1; i--) {
         for (int v = 0; v < oc->geoSphere->getNumVs(); v++) {
             for (int r = 0; r < oc->geoSphere->getView(v)->neighbourCount; r++) {
-                int p = views[v]->neighbours[r];
+                int p = oc->geoSphere->getView(v)->neighbours[r];
                 maxInfo[i][v][r] = -1;
                 nextViewIndex[i][v][r] = -1;
 
-                for (int t = 0; t < views[v]->neighbourCount; t++) {
+                for (int t = 0; t < oc->geoSphere->getView(v)->neighbourCount; t++) {
 
-                    int k = views[v]->neighbours[t];
-
-                    // if(k==396&&v==389) cout<<" k is "<<k<<" v "<<v<<" t "<<t<<endl;
+                    int k = oc->geoSphere->getView(v)->neighbours[t];
                     float pathInfo;
 
-                    if (this->validTransition(v, k, p)) {
+
+                    GeoPoint* vView=oc->geoSphere->getView(v);
+                    GeoPoint* kView=oc->geoSphere->getView(k);
+                    GeoPoint* pView=oc->geoSphere->getView(p);
+
+                    if (this->validTransition(vView, kView, pView)) {
                         pathInfo = info[i][v] + maxInfo[i + 1][k][lookupNeighbourIndex(k, v)];
                     } else {
                         pathInfo = 0;
                     }
 
                     if (pathInfo > maxInfo[i][v][r]) {
-                        //if (i == 7 && v == 134) cout << "For IVR " << i << " " << v << " " << r << " with pi" << pathInfo << " sett nvi to " << k << " p was " << p << endl;
-                        maxInfo[i][v][r] = pathInfo;
-                        //    if(v==389&&k==396) cout<<"strange but true \n";
+                         maxInfo[i][v][r] = pathInfo;
                         nextViewIndex[i][v][r] = k;
-                        // if(v==389&&i==0) cout<<" for r "<<r<<" k is "<<k<<endl;
-                    }
+                     }
                 }
             }
         }
@@ -197,12 +184,13 @@ void InfoSheet::addTimeInfo(float* timeInfo) {
     if (currentInfoTs > oc->numSteps) cout << "error exceeding num ts" << endl;
     info[currentInfoTs] = timeInfo;
     currentInfoTs++;
+    
 }
 
 int InfoSheet::lookupNeighbourIndex(int k, int v) {
     //index of v in k's neighbour list
-    for (int i = 0; i < views[k]->neighbourCount; i++) {
-        if (views[k]->neighbours[i] == v) return i;
+    for (int i = 0; i < oc->geoSphere->getView(k)->neighbourCount; i++) {
+        if (oc->geoSphere->getView(k)->neighbours[i] == v) return i;
     }
     cout << "Error !!!!!failed to find v: " << v << " in lookup of k: " << k << endl;
     //cout<<" ks nc is "<<views[k]->neighbourCount<<endl;
@@ -210,7 +198,7 @@ int InfoSheet::lookupNeighbourIndex(int k, int v) {
 }
 
 int InfoSheet::getNeighbour(int k, int v) {
-    return views[k]->neighbours[v];
+    return oc->geoSphere->getView(k)->neighbours[v];
 }
 
 int* InfoSheet::returnBestViews() {

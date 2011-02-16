@@ -73,7 +73,6 @@ bool GeoSphere::loadGeoSphereFile(string filename){
         
     }
    
-
     for (int i = 0; i < n_vertices; i++) {
 
         for (int i2 = 0; i2 < views[i]->neighbourCount; i2++) {

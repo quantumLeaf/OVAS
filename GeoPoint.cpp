@@ -30,3 +30,5 @@ void GeoPoint::addNeighbour(int nei) {
     }
     neighbours[neighbourCount++] = nei;
 }
+
+

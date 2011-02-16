@@ -19,6 +19,8 @@
 #include <vtkPolyData.h>
 #include <vtkRenderWindowInteractor.h>
 #include <vtkProperty.h>
+#include <vtkWindowToImageFilter.h>
+#include <vtkPNGWriter.h>
 
 
 #endif	/* VTKESSENTIALS_H */

@@ -27,7 +27,9 @@ public:
     GeoPoint* getView(int i){
         return views[i];
     }
-
+    void setNumViews(int num){
+        n_vertices=num;
+    }
    
 private:
     int n_vertices;

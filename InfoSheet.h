@@ -23,7 +23,7 @@ public:
     //InfoSheet();
     InfoSheet(const InfoSheet& orig);
     virtual ~InfoSheet();
-    infoSheet(OVASControl* o);
+    InfoSheet(OVASControl* o);
 
      bool validTransition(GeoPoint* fromView,GeoPoint* toView,GeoPoint* prevV);
 
@@ -36,9 +36,9 @@ public:
    int* findPath();
    int* returnBestViews();
 private:
-    const int numRegions=36;
+    const static int numRegions=36;
     int currentInfoTs;
-    int numRegions;
+
     float** info;
     float*** maxInfo;
     float*** nextViewIndex;

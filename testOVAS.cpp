@@ -20,7 +20,9 @@ int main(int argc, char** argv) {
     
     Analyser4D* a4d=new Analyser4D;
     a4d->setFile("./ovas.config");
-    a4d->analyse();
+    a4d->init();
+   // a4d->analyse();
+    a4d->findOptimalPath();
     
 
     

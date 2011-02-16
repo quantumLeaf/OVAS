@@ -6,6 +6,7 @@
  */
 
 #include "Analyser4D.h"
+#include "InfoData.h"
 
 Analyser4D::Analyser4D() {
     oc=new OVASControl();
@@ -30,18 +31,6 @@ void Analyser4D::init() {
         loadConfig(*oc->filename);
     }
     oc->a3d->init();
-
-}
-
-void Analyser4D::initFeatures() {
-
-}
-
-void Analyser4D::initAnalyser3D(int step) {
-
-}
-
-void Analyser4D::evalEach3D() {
 
 }
 
@@ -86,7 +75,7 @@ void Analyser4D::loadConfig(string filename) {
                 cout<<" is "<<oc->geoSphere->getNumVs()<<endl;
     
 
-                oc->features->push_back(new Feature(wArea,oc));
+             //   oc->features->push_back(new Feature(wArea,oc));
             //    oc->features->push_back(new Feature(wTop,oc));
              //   oc->features->push_back(new Feature(wCurv,oc));
                 oc->features->push_back(new TemporalChangeFeature(wtChange,oc));
@@ -120,7 +109,7 @@ void Analyser4D::loadConfig(string filename) {
 }
 
 void Analyser4D::analyse() {
-    init();
+   
   
     cout << "analysing all " << numSteps << "steps" << endl;
     for (int i = 0; i < numSteps; i++) {
@@ -129,8 +118,17 @@ void Analyser4D::analyse() {
         oc->a3d->evalEachView();
         oc->currentStep++;
     }
-}
 
-void Analyser4D::testDepts() {
 
 }
+
+void Analyser4D::findOptimalPath(){
+   
+    InfoData* infoData=new InfoData(oc);
+    oc->path=infoData->findOptimalPath();
+    oc->viewEvaluator->outputView(oc->geoSphere->getView(184),"this.png");
+}
+
+
+
+
