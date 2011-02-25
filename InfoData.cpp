@@ -26,7 +26,6 @@ InfoData::InfoData(OVASControl* oc) {
             featureStepData = (*it)->getEvaluatedStepData(step);
             for (int view = 0; view < numViews; view++) {
                 aggragatedStepData[view] += featureStepData[view];
-                
             }
             delete [] featureStepData;
         }
@@ -42,10 +41,16 @@ InfoData::~InfoData() {
 }
 
 int* InfoData::findOptimalPath() {
-//    infoSheet->outputInfoData("thisData.txt");
-    infoSheet->loadInfo("thisData.txt");
+    infoSheet->outputInfoData("thisData.txt");
+    //infoSheet->loadInfo("thisData.txt");
 
     infoSheet->calcMaxInfo();
     int* path=infoSheet->findPath();
     return path;
+}
+
+
+int* InfoData::findBestViews(){
+    int* bvs=infoSheet->returnBestViews();
+    return bvs;
 }

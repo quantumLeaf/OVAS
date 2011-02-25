@@ -38,7 +38,8 @@ public:
     Volume4D* vol;
     
 private:
-    
+    bool upSet;
+    double* upV;
     vtkSmartPointer<vtkCamera> camera;
     Analyser4D* a4d;
     vtkSmartPointer<vtkActor> dataActor;

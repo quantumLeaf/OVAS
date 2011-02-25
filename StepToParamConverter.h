@@ -15,6 +15,7 @@ public:
     StepToParamConverter(const StepToParamConverter& orig);
     virtual ~StepToParamConverter();
     float getParamForStep(int step);
+    float getParamFractionForStep(int step);
 private:
     float start;
     float end;

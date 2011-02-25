@@ -21,7 +21,7 @@ public:
     
     void scoreFeature(GeoPoint* View){
         Feature::scoreFeature(View);
-        oc->AreaDone[oc->currentStep]=true;
+        
     }
 private:
     

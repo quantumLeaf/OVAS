@@ -122,19 +122,18 @@ int* InfoSheet::findPath() {
     }
     // cout<<" found pos "<<pos<<" and reg "<<reg<<endl;
     for (int i = 0; i < oc->numSteps; i++) {
-        cout << "step " << i << " pos " << pos << " from n:" << reg << " " << oc->geoSphere->getView(pos)->neighbours[reg] << endl;
+        cout << "step " << i << " pos " << pos << " from n:" << reg << " " << oc->geoSphere->getView(pos)->neighbours[reg] << " info "<<info[i][pos]<<endl;
 
         path[i] = pos;
         //cout<<"new ivr "<<i<<" "<<pos<<" "<<reg<<endl;
         if (i < oc->numSteps - 1) {
             pos = nextViewIndex[i][pos][reg];
-            cout << " update pos to " << pos << endl;
-            if (path[i] == 389 && pos == 396) cout << " looking up " << endl;
+                       
             reg = lookupNeighbourIndex(pos, path[i]);
         }
         //cout << "step " << i << " pos " <<path[i]<<" from n:"<<reg<<" "<<views[pos]->neighbours[reg]<<endl;;
     }
-
+    
     return path;
 }
 
@@ -222,7 +221,6 @@ int* InfoSheet::returnBestViews() {
     cout << endl;
     return bestViews;
 }
-
 
 
 

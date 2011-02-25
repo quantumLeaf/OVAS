@@ -37,6 +37,9 @@ public:
     int countColour(FrameBuffer* data){
         countColour(colourR,colourG,colourB,data);
     }
+    void setWeight(float w){
+        weight=w;
+    }
     float* getEvaluatedStepData(int step);
     int a;
     int** intScoreData;

@@ -15,6 +15,7 @@ public:
     InfoData(OVASControl* oc);
     InfoData(const InfoData& orig);
     int* findOptimalPath();
+    int* findBestViews();
     virtual ~InfoData();
 private:
     InfoSheet* infoSheet;

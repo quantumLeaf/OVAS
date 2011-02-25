@@ -15,6 +15,7 @@
 #include <sstream>
 #include "GeoSphere.h"
 #include "MetaballsVol4D.h"
+#include "FlyingSaucersVol4D.h"
 #include "Analyser3D.h"
 #include "FeatureWeights.h"
 #include "OVASControl.h"
@@ -37,9 +38,11 @@ public:
     void setCurvatureWeight(float weight);
     void analyse();
     void findOptimalPath();
+    void findAndOutputPaths();
 
     void outputView(int view, char* filename);
-
+    void outputPath(string filestem);
+    void outputBVs(string filestem);
     void setFile(string _filename) {
         oc->filename = new string(_filename);
     }

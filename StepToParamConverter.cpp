@@ -24,3 +24,9 @@ float StepToParamConverter::getParamForStep(int step){
     return (distance*fraction+start);
 }
 
+float StepToParamConverter::getParamFractionForStep(int step){
+    float distance=end-start;
+    float fraction=(float)step/(numSteps-1);
+    return fraction;
+}
+

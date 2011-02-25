@@ -9,12 +9,12 @@
 #include "InfoData.h"
 
 Analyser4D::Analyser4D() {
-    oc=new OVASControl();
+    oc = new OVASControl();
     oc->geoSphere = new GeoSphere();
-    oc->geoSequence=new GeoSequence(oc->geoSphere);
-    oc->features=new vector<Feature*>();
+    oc->geoSequence = new GeoSequence(oc->geoSphere);
+    oc->features = new vector<Feature*>();
     oc->viewEvaluator = new ViewEvaluator(oc);
-   // oc->volume4D=new Volume4D(oc);
+    // oc->volume4D=new Volume4D(oc);
     oc->a3d = new Analyser3D(oc);
     oc->filename = new string("");
 }
@@ -55,7 +55,7 @@ void Analyser4D::loadConfig(string filename) {
                 lineStream >> startParam >> endParam >> numSteps;
                 oc->stepToParamConverter = new StepToParamConverter(startParam, endParam, numSteps);
                 cout << "\tiframes start " << startParam << " end " << endParam << " steps " << numSteps << endl;
-                oc->numSteps=numSteps;
+                oc->numSteps = numSteps;
             }
             if (command == "new") {
                 cout << " new" << endl;
@@ -71,14 +71,14 @@ void Analyser4D::loadConfig(string filename) {
 
                 gsfilename = "./sphereData/" + gsfilename;
                 oc->geoSphere->loadGeoSphereFile(gsfilename);
-                
-                cout<<" is "<<oc->geoSphere->getNumVs()<<endl;
-    
 
-             //   oc->features->push_back(new Feature(wArea,oc));
-            //    oc->features->push_back(new Feature(wTop,oc));
-             //   oc->features->push_back(new Feature(wCurv,oc));
-                oc->features->push_back(new TemporalChangeFeature(wtChange,oc));
+                cout << " is " << oc->geoSphere->getNumVs() << endl;
+
+
+                   oc->features->push_back(new Feature(wArea,oc));
+                //    oc->features->push_back(new Feature(wTop,oc));
+                //   oc->features->push_back(new Feature(wCurv,oc));
+                oc->features->push_back(new TemporalChangeFeature(wtChange, oc));
                 if (screenRend == "onScreen") {
                     oc->viewEvaluator->setScreenRenderOn();
                 }
@@ -91,30 +91,39 @@ void Analyser4D::loadConfig(string filename) {
 
                 if (showInterest == "showInterest") {
                 }
-                
+
             }
-            
+
             if (command == "metaballs") {
                 float twist;
                 lineStream >> twist;
                 cout << "\tNew Metaballs twist:" << twist << endl;
                 //MetaballsVol4D*
-                 
-                oc->numSteps=numSteps;
-                oc->xDim=oc->yDim=oc->zDim=dims;
-                oc->volume4D = dynamic_cast<Volume4D*> (new MetaballsVol4D(oc,twist));
+
+                oc->numSteps = numSteps;
+                oc->xDim = oc->yDim = oc->zDim = dims;
+                oc->volume4D = dynamic_cast<Volume4D*> (new MetaballsVol4D(oc, twist));
+            }
+            if (command == "flyingsaucers") {
+                
+                cout << "\tNew Flying Saucers " <<dims<< endl;
+                //MetaballsVol4D*
+
+                oc->numSteps = numSteps;
+                oc->xDim = oc->yDim = oc->zDim = dims;
+                oc->volume4D = dynamic_cast<Volume4D*> (new FlyingSaucersVol4D(oc));
             }
         }
     }
 }
 
 void Analyser4D::analyse() {
-   
-  
+
+
     cout << "analysing all " << numSteps << "steps" << endl;
     for (int i = 0; i < numSteps; i++) {
         oc->volume4D->setToStep(i);
-        oc->volume4D->updateActor();      
+        oc->volume4D->updateActor();
         oc->a3d->evalEachView();
         oc->currentStep++;
     }
@@ -122,11 +131,77 @@ void Analyser4D::analyse() {
 
 }
 
-void Analyser4D::findOptimalPath(){
-   
-    InfoData* infoData=new InfoData(oc);
-    oc->path=infoData->findOptimalPath();
-    oc->viewEvaluator->outputView(oc->geoSphere->getView(184),"this.png");
+void Analyser4D::findOptimalPath() {
+
+    InfoData* infoData = new InfoData(oc);
+    oc->path = infoData->findOptimalPath();
+    oc->bestViews=infoData->findBestViews();
+
+}
+
+void Analyser4D::findAndOutputPaths(){
+    int numFeatures=oc->features->size();
+    cout<<numFeatures<<" features"<<endl;
+    vector<Feature*>::iterator it;
+    int f=0;
+    for (it = oc->features->begin(); it != oc->features->end(); it++,f++) {
+        if(f==0) (*it)->setWeight(1);
+        if(f==1) (*it)->setWeight(0);
+    }
+    findOptimalPath();
+    outputPath("./results/area");
+    outputBVs("./results/bvs");
+    
+//    f=0;
+//    for (it = oc->features->begin(); it != oc->features->end(); it++,f++) {
+//        if(f==0) (*it)->setWeight(0);
+//        if(f==1) (*it)->setWeight(1);
+//    }
+//    findOptimalPath();
+//    outputPath("tchange");
+//
+//    f=0;
+//    for (it = oc->features->begin(); it != oc->features->end(); it++,f++) {
+//        if(f==0) (*it)->setWeight(1);
+//        if(f==1) (*it)->setWeight(1);
+//    }
+//    findOptimalPath();
+//    outputPath("comb");
+
+}
+
+void Analyser4D::outputPath(string filestem) {
+
+
+    for (int i = 0; i < numSteps; i++) {
+        oc->volume4D->setToStep(i);
+        oc->volume4D->updateActor();
+        string filename(filestem);
+        stringstream s;
+        s << i;
+        filename+=s.str();
+        filename+=".png";
+
+        oc->viewEvaluator->outputView(oc->geoSphere->getView(oc->path[i]), filename.c_str());
+
+    }
+}
+
+void Analyser4D::outputBVs(string filestem) {
+
+
+    for (int i = 0; i < numSteps; i++) {
+        oc->volume4D->setToStep(i);
+        oc->volume4D->updateActor();
+        string filename(filestem);
+        stringstream s;
+        s << i;
+        filename+=s.str();
+        filename+=".png";
+
+        oc->viewEvaluator->outputView(oc->geoSphere->getView(oc->bestViews[i]), filename.c_str());
+
+    }
 }
 
 

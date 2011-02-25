@@ -30,10 +30,7 @@ public:
 
     OVASControl() {
         currentStep = currentView = 0;
-        AreaDone = new bool[numSteps];
-        for (int i = 0; i < numSteps; i++) {
-            AreaDone[i] = false;
-        }
+        
     };
     OVASControl(const OVASControl& orig);
     virtual ~OVASControl();
@@ -74,8 +71,9 @@ public:
     GeoSphere* geoSphere;
     int currentStep;
     int currentView;
-    bool* AreaDone;
+  
     int* path;
+    int* bestViews;
     AreaFeature* areaFeature;
 private:
 

@@ -37,7 +37,7 @@ Feature::~Feature() {
 }
 
 void Feature::readyRenderer(vtkSmartPointer<vtkRenderer> _renderer) {
-
+    //cout<<"ready rend w "<<weight<<endl;
     renderer = _renderer;
     renderWindow = renderer->GetRenderWindow();
     camera = renderer->GetActiveCamera();
@@ -58,12 +58,17 @@ void Feature::climbDown() {
 }
 
 void Feature::scoreFeature(GeoPoint* view) {
+    
     float viewRange = 3;
     camera->SetPosition(viewRange * view->getx(), viewRange * view->gety(), viewRange * view->getz());
     renderWindow->Render();
-    //int* size = renderWindow->GetSize();
+    //vtkSmartPointer<vtkRenderWindowInteractor> renderWindowInteractor =vtkSmartPointer<vtkRenderWindowInteractor>::New();
+    //renderWindowInteractor->SetRenderWindow(renderWindow);
+
+        //renderWindowInteractor->Start();
+   
     scoreData[oc->currentStep][oc->currentView]=countColour(framebuffer);
-    cout<<" scpre "<<oc->currentStep<<" "<<oc->currentView<<" "<<scoreData[oc->currentStep][oc->currentView]<<endl;
+   
 }
 
 int Feature::countColour(float r, float g, float b, FrameBuffer* fb) {
@@ -87,9 +92,12 @@ int Feature::countColour(float r, float g, float b, FrameBuffer* fb) {
 float* Feature::getEvaluatedStepData(int step){
     float* data=new float[oc->geoSphere->getNumVs()];
     for(int i=0;i<oc->geoSphere->getNumVs();i++){
-        
-        data[i]=scoreData[step][i]*weight;
-        //cout<<" the data this "<<scoreData[step][i]<<" w here "<<weight<<endl;
+        float maxValue = log2(300 * 300);
+        float value=scoreData[step][i];
+        float contribution = 1, dAFactor=1;
+        contribution = weight * (log2(value) / maxValue);
+        if (value == 0) contribution = 0;
+        data[i]=contribution;
     }
     return data;
 }

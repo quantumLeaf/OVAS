@@ -26,6 +26,8 @@ ViewEvaluator::ViewEvaluator(OVASControl* o) {
     camera->SetFocalPoint(0.5, 0.5, 0.5);
     camera->SetParallelProjection(1);
     camera->SetClippingRange(0, 8);
+    upSet=false;
+    upV=new double[3]();
 }
 
 ViewEvaluator::ViewEvaluator(const ViewEvaluator& orig) {
@@ -58,7 +60,7 @@ void ViewEvaluator::evaluate(GeoPoint* view) {
     vector<Feature*>::iterator it;
 
     for (it = oc->features->begin(); it != oc->features->end(); it++) {
-        (*it)->scoreFeature(view);
+       (*it)->scoreFeature(view);
     }
     oc->currentView++;
 
@@ -99,7 +101,11 @@ void ViewEvaluator::renderThisView(GeoPoint* view) {
 
 void ViewEvaluator::outputView(GeoPoint* view, string filename) {
     readyFeatures();
-    bool upSet = false;
+    oc->volActor->GetProperty()->SetAmbient(0.3);
+    oc->volActor->GetProperty()->SetDiffuse(0.7); //SetShading(0);
+    oc->volActor->GetProperty()->SetSpecular(0.7); //SetShading(0);
+    oc->volActor->GetProperty()->SetInterpolationToPhong();
+    
     vtkSmartPointer<vtkWindowToImageFilter> windowToImageFilter = vtkSmartPointer<vtkWindowToImageFilter>::New();
     windowToImageFilter->SetInput(renderWindow);
     vtkSmartPointer<vtkPNGWriter> writer = vtkSmartPointer<vtkPNGWriter>::New();
