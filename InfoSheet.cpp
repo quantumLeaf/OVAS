@@ -70,6 +70,7 @@ bool InfoSheet::validTransition(GeoPoint* fromV, GeoPoint* toV, GeoPoint* prevV)
     bool cond = false;
    
     if (prevV == toV) return false;
+    if (fromV == toV) return false;
 
     namespace ub = boost::numeric::ublas;
 
@@ -89,10 +90,10 @@ bool InfoSheet::validTransition(GeoPoint* fromV, GeoPoint* toV, GeoPoint* prevV)
 
     float inLen = sqrt(in(0) * in(0) + in(1) * in(1) + in(2) * in(2));
     float outLen = sqrt(out(0) * out(0) + out(1) * out(1) + out(2) * out(2));
-    float theta = acos((in(0) * out(0) + in(0) * out(0) + in(0) * out(0)) / (inLen * outLen));
+    float theta = acos((in(0) * out(0) + in(1) * out(1) + in(2) * out(2)) / (inLen * outLen));
 
     float pi = 3.14152;
-
+    //cout<<"theta is "<<theta<<" iL "<<inLen<<" oL "<<outLen<<endl;
     if (theta < ((pi) / 4) && theta > 0) {
         return true;
     } else {
@@ -122,6 +123,7 @@ int* InfoSheet::findPath() {
     }
     // cout<<" found pos "<<pos<<" and reg "<<reg<<endl;
     for (int i = 0; i < oc->numSteps; i++) {
+       
         cout << "step " << i << " pos " << pos << " from n:" << reg << " " << oc->geoSphere->getView(pos)->neighbours[reg] << " info "<<info[i][pos]<<endl;
 
         path[i] = pos;

@@ -43,6 +43,7 @@ public:
     void outputView(int view, char* filename);
     void outputPath(string filestem);
     void outputBVs(string filestem);
+    void outputPathVis(string filename);
     void setFile(string _filename) {
         oc->filename = new string(_filename);
     }

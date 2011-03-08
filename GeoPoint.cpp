@@ -31,4 +31,12 @@ void GeoPoint::addNeighbour(int nei) {
     neighbours[neighbourCount++] = nei;
 }
 
+float* GeoPoint::getPoint(float scale){
+        float* pos=new float[3]();
+        pos[0] = scale*x;
+        pos[1] = scale*y;
+        pos[2] = scale*z;
+        return pos;
+}
+
 

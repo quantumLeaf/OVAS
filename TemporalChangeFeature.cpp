@@ -26,6 +26,7 @@ TemporalChangeFeature::TemporalChangeFeature(float weight, OVASControl* oc) : Fe
     colourB=1;
     colourG=0;
     colourR=0;
+    cout<<"new tc feature"<<endl;
 }
 
 TemporalChangeFeature::TemporalChangeFeature(const TemporalChangeFeature& orig) {

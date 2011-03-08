@@ -20,24 +20,28 @@ float FlyingSaucersVol4D::getVoxelValue(int x, int y, int z, int step) {
 
     float time = oc->stepToParamConverter->getParamForStep(step);
     float tFraction = oc->stepToParamConverter->getParamFractionForStep(step);
-    int noCenters = 1;
+    int noCenters = 3;
     float spread = 0.3;
 
     vector<float> centres(3 * noCenters);
 
     float fieldVal = 0;
     float cx, cy, cz;
-    float weight = 5;
+    float weight = 3.9;
     for (size_t i = 0; i < noCenters; i++) {
-//        cx = 0.5 + spread * sin(time + sin(0.1 * time) * i);
-//        cy = 0.5 + spread * cos(0.9 * time + sin(0.1 * time) * i);
-//        cz = 0.5 + spread * cos(0.7 * time + sin(0.01 * time) * i);
-        cx=cy=cz=0.5;
+        cy = 0.3 + 0.25*i;
+        cx = 0.3 + 0.2*i;
+        cz = 0.3 + 0.2*i;
+     //   cx=cy=cz=0.5;
         float sx, sy, sz;
-        float sinVal=sin(tFraction*(2*3.14152));
-        sx = 700;
-        sy = 2;
-        sz = 2;
+        float sinVal=sin(tFraction*(4*3.14152));
+        
+        sy = 350+sinVal*300;
+        if(x==16&&y==16&&z==16){
+            cout<<"sinv "<<sinVal<<" sy: "<<sy<<endl;
+        }
+        sx = 3;
+        sz = 3;
 
         float xv = (float) x / oc->xDim;
         float yv = (float) y / oc->yDim;

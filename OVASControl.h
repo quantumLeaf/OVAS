@@ -22,6 +22,7 @@ class Feature;
 class AreaFeature;
 class StepToParamConverter;
 class ViewEvaluator;
+class PathVisualiser;
 
 using namespace std;
 
@@ -69,6 +70,8 @@ public:
     ViewEvaluator* viewEvaluator;
     StepToParamConverter* stepToParamConverter;
     GeoSphere* geoSphere;
+    PathVisualiser* pathVisualiser;
+    string* resultsPath;
     int currentStep;
     int currentView;
   

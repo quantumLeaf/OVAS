@@ -39,6 +39,7 @@ public:
 
     }
 
+    float* getPoint(float scale=1);
 
 private:
 

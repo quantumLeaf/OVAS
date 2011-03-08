@@ -21,6 +21,8 @@
 #include <vtkProperty.h>
 #include <vtkWindowToImageFilter.h>
 #include <vtkPNGWriter.h>
+#include <vtkSphereSource.h>
+
 
 
 #endif	/* VTKESSENTIALS_H */

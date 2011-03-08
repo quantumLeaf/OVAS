@@ -143,6 +143,8 @@ void ViewEvaluator::outputView(GeoPoint* view, string filename) {
     renderWindow->Render();
     // if (view == 275) cout << " the worst is " << 275 << " OVA " << OVAData[275][0] << OVAData[275][1] << endl;
     windowToImageFilter->Update();
+    filename=*(oc->resultsPath)+filename;
+    cout<<"OUTPUTTING to "<<filename<<endl;
     writer->SetFileName(filename.c_str());
     writer->Write();
     

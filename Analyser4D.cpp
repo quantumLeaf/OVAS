@@ -7,6 +7,7 @@
 
 #include "Analyser4D.h"
 #include "InfoData.h"
+#include "PathVisualiser.h"
 
 Analyser4D::Analyser4D() {
     oc = new OVASControl();
@@ -14,9 +15,28 @@ Analyser4D::Analyser4D() {
     oc->geoSequence = new GeoSequence(oc->geoSphere);
     oc->features = new vector<Feature*>();
     oc->viewEvaluator = new ViewEvaluator(oc);
+    oc->pathVisualiser=new PathVisualiser(oc);
     // oc->volume4D=new Volume4D(oc);
     oc->a3d = new Analyser3D(oc);
     oc->filename = new string("");
+
+    int startTime = time(NULL);
+    char *command = new char[100];
+    char* dir = new char[100];
+    
+    sprintf(command, "mkdir /home/zoizoi/psyforge/OVASRunData/run%d", (int) startTime);
+    system(command);
+    sprintf(command, "mkdir /home/zoizoi/psyforge/OVASRunData/run%d/codeDump", (int) startTime);
+    system(command);
+    sprintf(command, "cp *.cpp /home/zoizoi/psyforge/OVASRunData/run%d/codeDump", (int) startTime);
+    system(command);
+    sprintf(command, "cp *.h /home/zoizoi/psyforge/OVASRunData/run%d/codeDump", (int) startTime);
+    system(command);
+
+    sprintf(dir, "/home/zoizoi/psyforge/OVASRunData/run%d/", (int) startTime);
+    oc->resultsPath=new string(dir);
+    
+
 }
 
 Analyser4D::Analyser4D(const Analyser4D& orig) {
@@ -118,8 +138,6 @@ void Analyser4D::loadConfig(string filename) {
 }
 
 void Analyser4D::analyse() {
-
-
     cout << "analysing all " << numSteps << "steps" << endl;
     for (int i = 0; i < numSteps; i++) {
         oc->volume4D->setToStep(i);
@@ -127,8 +145,6 @@ void Analyser4D::analyse() {
         oc->a3d->evalEachView();
         oc->currentStep++;
     }
-
-
 }
 
 void Analyser4D::findOptimalPath() {
@@ -144,13 +160,14 @@ void Analyser4D::findAndOutputPaths(){
     cout<<numFeatures<<" features"<<endl;
     vector<Feature*>::iterator it;
     int f=0;
-    for (it = oc->features->begin(); it != oc->features->end(); it++,f++) {
-        if(f==0) (*it)->setWeight(1);
-        if(f==1) (*it)->setWeight(0);
-    }
+//    for (it = oc->features->begin(); it != oc->features->end(); it++,f++) {
+//        if(f==0) (*it)->setWeight(1);
+//        if(f==1) (*it)->setWeight(0);
+//    }
     findOptimalPath();
-    outputPath("./results/area");
-    outputBVs("./results/bvs");
+    outputPath("area");
+    //outputBVs("bvs");
+    outputPathVis("pathVis.png");
     
 //    f=0;
 //    for (it = oc->features->begin(); it != oc->features->end(); it++,f++) {
@@ -170,6 +187,9 @@ void Analyser4D::findAndOutputPaths(){
 
 }
 
+void Analyser4D::outputPathVis(string filename) {
+    oc->pathVisualiser->VisualisePath(oc->path,oc->numSteps);
+}
 void Analyser4D::outputPath(string filestem) {
 
 

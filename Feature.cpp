@@ -27,6 +27,7 @@ Feature::Feature(float weight,OVASControl* o) : weight(weight),oc(o) {
     colourB=1;
     colourG=0;
     colourR=0;
+    cout<<"created feature w "<<weight<<endl;
  //   Feature();
 }
 
@@ -62,6 +63,12 @@ void Feature::scoreFeature(GeoPoint* view) {
     float viewRange = 3;
     camera->SetPosition(viewRange * view->getx(), viewRange * view->gety(), viewRange * view->getz());
     renderWindow->Render();
+//     vtkSmartPointer<vtkRenderWindowInteractor> renderWindowInteractor =
+//    vtkSmartPointer<vtkRenderWindowInteractor>::New();
+//  renderWindowInteractor->SetRenderWindow(renderWindow);
+
+  
+ // renderWindowInteractor->Start();
     //vtkSmartPointer<vtkRenderWindowInteractor> renderWindowInteractor =vtkSmartPointer<vtkRenderWindowInteractor>::New();
     //renderWindowInteractor->SetRenderWindow(renderWindow);
 
@@ -90,6 +97,7 @@ int Feature::countColour(float r, float g, float b, FrameBuffer* fb) {
 }
 
 float* Feature::getEvaluatedStepData(int step){
+    //cout<<"weight this is "<<weight<<endl;
     float* data=new float[oc->geoSphere->getNumVs()];
     for(int i=0;i<oc->geoSphere->getNumVs();i++){
         float maxValue = log2(300 * 300);

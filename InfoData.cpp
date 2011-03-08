@@ -44,7 +44,7 @@ int* InfoData::findOptimalPath() {
     infoSheet->outputInfoData("thisData.txt");
     //infoSheet->loadInfo("thisData.txt");
 
-    infoSheet->calcMaxInfo();
+    //infoSheet->calcMaxInfo();
     int* path=infoSheet->findPath();
     return path;
 }
