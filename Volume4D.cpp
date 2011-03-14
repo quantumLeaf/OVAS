@@ -63,4 +63,18 @@ void Volume4D::updateActor(){
     contourer->Modified();
 }
 
+void Volume4D::testReebGraph(){
 
+    cout<<" centre data val "<<getVoxelValue(16,16,16,1)<<endl;
+    vtkSmartPointer<vtkThreshold> threshold=vtkSmartPointer<vtkThreshold>::New();
+    threshold->SetInput(vtkVol);
+    threshold->ThresholdByUpper(0);//scalars are all postive so threshold all
+    vtkSmartPointer<vtkUnstructuredGrid> unstructuredData=threshold->GetOutput();
+    threshold->Update();
+
+    vtkSmartPointer<vtkReebGraph> reebGraph=vtkSmartPointer<vtkReebGraph>::New();
+    reebGraph->Build(unstructuredData,(vtkIdType)0);
+    cout<<"reeb graph built!"<<endl;
+    cout<<" vcount "<<reebGraph->GetNumberOfVertices()<<endl;
+
+}

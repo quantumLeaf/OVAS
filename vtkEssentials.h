@@ -22,6 +22,10 @@
 #include <vtkWindowToImageFilter.h>
 #include <vtkPNGWriter.h>
 #include <vtkSphereSource.h>
+#include <vtkThreshold.h>
+#include <vtkReebGraph.h>
+#include <vtkUnstructuredGrid.h>
+
 
 
 

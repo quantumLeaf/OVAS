@@ -216,7 +216,6 @@ void Analyser4D::outputBVs(string filestem) {
         string filename(filestem);
         stringstream s;
         s << i;
-        filename+=s.str();
         filename+=".png";
 
         oc->viewEvaluator->outputView(oc->geoSphere->getView(oc->bestViews[i]), filename.c_str());
@@ -224,6 +223,10 @@ void Analyser4D::outputBVs(string filestem) {
     }
 }
 
-
+void Analyser4D::testReebGraph(){
+    oc->volume4D->setToStep(0);
+    oc->volume4D->testReebGraph();
+    
+}
 
 

@@ -21,10 +21,11 @@ int main(int argc, char** argv) {
     Analyser4D* a4d=new Analyser4D;
     a4d->setFile("./ovas.config");
     a4d->init();
-    a4d->analyse();
+    //a4d->analyse();
+    a4d->testReebGraph();
     //a4d->findOptimalPath();
     //a4d->outputPath("outputPath");
-    a4d->findAndOutputPaths();
+   // a4d->findAndOutputPaths();
     
 }
 

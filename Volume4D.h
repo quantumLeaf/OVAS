@@ -21,6 +21,7 @@ public:
     
     virtual float getVoxelValue(int x,int y,int z,int step){ return 0;}
     void updateActor();
+    void testReebGraph();
    
 protected:
     OVASControl* oc;

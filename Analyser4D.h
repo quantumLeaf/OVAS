@@ -39,7 +39,7 @@ public:
     void analyse();
     void findOptimalPath();
     void findAndOutputPaths();
-
+    void testReebGraph();
     void outputView(int view, char* filename);
     void outputPath(string filestem);
     void outputBVs(string filestem);
