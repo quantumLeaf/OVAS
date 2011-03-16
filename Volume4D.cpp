@@ -64,8 +64,8 @@ void Volume4D::updateActor(){
 }
 
 void Volume4D::testReebGraph(){
+    //vtkVol->SetScalarComponentFromFloat(i, j, k, 0, val);
 
-    cout<<" centre data val "<<getVoxelValue(16,16,16,1)<<endl;
     vtkSmartPointer<vtkThreshold> threshold=vtkSmartPointer<vtkThreshold>::New();
     threshold->SetInput(vtkVol);
     threshold->ThresholdByUpper(0);//scalars are all postive so threshold all
