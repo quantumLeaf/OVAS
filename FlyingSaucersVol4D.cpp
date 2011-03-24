@@ -10,7 +10,11 @@
 FlyingSaucersVol4D::FlyingSaucersVol4D(OVASControl* oc, int numSaucers) : ImplicitVolume4D(oc) {
     saucers=new vector<MovingAAElipsoid*>();
     for (int i=0;i<numSaucers;i++){
-        saucers->push_back(new MovingAAElipsoid(0,0,0,0,0,0,0,0,0,1));
+        srand(27);
+        float x=rand(),y=rand(),z=rand(),vx=rand()/4,vy=(vx/5)*rand(),vz=(vx/5)*rand();
+        float sx,sy,sz;
+        sx=sy=sz=1;
+        saucers->push_back(new MovingAAElipsoid(oc,x,y,z,vx,vy,vz,sx,sy,sz,1));
     }
     
 }
@@ -105,8 +109,11 @@ float FlyingSaucersVol4D::getVoxelValue(int x, int y, int z, int step) {
     float time = oc->stepToParamConverter->getParamForStep(step);
     float tFraction = oc->stepToParamConverter->getParamFractionForStep(step);
     int numSaucers = saucers->size();
-    for (int i=0;i<numSaucers;i++){
-
+    vector<MovingAAElipsoid*>::iterator it;
+    float totalVal=0;
+    for (it=saucers->begin();it!=saucers->end();it++){
+        MovingAAElipsoid* saucer=*(it);
+        totalVal+=saucer->getContribAt(x,y,z,step);
     }
     
 

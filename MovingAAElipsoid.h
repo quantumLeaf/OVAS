@@ -8,15 +8,20 @@
 #ifndef MOVINGAAELIPSOID_H
 #define	MOVINGAAELIPSOID_H
 
+#include "OVASControl.h"
+
+
 class MovingAAElipsoid {
 public:
-    MovingAAElipsoid(float px,float py,float pz,float vx,float vy,float vz,float sx,float sy,float sz,float w);
+    MovingAAElipsoid(OVASControl* oc,float px,float py,float pz,float vx,float vy,float vz,float sx,float sy,float sz,float w);
     MovingAAElipsoid(const MovingAAElipsoid& orig);
     virtual ~MovingAAElipsoid();
-    float getContribAt(int x,int y,int z,int t);
+    float getContribAt(int x,int y,int z,int step);
 
 
 private:
+    OVASControl* oc;
+    float px,py,pz,vx,vy,vz,sx,sy,sz,weight;
 
 };
 
