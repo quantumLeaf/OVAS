@@ -1,6 +1,7 @@
-PROJECT (VAS)
+PROJECT (OVAS)
 cmake_minimum_required(VERSION 2.6)
 
+FIND_PACKAGE(VXL)
 
 
 FIND_PACKAGE(VTK REQUIRED)
@@ -18,11 +19,13 @@ INCLUDE(${VTK_USE_FILE})
 #ENDIF(ITK_FOUND)
 
 
-include_directories (${VAS_SOURCE_DIR})   
+#include_directories (${VAS_SOURCE_DIR})   
+
+include_directories (${VAS_SOURCE_DIR} "/usr/local/include/vxl/core/" "/usr/local/include/vxl/vcl/")
 
 
-ADD_EXECUTABLE(testOVAS testOVAS.cpp Analyser4D.cpp abstractFeature.cpp  Feature.cpp      ImplicitVolume4D.cpp
-Analyser3D.cpp GeoPoint.cpp     StepToParamConverter.cpp
-       GeoSequence.cpp GeoSphere.cpp    Volume4D.cpp MetaballsVol4D
+ADD_EXECUTABLE(testOVAS testOVAS.cpp Analyser4D.cpp abstractFeature.cpp  Feature.cpp ImplicitVolume4D.cpp
+Analyser3D.cpp GeoPoint.cpp StepToParamConverter.cpp
+       GeoSequence.cpp GeoSphere.cpp    Volume4D.cpp MetaballsVol4D FeatureWeights.cpp ViewEvaluator.cpp testVol4D.cpp OVASControl.cpp FrameBuffer.cpp TemporalChangeFeature.cpp arraytools.h AreaFeature.cpp InfoSheet.cpp InfoData.cpp FlyingSaucersVol4D.cpp PathVisualiser.cpp TemporalChangeFeature2.cpp MovingAAElipsoid.cpp
 ) 
-TARGET_LINK_LIBRARIES(testOVAS vtkWidgets vtkRendering vtkHybrid)
+TARGET_LINK_LIBRARIES(testOVAS vtkWidgets vtkRendering vtkHybrid vnl)
