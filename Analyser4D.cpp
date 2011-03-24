@@ -10,6 +10,7 @@
 #include "PathVisualiser.h"
 
 Analyser4D::Analyser4D() {
+    //TemporalChangeFeature2 a;
     oc = new OVASControl();
     oc->geoSphere = new GeoSphere();
     oc->geoSequence = new GeoSequence(oc->geoSphere);
@@ -91,14 +92,11 @@ void Analyser4D::loadConfig(string filename) {
 
                 gsfilename = "./sphereData/" + gsfilename;
                 oc->geoSphere->loadGeoSphereFile(gsfilename);
-
                 cout << " is " << oc->geoSphere->getNumVs() << endl;
-
-
                    oc->features->push_back(new Feature(wArea,oc));
                 //    oc->features->push_back(new Feature(wTop,oc));
                 //   oc->features->push_back(new Feature(wCurv,oc));
-                oc->features->push_back(new TemporalChangeFeature(wtChange, oc));
+                oc->features->push_back(new TemporalChangeFeature2(wtChange, oc));
                 if (screenRend == "onScreen") {
                     oc->viewEvaluator->setScreenRenderOn();
                 }
@@ -108,10 +106,8 @@ void Analyser4D::loadConfig(string filename) {
                 } else {
                     //frame->ignoreAreaOnCriticalFrame = false;
                 }
-
                 if (showInterest == "showInterest") {
                 }
-
             }
 
             if (command == "metaballs") {
@@ -131,7 +127,7 @@ void Analyser4D::loadConfig(string filename) {
 
                 oc->numSteps = numSteps;
                 oc->xDim = oc->yDim = oc->zDim = dims;
-                oc->volume4D = dynamic_cast<Volume4D*> (new FlyingSaucersVol4D(oc));
+                oc->volume4D = dynamic_cast<Volume4D*> (new FlyingSaucersVol4D(oc,1));
             }
         }
     }
@@ -165,7 +161,7 @@ void Analyser4D::findAndOutputPaths(){
 //        if(f==1) (*it)->setWeight(0);
 //    }
     findOptimalPath();
-    outputPath("area");
+    outputPath("change");
     //outputBVs("bvs");
     outputPathVis("pathVis.png");
     
@@ -226,7 +222,6 @@ void Analyser4D::outputBVs(string filestem) {
 void Analyser4D::testReebGraph(){
     oc->volume4D->setToStep(0);
     oc->volume4D->testReebGraph();
-    
 }
 
 

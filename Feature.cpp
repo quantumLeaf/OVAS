@@ -64,9 +64,9 @@ void Feature::scoreFeature(GeoPoint* view) {
     camera->SetPosition(viewRange * view->getx(), viewRange * view->gety(), viewRange * view->getz());
     renderWindow->Render();
 
-    vtkSmartPointer<vtkRenderWindowInteractor> renderWindowInteractor =vtkSmartPointer<vtkRenderWindowInteractor>::New();
-    renderWindowInteractor->SetRenderWindow(renderWindow);
-    renderWindowInteractor->Start();
+//    vtkSmartPointer<vtkRenderWindowInteractor> renderWindowInteractor =vtkSmartPointer<vtkRenderWindowInteractor>::New();
+//    renderWindowInteractor->SetRenderWindow(renderWindow);
+//    renderWindowInteractor->Start();
    
     scoreData[oc->currentStep][oc->currentView]=countColour(framebuffer);
    

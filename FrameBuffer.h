@@ -23,7 +23,13 @@ public:
         len = size[0] * size[1];
         data = renderWindow->GetRGBAPixelData(0, 0, (size[0] - 1), (size[1] - 1), 0);
     }
-
+    float* copyData(){
+        float* dataCopy=new float[len]();
+        for(int i=0;i<len;i++){
+            dataCopy[i]=data[i];
+        }
+        return dataCopy;
+    }
     float* getData() {
         return data;
     }

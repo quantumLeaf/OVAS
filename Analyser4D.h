@@ -20,6 +20,8 @@
 #include "FeatureWeights.h"
 #include "OVASControl.h"
 #include "TemporalChangeFeature.h"
+#include "TemporalChangeFeature2.h"
+
 using namespace std;
 
 class Analyser4D {
