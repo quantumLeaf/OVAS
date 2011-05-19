@@ -26,8 +26,8 @@ ViewEvaluator::ViewEvaluator(OVASControl* o) {
     camera->SetFocalPoint(0.5, 0.5, 0.5);
     camera->SetParallelProjection(1);
     camera->SetClippingRange(0, 8);
-    upSet=false;
-    upV=new double[3]();
+    upSet = false;
+    upV = new double[3]();
 }
 
 ViewEvaluator::ViewEvaluator(const ViewEvaluator& orig) {
@@ -60,7 +60,7 @@ void ViewEvaluator::evaluate(GeoPoint* view) {
     vector<Feature*>::iterator it;
 
     for (it = oc->features->begin(); it != oc->features->end(); it++) {
-       (*it)->scoreFeature(view);
+        (*it)->scoreFeature(view);
     }
     oc->currentView++;
 
@@ -105,14 +105,14 @@ void ViewEvaluator::outputView(GeoPoint* view, string filename) {
     oc->volActor->GetProperty()->SetDiffuse(0.7); //SetShading(0);
     oc->volActor->GetProperty()->SetSpecular(0.7); //SetShading(0);
     oc->volActor->GetProperty()->SetInterpolationToPhong();
-    
+
     vtkSmartPointer<vtkWindowToImageFilter> windowToImageFilter = vtkSmartPointer<vtkWindowToImageFilter>::New();
     windowToImageFilter->SetInput(renderWindow);
     vtkSmartPointer<vtkPNGWriter> writer = vtkSmartPointer<vtkPNGWriter>::New();
     writer->SetInput(windowToImageFilter->GetOutput());
     float viewRange = 3;
     vnl_vector<float> pos(3);
-    double* upV=new double[3]();
+    double* upV = new double[3]();
     pos[0] = viewRange * view->getx();
     pos[1] = viewRange * view->gety();
     pos[2] = viewRange * view->getz();
@@ -121,7 +121,7 @@ void ViewEvaluator::outputView(GeoPoint* view, string filename) {
     //cout << "outputing angle " << view << "with interest " << OVAData[view][2] << " and area " << OVAData[view][3] << " " << OVAData[view][1] << " : " << OVAData[view][0] << endl;
     if (!upSet) {
         upSet = true;
-        upV=camera->GetViewUp();
+        upV = camera->GetViewUp();
     }
     //upV[0]=0;upV[1]=1;upV[2]=0;
     camera->SetViewUp(upV);
@@ -137,18 +137,42 @@ void ViewEvaluator::outputView(GeoPoint* view, string filename) {
     north = northPole - here;
     // camera->SetViewUp(north[0], north[1], north[2]);
     camera->OrthogonalizeViewUp();
-    upV=camera->GetViewUp();
+    upV = camera->GetViewUp();
     cout << " up is " << upV[0] << " " << upV[1] << " " << upV[2] << endl;
     cout << " view is " << pos[0] << " " << pos[1] << " " << pos[2] << endl;
     renderWindow->Render();
     // if (view == 275) cout << " the worst is " << 275 << " OVA " << OVAData[275][0] << OVAData[275][1] << endl;
     windowToImageFilter->Update();
-    filename=*(oc->resultsPath)+filename;
-    cout<<"OUTPUTTING to "<<filename<<endl;
+    filename = *(oc->resultsPath) + filename;
+    cout << "OUTPUTTING to " << filename << endl;
     writer->SetFileName(filename.c_str());
     writer->Write();
-    
+
 
     renderWindow->Render();
     climbDownFeatures();
+}
+
+void ViewEvaluator::interact() {
+
+
+
+    if (oc->rwiSet == false) {
+        oc->rwi =
+                vtkSmartPointer<vtkRenderWindowInteractor>::New();
+        oc->rwi->SetRenderWindow(renderWindow);
+        oc->rwiSet = true;
+    }
+
+    //Add the actors to the scene
+    renderer->AddActor(oc->volActor);
+    renderer->SetBackground(0.3, 0, 0); // Background color dark red
+
+    //Render and interact
+    renderWindow->Render();
+
+    oc->rwi->Start();
+  
+    
+
 }

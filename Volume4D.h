@@ -10,6 +10,22 @@
 #include "StepToParamConverter.h"
 #include "vtkEssentials.h"
 #include "OVASControl.h"
+#include "Data.h"
+#include "Mesh.h"
+extern "C" 
+{
+#include <tourtre.h>
+}
+
+#include <unistd.h>
+
+using std::cin;
+using std::cout;
+using std::clog;
+using std::cerr;
+using std::endl;
+
+
 
 class Volume4D {
 public:
@@ -22,7 +38,12 @@ public:
     virtual float getVoxelValue(int x,int y,int z,int step){ return 0;}
     void updateActor();
     void testReebGraph();
-   
+    void testContourTree();
+    int DisplayReebGraph(vtkReebGraph *g);
+    int DisplayVolumeSkeleton(vtkUnstructuredGrid* vtkNotUsed(volumeMesh), vtkTable *skeleton);
+//    size_t neighbors ( size_t v, size_t * nbrs, void * d );
+//    double value ( size_t v, void * d );
+    
 protected:
     OVASControl* oc;
     vtkSmartPointer<vtkImageData> vtkVol;

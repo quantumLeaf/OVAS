@@ -26,9 +26,9 @@ public:
     virtual ~Feature();
     
     virtual void initFeature(){};
-    void addActor(vtkSmartPointer<vtkActor> actor){
-        actors.push_back(actor);
-    }
+//    void addActor(vtkSmartPointer<vtkActor> actor){
+//        //actors.push_back(actor);
+//    }
     void readyRenderer(vtkSmartPointer<vtkRenderer> _renderer);
     void climbDown();
     virtual void scoreFeature(GeoPoint* view);

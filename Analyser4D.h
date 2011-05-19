@@ -42,6 +42,8 @@ public:
     void findOptimalPath();
     void findAndOutputPaths();
     void testReebGraph();
+    void testContourTree();
+    void interactSteps();
     void outputView(int view, char* filename);
     void outputPath(string filestem);
     void outputBVs(string filestem);

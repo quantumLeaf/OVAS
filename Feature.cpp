@@ -43,9 +43,9 @@ void Feature::readyRenderer(vtkSmartPointer<vtkRenderer> _renderer) {
     renderWindow = renderer->GetRenderWindow();
     camera = renderer->GetActiveCamera();
     std::vector< vtkSmartPointer<vtkActor> >::iterator it;
-    for (it = actors.begin(); it != actors.end(); it++) {
-        renderer->AddActor((*it));
-    }
+//    for (it = actors.begin(); it != actors.end(); it++) {
+//        renderer->AddActor((*it));
+//    }
     framebuffer = new FrameBuffer(renderer->GetRenderWindow());
 }
 

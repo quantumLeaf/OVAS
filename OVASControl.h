@@ -24,6 +24,7 @@ class StepToParamConverter;
 class ViewEvaluator;
 class PathVisualiser;
 
+
 using namespace std;
 
 class OVASControl {
@@ -31,6 +32,7 @@ public:
 
     OVASControl() {
         currentStep = currentView = 0;
+        rwiSet=false;
         
     };
     OVASControl(const OVASControl& orig);
@@ -78,6 +80,8 @@ public:
     int* path;
     int* bestViews;
     AreaFeature* areaFeature;
+    vtkSmartPointer<vtkRenderWindowInteractor> rwi;
+    bool rwiSet;
 private:
 
 };

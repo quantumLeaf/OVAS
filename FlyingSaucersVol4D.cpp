@@ -9,12 +9,18 @@
 
 FlyingSaucersVol4D::FlyingSaucersVol4D(OVASControl* oc, int numSaucers) : ImplicitVolume4D(oc) {
     saucers=new vector<MovingAAElipsoid*>();
+    srand(28);
     for (int i=0;i<numSaucers;i++){
-        srand(27);
-        float x=rand(),y=rand(),z=rand(),vx=rand()/4,vy=(vx/5)*rand(),vz=(vx/5)*rand();
+        
+        float x=((float)rand())/RAND_MAX,y=((float)rand())/RAND_MAX,z=((float)rand())/RAND_MAX,vx=(((float)rand())/RAND_MAX)/2-0.25,vy=(vx/5)*((float)rand())/RAND_MAX,vz=(vx/5)*((float)rand())/RAND_MAX;
+        x=0.2;y=0.5;z=0.1;
         float sx,sy,sz;
-        sx=sy=sz=1;
-        saucers->push_back(new MovingAAElipsoid(oc,x,y,z,vx,vy,vz,sx,sy,sz,1));
+        sy=sz=10;
+        sx=100;
+        float w=4;
+       
+        saucers->push_back(new MovingAAElipsoid(oc,x,y,z,vx,vy,vz,sx,sy,sz,w));
+        cout<<" add saucer "<<x*oc->xDim<<" "<<y*oc->yDim<<" "<<z*oc->zDim<<endl;
     }
     
 }
@@ -105,17 +111,20 @@ FlyingSaucersVol4D::~FlyingSaucersVol4D() {
 
 
 float FlyingSaucersVol4D::getVoxelValue(int x, int y, int z, int step) {
-
+    
     float time = oc->stepToParamConverter->getParamForStep(step);
     float tFraction = oc->stepToParamConverter->getParamFractionForStep(step);
-    int numSaucers = saucers->size();
+    
     vector<MovingAAElipsoid*>::iterator it;
     float totalVal=0;
     for (it=saucers->begin();it!=saucers->end();it++){
         MovingAAElipsoid* saucer=*(it);
-        totalVal+=saucer->getContribAt(x,y,z,step);
+        
+        totalVal+=saucer->getContribAt(x,y,z,step);//*(0.9+0.2*((float)rand())/RAND_MAX);
     }
-    
+    //cout<<"returning tv "<<totalVal<<endl;
+    //return 0;
+    return totalVal;
 
 
 }

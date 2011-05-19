@@ -35,6 +35,7 @@ public:
     void setScreenRenderOn(){
         onScreen=true;
     }
+    void interact();
     Volume4D* vol;
     
 private:

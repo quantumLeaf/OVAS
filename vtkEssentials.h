@@ -25,9 +25,18 @@
 #include <vtkThreshold.h>
 #include <vtkReebGraph.h>
 #include <vtkUnstructuredGrid.h>
-
-
-
+#include <vtkUnstructuredGridToReebGraphFilter.h>
+#include <vtkGeometryFilter.h>
+#include <vtkAppendFilter.h>
+#include <vtkPointData.h>
+#include <vtkDataSetTriangleFilter.h>
+#include <vtkReebGraphSimplificationFilter.h>
+#include <vtkTable.h>
+#include <vtkDoubleArray.h>
+#include <vtkVariant.h>
+#include <vtkVariantArray.h>
+#include <vtkEdgeListIterator.h>
+#include <vtkReebGraphVolumeSkeletonFilter.h>
 
 #endif	/* VTKESSENTIALS_H */
 

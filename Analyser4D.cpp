@@ -16,7 +16,7 @@ Analyser4D::Analyser4D() {
     oc->geoSequence = new GeoSequence(oc->geoSphere);
     oc->features = new vector<Feature*>();
     oc->viewEvaluator = new ViewEvaluator(oc);
-    oc->pathVisualiser=new PathVisualiser(oc);
+    oc->pathVisualiser = new PathVisualiser(oc);
     // oc->volume4D=new Volume4D(oc);
     oc->a3d = new Analyser3D(oc);
     oc->filename = new string("");
@@ -24,7 +24,7 @@ Analyser4D::Analyser4D() {
     int startTime = time(NULL);
     char *command = new char[100];
     char* dir = new char[100];
-    
+
     sprintf(command, "mkdir /home/zoizoi/psyforge/OVASRunData/run%d", (int) startTime);
     system(command);
     sprintf(command, "mkdir /home/zoizoi/psyforge/OVASRunData/run%d/codeDump", (int) startTime);
@@ -35,8 +35,8 @@ Analyser4D::Analyser4D() {
     system(command);
 
     sprintf(dir, "/home/zoizoi/psyforge/OVASRunData/run%d/", (int) startTime);
-    oc->resultsPath=new string(dir);
-    
+    oc->resultsPath = new string(dir);
+
 
 }
 
@@ -93,10 +93,11 @@ void Analyser4D::loadConfig(string filename) {
                 gsfilename = "./sphereData/" + gsfilename;
                 oc->geoSphere->loadGeoSphereFile(gsfilename);
                 cout << " is " << oc->geoSphere->getNumVs() << endl;
-                   oc->features->push_back(new Feature(wArea,oc));
+                oc->features->push_back(new Feature(wArea, oc));
                 //    oc->features->push_back(new Feature(wTop,oc));
                 //   oc->features->push_back(new Feature(wCurv,oc));
                 oc->features->push_back(new TemporalChangeFeature2(wtChange, oc));
+
                 if (screenRend == "onScreen") {
                     oc->viewEvaluator->setScreenRenderOn();
                 }
@@ -115,19 +116,25 @@ void Analyser4D::loadConfig(string filename) {
                 lineStream >> twist;
                 cout << "\tNew Metaballs twist:" << twist << endl;
                 //MetaballsVol4D*
-
                 oc->numSteps = numSteps;
                 oc->xDim = oc->yDim = oc->zDim = dims;
                 oc->volume4D = dynamic_cast<Volume4D*> (new MetaballsVol4D(oc, twist));
             }
             if (command == "flyingsaucers") {
-                
-                cout << "\tNew Flying Saucers " <<dims<< endl;
+                cout << "\tNew Flying Saucers " << dims << endl;
                 //MetaballsVol4D*
-
                 oc->numSteps = numSteps;
                 oc->xDim = oc->yDim = oc->zDim = dims;
-                oc->volume4D = dynamic_cast<Volume4D*> (new FlyingSaucersVol4D(oc,1));
+                oc->volume4D = dynamic_cast<Volume4D*> (new FlyingSaucersVol4D(oc, 1));
+            }
+            if (command == "savedVolint") {
+                string fileName;
+                lineStream >> fileName;
+                cout << "\tNLoading Vol " << filename << endl;
+                //MetaballsVol4D*
+                oc->numSteps = numSteps;
+                oc->xDim = oc->yDim = oc->zDim = dims;
+                oc->volume4D = dynamic_cast<Volume4D*> (new FlyingSaucersVol4D(oc, 1));
             }
         }
     }
@@ -147,45 +154,46 @@ void Analyser4D::findOptimalPath() {
 
     InfoData* infoData = new InfoData(oc);
     oc->path = infoData->findOptimalPath();
-    oc->bestViews=infoData->findBestViews();
+    oc->bestViews = infoData->findBestViews();
 
 }
 
-void Analyser4D::findAndOutputPaths(){
-    int numFeatures=oc->features->size();
-    cout<<numFeatures<<" features"<<endl;
+void Analyser4D::findAndOutputPaths() {
+    int numFeatures = oc->features->size();
+    cout << numFeatures << " features" << endl;
     vector<Feature*>::iterator it;
-    int f=0;
-//    for (it = oc->features->begin(); it != oc->features->end(); it++,f++) {
-//        if(f==0) (*it)->setWeight(1);
-//        if(f==1) (*it)->setWeight(0);
-//    }
+//    int f = 0;
+//        for (it = oc->features->begin(); it != oc->features->end(); it++,f++) {
+//            if(f==0) (*it)->setWeight(1);
+//            if(f==1) (*it)->setWeight(0);
+//        }
     findOptimalPath();
     outputPath("change");
     //outputBVs("bvs");
     outputPathVis("pathVis.png");
-    
-//    f=0;
-//    for (it = oc->features->begin(); it != oc->features->end(); it++,f++) {
-//        if(f==0) (*it)->setWeight(0);
-//        if(f==1) (*it)->setWeight(1);
-//    }
-//    findOptimalPath();
-//    outputPath("tchange");
-//
-//    f=0;
-//    for (it = oc->features->begin(); it != oc->features->end(); it++,f++) {
-//        if(f==0) (*it)->setWeight(1);
-//        if(f==1) (*it)->setWeight(1);
-//    }
-//    findOptimalPath();
-//    outputPath("comb");
+
+    //    f=0;
+    //    for (it = oc->features->begin(); it != oc->features->end(); it++,f++) {
+    //        if(f==0) (*it)->setWeight(0);
+    //        if(f==1) (*it)->setWeight(1);
+    //    }
+    //    findOptimalPath();
+    //    outputPath("tchange");
+    //
+    //    f=0;
+    //    for (it = oc->features->begin(); it != oc->features->end(); it++,f++) {
+    //        if(f==0) (*it)->setWeight(1);
+    //        if(f==1) (*it)->setWeight(1);
+    //    }
+    //    findOptimalPath();
+    //    outputPath("comb");
 
 }
 
 void Analyser4D::outputPathVis(string filename) {
-    oc->pathVisualiser->VisualisePath(oc->path,oc->numSteps);
+    oc->pathVisualiser->VisualisePath(oc->path, oc->numSteps);
 }
+
 void Analyser4D::outputPath(string filestem) {
 
 
@@ -195,8 +203,8 @@ void Analyser4D::outputPath(string filestem) {
         string filename(filestem);
         stringstream s;
         s << i;
-        filename+=s.str();
-        filename+=".png";
+        filename += s.str();
+        filename += ".png";
 
         oc->viewEvaluator->outputView(oc->geoSphere->getView(oc->path[i]), filename.c_str());
 
@@ -212,16 +220,30 @@ void Analyser4D::outputBVs(string filestem) {
         string filename(filestem);
         stringstream s;
         s << i;
-        filename+=".png";
-
+        filename += ".png";
         oc->viewEvaluator->outputView(oc->geoSphere->getView(oc->bestViews[i]), filename.c_str());
-
     }
 }
 
-void Analyser4D::testReebGraph(){
+void Analyser4D::testContourTree() {
+    oc->volume4D->setToStep(0);
+    oc->volume4D->testContourTree();
+}
+void Analyser4D::testReebGraph() {
     oc->volume4D->setToStep(0);
     oc->volume4D->testReebGraph();
 }
 
-
+void Analyser4D::interactSteps() {
+    oc->volActor->GetProperty()->SetAmbient(0.3);
+    oc->volActor->GetProperty()->SetDiffuse(0.7); //SetShading(0);
+    oc->volActor->GetProperty()->SetSpecular(0.7); //SetShading(0);
+    oc->volActor->GetProperty()->SetInterpolationToPhong();
+    for (int step = 0; step < 1; step++) {
+        cout<<"setting to "<<step<<endl;
+        oc->volume4D->setToStep(step);
+        oc->volume4D->updateActor();
+        cout<<"set to "<<step<<endl;
+        oc->viewEvaluator->interact();
+    }
+}
