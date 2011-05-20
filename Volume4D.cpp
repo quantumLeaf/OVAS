@@ -65,6 +65,53 @@ void Volume4D::updateActor() {
     contourer->Modified();
 }
 
+void Volume4D::loadFloatVolume(string fileName){
+    
+int totalSize = oc->xDim*oc->yDim*oc->zDim;
+
+
+    std::fstream infile;
+
+    infile.open(fileName.c_str(), std::ios::in);
+    if (!infile) {
+        std::clog << "could not open " << fileName << std::endl;
+        return;
+    }
+    
+    
+    float * floatData = new float [totalSize];
+    
+    infile.read((char*)floatData,totalSize*4);
+//    char* re1src=reinterpret_cast<char *>(&fd);
+//    char* re1dest=new char[4];
+//    re1dest[1]=re1src[2];
+//    re1dest[2]=re1src[1];
+//    re1dest[0]=re1src[3];
+//    re1dest[3]=re1src[0];
+    
+    
+    //endian_byte_swapper(re1dest,re1src);
+//    endian_byte_swapper(re1dest,re1src);
+    int voxCount=0;
+    for (int k = 0; k < oc->zDim; k++) {
+        for (int j = 0; j < oc->yDim; j++) {
+            for (int i = 0; i < oc->xDim; i++) {
+                vtkVol->SetScalarComponentFromFloat(i, j, k, 0, floatData[voxCount++]);
+            }
+        }
+    }
+    
+    float fmaxValue= floatData[0]; float fminValue = floatData[0];
+    for (uint i = 0; i < totalSize; i++) {
+        if (floatData[i] > fmaxValue) fmaxValue = floatData[i];
+        if (floatData[i] < fminValue) fminValue = floatData[i];
+    }
+    
+    
+    std::clog << "loaded vol max value was " << fmaxValue << " and min value was " << fminValue << std::endl;
+
+    return;
+}
 size_t neighbors(size_t v, size_t * nbrs, void * d) {
     Mesh * mesh = static_cast<Mesh*> (d);
     static std::vector<size_t> nbrsBuf;

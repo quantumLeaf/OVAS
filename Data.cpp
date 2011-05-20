@@ -218,24 +218,34 @@ bool Data::loadVol(const char * filename, int _size) {
     float * floatData = new float [totalSize];
     float fd;
     //infile.read((char*)floatData, totalSize * 4);
-  
+    cout << setprecision(16);
     infile.read((char*)&fd,4);
-    char* re1src=reinterpret_cast<char *>(&fd);
+    cout<<"fd on read "<<fd<<endl;
+    char* re=reinterpret_cast<char *>(&fd);
+    
     char* re1dest=new char[4];
-    re1dest[1]=re1src[2];
-    re1dest[2]=re1src[1];
-    re1dest[0]=re1src[3];
-    re1dest[3]=re1src[0];
+    char t=re[3];
+    re[3]=re[0];
+    re[0]=t;
+    t=re[2];
+    re[2]=re[1];
+    re[1]=t;
+    cout<<"fd post swap "<<fd<<endl;
+    endian_byte_swapper(re1dest,re);
+    float* fd2=reinterpret_cast<float*> (re);
+    float* fd3=reinterpret_cast<float*> (re1dest);
+    cout<<"fd2 post swap "<<fd2<<endl;
+    cout<<"fd3 post swap "<<fd3<<endl;
+   
+    
+    
     
     
     //endian_byte_swapper(re1dest,re1src);
 //    endian_byte_swapper(re1dest,re1src);
-    float* fd2=reinterpret_cast<float*> (re1dest);
-    uint* ui2=reinterpret_cast<uint*> (re1dest);
     
-    cout<<"fd1 "<<fd<<endl;
-    cout<<"fd2"<<*fd2<<endl;
-    cout<<"u12"<<*ui2<<endl;
+    
+    
 //    float* fd2;
 //    //unsigned int fd2=reinterpret_cast<uint>(fd);
 //    

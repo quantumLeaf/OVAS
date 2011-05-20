@@ -37,6 +37,8 @@ public:
     
     virtual float getVoxelValue(int x,int y,int z,int step){ return 0;}
     void updateActor();
+    void loadFloatVolume(string fileName);
+    
     void testReebGraph();
     void testContourTree();
     int DisplayReebGraph(vtkReebGraph *g);
