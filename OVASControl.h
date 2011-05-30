@@ -13,6 +13,7 @@
 #include <vector>
 #include <sstream>
 #include "vtkEssentials.h"
+#include <string>
 
 class GeoSequence;
 class GeoSphere;
@@ -66,6 +67,7 @@ public:
     vtkSmartPointer<vtkActor> volActor;
     GeoSequence* geoSequence;
     string* filename;
+    string* volDataFileName;
     Volume4D* volume4D;
     Analyser3D* a3d;
     vector<Feature*>* features;
@@ -74,6 +76,7 @@ public:
     GeoSphere* geoSphere;
     PathVisualiser* pathVisualiser;
     string* resultsPath;
+   
     int currentStep;
     int currentView;
   

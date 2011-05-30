@@ -234,8 +234,8 @@ bool Data::loadVol(const char * filename, int _size) {
     endian_byte_swapper(re1dest,re);
     float* fd2=reinterpret_cast<float*> (re);
     float* fd3=reinterpret_cast<float*> (re1dest);
-    cout<<"fd2 post swap "<<fd2<<endl;
-    cout<<"fd3 post swap "<<fd3<<endl;
+    cout<<"fd2 post swap "<<*fd2<<endl;
+    cout<<"fd3 post swap "<<*fd3<<endl;
    
     
     

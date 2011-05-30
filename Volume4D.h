@@ -12,6 +12,8 @@
 #include "OVASControl.h"
 #include "Data.h"
 #include "Mesh.h"
+#include <vector>
+#include "CriticalPoint.h"
 extern "C" 
 {
 #include <tourtre.h>
@@ -37,12 +39,17 @@ public:
     
     virtual float getVoxelValue(int x,int y,int z,int step){ return 0;}
     void updateActor();
-    void loadFloatVolume(string fileName);
+    void loadFloatVolume(string* fileName);
     
     void testReebGraph();
     void testContourTree();
+    void findCritcalPoints();
+    float evalPersistence(Data* data,ctBranch* b);
+    void addPersistentBranches(Data*,ctBranch*,float thresh);     
+    
     int DisplayReebGraph(vtkReebGraph *g);
     int DisplayVolumeSkeleton(vtkUnstructuredGrid* vtkNotUsed(volumeMesh), vtkTable *skeleton);
+    vector<CriticalPoint*>* criticalPoints;
 //    size_t neighbors ( size_t v, size_t * nbrs, void * d );
 //    double value ( size_t v, void * d );
     
@@ -51,7 +58,8 @@ protected:
     vtkSmartPointer<vtkImageData> vtkVol;
     vtkSmartPointer<vtkContourFilter> contourer;
     float* isoVal;
-   
+    unsigned char* charVol;
+    
     
    
 };

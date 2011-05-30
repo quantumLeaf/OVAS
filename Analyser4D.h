@@ -16,6 +16,7 @@
 #include "GeoSphere.h"
 #include "MetaballsVol4D.h"
 #include "FlyingSaucersVol4D.h"
+#include "LoadedVol4D.h"
 #include "Analyser3D.h"
 #include "FeatureWeights.h"
 #include "OVASControl.h"

@@ -53,6 +53,8 @@ a4d->interactSteps();
 //    a4d->analyse();
 //a4d->testReebGraph();
 a4d->testContourTree();
+
+
 //    //a4d->findOptimalPath();
 //    //a4d->outputPath("outputPath");
 //    a4d->findAndOutputPaths();

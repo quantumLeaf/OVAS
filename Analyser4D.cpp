@@ -94,7 +94,7 @@ void Analyser4D::loadConfig(string filename) {
                 oc->geoSphere->loadGeoSphereFile(gsfilename);
                 cout << " is " << oc->geoSphere->getNumVs() << endl;
                 oc->features->push_back(new Feature(wArea, oc));
-                //    oc->features->push_back(new Feature(wTop,oc));
+                oc->features->push_back(new TopologyFeature(wTop,oc));
                 //   oc->features->push_back(new Feature(wCurv,oc));
                 oc->features->push_back(new TemporalChangeFeature2(wtChange, oc));
 
@@ -127,14 +127,15 @@ void Analyser4D::loadConfig(string filename) {
                 oc->xDim = oc->yDim = oc->zDim = dims;
                 oc->volume4D = dynamic_cast<Volume4D*> (new FlyingSaucersVol4D(oc, 1));
             }
-            if (command == "savedVolint") {
-                string fileName;
-                lineStream >> fileName;
-                cout << "\tNLoading Vol " << filename << endl;
+            if (command == "savedRawVolFloat32") {
+                 string* dataFilename=new string();
+                lineStream >> *dataFilename;
+               
+                cout << "\tNLoading Vol " << dataFilename << endl;
                 //MetaballsVol4D*
-                oc->numSteps = numSteps;
+                oc->numSteps = 1;
                 oc->xDim = oc->yDim = oc->zDim = dims;
-                oc->volume4D = dynamic_cast<Volume4D*> (new FlyingSaucersVol4D(oc, 1));
+                oc->volume4D = dynamic_cast<Volume4D*> (new LoadedVol4D(oc, dataFilename));
             }
         }
     }
@@ -241,7 +242,9 @@ void Analyser4D::interactSteps() {
     oc->volActor->GetProperty()->SetInterpolationToPhong();
     for (int step = 0; step < 1; step++) {
         cout<<"setting to "<<step<<endl;
-        oc->volume4D->setToStep(step);
+        //oc->volume4D->setToStep(step);
+        oc->volume4D->findCritcalPoints();
+        
         oc->volume4D->updateActor();
         cout<<"set to "<<step<<endl;
         oc->viewEvaluator->interact();
