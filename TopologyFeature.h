@@ -13,12 +13,14 @@
 
 class TopologyFeature : public Feature{
 public:
+    
     TopologyFeature(float weight,OVASControl*);
     TopologyFeature(const TopologyFeature& orig);
     virtual ~TopologyFeature();
     void scoreFeature(GeoPoint* view);
     bool closeToCriticalIsoVal(float currentIso,CriticalPoint* point);
 private:
+    float pointIsoThreshold;
     
 };
 

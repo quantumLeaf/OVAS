@@ -25,9 +25,9 @@ Volume4D::Volume4D(OVASControl* o) {
     vtkVol->SetOrigin(0, 0, 0);
     vtkVol->SetSpacing(sp, sp, sp);
     vtkVol->AllocateScalars();
-    isoVal = new float(1.19);
+    oc->currentIso = 1.19;
     contourer->SetInput(vtkVol);
-    contourer->SetValue(0, *isoVal);
+    contourer->SetValue(0, oc->currentIso);
     contourer->Update();
     vtkSmartPointer<vtkPolyDataMapper> mapper = vtkSmartPointer<vtkPolyDataMapper>::New();
     mapper->SetInput(contourer->GetOutput());
@@ -47,9 +47,7 @@ Volume4D::~Volume4D() {
 }
 
 void Volume4D::setToStep(int step) {
-    float fmaxValue = 0;
-    float fminValue = 0;
-    float val;
+   
     loadFloatVolume(oc->volDataFileName);
 
 
@@ -119,7 +117,9 @@ void Volume4D::loadFloatVolume(string* fileName) {
     }
 
     std::clog << "loaded vol max value was " << fmaxValue << " and min value was " << fminValue << std::endl;
-
+    oc->isoRange=fmaxValue-fminValue;
+    oc->isoRangeThreshold=oc->isoRange/10;
+   
     return;
 }
 
@@ -152,7 +152,7 @@ float Volume4D::evalPersistence(Data* data, ctBranch* b) {
     sval = vtkVol->GetScalarComponentAsFloat(x, y, z, 0);
     float persistence = eval - sval;
     //if (persistence < 0) cout << "FOUND NEGATIVE PERSISTENCE Volume4D::evalPersistence(Data data,ctBranch* b)" << persistence<<endl;
-    return persistence;
+    return fabs(persistence);
 }
 
 void outputTree(std::ofstream & out, ctBranch * b) {
@@ -167,7 +167,7 @@ void outputTree(std::ofstream & out, ctBranch * b) {
 }
 
 void Volume4D::findCritcalPoints() {
-    setToStep(0);
+   // setToStep(0);
     cout << " building contour tree" << endl;
 
     Data data;
@@ -198,7 +198,7 @@ void Volume4D::findCritcalPoints() {
     data.convertIndex(id, x, y, z);
     int step = 0;
     float val = vtkVol->GetScalarComponentAsFloat(x, y, z, 0);
-    criticalPoints->push_back(new CriticalPoint(x, y, z, step, val));
+
     cout << "   found root id " << id << "location " << x << " " << y << " " << z << " val " << (int) data[id] << " voxval " << val << endl;
     cout << " persistance " << evalPersistence(&data, root) << endl;
     //data.convertIndex(data.maxId, x, y, z);
@@ -219,17 +219,29 @@ void Volume4D::findCritcalPoints() {
 
 void Volume4D::addPersistentBranches(Data* data, ctBranch* b, float thresh) {
     float persistence = evalPersistence(data, b);
-    if(persistence<-0.03) cout<<"warning stronger negative persistence "<<persistence<<endl;
+    //if(persistence<-0.03) cout<<"warning stronger negative persistence "<<persistence<<endl;
     if (persistence > thresh) {
         int extId = b->extremum;
         int sadId = b->saddle;
         float eval, sval;
         unsigned int x, y, z;
-        data->convertIndex(extId, x, y, z);
-        eval = vtkVol->GetScalarComponentAsFloat(x, y, z, 0);
-        data->convertIndex(sadId, x, y, z);
-        sval = vtkVol->GetScalarComponentAsFloat(x, y, z, 0);
         cout << "adding branch ex" << b->extremum << " sad: " << b->saddle << "with persistence " << persistence << endl;
+        data->convertIndex(extId, x, y, z);
+        if (!(x == 0 || x == oc->xDim || y == 0 || y == oc->yDim || z == 0 || z == oc->zDim)) {
+            eval = vtkVol->GetScalarComponentAsFloat(x, y, z, 0);
+            CriticalPoint* cp = new CriticalPoint(x, y, z, oc->currentStep, eval, oc->xDim, oc->yDim, oc->zDim);
+            criticalPoints->push_back(cp);
+            CriticalPoint* lastPoint = criticalPoints->back();
+            cout << "add new CP " << lastPoint->getXFloat() << " " << lastPoint->getYFloat() << " " << lastPoint->getZFloat() << " " << lastPoint->value << endl;
+        }
+        data->convertIndex(sadId, x, y, z);
+        if (!(x == 0 || x == oc->xDim || y == 0 || y == oc->yDim || z == 0 || z == oc->zDim)) {
+            sval = vtkVol->GetScalarComponentAsFloat(x, y, z, 0);
+            criticalPoints->push_back(new CriticalPoint(x, y, z, oc->currentStep, sval, oc->xDim, oc->yDim, oc->zDim));
+            CriticalPoint* lastPoint = criticalPoints->back();
+            cout << "add new CP " << lastPoint->getXFloat() << " " << lastPoint->getYFloat() << " " << lastPoint->getZFloat() << " " << lastPoint->value << endl;
+        }
+
         for (ctBranch * c = b->children.head; c != NULL; c = c->nextChild) {
 
             addPersistentBranches(data, c, thresh);

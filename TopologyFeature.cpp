@@ -20,6 +20,7 @@ TopologyFeature::TopologyFeature(float weight, OVASControl* oc) : Feature(weight
     colourB=0;
     colourG=0;
     colourR=1;
+    pointIsoThreshold=0.3;
     cout<<"new topology feature"<<endl;
 }
 
@@ -31,12 +32,11 @@ TopologyFeature::~TopologyFeature() {
 
 void TopologyFeature::scoreFeature(GeoPoint* view) {
    
-
     float viewRange = 3;
     camera->SetPosition(viewRange * view->getx(), viewRange * view->gety(), viewRange * view->getz());
     vector<CriticalPoint*>::iterator it;
     for (it=oc->volume4D->criticalPoints->begin();it!=oc->volume4D->criticalPoints->end();it++){
-        if (closeToCriticalIsoVal()) renderer->AddActor((*it)->getActor());
+        if (closeToCriticalIsoVal(oc->currentIso,(*it))) renderer->AddActor((*it)->getActor());
     }
     renderWindow->Render();
 
@@ -48,5 +48,10 @@ void TopologyFeature::scoreFeature(GeoPoint* view) {
         renderer->RemoveActor((*it)->getActor());
     }
     
+}
+
+bool TopologyFeature::closeToCriticalIsoVal(float currentIso,CriticalPoint* point){
+    if(fabs(point->value-currentIso)<(oc->isoRangeThreshold))   return true;
+    return false;
 }
 

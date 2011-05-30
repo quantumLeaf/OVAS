@@ -8,6 +8,7 @@
 #include "Analyser4D.h"
 #include "InfoData.h"
 #include "PathVisualiser.h"
+#include "TopologyFeature.h"
 
 Analyser4D::Analyser4D() {
     //TemporalChangeFeature2 a;
@@ -94,9 +95,10 @@ void Analyser4D::loadConfig(string filename) {
                 oc->geoSphere->loadGeoSphereFile(gsfilename);
                 cout << " is " << oc->geoSphere->getNumVs() << endl;
                 oc->features->push_back(new Feature(wArea, oc));
-                oc->features->push_back(new TopologyFeature(wTop,oc));
+                
                 //   oc->features->push_back(new Feature(wCurv,oc));
                 oc->features->push_back(new TemporalChangeFeature2(wtChange, oc));
+                oc->features->push_back(new TopologyFeature(wTop,oc));
 
                 if (screenRend == "onScreen") {
                     oc->viewEvaluator->setScreenRenderOn();
@@ -144,9 +146,14 @@ void Analyser4D::loadConfig(string filename) {
 void Analyser4D::analyse() {
     cout << "analysing all " << numSteps << "steps" << endl;
     for (int i = 0; i < numSteps; i++) {
+        
         oc->volume4D->setToStep(i);
+        
         oc->volume4D->updateActor();
+        
+        oc->volume4D->findCritcalPoints();
         oc->a3d->evalEachView();
+        cout<<" done step"<<endl;
         oc->currentStep++;
     }
 }

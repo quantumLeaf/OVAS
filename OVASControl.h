@@ -79,7 +79,9 @@ public:
    
     int currentStep;
     int currentView;
-  
+    float currentIso;
+    float isoRange;
+    float isoRangeThreshold;
     int* path;
     int* bestViews;
     AreaFeature* areaFeature;

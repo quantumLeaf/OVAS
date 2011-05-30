@@ -10,6 +10,8 @@
 #include "vtkSmartPointer.h"
 #include "vtkActor.h"
 #include "vtkSphereSource.h"
+#include "vtkPolyDataMapper.h"
+#include "vtkProperty.h"
 class CriticalPoint {
 public:
     CriticalPoint(int x,int y, int z,int step, float value, int,int,int);
