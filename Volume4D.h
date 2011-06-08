@@ -40,13 +40,14 @@ public:
     virtual float getVoxelValue(int x,int y,int z,int step){ return 0;}
     void updateActor();
     void loadFloatVolume(string* fileName);
+    void createCharVolume();
     
     void testReebGraph();
     void testContourTree();
     void findCritcalPoints();
     float evalPersistence(Data* data,ctBranch* b);
     void addPersistentBranches(Data*,ctBranch*,float thresh);     
-    
+    void outputTree(std::ofstream & out, ctBranch * b,Data* d);
     int DisplayReebGraph(vtkReebGraph *g);
     int DisplayVolumeSkeleton(vtkUnstructuredGrid* vtkNotUsed(volumeMesh), vtkTable *skeleton);
     vector<CriticalPoint*>* criticalPoints;

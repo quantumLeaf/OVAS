@@ -159,6 +159,9 @@ OVAS_BINARY_DIR:STATIC=/home/zoizoi/psyforge/OVAS
 //Value Computed by CMake
 OVAS_SOURCE_DIR:STATIC=/home/zoizoi/psyforge/OVAS
 
+//Path to a library.
+TOURTRE_LIBRARY:FILEPATH=/home/zoizoi/psyforge/woven/libtourtre_v15/libtourtre/libtourtre.so
+
 //Value Computed by CMake
 VAS_BINARY_DIR:STATIC=/home/zoizoi/psyforge/OVAS
 
@@ -166,7 +169,7 @@ VAS_BINARY_DIR:STATIC=/home/zoizoi/psyforge/OVAS
 VAS_SOURCE_DIR:STATIC=/home/zoizoi/psyforge/OVAS
 
 //The directory containing a CMake configuration file for VTK.
-VTK_DIR:PATH=/usr/local/lib/vtk-5.7
+VTK_DIR:PATH=/usr/local/lib/vtk-5.9
 
 //The directory containing a CMake configuration file for VXL.
 VXL_DIR:PATH=/usr/local/share/vxl/cmake
@@ -192,7 +195,7 @@ CMAKE_CACHE_MAJOR_VERSION:INTERNAL=2
 //Minor version of cmake used to create the current loaded cache
 CMAKE_CACHE_MINOR_VERSION:INTERNAL=8
 //Patch version of cmake used to create the current loaded cache
-CMAKE_CACHE_PATCH_VERSION:INTERNAL=2
+CMAKE_CACHE_PATCH_VERSION:INTERNAL=3
 //ADVANCED property for variable: CMAKE_COLOR_MAKEFILE
 CMAKE_COLOR_MAKEFILE-ADVANCED:INTERNAL=1
 //Path to CMake executable.
@@ -300,6 +303,8 @@ CMAKE_UNAME:INTERNAL=/bin/uname
 CMAKE_USE_RELATIVE_PATHS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//MODIFIED property for variable: TOURTRE_LIBRARY
+TOURTRE_LIBRARY-MODIFIED:INTERNAL=ON
 //ADVANCED property for variable: VXL_IMPORT_BUILD_SETTINGS
 VXL_IMPORT_BUILD_SETTINGS-ADVANCED:INTERNAL=1
 

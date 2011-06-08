@@ -337,6 +337,438 @@ CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.o.provides: CMakeFiles/testOVAS.dir/M
 CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.o.provides.build: CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.o
 .PHONY : CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.o.provides.build
 
+CMakeFiles/testOVAS.dir/FeatureWeights.cpp.o: CMakeFiles/testOVAS.dir/flags.make
+CMakeFiles/testOVAS.dir/FeatureWeights.cpp.o: FeatureWeights.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/zoizoi/psyforge/OVAS/CMakeFiles $(CMAKE_PROGRESS_13)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/testOVAS.dir/FeatureWeights.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/testOVAS.dir/FeatureWeights.cpp.o -c /home/zoizoi/psyforge/OVAS/FeatureWeights.cpp
+
+CMakeFiles/testOVAS.dir/FeatureWeights.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testOVAS.dir/FeatureWeights.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/zoizoi/psyforge/OVAS/FeatureWeights.cpp > CMakeFiles/testOVAS.dir/FeatureWeights.cpp.i
+
+CMakeFiles/testOVAS.dir/FeatureWeights.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testOVAS.dir/FeatureWeights.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/zoizoi/psyforge/OVAS/FeatureWeights.cpp -o CMakeFiles/testOVAS.dir/FeatureWeights.cpp.s
+
+CMakeFiles/testOVAS.dir/FeatureWeights.cpp.o.requires:
+.PHONY : CMakeFiles/testOVAS.dir/FeatureWeights.cpp.o.requires
+
+CMakeFiles/testOVAS.dir/FeatureWeights.cpp.o.provides: CMakeFiles/testOVAS.dir/FeatureWeights.cpp.o.requires
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/FeatureWeights.cpp.o.provides.build
+.PHONY : CMakeFiles/testOVAS.dir/FeatureWeights.cpp.o.provides
+
+CMakeFiles/testOVAS.dir/FeatureWeights.cpp.o.provides.build: CMakeFiles/testOVAS.dir/FeatureWeights.cpp.o
+.PHONY : CMakeFiles/testOVAS.dir/FeatureWeights.cpp.o.provides.build
+
+CMakeFiles/testOVAS.dir/ViewEvaluator.cpp.o: CMakeFiles/testOVAS.dir/flags.make
+CMakeFiles/testOVAS.dir/ViewEvaluator.cpp.o: ViewEvaluator.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/zoizoi/psyforge/OVAS/CMakeFiles $(CMAKE_PROGRESS_14)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/testOVAS.dir/ViewEvaluator.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/testOVAS.dir/ViewEvaluator.cpp.o -c /home/zoizoi/psyforge/OVAS/ViewEvaluator.cpp
+
+CMakeFiles/testOVAS.dir/ViewEvaluator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testOVAS.dir/ViewEvaluator.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/zoizoi/psyforge/OVAS/ViewEvaluator.cpp > CMakeFiles/testOVAS.dir/ViewEvaluator.cpp.i
+
+CMakeFiles/testOVAS.dir/ViewEvaluator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testOVAS.dir/ViewEvaluator.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/zoizoi/psyforge/OVAS/ViewEvaluator.cpp -o CMakeFiles/testOVAS.dir/ViewEvaluator.cpp.s
+
+CMakeFiles/testOVAS.dir/ViewEvaluator.cpp.o.requires:
+.PHONY : CMakeFiles/testOVAS.dir/ViewEvaluator.cpp.o.requires
+
+CMakeFiles/testOVAS.dir/ViewEvaluator.cpp.o.provides: CMakeFiles/testOVAS.dir/ViewEvaluator.cpp.o.requires
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/ViewEvaluator.cpp.o.provides.build
+.PHONY : CMakeFiles/testOVAS.dir/ViewEvaluator.cpp.o.provides
+
+CMakeFiles/testOVAS.dir/ViewEvaluator.cpp.o.provides.build: CMakeFiles/testOVAS.dir/ViewEvaluator.cpp.o
+.PHONY : CMakeFiles/testOVAS.dir/ViewEvaluator.cpp.o.provides.build
+
+CMakeFiles/testOVAS.dir/testVol4D.cpp.o: CMakeFiles/testOVAS.dir/flags.make
+CMakeFiles/testOVAS.dir/testVol4D.cpp.o: testVol4D.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/zoizoi/psyforge/OVAS/CMakeFiles $(CMAKE_PROGRESS_15)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/testOVAS.dir/testVol4D.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/testOVAS.dir/testVol4D.cpp.o -c /home/zoizoi/psyforge/OVAS/testVol4D.cpp
+
+CMakeFiles/testOVAS.dir/testVol4D.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testOVAS.dir/testVol4D.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/zoizoi/psyforge/OVAS/testVol4D.cpp > CMakeFiles/testOVAS.dir/testVol4D.cpp.i
+
+CMakeFiles/testOVAS.dir/testVol4D.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testOVAS.dir/testVol4D.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/zoizoi/psyforge/OVAS/testVol4D.cpp -o CMakeFiles/testOVAS.dir/testVol4D.cpp.s
+
+CMakeFiles/testOVAS.dir/testVol4D.cpp.o.requires:
+.PHONY : CMakeFiles/testOVAS.dir/testVol4D.cpp.o.requires
+
+CMakeFiles/testOVAS.dir/testVol4D.cpp.o.provides: CMakeFiles/testOVAS.dir/testVol4D.cpp.o.requires
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/testVol4D.cpp.o.provides.build
+.PHONY : CMakeFiles/testOVAS.dir/testVol4D.cpp.o.provides
+
+CMakeFiles/testOVAS.dir/testVol4D.cpp.o.provides.build: CMakeFiles/testOVAS.dir/testVol4D.cpp.o
+.PHONY : CMakeFiles/testOVAS.dir/testVol4D.cpp.o.provides.build
+
+CMakeFiles/testOVAS.dir/OVASControl.cpp.o: CMakeFiles/testOVAS.dir/flags.make
+CMakeFiles/testOVAS.dir/OVASControl.cpp.o: OVASControl.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/zoizoi/psyforge/OVAS/CMakeFiles $(CMAKE_PROGRESS_16)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/testOVAS.dir/OVASControl.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/testOVAS.dir/OVASControl.cpp.o -c /home/zoizoi/psyforge/OVAS/OVASControl.cpp
+
+CMakeFiles/testOVAS.dir/OVASControl.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testOVAS.dir/OVASControl.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/zoizoi/psyforge/OVAS/OVASControl.cpp > CMakeFiles/testOVAS.dir/OVASControl.cpp.i
+
+CMakeFiles/testOVAS.dir/OVASControl.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testOVAS.dir/OVASControl.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/zoizoi/psyforge/OVAS/OVASControl.cpp -o CMakeFiles/testOVAS.dir/OVASControl.cpp.s
+
+CMakeFiles/testOVAS.dir/OVASControl.cpp.o.requires:
+.PHONY : CMakeFiles/testOVAS.dir/OVASControl.cpp.o.requires
+
+CMakeFiles/testOVAS.dir/OVASControl.cpp.o.provides: CMakeFiles/testOVAS.dir/OVASControl.cpp.o.requires
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/OVASControl.cpp.o.provides.build
+.PHONY : CMakeFiles/testOVAS.dir/OVASControl.cpp.o.provides
+
+CMakeFiles/testOVAS.dir/OVASControl.cpp.o.provides.build: CMakeFiles/testOVAS.dir/OVASControl.cpp.o
+.PHONY : CMakeFiles/testOVAS.dir/OVASControl.cpp.o.provides.build
+
+CMakeFiles/testOVAS.dir/FrameBuffer.cpp.o: CMakeFiles/testOVAS.dir/flags.make
+CMakeFiles/testOVAS.dir/FrameBuffer.cpp.o: FrameBuffer.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/zoizoi/psyforge/OVAS/CMakeFiles $(CMAKE_PROGRESS_17)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/testOVAS.dir/FrameBuffer.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/testOVAS.dir/FrameBuffer.cpp.o -c /home/zoizoi/psyforge/OVAS/FrameBuffer.cpp
+
+CMakeFiles/testOVAS.dir/FrameBuffer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testOVAS.dir/FrameBuffer.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/zoizoi/psyforge/OVAS/FrameBuffer.cpp > CMakeFiles/testOVAS.dir/FrameBuffer.cpp.i
+
+CMakeFiles/testOVAS.dir/FrameBuffer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testOVAS.dir/FrameBuffer.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/zoizoi/psyforge/OVAS/FrameBuffer.cpp -o CMakeFiles/testOVAS.dir/FrameBuffer.cpp.s
+
+CMakeFiles/testOVAS.dir/FrameBuffer.cpp.o.requires:
+.PHONY : CMakeFiles/testOVAS.dir/FrameBuffer.cpp.o.requires
+
+CMakeFiles/testOVAS.dir/FrameBuffer.cpp.o.provides: CMakeFiles/testOVAS.dir/FrameBuffer.cpp.o.requires
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/FrameBuffer.cpp.o.provides.build
+.PHONY : CMakeFiles/testOVAS.dir/FrameBuffer.cpp.o.provides
+
+CMakeFiles/testOVAS.dir/FrameBuffer.cpp.o.provides.build: CMakeFiles/testOVAS.dir/FrameBuffer.cpp.o
+.PHONY : CMakeFiles/testOVAS.dir/FrameBuffer.cpp.o.provides.build
+
+CMakeFiles/testOVAS.dir/TemporalChangeFeature.cpp.o: CMakeFiles/testOVAS.dir/flags.make
+CMakeFiles/testOVAS.dir/TemporalChangeFeature.cpp.o: TemporalChangeFeature.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/zoizoi/psyforge/OVAS/CMakeFiles $(CMAKE_PROGRESS_18)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/testOVAS.dir/TemporalChangeFeature.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/testOVAS.dir/TemporalChangeFeature.cpp.o -c /home/zoizoi/psyforge/OVAS/TemporalChangeFeature.cpp
+
+CMakeFiles/testOVAS.dir/TemporalChangeFeature.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testOVAS.dir/TemporalChangeFeature.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/zoizoi/psyforge/OVAS/TemporalChangeFeature.cpp > CMakeFiles/testOVAS.dir/TemporalChangeFeature.cpp.i
+
+CMakeFiles/testOVAS.dir/TemporalChangeFeature.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testOVAS.dir/TemporalChangeFeature.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/zoizoi/psyforge/OVAS/TemporalChangeFeature.cpp -o CMakeFiles/testOVAS.dir/TemporalChangeFeature.cpp.s
+
+CMakeFiles/testOVAS.dir/TemporalChangeFeature.cpp.o.requires:
+.PHONY : CMakeFiles/testOVAS.dir/TemporalChangeFeature.cpp.o.requires
+
+CMakeFiles/testOVAS.dir/TemporalChangeFeature.cpp.o.provides: CMakeFiles/testOVAS.dir/TemporalChangeFeature.cpp.o.requires
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/TemporalChangeFeature.cpp.o.provides.build
+.PHONY : CMakeFiles/testOVAS.dir/TemporalChangeFeature.cpp.o.provides
+
+CMakeFiles/testOVAS.dir/TemporalChangeFeature.cpp.o.provides.build: CMakeFiles/testOVAS.dir/TemporalChangeFeature.cpp.o
+.PHONY : CMakeFiles/testOVAS.dir/TemporalChangeFeature.cpp.o.provides.build
+
+CMakeFiles/testOVAS.dir/AreaFeature.cpp.o: CMakeFiles/testOVAS.dir/flags.make
+CMakeFiles/testOVAS.dir/AreaFeature.cpp.o: AreaFeature.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/zoizoi/psyforge/OVAS/CMakeFiles $(CMAKE_PROGRESS_19)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/testOVAS.dir/AreaFeature.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/testOVAS.dir/AreaFeature.cpp.o -c /home/zoizoi/psyforge/OVAS/AreaFeature.cpp
+
+CMakeFiles/testOVAS.dir/AreaFeature.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testOVAS.dir/AreaFeature.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/zoizoi/psyforge/OVAS/AreaFeature.cpp > CMakeFiles/testOVAS.dir/AreaFeature.cpp.i
+
+CMakeFiles/testOVAS.dir/AreaFeature.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testOVAS.dir/AreaFeature.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/zoizoi/psyforge/OVAS/AreaFeature.cpp -o CMakeFiles/testOVAS.dir/AreaFeature.cpp.s
+
+CMakeFiles/testOVAS.dir/AreaFeature.cpp.o.requires:
+.PHONY : CMakeFiles/testOVAS.dir/AreaFeature.cpp.o.requires
+
+CMakeFiles/testOVAS.dir/AreaFeature.cpp.o.provides: CMakeFiles/testOVAS.dir/AreaFeature.cpp.o.requires
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/AreaFeature.cpp.o.provides.build
+.PHONY : CMakeFiles/testOVAS.dir/AreaFeature.cpp.o.provides
+
+CMakeFiles/testOVAS.dir/AreaFeature.cpp.o.provides.build: CMakeFiles/testOVAS.dir/AreaFeature.cpp.o
+.PHONY : CMakeFiles/testOVAS.dir/AreaFeature.cpp.o.provides.build
+
+CMakeFiles/testOVAS.dir/InfoSheet.cpp.o: CMakeFiles/testOVAS.dir/flags.make
+CMakeFiles/testOVAS.dir/InfoSheet.cpp.o: InfoSheet.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/zoizoi/psyforge/OVAS/CMakeFiles $(CMAKE_PROGRESS_20)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/testOVAS.dir/InfoSheet.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/testOVAS.dir/InfoSheet.cpp.o -c /home/zoizoi/psyforge/OVAS/InfoSheet.cpp
+
+CMakeFiles/testOVAS.dir/InfoSheet.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testOVAS.dir/InfoSheet.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/zoizoi/psyforge/OVAS/InfoSheet.cpp > CMakeFiles/testOVAS.dir/InfoSheet.cpp.i
+
+CMakeFiles/testOVAS.dir/InfoSheet.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testOVAS.dir/InfoSheet.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/zoizoi/psyforge/OVAS/InfoSheet.cpp -o CMakeFiles/testOVAS.dir/InfoSheet.cpp.s
+
+CMakeFiles/testOVAS.dir/InfoSheet.cpp.o.requires:
+.PHONY : CMakeFiles/testOVAS.dir/InfoSheet.cpp.o.requires
+
+CMakeFiles/testOVAS.dir/InfoSheet.cpp.o.provides: CMakeFiles/testOVAS.dir/InfoSheet.cpp.o.requires
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/InfoSheet.cpp.o.provides.build
+.PHONY : CMakeFiles/testOVAS.dir/InfoSheet.cpp.o.provides
+
+CMakeFiles/testOVAS.dir/InfoSheet.cpp.o.provides.build: CMakeFiles/testOVAS.dir/InfoSheet.cpp.o
+.PHONY : CMakeFiles/testOVAS.dir/InfoSheet.cpp.o.provides.build
+
+CMakeFiles/testOVAS.dir/InfoData.cpp.o: CMakeFiles/testOVAS.dir/flags.make
+CMakeFiles/testOVAS.dir/InfoData.cpp.o: InfoData.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/zoizoi/psyforge/OVAS/CMakeFiles $(CMAKE_PROGRESS_21)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/testOVAS.dir/InfoData.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/testOVAS.dir/InfoData.cpp.o -c /home/zoizoi/psyforge/OVAS/InfoData.cpp
+
+CMakeFiles/testOVAS.dir/InfoData.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testOVAS.dir/InfoData.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/zoizoi/psyforge/OVAS/InfoData.cpp > CMakeFiles/testOVAS.dir/InfoData.cpp.i
+
+CMakeFiles/testOVAS.dir/InfoData.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testOVAS.dir/InfoData.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/zoizoi/psyforge/OVAS/InfoData.cpp -o CMakeFiles/testOVAS.dir/InfoData.cpp.s
+
+CMakeFiles/testOVAS.dir/InfoData.cpp.o.requires:
+.PHONY : CMakeFiles/testOVAS.dir/InfoData.cpp.o.requires
+
+CMakeFiles/testOVAS.dir/InfoData.cpp.o.provides: CMakeFiles/testOVAS.dir/InfoData.cpp.o.requires
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/InfoData.cpp.o.provides.build
+.PHONY : CMakeFiles/testOVAS.dir/InfoData.cpp.o.provides
+
+CMakeFiles/testOVAS.dir/InfoData.cpp.o.provides.build: CMakeFiles/testOVAS.dir/InfoData.cpp.o
+.PHONY : CMakeFiles/testOVAS.dir/InfoData.cpp.o.provides.build
+
+CMakeFiles/testOVAS.dir/FlyingSaucersVol4D.cpp.o: CMakeFiles/testOVAS.dir/flags.make
+CMakeFiles/testOVAS.dir/FlyingSaucersVol4D.cpp.o: FlyingSaucersVol4D.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/zoizoi/psyforge/OVAS/CMakeFiles $(CMAKE_PROGRESS_22)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/testOVAS.dir/FlyingSaucersVol4D.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/testOVAS.dir/FlyingSaucersVol4D.cpp.o -c /home/zoizoi/psyforge/OVAS/FlyingSaucersVol4D.cpp
+
+CMakeFiles/testOVAS.dir/FlyingSaucersVol4D.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testOVAS.dir/FlyingSaucersVol4D.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/zoizoi/psyforge/OVAS/FlyingSaucersVol4D.cpp > CMakeFiles/testOVAS.dir/FlyingSaucersVol4D.cpp.i
+
+CMakeFiles/testOVAS.dir/FlyingSaucersVol4D.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testOVAS.dir/FlyingSaucersVol4D.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/zoizoi/psyforge/OVAS/FlyingSaucersVol4D.cpp -o CMakeFiles/testOVAS.dir/FlyingSaucersVol4D.cpp.s
+
+CMakeFiles/testOVAS.dir/FlyingSaucersVol4D.cpp.o.requires:
+.PHONY : CMakeFiles/testOVAS.dir/FlyingSaucersVol4D.cpp.o.requires
+
+CMakeFiles/testOVAS.dir/FlyingSaucersVol4D.cpp.o.provides: CMakeFiles/testOVAS.dir/FlyingSaucersVol4D.cpp.o.requires
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/FlyingSaucersVol4D.cpp.o.provides.build
+.PHONY : CMakeFiles/testOVAS.dir/FlyingSaucersVol4D.cpp.o.provides
+
+CMakeFiles/testOVAS.dir/FlyingSaucersVol4D.cpp.o.provides.build: CMakeFiles/testOVAS.dir/FlyingSaucersVol4D.cpp.o
+.PHONY : CMakeFiles/testOVAS.dir/FlyingSaucersVol4D.cpp.o.provides.build
+
+CMakeFiles/testOVAS.dir/PathVisualiser.cpp.o: CMakeFiles/testOVAS.dir/flags.make
+CMakeFiles/testOVAS.dir/PathVisualiser.cpp.o: PathVisualiser.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/zoizoi/psyforge/OVAS/CMakeFiles $(CMAKE_PROGRESS_23)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/testOVAS.dir/PathVisualiser.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/testOVAS.dir/PathVisualiser.cpp.o -c /home/zoizoi/psyforge/OVAS/PathVisualiser.cpp
+
+CMakeFiles/testOVAS.dir/PathVisualiser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testOVAS.dir/PathVisualiser.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/zoizoi/psyforge/OVAS/PathVisualiser.cpp > CMakeFiles/testOVAS.dir/PathVisualiser.cpp.i
+
+CMakeFiles/testOVAS.dir/PathVisualiser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testOVAS.dir/PathVisualiser.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/zoizoi/psyforge/OVAS/PathVisualiser.cpp -o CMakeFiles/testOVAS.dir/PathVisualiser.cpp.s
+
+CMakeFiles/testOVAS.dir/PathVisualiser.cpp.o.requires:
+.PHONY : CMakeFiles/testOVAS.dir/PathVisualiser.cpp.o.requires
+
+CMakeFiles/testOVAS.dir/PathVisualiser.cpp.o.provides: CMakeFiles/testOVAS.dir/PathVisualiser.cpp.o.requires
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/PathVisualiser.cpp.o.provides.build
+.PHONY : CMakeFiles/testOVAS.dir/PathVisualiser.cpp.o.provides
+
+CMakeFiles/testOVAS.dir/PathVisualiser.cpp.o.provides.build: CMakeFiles/testOVAS.dir/PathVisualiser.cpp.o
+.PHONY : CMakeFiles/testOVAS.dir/PathVisualiser.cpp.o.provides.build
+
+CMakeFiles/testOVAS.dir/TemporalChangeFeature2.cpp.o: CMakeFiles/testOVAS.dir/flags.make
+CMakeFiles/testOVAS.dir/TemporalChangeFeature2.cpp.o: TemporalChangeFeature2.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/zoizoi/psyforge/OVAS/CMakeFiles $(CMAKE_PROGRESS_24)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/testOVAS.dir/TemporalChangeFeature2.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/testOVAS.dir/TemporalChangeFeature2.cpp.o -c /home/zoizoi/psyforge/OVAS/TemporalChangeFeature2.cpp
+
+CMakeFiles/testOVAS.dir/TemporalChangeFeature2.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testOVAS.dir/TemporalChangeFeature2.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/zoizoi/psyforge/OVAS/TemporalChangeFeature2.cpp > CMakeFiles/testOVAS.dir/TemporalChangeFeature2.cpp.i
+
+CMakeFiles/testOVAS.dir/TemporalChangeFeature2.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testOVAS.dir/TemporalChangeFeature2.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/zoizoi/psyforge/OVAS/TemporalChangeFeature2.cpp -o CMakeFiles/testOVAS.dir/TemporalChangeFeature2.cpp.s
+
+CMakeFiles/testOVAS.dir/TemporalChangeFeature2.cpp.o.requires:
+.PHONY : CMakeFiles/testOVAS.dir/TemporalChangeFeature2.cpp.o.requires
+
+CMakeFiles/testOVAS.dir/TemporalChangeFeature2.cpp.o.provides: CMakeFiles/testOVAS.dir/TemporalChangeFeature2.cpp.o.requires
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/TemporalChangeFeature2.cpp.o.provides.build
+.PHONY : CMakeFiles/testOVAS.dir/TemporalChangeFeature2.cpp.o.provides
+
+CMakeFiles/testOVAS.dir/TemporalChangeFeature2.cpp.o.provides.build: CMakeFiles/testOVAS.dir/TemporalChangeFeature2.cpp.o
+.PHONY : CMakeFiles/testOVAS.dir/TemporalChangeFeature2.cpp.o.provides.build
+
+CMakeFiles/testOVAS.dir/MovingAAElipsoid.cpp.o: CMakeFiles/testOVAS.dir/flags.make
+CMakeFiles/testOVAS.dir/MovingAAElipsoid.cpp.o: MovingAAElipsoid.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/zoizoi/psyforge/OVAS/CMakeFiles $(CMAKE_PROGRESS_25)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/testOVAS.dir/MovingAAElipsoid.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/testOVAS.dir/MovingAAElipsoid.cpp.o -c /home/zoizoi/psyforge/OVAS/MovingAAElipsoid.cpp
+
+CMakeFiles/testOVAS.dir/MovingAAElipsoid.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testOVAS.dir/MovingAAElipsoid.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/zoizoi/psyforge/OVAS/MovingAAElipsoid.cpp > CMakeFiles/testOVAS.dir/MovingAAElipsoid.cpp.i
+
+CMakeFiles/testOVAS.dir/MovingAAElipsoid.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testOVAS.dir/MovingAAElipsoid.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/zoizoi/psyforge/OVAS/MovingAAElipsoid.cpp -o CMakeFiles/testOVAS.dir/MovingAAElipsoid.cpp.s
+
+CMakeFiles/testOVAS.dir/MovingAAElipsoid.cpp.o.requires:
+.PHONY : CMakeFiles/testOVAS.dir/MovingAAElipsoid.cpp.o.requires
+
+CMakeFiles/testOVAS.dir/MovingAAElipsoid.cpp.o.provides: CMakeFiles/testOVAS.dir/MovingAAElipsoid.cpp.o.requires
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/MovingAAElipsoid.cpp.o.provides.build
+.PHONY : CMakeFiles/testOVAS.dir/MovingAAElipsoid.cpp.o.provides
+
+CMakeFiles/testOVAS.dir/MovingAAElipsoid.cpp.o.provides.build: CMakeFiles/testOVAS.dir/MovingAAElipsoid.cpp.o
+.PHONY : CMakeFiles/testOVAS.dir/MovingAAElipsoid.cpp.o.provides.build
+
+CMakeFiles/testOVAS.dir/Data.cpp.o: CMakeFiles/testOVAS.dir/flags.make
+CMakeFiles/testOVAS.dir/Data.cpp.o: Data.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/zoizoi/psyforge/OVAS/CMakeFiles $(CMAKE_PROGRESS_26)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/testOVAS.dir/Data.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/testOVAS.dir/Data.cpp.o -c /home/zoizoi/psyforge/OVAS/Data.cpp
+
+CMakeFiles/testOVAS.dir/Data.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testOVAS.dir/Data.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/zoizoi/psyforge/OVAS/Data.cpp > CMakeFiles/testOVAS.dir/Data.cpp.i
+
+CMakeFiles/testOVAS.dir/Data.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testOVAS.dir/Data.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/zoizoi/psyforge/OVAS/Data.cpp -o CMakeFiles/testOVAS.dir/Data.cpp.s
+
+CMakeFiles/testOVAS.dir/Data.cpp.o.requires:
+.PHONY : CMakeFiles/testOVAS.dir/Data.cpp.o.requires
+
+CMakeFiles/testOVAS.dir/Data.cpp.o.provides: CMakeFiles/testOVAS.dir/Data.cpp.o.requires
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/Data.cpp.o.provides.build
+.PHONY : CMakeFiles/testOVAS.dir/Data.cpp.o.provides
+
+CMakeFiles/testOVAS.dir/Data.cpp.o.provides.build: CMakeFiles/testOVAS.dir/Data.cpp.o
+.PHONY : CMakeFiles/testOVAS.dir/Data.cpp.o.provides.build
+
+CMakeFiles/testOVAS.dir/Mesh.cpp.o: CMakeFiles/testOVAS.dir/flags.make
+CMakeFiles/testOVAS.dir/Mesh.cpp.o: Mesh.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/zoizoi/psyforge/OVAS/CMakeFiles $(CMAKE_PROGRESS_27)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/testOVAS.dir/Mesh.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/testOVAS.dir/Mesh.cpp.o -c /home/zoizoi/psyforge/OVAS/Mesh.cpp
+
+CMakeFiles/testOVAS.dir/Mesh.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testOVAS.dir/Mesh.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/zoizoi/psyforge/OVAS/Mesh.cpp > CMakeFiles/testOVAS.dir/Mesh.cpp.i
+
+CMakeFiles/testOVAS.dir/Mesh.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testOVAS.dir/Mesh.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/zoizoi/psyforge/OVAS/Mesh.cpp -o CMakeFiles/testOVAS.dir/Mesh.cpp.s
+
+CMakeFiles/testOVAS.dir/Mesh.cpp.o.requires:
+.PHONY : CMakeFiles/testOVAS.dir/Mesh.cpp.o.requires
+
+CMakeFiles/testOVAS.dir/Mesh.cpp.o.provides: CMakeFiles/testOVAS.dir/Mesh.cpp.o.requires
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/Mesh.cpp.o.provides.build
+.PHONY : CMakeFiles/testOVAS.dir/Mesh.cpp.o.provides
+
+CMakeFiles/testOVAS.dir/Mesh.cpp.o.provides.build: CMakeFiles/testOVAS.dir/Mesh.cpp.o
+.PHONY : CMakeFiles/testOVAS.dir/Mesh.cpp.o.provides.build
+
+CMakeFiles/testOVAS.dir/LoadedVol4D.cpp.o: CMakeFiles/testOVAS.dir/flags.make
+CMakeFiles/testOVAS.dir/LoadedVol4D.cpp.o: LoadedVol4D.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/zoizoi/psyforge/OVAS/CMakeFiles $(CMAKE_PROGRESS_28)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/testOVAS.dir/LoadedVol4D.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/testOVAS.dir/LoadedVol4D.cpp.o -c /home/zoizoi/psyforge/OVAS/LoadedVol4D.cpp
+
+CMakeFiles/testOVAS.dir/LoadedVol4D.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testOVAS.dir/LoadedVol4D.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/zoizoi/psyforge/OVAS/LoadedVol4D.cpp > CMakeFiles/testOVAS.dir/LoadedVol4D.cpp.i
+
+CMakeFiles/testOVAS.dir/LoadedVol4D.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testOVAS.dir/LoadedVol4D.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/zoizoi/psyforge/OVAS/LoadedVol4D.cpp -o CMakeFiles/testOVAS.dir/LoadedVol4D.cpp.s
+
+CMakeFiles/testOVAS.dir/LoadedVol4D.cpp.o.requires:
+.PHONY : CMakeFiles/testOVAS.dir/LoadedVol4D.cpp.o.requires
+
+CMakeFiles/testOVAS.dir/LoadedVol4D.cpp.o.provides: CMakeFiles/testOVAS.dir/LoadedVol4D.cpp.o.requires
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/LoadedVol4D.cpp.o.provides.build
+.PHONY : CMakeFiles/testOVAS.dir/LoadedVol4D.cpp.o.provides
+
+CMakeFiles/testOVAS.dir/LoadedVol4D.cpp.o.provides.build: CMakeFiles/testOVAS.dir/LoadedVol4D.cpp.o
+.PHONY : CMakeFiles/testOVAS.dir/LoadedVol4D.cpp.o.provides.build
+
+CMakeFiles/testOVAS.dir/CriticalPoint.cpp.o: CMakeFiles/testOVAS.dir/flags.make
+CMakeFiles/testOVAS.dir/CriticalPoint.cpp.o: CriticalPoint.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/zoizoi/psyforge/OVAS/CMakeFiles $(CMAKE_PROGRESS_29)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/testOVAS.dir/CriticalPoint.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/testOVAS.dir/CriticalPoint.cpp.o -c /home/zoizoi/psyforge/OVAS/CriticalPoint.cpp
+
+CMakeFiles/testOVAS.dir/CriticalPoint.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testOVAS.dir/CriticalPoint.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/zoizoi/psyforge/OVAS/CriticalPoint.cpp > CMakeFiles/testOVAS.dir/CriticalPoint.cpp.i
+
+CMakeFiles/testOVAS.dir/CriticalPoint.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testOVAS.dir/CriticalPoint.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/zoizoi/psyforge/OVAS/CriticalPoint.cpp -o CMakeFiles/testOVAS.dir/CriticalPoint.cpp.s
+
+CMakeFiles/testOVAS.dir/CriticalPoint.cpp.o.requires:
+.PHONY : CMakeFiles/testOVAS.dir/CriticalPoint.cpp.o.requires
+
+CMakeFiles/testOVAS.dir/CriticalPoint.cpp.o.provides: CMakeFiles/testOVAS.dir/CriticalPoint.cpp.o.requires
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/CriticalPoint.cpp.o.provides.build
+.PHONY : CMakeFiles/testOVAS.dir/CriticalPoint.cpp.o.provides
+
+CMakeFiles/testOVAS.dir/CriticalPoint.cpp.o.provides.build: CMakeFiles/testOVAS.dir/CriticalPoint.cpp.o
+.PHONY : CMakeFiles/testOVAS.dir/CriticalPoint.cpp.o.provides.build
+
+CMakeFiles/testOVAS.dir/TopologyFeature.cpp.o: CMakeFiles/testOVAS.dir/flags.make
+CMakeFiles/testOVAS.dir/TopologyFeature.cpp.o: TopologyFeature.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/zoizoi/psyforge/OVAS/CMakeFiles $(CMAKE_PROGRESS_30)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/testOVAS.dir/TopologyFeature.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/testOVAS.dir/TopologyFeature.cpp.o -c /home/zoizoi/psyforge/OVAS/TopologyFeature.cpp
+
+CMakeFiles/testOVAS.dir/TopologyFeature.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testOVAS.dir/TopologyFeature.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/zoizoi/psyforge/OVAS/TopologyFeature.cpp > CMakeFiles/testOVAS.dir/TopologyFeature.cpp.i
+
+CMakeFiles/testOVAS.dir/TopologyFeature.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testOVAS.dir/TopologyFeature.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/zoizoi/psyforge/OVAS/TopologyFeature.cpp -o CMakeFiles/testOVAS.dir/TopologyFeature.cpp.s
+
+CMakeFiles/testOVAS.dir/TopologyFeature.cpp.o.requires:
+.PHONY : CMakeFiles/testOVAS.dir/TopologyFeature.cpp.o.requires
+
+CMakeFiles/testOVAS.dir/TopologyFeature.cpp.o.provides: CMakeFiles/testOVAS.dir/TopologyFeature.cpp.o.requires
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/TopologyFeature.cpp.o.provides.build
+.PHONY : CMakeFiles/testOVAS.dir/TopologyFeature.cpp.o.provides
+
+CMakeFiles/testOVAS.dir/TopologyFeature.cpp.o.provides.build: CMakeFiles/testOVAS.dir/TopologyFeature.cpp.o
+.PHONY : CMakeFiles/testOVAS.dir/TopologyFeature.cpp.o.provides.build
+
 # Object files for target testOVAS
 testOVAS_OBJECTS = \
 "CMakeFiles/testOVAS.dir/testOVAS.cpp.o" \
@@ -350,7 +782,25 @@ testOVAS_OBJECTS = \
 "CMakeFiles/testOVAS.dir/GeoSequence.cpp.o" \
 "CMakeFiles/testOVAS.dir/GeoSphere.cpp.o" \
 "CMakeFiles/testOVAS.dir/Volume4D.cpp.o" \
-"CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.o"
+"CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.o" \
+"CMakeFiles/testOVAS.dir/FeatureWeights.cpp.o" \
+"CMakeFiles/testOVAS.dir/ViewEvaluator.cpp.o" \
+"CMakeFiles/testOVAS.dir/testVol4D.cpp.o" \
+"CMakeFiles/testOVAS.dir/OVASControl.cpp.o" \
+"CMakeFiles/testOVAS.dir/FrameBuffer.cpp.o" \
+"CMakeFiles/testOVAS.dir/TemporalChangeFeature.cpp.o" \
+"CMakeFiles/testOVAS.dir/AreaFeature.cpp.o" \
+"CMakeFiles/testOVAS.dir/InfoSheet.cpp.o" \
+"CMakeFiles/testOVAS.dir/InfoData.cpp.o" \
+"CMakeFiles/testOVAS.dir/FlyingSaucersVol4D.cpp.o" \
+"CMakeFiles/testOVAS.dir/PathVisualiser.cpp.o" \
+"CMakeFiles/testOVAS.dir/TemporalChangeFeature2.cpp.o" \
+"CMakeFiles/testOVAS.dir/MovingAAElipsoid.cpp.o" \
+"CMakeFiles/testOVAS.dir/Data.cpp.o" \
+"CMakeFiles/testOVAS.dir/Mesh.cpp.o" \
+"CMakeFiles/testOVAS.dir/LoadedVol4D.cpp.o" \
+"CMakeFiles/testOVAS.dir/CriticalPoint.cpp.o" \
+"CMakeFiles/testOVAS.dir/TopologyFeature.cpp.o"
 
 # External object files for target testOVAS
 testOVAS_EXTERNAL_OBJECTS =
@@ -367,35 +817,55 @@ testOVAS: CMakeFiles/testOVAS.dir/GeoSequence.cpp.o
 testOVAS: CMakeFiles/testOVAS.dir/GeoSphere.cpp.o
 testOVAS: CMakeFiles/testOVAS.dir/Volume4D.cpp.o
 testOVAS: CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.o
-testOVAS: /usr/local/lib/vtk-5.7/libvtkWidgets.a
-testOVAS: /usr/local/lib/vtk-5.7/libvtkRendering.a
-testOVAS: /usr/local/lib/vtk-5.7/libvtkHybrid.a
-testOVAS: /usr/local/lib/vtk-5.7/libvtkRendering.a
-testOVAS: /usr/local/lib/vtk-5.7/libvtkGraphics.a
-testOVAS: /usr/local/lib/vtk-5.7/libvtkverdict.a
-testOVAS: /usr/local/lib/vtk-5.7/libvtkImaging.a
-testOVAS: /usr/lib/libXt.so
-testOVAS: /usr/lib/libSM.so
-testOVAS: /usr/lib/libICE.so
-testOVAS: /usr/lib/libX11.so
-testOVAS: /usr/lib/libXext.so
-testOVAS: /usr/local/lib/vtk-5.7/libvtkIO.a
-testOVAS: /usr/local/lib/vtk-5.7/libvtkFiltering.a
-testOVAS: /usr/local/lib/vtk-5.7/libvtkCommon.a
-testOVAS: /usr/local/lib/vtk-5.7/libvtkDICOMParser.a
-testOVAS: /usr/local/lib/vtk-5.7/libvtkNetCDF_cxx.a
-testOVAS: /usr/local/lib/vtk-5.7/libvtkmetaio.a
-testOVAS: /usr/local/lib/vtk-5.7/libvtksqlite.a
-testOVAS: /usr/local/lib/vtk-5.7/libvtkpng.a
-testOVAS: /usr/local/lib/vtk-5.7/libvtktiff.a
-testOVAS: /usr/local/lib/vtk-5.7/libvtkzlib.a
-testOVAS: /usr/local/lib/vtk-5.7/libvtkjpeg.a
-testOVAS: /usr/local/lib/vtk-5.7/libvtkexpat.a
-testOVAS: /usr/local/lib/vtk-5.7/libvtksys.a
-testOVAS: /usr/local/lib/vtk-5.7/libvtkftgl.a
-testOVAS: /usr/local/lib/vtk-5.7/libvtkfreetype.a
-testOVAS: /usr/local/lib/vtk-5.7/libvtkexoIIc.a
-testOVAS: /usr/local/lib/vtk-5.7/libvtkNetCDF.a
+testOVAS: CMakeFiles/testOVAS.dir/FeatureWeights.cpp.o
+testOVAS: CMakeFiles/testOVAS.dir/ViewEvaluator.cpp.o
+testOVAS: CMakeFiles/testOVAS.dir/testVol4D.cpp.o
+testOVAS: CMakeFiles/testOVAS.dir/OVASControl.cpp.o
+testOVAS: CMakeFiles/testOVAS.dir/FrameBuffer.cpp.o
+testOVAS: CMakeFiles/testOVAS.dir/TemporalChangeFeature.cpp.o
+testOVAS: CMakeFiles/testOVAS.dir/AreaFeature.cpp.o
+testOVAS: CMakeFiles/testOVAS.dir/InfoSheet.cpp.o
+testOVAS: CMakeFiles/testOVAS.dir/InfoData.cpp.o
+testOVAS: CMakeFiles/testOVAS.dir/FlyingSaucersVol4D.cpp.o
+testOVAS: CMakeFiles/testOVAS.dir/PathVisualiser.cpp.o
+testOVAS: CMakeFiles/testOVAS.dir/TemporalChangeFeature2.cpp.o
+testOVAS: CMakeFiles/testOVAS.dir/MovingAAElipsoid.cpp.o
+testOVAS: CMakeFiles/testOVAS.dir/Data.cpp.o
+testOVAS: CMakeFiles/testOVAS.dir/Mesh.cpp.o
+testOVAS: CMakeFiles/testOVAS.dir/LoadedVol4D.cpp.o
+testOVAS: CMakeFiles/testOVAS.dir/CriticalPoint.cpp.o
+testOVAS: CMakeFiles/testOVAS.dir/TopologyFeature.cpp.o
+testOVAS: /usr/local/lib/vtk-5.9/libvtkWidgets.a
+testOVAS: /usr/local/lib/vtk-5.9/libvtkRendering.a
+testOVAS: /usr/local/lib/vtk-5.9/libvtkHybrid.a
+testOVAS: /home/zoizoi/psyforge/woven/libtourtre_v15/libtourtre/libtourtre.so
+testOVAS: /usr/local/lib/vtk-5.9/libvtkexoIIc.a
+testOVAS: /usr/local/lib/vtk-5.9/libvtkVolumeRendering.a
+testOVAS: /usr/local/lib/vtk-5.9/libvtkRendering.a
+testOVAS: /usr/local/lib/vtk-5.9/libvtkGraphics.a
+testOVAS: /usr/local/lib/vtk-5.9/libvtkverdict.a
+testOVAS: /usr/local/lib/vtk-5.9/libvtkImaging.a
+testOVAS: /usr/local/lib/vtk-5.9/libvtkftgl.a
+testOVAS: /usr/local/lib/vtk-5.9/libvtkfreetype.a
+testOVAS: /usr/lib/x86_64-linux-gnu/libXt.so
+testOVAS: /usr/lib/x86_64-linux-gnu/libSM.so
+testOVAS: /usr/lib/x86_64-linux-gnu/libICE.so
+testOVAS: /usr/lib/x86_64-linux-gnu/libX11.so
+testOVAS: /usr/lib/x86_64-linux-gnu/libXext.so
+testOVAS: /usr/local/lib/vtk-5.9/libvtkIO.a
+testOVAS: /usr/local/lib/vtk-5.9/libvtkFiltering.a
+testOVAS: /usr/local/lib/vtk-5.9/libvtkCommon.a
+testOVAS: /usr/local/lib/vtk-5.9/libvtkDICOMParser.a
+testOVAS: /usr/local/lib/vtk-5.9/libvtkNetCDF_cxx.a
+testOVAS: /usr/local/lib/vtk-5.9/libvtkNetCDF.a
+testOVAS: /usr/local/lib/vtk-5.9/libvtkmetaio.a
+testOVAS: /usr/local/lib/vtk-5.9/libvtksqlite.a
+testOVAS: /usr/local/lib/vtk-5.9/libvtkpng.a
+testOVAS: /usr/local/lib/vtk-5.9/libvtktiff.a
+testOVAS: /usr/local/lib/vtk-5.9/libvtkzlib.a
+testOVAS: /usr/local/lib/vtk-5.9/libvtkjpeg.a
+testOVAS: /usr/local/lib/vtk-5.9/libvtkexpat.a
+testOVAS: /usr/local/lib/vtk-5.9/libvtksys.a
 testOVAS: /usr/lib/libGL.so
 testOVAS: CMakeFiles/testOVAS.dir/build.make
 testOVAS: CMakeFiles/testOVAS.dir/link.txt
@@ -418,6 +888,24 @@ CMakeFiles/testOVAS.dir/requires: CMakeFiles/testOVAS.dir/GeoSequence.cpp.o.requ
 CMakeFiles/testOVAS.dir/requires: CMakeFiles/testOVAS.dir/GeoSphere.cpp.o.requires
 CMakeFiles/testOVAS.dir/requires: CMakeFiles/testOVAS.dir/Volume4D.cpp.o.requires
 CMakeFiles/testOVAS.dir/requires: CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.o.requires
+CMakeFiles/testOVAS.dir/requires: CMakeFiles/testOVAS.dir/FeatureWeights.cpp.o.requires
+CMakeFiles/testOVAS.dir/requires: CMakeFiles/testOVAS.dir/ViewEvaluator.cpp.o.requires
+CMakeFiles/testOVAS.dir/requires: CMakeFiles/testOVAS.dir/testVol4D.cpp.o.requires
+CMakeFiles/testOVAS.dir/requires: CMakeFiles/testOVAS.dir/OVASControl.cpp.o.requires
+CMakeFiles/testOVAS.dir/requires: CMakeFiles/testOVAS.dir/FrameBuffer.cpp.o.requires
+CMakeFiles/testOVAS.dir/requires: CMakeFiles/testOVAS.dir/TemporalChangeFeature.cpp.o.requires
+CMakeFiles/testOVAS.dir/requires: CMakeFiles/testOVAS.dir/AreaFeature.cpp.o.requires
+CMakeFiles/testOVAS.dir/requires: CMakeFiles/testOVAS.dir/InfoSheet.cpp.o.requires
+CMakeFiles/testOVAS.dir/requires: CMakeFiles/testOVAS.dir/InfoData.cpp.o.requires
+CMakeFiles/testOVAS.dir/requires: CMakeFiles/testOVAS.dir/FlyingSaucersVol4D.cpp.o.requires
+CMakeFiles/testOVAS.dir/requires: CMakeFiles/testOVAS.dir/PathVisualiser.cpp.o.requires
+CMakeFiles/testOVAS.dir/requires: CMakeFiles/testOVAS.dir/TemporalChangeFeature2.cpp.o.requires
+CMakeFiles/testOVAS.dir/requires: CMakeFiles/testOVAS.dir/MovingAAElipsoid.cpp.o.requires
+CMakeFiles/testOVAS.dir/requires: CMakeFiles/testOVAS.dir/Data.cpp.o.requires
+CMakeFiles/testOVAS.dir/requires: CMakeFiles/testOVAS.dir/Mesh.cpp.o.requires
+CMakeFiles/testOVAS.dir/requires: CMakeFiles/testOVAS.dir/LoadedVol4D.cpp.o.requires
+CMakeFiles/testOVAS.dir/requires: CMakeFiles/testOVAS.dir/CriticalPoint.cpp.o.requires
+CMakeFiles/testOVAS.dir/requires: CMakeFiles/testOVAS.dir/TopologyFeature.cpp.o.requires
 .PHONY : CMakeFiles/testOVAS.dir/requires
 
 CMakeFiles/testOVAS.dir/clean:

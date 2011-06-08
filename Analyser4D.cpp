@@ -127,7 +127,7 @@ void Analyser4D::loadConfig(string filename) {
                 //MetaballsVol4D*
                 oc->numSteps = numSteps;
                 oc->xDim = oc->yDim = oc->zDim = dims;
-                oc->volume4D = dynamic_cast<Volume4D*> (new FlyingSaucersVol4D(oc, 1));
+                oc->volume4D = dynamic_cast<Volume4D*> (new FlyingSaucersVol4D(oc, 5));
             }
             if (command == "savedRawVolFloat32") {
                  string* dataFilename=new string();

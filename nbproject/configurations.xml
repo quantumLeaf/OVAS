@@ -1,61 +1,273 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configurationDescriptor version="69">
-  <logicalFolder name="root" displayName="root" projectFiles="true">
+<configurationDescriptor version="79">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
-                   projectFiles="true"
-                   kind="SOURCE_LOGICAL_FOLDER">
+                   projectFiles="true">
       <itemPath>Analyser3D.h</itemPath>
       <itemPath>Analyser4D.h</itemPath>
       <itemPath>AreaFeature.h</itemPath>
       <itemPath>Feature.h</itemPath>
+      <itemPath>FeatureWeights.h</itemPath>
+      <itemPath>FrameBuffer.h</itemPath>
       <itemPath>GeoPoint.h</itemPath>
       <itemPath>GeoSequence.h</itemPath>
       <itemPath>GeoSphere.h</itemPath>
       <itemPath>ImplicitVolume4D.h</itemPath>
       <itemPath>MetaballsVol4D.h</itemPath>
+      <itemPath>OVASControl.h</itemPath>
       <itemPath>StepToParamConverter.h</itemPath>
+      <itemPath>ViewEvaluator.h</itemPath>
       <itemPath>Volume4D.h</itemPath>
       <itemPath>vtkEssentials.h</itemPath>
     </logicalFolder>
+    <logicalFolder name="libtourtre" displayName="libtourtre" projectFiles="true">
+      <logicalFolder name="_darcs" displayName="_darcs" projectFiles="true">
+        <logicalFolder name="checkpoints" displayName="checkpoints" projectFiles="true">
+        </logicalFolder>
+        <logicalFolder name="inventories" displayName="inventories" projectFiles="true">
+        </logicalFolder>
+        <logicalFolder name="patches" displayName="patches" projectFiles="true">
+          <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/patches/20071129204440-27fdb-cc61b9b69bc5231c1b4212278c2ac9629c804fde.gz</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/patches/20071129204757-27fdb-4d845ce8cb025cb1480b79e2c4d640e0bf9afdcf.gz</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/patches/20071130003110-27fdb-cc352f7643b121fabd1e3008c7aae993d890a5f7.gz</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/patches/20081219223547-27fdb-197c7cc7028e19375b72be637a3de6d91de5edec.gz</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/patches/20081219223619-27fdb-ef840f4092e35a7f83461cf5cf4b0cdeb9d01481.gz</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/patches/20081219232627-27fdb-cf29d3ef1f4f19a7c7b222953c06460f5189e3dc.gz</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/patches/20081219232641-27fdb-f874946b63d9fba8473def5d2662d97ac7c306da.gz</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/patches/20081219233206-27fdb-8188dda0b53450131503d233a276ba7fbeac9c4e.gz</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/patches/20081219233318-27fdb-33edfe7176af61dc62baa37e10e4e9e2a9415f7c.gz</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/patches/20081221052757-27fdb-c58d42bc9509ca2aa0ad0c77fed28e860796997d.gz</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/patches/20081221054104-27fdb-785bccbd7382312f1a02c6ca30490e051662c872.gz</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/patches/20081221180110-27fdb-7b1997db6ea13b4b38c1315d264d66b863e6f874.gz</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/patches/20081221204955-27fdb-fb5c850edb04a4069318a9b072317895c979dd3e.gz</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/patches/20081231030819-889e6-6ef989bd24365875e92cf48fabb8aa3e18b16f7a.gz</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/patches/20081231040735-889e6-2b87df60d398dd8472e311681b72c7c89c49c810.gz</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/patches/20081231083255-889e6-4adabcb1b59ea12faea9e73f0026fb6f32dc2f47.gz</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/patches/20090121002324-889e6-cb1e648d4dfe80c6bc5497e6320fc277cbf935b1.gz</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/patches/20090121002444-889e6-c011e10981fe501de9bddd9cff3ca3b1cda03632.gz</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/patches/20090121165858-889e6-5282dceee162baa5aa7eaba18ca39eae576bf7d2.gz</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/patches/20090122190908-889e6-88d8f81de0a46f1bdfdcf75e8b81280d05f821bd.gz</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/patches/20090122232103-889e6-19dabd100b4b6bce3f9904decfd85df3b213c8fa.gz</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/patches/20090227181103-889e6-a314f3570dc0b550214bc28ea1fbb53acb8e2221.gz</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/patches/20100519204315-889e6-b2a435b1dba0dcbb660b765f813582a2f0ee66e3.gz</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/patches/pending</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/patches/pending.tentative</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/patches/unrevert</itemPath>
+        </logicalFolder>
+        <logicalFolder name="prefs" displayName="prefs" projectFiles="true">
+          <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/prefs/author</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/prefs/binaries</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/prefs/boring</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/prefs/defaultrepo</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/prefs/motd</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/prefs/repos</itemPath>
+        </logicalFolder>
+        <logicalFolder name="pristine" displayName="pristine" projectFiles="true">
+          <logicalFolder name="doc" displayName="doc" projectFiles="true">
+            <logicalFolder name="img" displayName="img" projectFiles="true">
+              <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/doc/img/tourtre.jpg</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="examples" displayName="examples" projectFiles="true">
+            <logicalFolder name="simple" displayName="simple" projectFiles="true">
+              <logicalFolder name="obj" displayName="obj" projectFiles="true">
+              </logicalFolder>
+              <logicalFolder name="src" displayName="src" projectFiles="true">
+                <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/examples/simple/src/Data.cpp</itemPath>
+                <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/examples/simple/src/Data.h</itemPath>
+                <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/examples/simple/src/Global.h</itemPath>
+                <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/examples/simple/src/Mesh.cpp</itemPath>
+                <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/examples/simple/src/Mesh.h</itemPath>
+                <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/examples/simple/src/main.cpp</itemPath>
+              </logicalFolder>
+              <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/examples/simple/Makefile</itemPath>
+              <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/examples/simple/README</itemPath>
+              <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/examples/simple/nucleon.41x41x41.uint8</itemPath>
+              <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/examples/simple/nucleon.tree</itemPath>
+            </logicalFolder>
+            <logicalFolder name="tiff" displayName="tiff" projectFiles="true">
+              <logicalFolder name="obj" displayName="obj" projectFiles="true">
+              </logicalFolder>
+              <logicalFolder name="src" displayName="src" projectFiles="true">
+                <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/examples/tiff/src/Global.h</itemPath>
+                <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/examples/tiff/src/Mesh.cpp</itemPath>
+                <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/examples/tiff/src/Mesh.h</itemPath>
+                <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/examples/tiff/src/main.cpp</itemPath>
+              </logicalFolder>
+              <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/examples/tiff/Makefile</itemPath>
+              <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/examples/tiff/README</itemPath>
+              <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/examples/tiff/reddfoxx.tiff</itemPath>
+              <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/examples/tiff/simple.tiff</itemPath>
+            </logicalFolder>
+            <logicalFolder name="trilinear" displayName="trilinear" projectFiles="true">
+              <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/examples/trilinear/Makefile</itemPath>
+              <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/examples/trilinear/README</itemPath>
+              <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/examples/trilinear/main.c</itemPath>
+              <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/examples/trilinear/sglib.h</itemPath>
+              <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/examples/trilinear/trilinear.c</itemPath>
+              <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/examples/trilinear/trilinear.h</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="include" displayName="include" projectFiles="true">
+            <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/include/ctArc.h</itemPath>
+            <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/include/ctBranch.h</itemPath>
+            <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/include/ctNode.h</itemPath>
+            <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/include/tourtre.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="src" displayName="src" projectFiles="true">
+            <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/src/ctAlloc.h</itemPath>
+            <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/src/ctArc.c</itemPath>
+            <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/src/ctBranch.c</itemPath>
+            <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/src/ctComponent.c</itemPath>
+            <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/src/ctComponent.h</itemPath>
+            <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/src/ctContext.h</itemPath>
+            <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/src/ctMisc.h</itemPath>
+            <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/src/ctNode.c</itemPath>
+            <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/src/ctNodeMap.c</itemPath>
+            <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/src/ctNodeMap.h</itemPath>
+            <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/src/ctQueue.c</itemPath>
+            <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/src/ctQueue.h</itemPath>
+            <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/src/tourtre.c</itemPath>
+          </logicalFolder>
+          <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/Doxyfile</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/Makefile</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/pristine/README</itemPath>
+        </logicalFolder>
+        <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/index</itemPath>
+        <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/index_invalid</itemPath>
+        <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/inventory</itemPath>
+        <itemPath>../woven/libtourtre_v15/libtourtre/_darcs/tentative_pristine</itemPath>
+      </logicalFolder>
+      <logicalFolder name="doc" displayName="doc" projectFiles="true">
+        <logicalFolder name="html" displayName="html" projectFiles="true">
+          <itemPath>../woven/libtourtre_v15/libtourtre/doc/html/annotated.html</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/doc/html/classes.html</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/doc/html/ctArc_8h.html</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/doc/html/ctArc_8h_source.html</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/doc/html/ctBranch_8h.html</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/doc/html/ctBranch_8h_source.html</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/doc/html/ctNode_8h.html</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/doc/html/ctNode_8h_source.html</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/doc/html/doxygen.css</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/doc/html/doxygen.png</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/doc/html/files.html</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/doc/html/functions.html</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/doc/html/functions_vars.html</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/doc/html/globals.html</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/doc/html/globals_func.html</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/doc/html/globals_type.html</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/doc/html/index.html</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/doc/html/structctArc.html</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/doc/html/structctBranch.html</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/doc/html/structctBranchList.html</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/doc/html/structctNode.html</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/doc/html/tab_b.gif</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/doc/html/tab_l.gif</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/doc/html/tab_r.gif</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/doc/html/tabs.css</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/doc/html/tourtre.jpg</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/doc/html/tourtre_8h.html</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/doc/html/tourtre_8h_source.html</itemPath>
+        </logicalFolder>
+        <logicalFolder name="img" displayName="img" projectFiles="true">
+          <itemPath>../woven/libtourtre_v15/libtourtre/doc/img/tourtre.jpg</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="examples" displayName="examples" projectFiles="true">
+        <logicalFolder name="simple" displayName="simple" projectFiles="true">
+          <logicalFolder name="obj" displayName="obj" projectFiles="true">
+            <itemPath>../woven/libtourtre_v15/libtourtre/examples/simple/obj/Data.d</itemPath>
+            <itemPath>../woven/libtourtre_v15/libtourtre/examples/simple/obj/Mesh.d</itemPath>
+            <itemPath>../woven/libtourtre_v15/libtourtre/examples/simple/obj/main.d</itemPath>
+          </logicalFolder>
+          <logicalFolder name="src" displayName="src" projectFiles="true">
+            <itemPath>../woven/libtourtre_v15/libtourtre/examples/simple/src/Data.cpp</itemPath>
+            <itemPath>../woven/libtourtre_v15/libtourtre/examples/simple/src/Data.h</itemPath>
+            <itemPath>../woven/libtourtre_v15/libtourtre/examples/simple/src/Global.h</itemPath>
+            <itemPath>../woven/libtourtre_v15/libtourtre/examples/simple/src/Mesh.cpp</itemPath>
+            <itemPath>../woven/libtourtre_v15/libtourtre/examples/simple/src/Mesh.h</itemPath>
+            <itemPath>../woven/libtourtre_v15/libtourtre/examples/simple/src/main.cpp</itemPath>
+          </logicalFolder>
+          <itemPath>../woven/libtourtre_v15/libtourtre/examples/simple/Makefile</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/examples/simple/README</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/examples/simple/nucleon.41x41x41.uint8</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/examples/simple/nucleon.tree</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/examples/simple/output</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/examples/simple/simple</itemPath>
+        </logicalFolder>
+        <logicalFolder name="tiff" displayName="tiff" projectFiles="true">
+          <logicalFolder name="obj" displayName="obj" projectFiles="true">
+          </logicalFolder>
+          <logicalFolder name="src" displayName="src" projectFiles="true">
+            <itemPath>../woven/libtourtre_v15/libtourtre/examples/tiff/src/Global.h</itemPath>
+            <itemPath>../woven/libtourtre_v15/libtourtre/examples/tiff/src/Mesh.cpp</itemPath>
+            <itemPath>../woven/libtourtre_v15/libtourtre/examples/tiff/src/Mesh.h</itemPath>
+            <itemPath>../woven/libtourtre_v15/libtourtre/examples/tiff/src/main.cpp</itemPath>
+          </logicalFolder>
+          <itemPath>../woven/libtourtre_v15/libtourtre/examples/tiff/Makefile</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/examples/tiff/README</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/examples/tiff/reddfoxx.tiff</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/examples/tiff/simple.tiff</itemPath>
+        </logicalFolder>
+        <logicalFolder name="trilinear" displayName="trilinear" projectFiles="true">
+          <itemPath>../woven/libtourtre_v15/libtourtre/examples/trilinear/Makefile</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/examples/trilinear/README</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/examples/trilinear/main.c</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/examples/trilinear/sglib.h</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/examples/trilinear/trilinear.c</itemPath>
+          <itemPath>../woven/libtourtre_v15/libtourtre/examples/trilinear/trilinear.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="include" displayName="include" projectFiles="true">
+        <itemPath>../woven/libtourtre_v15/libtourtre/include/ctArc.h</itemPath>
+        <itemPath>../woven/libtourtre_v15/libtourtre/include/ctBranch.h</itemPath>
+        <itemPath>../woven/libtourtre_v15/libtourtre/include/ctNode.h</itemPath>
+        <itemPath>../woven/libtourtre_v15/libtourtre/include/tourtre.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="src" displayName="src" projectFiles="true">
+        <itemPath>../woven/libtourtre_v15/libtourtre/src/ctAlloc.h</itemPath>
+        <itemPath>../woven/libtourtre_v15/libtourtre/src/ctArc.c</itemPath>
+        <itemPath>../woven/libtourtre_v15/libtourtre/src/ctBranch.c</itemPath>
+        <itemPath>../woven/libtourtre_v15/libtourtre/src/ctComponent.c</itemPath>
+        <itemPath>../woven/libtourtre_v15/libtourtre/src/ctComponent.h</itemPath>
+        <itemPath>../woven/libtourtre_v15/libtourtre/src/ctContext.h</itemPath>
+        <itemPath>../woven/libtourtre_v15/libtourtre/src/ctMisc.h</itemPath>
+        <itemPath>../woven/libtourtre_v15/libtourtre/src/ctNode.c</itemPath>
+        <itemPath>../woven/libtourtre_v15/libtourtre/src/ctNodeMap.c</itemPath>
+        <itemPath>../woven/libtourtre_v15/libtourtre/src/ctNodeMap.h</itemPath>
+        <itemPath>../woven/libtourtre_v15/libtourtre/src/ctQueue.c</itemPath>
+        <itemPath>../woven/libtourtre_v15/libtourtre/src/ctQueue.h</itemPath>
+        <itemPath>../woven/libtourtre_v15/libtourtre/src/sglib.h</itemPath>
+        <itemPath>../woven/libtourtre_v15/libtourtre/src/tourtre.c</itemPath>
+      </logicalFolder>
+      <itemPath>../woven/libtourtre_v15/libtourtre/Doxyfile</itemPath>
+      <itemPath>../woven/libtourtre_v15/libtourtre/Makefile</itemPath>
+      <itemPath>../woven/libtourtre_v15/libtourtre/README</itemPath>
+    </logicalFolder>
     <logicalFolder name="OVAS" displayName="OVAS" projectFiles="true">
-      <logicalFolder name="CMakeFiles"
-                     displayName="CMakeFiles"
-                     projectFiles="true"
-                     kind="SOURCE_LOGICAL_FOLDER">
-        <logicalFolder name="CMakeTmp"
-                       displayName="CMakeTmp"
-                       projectFiles="true"
-                       kind="SOURCE_LOGICAL_FOLDER">
-          <logicalFolder name="CMakeFiles"
-                         displayName="CMakeFiles"
-                         projectFiles="true"
-                         kind="SOURCE_LOGICAL_FOLDER">
+      <logicalFolder name="CMakeFiles" displayName="CMakeFiles" projectFiles="true">
+        <logicalFolder name="CMakeTmp" displayName="CMakeTmp" projectFiles="true">
+          <logicalFolder name="CMakeFiles" displayName="CMakeFiles" projectFiles="true">
             <logicalFolder name="cmTryCompileExec.dir"
                            displayName="cmTryCompileExec.dir"
-                           projectFiles="true"
-                           kind="SOURCE_LOGICAL_FOLDER">
+                           projectFiles="true">
             </logicalFolder>
           </logicalFolder>
         </logicalFolder>
-        <logicalFolder name="CompilerIdC"
-                       displayName="CompilerIdC"
-                       projectFiles="true"
-                       kind="SOURCE_LOGICAL_FOLDER">
+        <logicalFolder name="CompilerIdC" displayName="CompilerIdC" projectFiles="true">
           <itemPath>CMakeFiles/CompilerIdC/CMakeCCompilerId.c</itemPath>
           <itemPath>CMakeFiles/CompilerIdC/a.out</itemPath>
         </logicalFolder>
         <logicalFolder name="CompilerIdCXX"
                        displayName="CompilerIdCXX"
-                       projectFiles="true"
-                       kind="SOURCE_LOGICAL_FOLDER">
+                       projectFiles="true">
           <itemPath>CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp</itemPath>
           <itemPath>CMakeFiles/CompilerIdCXX/a.out</itemPath>
         </logicalFolder>
         <logicalFolder name="testOVAS.dir"
                        displayName="testOVAS.dir"
-                       projectFiles="true"
-                       kind="SOURCE_LOGICAL_FOLDER">
+                       projectFiles="true">
           <itemPath>CMakeFiles/testOVAS.dir/CXX.includecache</itemPath>
           <itemPath>CMakeFiles/testOVAS.dir/DependInfo.cmake</itemPath>
           <itemPath>CMakeFiles/testOVAS.dir/build.make</itemPath>
@@ -79,26 +291,16 @@
         <itemPath>CMakeFiles/cmake.check_cache</itemPath>
         <itemPath>CMakeFiles/progress.marks</itemPath>
       </logicalFolder>
-      <logicalFolder name="dist"
-                     displayName="dist"
-                     projectFiles="true"
-                     kind="SOURCE_LOGICAL_FOLDER">
-        <logicalFolder name="Debug"
-                       displayName="Debug"
-                       projectFiles="true"
-                       kind="SOURCE_LOGICAL_FOLDER">
+      <logicalFolder name="dist" displayName="dist" projectFiles="true">
+        <logicalFolder name="Debug" displayName="Debug" projectFiles="true">
           <logicalFolder name="GNU-Linux-x86"
                          displayName="GNU-Linux-x86"
-                         projectFiles="true"
-                         kind="SOURCE_LOGICAL_FOLDER">
+                         projectFiles="true">
             <itemPath>dist/Debug/GNU-Linux-x86/ovas</itemPath>
           </logicalFolder>
         </logicalFolder>
       </logicalFolder>
-      <logicalFolder name="sphereData"
-                     displayName="sphereData"
-                     projectFiles="true"
-                     kind="SOURCE_LOGICAL_FOLDER">
+      <logicalFolder name="sphereData" displayName="sphereData" projectFiles="true">
         <itemPath>sphereData/spherei1</itemPath>
         <itemPath>sphereData/spherei2</itemPath>
         <itemPath>sphereData/spherei3</itemPath>
@@ -120,26 +322,32 @@
       <itemPath>ovas.config</itemPath>
       <itemPath>testOVAS</itemPath>
     </logicalFolder>
-    <logicalFolder name="ResourceFiles"
-                   displayName="Resource Files"
-                   projectFiles="true"
-                   kind="SOURCE_LOGICAL_FOLDER">
-    </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
-                   projectFiles="true"
-                   kind="SOURCE_LOGICAL_FOLDER">
+                   projectFiles="true">
       <itemPath>Analyser3D.cpp</itemPath>
       <itemPath>Analyser4D.cpp</itemPath>
       <itemPath>AreaFeature.cpp</itemPath>
+      <itemPath>CriticalPoint.cpp</itemPath>
+      <itemPath>Data.cpp</itemPath>
       <itemPath>Feature.cpp</itemPath>
+      <itemPath>FeatureWeights.cpp</itemPath>
+      <itemPath>FlyingSaucersVol4D.cpp</itemPath>
+      <itemPath>FrameBuffer.cpp</itemPath>
       <itemPath>GeoPoint.cpp</itemPath>
       <itemPath>GeoSequence.cpp</itemPath>
       <itemPath>GeoSphere.cpp</itemPath>
       <itemPath>ImplicitVolume4D.cpp</itemPath>
+      <itemPath>Mesh.cpp</itemPath>
       <itemPath>MetaballsVol4D.cpp</itemPath>
       <itemPath>StepToParamConverter.cpp</itemPath>
+      <itemPath>TemporalChangeFeature.cpp</itemPath>
+      <itemPath>TemporalChangeFeature2.cpp</itemPath>
+      <itemPath>TopologyFeature.cpp</itemPath>
+      <itemPath>ViewEvaluator.cpp</itemPath>
       <itemPath>Volume4D.cpp</itemPath>
+      <itemPath>testVol4D.cpp</itemPath>
+      <itemPath>testVol4D.h</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -150,34 +358,48 @@
                    displayName="Important Files"
                    projectFiles="false"
                    kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>CMakeLists.txt</itemPath>
       <itemPath>Makefile</itemPath>
+      <itemPath>ovas.config</itemPath>
+      <itemPath>temptext</itemPath>
+      <itemPath>../woven/VTK/Graphics/vtkUnstructuredGridToReebGraphFilter.cxx</itemPath>
     </logicalFolder>
-    <itemPath>FrameBuffer.cpp</itemPath>
-    <itemPath>FrameBuffer.h</itemPath>
+    <itemPath>InfoData.cpp</itemPath>
+    <itemPath>InfoData.h</itemPath>
+    <itemPath>InfoSheet.cpp</itemPath>
+    <itemPath>InfoSheet.h</itemPath>
+    <itemPath>MovingAAElipsoid.cpp</itemPath>
+    <itemPath>MovingAAElipsoid.h</itemPath>
+    <itemPath>OVASControl.cpp</itemPath>
     <itemPath>testOVAS.cpp</itemPath>
+    <itemPath>testRenderView.cpp</itemPath>
+    <itemPath>testRenderView.h</itemPath>
   </logicalFolder>
   <sourceRootList>
     <Elem>.</Elem>
+    <Elem>../woven/libtourtre_v15/libtourtre</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="Debug" type="1">
       <toolsSet>
-        <developmentServer>localhost</developmentServer>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
         <compilerSet>GNU|GNU</compilerSet>
-        <platform>2</platform>
       </toolsSet>
       <compileType>
         <ccTool>
+          <incDir>
+            <pElem>../woven/libtourtre_v15/libtourtre/include</pElem>
+            <pElem>/usr/local/include/vtk-5.9</pElem>
+          </incDir>
           <commandLine>-gdwarf-2 -g3</commandLine>
         </ccTool>
       </compileType>
     </conf>
     <conf name="Release" type="1">
       <toolsSet>
-        <developmentServer>localhost</developmentServer>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
         <compilerSet>GNU|GNU</compilerSet>
-        <platform>2</platform>
       </toolsSet>
       <compileType>
         <cTool>

@@ -10,8 +10,11 @@ SET(CMAKE_FORCE_UNIX_PATHS 1)
 
 # The C and CXX include file search paths:
 SET(CMAKE_C_INCLUDE_PATH
-  "/usr/local/include/vtk-5.7"
+  "/usr/local/include/vtk-5.9"
   "."
+  "/usr/local/include/vxl/core"
+  "/usr/local/include/vxl/vcl"
+  "/home/zoizoi/psyforge/woven/libtourtre_v15/libtourtre/include"
   )
 SET(CMAKE_CXX_INCLUDE_PATH ${CMAKE_C_INCLUDE_PATH})
 SET(CMAKE_Fortran_INCLUDE_PATH ${CMAKE_C_INCLUDE_PATH})

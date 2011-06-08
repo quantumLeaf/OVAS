@@ -159,6 +159,78 @@ Analyser4D.cpp.s:
 	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/Analyser4D.cpp.s
 .PHONY : Analyser4D.cpp.s
 
+AreaFeature.o: AreaFeature.cpp.o
+.PHONY : AreaFeature.o
+
+# target to build an object file
+AreaFeature.cpp.o:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/AreaFeature.cpp.o
+.PHONY : AreaFeature.cpp.o
+
+AreaFeature.i: AreaFeature.cpp.i
+.PHONY : AreaFeature.i
+
+# target to preprocess a source file
+AreaFeature.cpp.i:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/AreaFeature.cpp.i
+.PHONY : AreaFeature.cpp.i
+
+AreaFeature.s: AreaFeature.cpp.s
+.PHONY : AreaFeature.s
+
+# target to generate assembly for a file
+AreaFeature.cpp.s:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/AreaFeature.cpp.s
+.PHONY : AreaFeature.cpp.s
+
+CriticalPoint.o: CriticalPoint.cpp.o
+.PHONY : CriticalPoint.o
+
+# target to build an object file
+CriticalPoint.cpp.o:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/CriticalPoint.cpp.o
+.PHONY : CriticalPoint.cpp.o
+
+CriticalPoint.i: CriticalPoint.cpp.i
+.PHONY : CriticalPoint.i
+
+# target to preprocess a source file
+CriticalPoint.cpp.i:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/CriticalPoint.cpp.i
+.PHONY : CriticalPoint.cpp.i
+
+CriticalPoint.s: CriticalPoint.cpp.s
+.PHONY : CriticalPoint.s
+
+# target to generate assembly for a file
+CriticalPoint.cpp.s:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/CriticalPoint.cpp.s
+.PHONY : CriticalPoint.cpp.s
+
+Data.o: Data.cpp.o
+.PHONY : Data.o
+
+# target to build an object file
+Data.cpp.o:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/Data.cpp.o
+.PHONY : Data.cpp.o
+
+Data.i: Data.cpp.i
+.PHONY : Data.i
+
+# target to preprocess a source file
+Data.cpp.i:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/Data.cpp.i
+.PHONY : Data.cpp.i
+
+Data.s: Data.cpp.s
+.PHONY : Data.s
+
+# target to generate assembly for a file
+Data.cpp.s:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/Data.cpp.s
+.PHONY : Data.cpp.s
+
 Feature.o: Feature.cpp.o
 .PHONY : Feature.o
 
@@ -182,6 +254,78 @@ Feature.s: Feature.cpp.s
 Feature.cpp.s:
 	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/Feature.cpp.s
 .PHONY : Feature.cpp.s
+
+FeatureWeights.o: FeatureWeights.cpp.o
+.PHONY : FeatureWeights.o
+
+# target to build an object file
+FeatureWeights.cpp.o:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/FeatureWeights.cpp.o
+.PHONY : FeatureWeights.cpp.o
+
+FeatureWeights.i: FeatureWeights.cpp.i
+.PHONY : FeatureWeights.i
+
+# target to preprocess a source file
+FeatureWeights.cpp.i:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/FeatureWeights.cpp.i
+.PHONY : FeatureWeights.cpp.i
+
+FeatureWeights.s: FeatureWeights.cpp.s
+.PHONY : FeatureWeights.s
+
+# target to generate assembly for a file
+FeatureWeights.cpp.s:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/FeatureWeights.cpp.s
+.PHONY : FeatureWeights.cpp.s
+
+FlyingSaucersVol4D.o: FlyingSaucersVol4D.cpp.o
+.PHONY : FlyingSaucersVol4D.o
+
+# target to build an object file
+FlyingSaucersVol4D.cpp.o:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/FlyingSaucersVol4D.cpp.o
+.PHONY : FlyingSaucersVol4D.cpp.o
+
+FlyingSaucersVol4D.i: FlyingSaucersVol4D.cpp.i
+.PHONY : FlyingSaucersVol4D.i
+
+# target to preprocess a source file
+FlyingSaucersVol4D.cpp.i:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/FlyingSaucersVol4D.cpp.i
+.PHONY : FlyingSaucersVol4D.cpp.i
+
+FlyingSaucersVol4D.s: FlyingSaucersVol4D.cpp.s
+.PHONY : FlyingSaucersVol4D.s
+
+# target to generate assembly for a file
+FlyingSaucersVol4D.cpp.s:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/FlyingSaucersVol4D.cpp.s
+.PHONY : FlyingSaucersVol4D.cpp.s
+
+FrameBuffer.o: FrameBuffer.cpp.o
+.PHONY : FrameBuffer.o
+
+# target to build an object file
+FrameBuffer.cpp.o:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/FrameBuffer.cpp.o
+.PHONY : FrameBuffer.cpp.o
+
+FrameBuffer.i: FrameBuffer.cpp.i
+.PHONY : FrameBuffer.i
+
+# target to preprocess a source file
+FrameBuffer.cpp.i:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/FrameBuffer.cpp.i
+.PHONY : FrameBuffer.cpp.i
+
+FrameBuffer.s: FrameBuffer.cpp.s
+.PHONY : FrameBuffer.s
+
+# target to generate assembly for a file
+FrameBuffer.cpp.s:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/FrameBuffer.cpp.s
+.PHONY : FrameBuffer.cpp.s
 
 GeoPoint.o: GeoPoint.cpp.o
 .PHONY : GeoPoint.o
@@ -279,6 +423,102 @@ ImplicitVolume4D.cpp.s:
 	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/ImplicitVolume4D.cpp.s
 .PHONY : ImplicitVolume4D.cpp.s
 
+InfoData.o: InfoData.cpp.o
+.PHONY : InfoData.o
+
+# target to build an object file
+InfoData.cpp.o:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/InfoData.cpp.o
+.PHONY : InfoData.cpp.o
+
+InfoData.i: InfoData.cpp.i
+.PHONY : InfoData.i
+
+# target to preprocess a source file
+InfoData.cpp.i:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/InfoData.cpp.i
+.PHONY : InfoData.cpp.i
+
+InfoData.s: InfoData.cpp.s
+.PHONY : InfoData.s
+
+# target to generate assembly for a file
+InfoData.cpp.s:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/InfoData.cpp.s
+.PHONY : InfoData.cpp.s
+
+InfoSheet.o: InfoSheet.cpp.o
+.PHONY : InfoSheet.o
+
+# target to build an object file
+InfoSheet.cpp.o:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/InfoSheet.cpp.o
+.PHONY : InfoSheet.cpp.o
+
+InfoSheet.i: InfoSheet.cpp.i
+.PHONY : InfoSheet.i
+
+# target to preprocess a source file
+InfoSheet.cpp.i:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/InfoSheet.cpp.i
+.PHONY : InfoSheet.cpp.i
+
+InfoSheet.s: InfoSheet.cpp.s
+.PHONY : InfoSheet.s
+
+# target to generate assembly for a file
+InfoSheet.cpp.s:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/InfoSheet.cpp.s
+.PHONY : InfoSheet.cpp.s
+
+LoadedVol4D.o: LoadedVol4D.cpp.o
+.PHONY : LoadedVol4D.o
+
+# target to build an object file
+LoadedVol4D.cpp.o:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/LoadedVol4D.cpp.o
+.PHONY : LoadedVol4D.cpp.o
+
+LoadedVol4D.i: LoadedVol4D.cpp.i
+.PHONY : LoadedVol4D.i
+
+# target to preprocess a source file
+LoadedVol4D.cpp.i:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/LoadedVol4D.cpp.i
+.PHONY : LoadedVol4D.cpp.i
+
+LoadedVol4D.s: LoadedVol4D.cpp.s
+.PHONY : LoadedVol4D.s
+
+# target to generate assembly for a file
+LoadedVol4D.cpp.s:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/LoadedVol4D.cpp.s
+.PHONY : LoadedVol4D.cpp.s
+
+Mesh.o: Mesh.cpp.o
+.PHONY : Mesh.o
+
+# target to build an object file
+Mesh.cpp.o:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/Mesh.cpp.o
+.PHONY : Mesh.cpp.o
+
+Mesh.i: Mesh.cpp.i
+.PHONY : Mesh.i
+
+# target to preprocess a source file
+Mesh.cpp.i:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/Mesh.cpp.i
+.PHONY : Mesh.cpp.i
+
+Mesh.s: Mesh.cpp.s
+.PHONY : Mesh.s
+
+# target to generate assembly for a file
+Mesh.cpp.s:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/Mesh.cpp.s
+.PHONY : Mesh.cpp.s
+
 MetaballsVol4D.o: MetaballsVol4D.cpp.o
 .PHONY : MetaballsVol4D.o
 
@@ -303,6 +543,78 @@ MetaballsVol4D.cpp.s:
 	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.s
 .PHONY : MetaballsVol4D.cpp.s
 
+MovingAAElipsoid.o: MovingAAElipsoid.cpp.o
+.PHONY : MovingAAElipsoid.o
+
+# target to build an object file
+MovingAAElipsoid.cpp.o:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/MovingAAElipsoid.cpp.o
+.PHONY : MovingAAElipsoid.cpp.o
+
+MovingAAElipsoid.i: MovingAAElipsoid.cpp.i
+.PHONY : MovingAAElipsoid.i
+
+# target to preprocess a source file
+MovingAAElipsoid.cpp.i:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/MovingAAElipsoid.cpp.i
+.PHONY : MovingAAElipsoid.cpp.i
+
+MovingAAElipsoid.s: MovingAAElipsoid.cpp.s
+.PHONY : MovingAAElipsoid.s
+
+# target to generate assembly for a file
+MovingAAElipsoid.cpp.s:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/MovingAAElipsoid.cpp.s
+.PHONY : MovingAAElipsoid.cpp.s
+
+OVASControl.o: OVASControl.cpp.o
+.PHONY : OVASControl.o
+
+# target to build an object file
+OVASControl.cpp.o:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/OVASControl.cpp.o
+.PHONY : OVASControl.cpp.o
+
+OVASControl.i: OVASControl.cpp.i
+.PHONY : OVASControl.i
+
+# target to preprocess a source file
+OVASControl.cpp.i:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/OVASControl.cpp.i
+.PHONY : OVASControl.cpp.i
+
+OVASControl.s: OVASControl.cpp.s
+.PHONY : OVASControl.s
+
+# target to generate assembly for a file
+OVASControl.cpp.s:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/OVASControl.cpp.s
+.PHONY : OVASControl.cpp.s
+
+PathVisualiser.o: PathVisualiser.cpp.o
+.PHONY : PathVisualiser.o
+
+# target to build an object file
+PathVisualiser.cpp.o:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/PathVisualiser.cpp.o
+.PHONY : PathVisualiser.cpp.o
+
+PathVisualiser.i: PathVisualiser.cpp.i
+.PHONY : PathVisualiser.i
+
+# target to preprocess a source file
+PathVisualiser.cpp.i:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/PathVisualiser.cpp.i
+.PHONY : PathVisualiser.cpp.i
+
+PathVisualiser.s: PathVisualiser.cpp.s
+.PHONY : PathVisualiser.s
+
+# target to generate assembly for a file
+PathVisualiser.cpp.s:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/PathVisualiser.cpp.s
+.PHONY : PathVisualiser.cpp.s
+
 StepToParamConverter.o: StepToParamConverter.cpp.o
 .PHONY : StepToParamConverter.o
 
@@ -326,6 +638,102 @@ StepToParamConverter.s: StepToParamConverter.cpp.s
 StepToParamConverter.cpp.s:
 	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/StepToParamConverter.cpp.s
 .PHONY : StepToParamConverter.cpp.s
+
+TemporalChangeFeature.o: TemporalChangeFeature.cpp.o
+.PHONY : TemporalChangeFeature.o
+
+# target to build an object file
+TemporalChangeFeature.cpp.o:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/TemporalChangeFeature.cpp.o
+.PHONY : TemporalChangeFeature.cpp.o
+
+TemporalChangeFeature.i: TemporalChangeFeature.cpp.i
+.PHONY : TemporalChangeFeature.i
+
+# target to preprocess a source file
+TemporalChangeFeature.cpp.i:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/TemporalChangeFeature.cpp.i
+.PHONY : TemporalChangeFeature.cpp.i
+
+TemporalChangeFeature.s: TemporalChangeFeature.cpp.s
+.PHONY : TemporalChangeFeature.s
+
+# target to generate assembly for a file
+TemporalChangeFeature.cpp.s:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/TemporalChangeFeature.cpp.s
+.PHONY : TemporalChangeFeature.cpp.s
+
+TemporalChangeFeature2.o: TemporalChangeFeature2.cpp.o
+.PHONY : TemporalChangeFeature2.o
+
+# target to build an object file
+TemporalChangeFeature2.cpp.o:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/TemporalChangeFeature2.cpp.o
+.PHONY : TemporalChangeFeature2.cpp.o
+
+TemporalChangeFeature2.i: TemporalChangeFeature2.cpp.i
+.PHONY : TemporalChangeFeature2.i
+
+# target to preprocess a source file
+TemporalChangeFeature2.cpp.i:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/TemporalChangeFeature2.cpp.i
+.PHONY : TemporalChangeFeature2.cpp.i
+
+TemporalChangeFeature2.s: TemporalChangeFeature2.cpp.s
+.PHONY : TemporalChangeFeature2.s
+
+# target to generate assembly for a file
+TemporalChangeFeature2.cpp.s:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/TemporalChangeFeature2.cpp.s
+.PHONY : TemporalChangeFeature2.cpp.s
+
+TopologyFeature.o: TopologyFeature.cpp.o
+.PHONY : TopologyFeature.o
+
+# target to build an object file
+TopologyFeature.cpp.o:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/TopologyFeature.cpp.o
+.PHONY : TopologyFeature.cpp.o
+
+TopologyFeature.i: TopologyFeature.cpp.i
+.PHONY : TopologyFeature.i
+
+# target to preprocess a source file
+TopologyFeature.cpp.i:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/TopologyFeature.cpp.i
+.PHONY : TopologyFeature.cpp.i
+
+TopologyFeature.s: TopologyFeature.cpp.s
+.PHONY : TopologyFeature.s
+
+# target to generate assembly for a file
+TopologyFeature.cpp.s:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/TopologyFeature.cpp.s
+.PHONY : TopologyFeature.cpp.s
+
+ViewEvaluator.o: ViewEvaluator.cpp.o
+.PHONY : ViewEvaluator.o
+
+# target to build an object file
+ViewEvaluator.cpp.o:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/ViewEvaluator.cpp.o
+.PHONY : ViewEvaluator.cpp.o
+
+ViewEvaluator.i: ViewEvaluator.cpp.i
+.PHONY : ViewEvaluator.i
+
+# target to preprocess a source file
+ViewEvaluator.cpp.i:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/ViewEvaluator.cpp.i
+.PHONY : ViewEvaluator.cpp.i
+
+ViewEvaluator.s: ViewEvaluator.cpp.s
+.PHONY : ViewEvaluator.s
+
+# target to generate assembly for a file
+ViewEvaluator.cpp.s:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/ViewEvaluator.cpp.s
+.PHONY : ViewEvaluator.cpp.s
 
 Volume4D.o: Volume4D.cpp.o
 .PHONY : Volume4D.o
@@ -399,6 +807,30 @@ testOVAS.cpp.s:
 	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/testOVAS.cpp.s
 .PHONY : testOVAS.cpp.s
 
+testVol4D.o: testVol4D.cpp.o
+.PHONY : testVol4D.o
+
+# target to build an object file
+testVol4D.cpp.o:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/testVol4D.cpp.o
+.PHONY : testVol4D.cpp.o
+
+testVol4D.i: testVol4D.cpp.i
+.PHONY : testVol4D.i
+
+# target to preprocess a source file
+testVol4D.cpp.i:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/testVol4D.cpp.i
+.PHONY : testVol4D.cpp.i
+
+testVol4D.s: testVol4D.cpp.s
+.PHONY : testVol4D.s
+
+# target to generate assembly for a file
+testVol4D.cpp.s:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/testVol4D.cpp.s
+.PHONY : testVol4D.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -414,9 +846,27 @@ help:
 	@echo "... Analyser4D.o"
 	@echo "... Analyser4D.i"
 	@echo "... Analyser4D.s"
+	@echo "... AreaFeature.o"
+	@echo "... AreaFeature.i"
+	@echo "... AreaFeature.s"
+	@echo "... CriticalPoint.o"
+	@echo "... CriticalPoint.i"
+	@echo "... CriticalPoint.s"
+	@echo "... Data.o"
+	@echo "... Data.i"
+	@echo "... Data.s"
 	@echo "... Feature.o"
 	@echo "... Feature.i"
 	@echo "... Feature.s"
+	@echo "... FeatureWeights.o"
+	@echo "... FeatureWeights.i"
+	@echo "... FeatureWeights.s"
+	@echo "... FlyingSaucersVol4D.o"
+	@echo "... FlyingSaucersVol4D.i"
+	@echo "... FlyingSaucersVol4D.s"
+	@echo "... FrameBuffer.o"
+	@echo "... FrameBuffer.i"
+	@echo "... FrameBuffer.s"
 	@echo "... GeoPoint.o"
 	@echo "... GeoPoint.i"
 	@echo "... GeoPoint.s"
@@ -429,12 +879,45 @@ help:
 	@echo "... ImplicitVolume4D.o"
 	@echo "... ImplicitVolume4D.i"
 	@echo "... ImplicitVolume4D.s"
+	@echo "... InfoData.o"
+	@echo "... InfoData.i"
+	@echo "... InfoData.s"
+	@echo "... InfoSheet.o"
+	@echo "... InfoSheet.i"
+	@echo "... InfoSheet.s"
+	@echo "... LoadedVol4D.o"
+	@echo "... LoadedVol4D.i"
+	@echo "... LoadedVol4D.s"
+	@echo "... Mesh.o"
+	@echo "... Mesh.i"
+	@echo "... Mesh.s"
 	@echo "... MetaballsVol4D.o"
 	@echo "... MetaballsVol4D.i"
 	@echo "... MetaballsVol4D.s"
+	@echo "... MovingAAElipsoid.o"
+	@echo "... MovingAAElipsoid.i"
+	@echo "... MovingAAElipsoid.s"
+	@echo "... OVASControl.o"
+	@echo "... OVASControl.i"
+	@echo "... OVASControl.s"
+	@echo "... PathVisualiser.o"
+	@echo "... PathVisualiser.i"
+	@echo "... PathVisualiser.s"
 	@echo "... StepToParamConverter.o"
 	@echo "... StepToParamConverter.i"
 	@echo "... StepToParamConverter.s"
+	@echo "... TemporalChangeFeature.o"
+	@echo "... TemporalChangeFeature.i"
+	@echo "... TemporalChangeFeature.s"
+	@echo "... TemporalChangeFeature2.o"
+	@echo "... TemporalChangeFeature2.i"
+	@echo "... TemporalChangeFeature2.s"
+	@echo "... TopologyFeature.o"
+	@echo "... TopologyFeature.i"
+	@echo "... TopologyFeature.s"
+	@echo "... ViewEvaluator.o"
+	@echo "... ViewEvaluator.i"
+	@echo "... ViewEvaluator.s"
 	@echo "... Volume4D.o"
 	@echo "... Volume4D.i"
 	@echo "... Volume4D.s"
@@ -444,6 +927,9 @@ help:
 	@echo "... testOVAS.o"
 	@echo "... testOVAS.i"
 	@echo "... testOVAS.s"
+	@echo "... testVol4D.o"
+	@echo "... testVol4D.i"
+	@echo "... testVol4D.s"
 .PHONY : help
 
 

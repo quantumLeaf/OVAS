@@ -47,13 +47,21 @@ Volume4D::~Volume4D() {
 }
 
 void Volume4D::setToStep(int step) {
-   
+     cout << "setting vol to step " << step << endl;
+//    for (int k = 0; k < oc->zDim; k++) {
+//        for (int j = 0; j < oc->yDim; j++) {
+//            for (int i = 0; i < oc->xDim; i++) {
+//                float val = getVoxelValue(i, j, k, step);
+//                //cout<<" got val "<<val<<endl;
+//                vtkVol->SetScalarComponentFromFloat(i, j, k, 0, val);
+//
+//            }
+//        }
+//    }
+//     createCharVolume();
     loadFloatVolume(oc->volDataFileName);
-
-
     contourer->Update();
     contourer->Modified();
-
 }
 
 void Volume4D::updateActor() {
@@ -62,6 +70,7 @@ void Volume4D::updateActor() {
 }
 
 void Volume4D::loadFloatVolume(string* fileName) {
+    cout<<"loading float vol"<<*fileName<<endl;
 
     int totalSize = oc->xDim * oc->yDim * oc->zDim;
 
@@ -74,28 +83,14 @@ void Volume4D::loadFloatVolume(string* fileName) {
     }
 
     cout << "total size is " << totalSize * 4 << endl;
-    float * floatData = new float [totalSize];
-
+    float * floatData = new float [totalSize];    
     infile.read((char*) floatData, totalSize * 4);
-    //    char* re1src=reinterpret_cast<char *>(&fd);
-    //    char* re1dest=new char[4];
-    //    re1dest[1]=re1src[2];
-    //    re1dest[2]=re1src[1];
-    //    re1dest[0]=re1src[3];
-    //    re1dest[3]=re1src[0];
-
-
-    //endian_byte_swapper(re1dest,re1src);
-    //    endian_byte_swapper(re1dest,re1src);
     int voxCount = 0;
     for (int k = 0; k < oc->zDim; k++) {
         for (int j = 0; j < oc->yDim; j++) {
             for (int i = 0; i < oc->xDim; i++) {
                 vtkVol->SetScalarComponentFromFloat(i, j, k, 0, floatData[voxCount++]);
-                if (k == 128 && j == 128) {
-                    cout << floatData[voxCount - 1] << endl;
-
-                }
+              
             }
         }
     }
@@ -122,6 +117,46 @@ void Volume4D::loadFloatVolume(string* fileName) {
    
     return;
 }
+
+void Volume4D::createCharVolume() {
+
+    int totalSize = oc->xDim * oc->yDim * oc->zDim;
+
+    cout << "total size is " << totalSize * 4 << endl;
+    float * floatData = new float [totalSize];
+
+    int voxCount = 0;
+    for (int k = 0; k < oc->zDim; k++) {
+        for (int j = 0; j < oc->yDim; j++) {
+            for (int i = 0; i < oc->xDim; i++) {
+                floatData[voxCount]=vtkVol->GetScalarComponentAsFloat(i, j, k, 0);
+                voxCount++;
+            }
+        }
+    }
+    cout << "created char checking min max" << endl;
+
+    float fmaxValue = floatData[0];
+    float fminValue = floatData[0];
+    for (int i = 0; i < totalSize; i++) {
+        if (floatData[i] > fmaxValue) fmaxValue = floatData[i];
+        if (floatData[i] < fminValue) fminValue = floatData[i];
+    }
+
+    float range = fmaxValue - fminValue;
+    for (int i = 0; i < totalSize; i++) {
+        float val = (((floatData[i] - fminValue) / range)*255);
+        unsigned char c = (unsigned char) val;
+        charVol[i] = c;
+    }
+
+    std::clog << "loaded vol max value was " << fmaxValue << " and min value was " << fminValue << std::endl;
+    oc->isoRange=fmaxValue-fminValue;
+    oc->isoRangeThreshold=oc->isoRange/10;
+   
+    return;
+}
+
 
 size_t neighbors(size_t v, size_t * nbrs, void * d) {
     Mesh * mesh = static_cast<Mesh*> (d);
@@ -168,7 +203,14 @@ void outputTree(std::ofstream & out, ctBranch * b) {
 
 void Volume4D::findCritcalPoints() {
    // setToStep(0);
-    cout << " building contour tree" << endl;
+    std::fstream infile;
+    string ctDatafile=*oc->volDataFileName+string(".ctData");
+    infile.open((ctDatafile).c_str(), std::ios::in);
+//    if (infile.is_open()) {
+//        std::clog << "could not open ctData " << ctDatafile << std::endl;
+//        return;
+//    }
+    cout << "unable to load critical points, building contour tree" << endl;
 
     Data data;
     int i = 0;
@@ -203,23 +245,32 @@ void Volume4D::findCritcalPoints() {
     cout << " persistance " << evalPersistence(&data, root) << endl;
     //data.convertIndex(data.maxId, x, y, z);
     //cout << "max val id " << data.maxId << "locati " << x << " " << y << " " << z << " with id " << (int) data.maxId << " val " << (int) data[data.maxId] << endl;
-    addPersistentBranches(&data, root, 0.04);
+    cout<<" adding persistant branches where persistance is greater than "<<oc->isoRange*0.05<<endl;
+    addPersistentBranches(&data, root, oc->isoRange*0.05);
     ctBranch ** map = ct_branchMap(ctx);
     ct_cleanup(ctx);
-
-    //output tree
-    //    std::ofstream out(outfile, std::ios::out);
-    //    if (out) {
-    //        outputTree(out, root);
-    //    } else {
-    //        cerr << "couldn't open output file " << outfile << endl;
-    //    }
+    
+//    ofstream outfile;
+//    outfile.open(ctDatafile.c_str());
+//    
+//        if (outfile.is_open()) {
+//            cout<<"opened output file "<<ctDatafile<<endl;
+//            vector<CriticalPoint*>::iterator it;
+//            cout<<"cp length "<<oc->volume4D->criticalPoints->size()<<endl;
+//            for (it=oc->volume4D->criticalPoints->begin();it!=oc->volume4D->criticalPoints->end();it++){
+//                cout<<"outputting critical point"<<endl;
+//                outfile<<(*it)->x<<" "<<(*it)->y<<" "<<(*it)->z<<" "<<(*it)->step<<" "<<(*it)->value<<endl;
+//            }
+//        } else {
+//            cerr << "couldn't open output file " << outfile << endl;
+//        }
 
 }
 
 void Volume4D::addPersistentBranches(Data* data, ctBranch* b, float thresh) {
     float persistence = evalPersistence(data, b);
     //if(persistence<-0.03) cout<<"warning stronger negative persistence "<<persistence<<endl;
+    cout<<"eval branch of persist "<<persistence<<endl;
     if (persistence > thresh) {
         int extId = b->extremum;
         int sadId = b->saddle;
@@ -241,9 +292,7 @@ void Volume4D::addPersistentBranches(Data* data, ctBranch* b, float thresh) {
             CriticalPoint* lastPoint = criticalPoints->back();
             cout << "add new CP " << lastPoint->getXFloat() << " " << lastPoint->getYFloat() << " " << lastPoint->getZFloat() << " " << lastPoint->value << endl;
         }
-
         for (ctBranch * c = b->children.head; c != NULL; c = c->nextChild) {
-
             addPersistentBranches(data, c, thresh);
         }
     }
@@ -257,7 +306,6 @@ void Volume4D::testContourTree() {
     char filename[1024] = "";
     strcpy(outfile, "./nucleon.tree");
     //strcpy(filename, "./ns_0208_e.dat");
-
 
     Data data;
     int i = 0;
