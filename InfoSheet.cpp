@@ -133,7 +133,7 @@ int* InfoSheet::findPath() {
                        
             reg = lookupNeighbourIndex(pos, path[i]);
         }
-        //cout << "step " << i << " pos " <<path[i]<<" from n:"<<reg<<" "<<views[pos]->neighbours[reg]<<endl;;
+        cout << "step " << i << " pos " <<path[i]<<" "<<oc->numSteps<<endl;;
     }
     
     return path;

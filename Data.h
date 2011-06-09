@@ -20,7 +20,7 @@ struct Data {
     }
 
     ~Data() {
-        if (data) delete[] data;
+       // if (data) delete[] data;
     }
 
     //1 dimensional referencing

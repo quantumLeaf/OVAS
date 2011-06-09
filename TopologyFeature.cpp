@@ -35,12 +35,15 @@ void TopologyFeature::scoreFeature(GeoPoint* view) {
     float viewRange = 3;
     camera->SetPosition(viewRange * view->getx(), viewRange * view->gety(), viewRange * view->getz());
     vector<CriticalPoint*>::iterator it;
+    int redBallCount=0;
     for (it=oc->volume4D->criticalPoints->begin();it!=oc->volume4D->criticalPoints->end();it++){
-        if (closeToCriticalIsoVal(oc->currentIso,(*it))){
+        if (closeToCriticalIsoVal(oc->currentIso,(*it))&&(*it)->step==oc->currentStep){
+            redBallCount++;
             renderer->AddActor((*it)->getActor());
-            cout<<"adding actor for CP at iso "<<oc->currentIso<<" where cp iso is "<<(*it)->value<<endl;
+            //cout<<"adding actor for CP at iso "<<oc->currentIso<<" where cp iso is "<<(*it)->value<<endl;
         }
     }
+    //cout<<" active redballs "<<redBallCount<<endl;
     renderWindow->Render();
 
     int redPix=countColour(colourR,colourG,colourB,framebuffer);

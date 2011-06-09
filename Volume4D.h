@@ -47,19 +47,19 @@ public:
     void findCritcalPoints();
     float evalPersistence(Data* data,ctBranch* b);
     void addPersistentBranches(Data*,ctBranch*,float thresh);     
-    void outputTree(std::ofstream & out, ctBranch * b,Data* d);
+   // void outputTree(std::ofstream & out, ctBranch * b,Data* d);
     int DisplayReebGraph(vtkReebGraph *g);
     int DisplayVolumeSkeleton(vtkUnstructuredGrid* vtkNotUsed(volumeMesh), vtkTable *skeleton);
     vector<CriticalPoint*>* criticalPoints;
 //    size_t neighbors ( size_t v, size_t * nbrs, void * d );
 //    double value ( size_t v, void * d );
-    
+    unsigned char* charVol;
 protected:
     OVASControl* oc;
     vtkSmartPointer<vtkImageData> vtkVol;
     vtkSmartPointer<vtkContourFilter> contourer;
     float* isoVal;
-    unsigned char* charVol;
+    
     
     
    

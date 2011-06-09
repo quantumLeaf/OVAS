@@ -14,6 +14,7 @@
 #include <sstream>
 #include "vtkEssentials.h"
 #include <string>
+#include <sstream>
 
 class GeoSequence;
 class GeoSphere;
@@ -91,5 +92,15 @@ private:
 
 };
 
+template <class T>
+inline std::string to_string (const T& t)
+{
+std::stringstream ss;
+ss << t;
+return ss.str();
+}
+
 #endif	/* OVASCONTROL_H */
+
+
 

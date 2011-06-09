@@ -25,7 +25,7 @@ Volume4D::Volume4D(OVASControl* o) {
     vtkVol->SetOrigin(0, 0, 0);
     vtkVol->SetSpacing(sp, sp, sp);
     vtkVol->AllocateScalars();
-    oc->currentIso = 1.19;
+    oc->currentIso = 1.177;
     contourer->SetInput(vtkVol);
     contourer->SetValue(0, oc->currentIso);
     contourer->Update();
@@ -36,7 +36,19 @@ Volume4D::Volume4D(OVASControl* o) {
     oc->volActor->GetProperty()->SetDiffuse(0); //SetShading(0);
     oc->volActor->GetProperty()->SetSpecular(0); //SetShading(0);
     oc->volActor->GetProperty()->SetInterpolationToFlat();
+
+
+
     charVol = new unsigned char[oc->xDim * oc->yDim * oc->zDim];
+
+    //cout << " address of charvol " << (static_cast<const void*> (charVol)) << endl;
+
+    int* test = new int[3];
+
+
+    //    /cout<<" current dims are "<<oc->xDim<<endl;
+
+
     criticalPoints = new vector<CriticalPoint*>();
 }
 
@@ -47,19 +59,23 @@ Volume4D::~Volume4D() {
 }
 
 void Volume4D::setToStep(int step) {
-     cout << "setting vol to step " << step << endl;
-//    for (int k = 0; k < oc->zDim; k++) {
-//        for (int j = 0; j < oc->yDim; j++) {
-//            for (int i = 0; i < oc->xDim; i++) {
-//                float val = getVoxelValue(i, j, k, step);
-//                //cout<<" got val "<<val<<endl;
-//                vtkVol->SetScalarComponentFromFloat(i, j, k, 0, val);
-//
-//            }
-//        }
-//    }
-//     createCharVolume();
-    loadFloatVolume(oc->volDataFileName);
+    cout << "setting vol to step " << step << endl;
+    //    for (int k = 0; k < oc->zDim; k++) {
+    //        for (int j = 0; j < oc->yDim; j++) {
+    //            for (int i = 0; i < oc->xDim; i++) {
+    //                float val = getVoxelValue(i, j, k, step);
+    //                //cout<<" got val "<<val<<endl;
+    //                vtkVol->SetScalarComponentFromFloat(i, j, k, 0, val);
+    //
+    //            }
+    //        }
+    //    }
+    //     createCharVolume();
+    //loadFloatVolume(oc->volDataFileName);
+    string filename = "./data/ns_000" + to_string(step*3 + 1) + "_r.dat";
+    cout << "loading file " << filename << endl;
+
+    loadFloatVolume(&filename);
     contourer->Update();
     contourer->Modified();
 }
@@ -70,7 +86,7 @@ void Volume4D::updateActor() {
 }
 
 void Volume4D::loadFloatVolume(string* fileName) {
-    cout<<"loading float vol"<<*fileName<<endl;
+    cout << "loading float vol" << *fileName << endl;
 
     int totalSize = oc->xDim * oc->yDim * oc->zDim;
 
@@ -83,14 +99,13 @@ void Volume4D::loadFloatVolume(string* fileName) {
     }
 
     cout << "total size is " << totalSize * 4 << endl;
-    float * floatData = new float [totalSize];    
+    float * floatData = new float [totalSize];
     infile.read((char*) floatData, totalSize * 4);
     int voxCount = 0;
     for (int k = 0; k < oc->zDim; k++) {
         for (int j = 0; j < oc->yDim; j++) {
             for (int i = 0; i < oc->xDim; i++) {
                 vtkVol->SetScalarComponentFromFloat(i, j, k, 0, floatData[voxCount++]);
-              
             }
         }
     }
@@ -103,6 +118,9 @@ void Volume4D::loadFloatVolume(string* fileName) {
         if (floatData[i] < fminValue) fminValue = floatData[i];
 
     }
+    //cout<<"load in character data to vol at "<<charVol<<endl;
+
+    //cout << " address of charvol " << (static_cast<const void*> (charVol)) << endl;
 
     float range = fmaxValue - fminValue;
     for (int i = 0; i < totalSize; i++) {
@@ -111,10 +129,16 @@ void Volume4D::loadFloatVolume(string* fileName) {
         charVol[i] = c;
     }
 
+    for (int i = 0; i < totalSize; i++) {
+        float val = (((floatData[i] - fminValue) / range)*255);
+        unsigned char c = (unsigned char) val;
+        charVol[i] = c;
+    }
+
     std::clog << "loaded vol max value was " << fmaxValue << " and min value was " << fminValue << std::endl;
-    oc->isoRange=fmaxValue-fminValue;
-    oc->isoRangeThreshold=oc->isoRange/10;
-   
+    oc->isoRange = fmaxValue - fminValue;
+    oc->isoRangeThreshold = oc->isoRange /15;
+
     return;
 }
 
@@ -129,7 +153,7 @@ void Volume4D::createCharVolume() {
     for (int k = 0; k < oc->zDim; k++) {
         for (int j = 0; j < oc->yDim; j++) {
             for (int i = 0; i < oc->xDim; i++) {
-                floatData[voxCount]=vtkVol->GetScalarComponentAsFloat(i, j, k, 0);
+                floatData[voxCount] = vtkVol->GetScalarComponentAsFloat(i, j, k, 0);
                 voxCount++;
             }
         }
@@ -144,19 +168,14 @@ void Volume4D::createCharVolume() {
     }
 
     float range = fmaxValue - fminValue;
-    for (int i = 0; i < totalSize; i++) {
-        float val = (((floatData[i] - fminValue) / range)*255);
-        unsigned char c = (unsigned char) val;
-        charVol[i] = c;
-    }
+
 
     std::clog << "loaded vol max value was " << fmaxValue << " and min value was " << fminValue << std::endl;
-    oc->isoRange=fmaxValue-fminValue;
-    oc->isoRangeThreshold=oc->isoRange/10;
-   
+    oc->isoRange = fmaxValue - fminValue;
+    oc->isoRangeThreshold = oc->isoRange / 10;
+
     return;
 }
-
 
 size_t neighbors(size_t v, size_t * nbrs, void * d) {
     Mesh * mesh = static_cast<Mesh*> (d);
@@ -201,16 +220,16 @@ void outputTree(std::ofstream & out, ctBranch * b) {
     out << ")";
 }
 
-void Volume4D::findCritcalPoints() {
-   // setToStep(0);
+        void Volume4D::findCritcalPoints() {
+    // setToStep(0);
     std::fstream infile;
-    string ctDatafile=*oc->volDataFileName+string(".ctData");
+    string ctDatafile = *oc->volDataFileName + string(".ctData");
     infile.open((ctDatafile).c_str(), std::ios::in);
-//    if (infile.is_open()) {
-//        std::clog << "could not open ctData " << ctDatafile << std::endl;
-//        return;
-//    }
-    cout << "unable to load critical points, building contour tree" << endl;
+    //    if (infile.is_open()) {
+    //        std::clog << "could not open ctData " << ctDatafile << std::endl;
+    //        return;
+    //    }
+    //cout << "unable to load critical points, building contour tree" << endl;
 
     Data data;
     int i = 0;
@@ -240,37 +259,44 @@ void Volume4D::findCritcalPoints() {
     data.convertIndex(id, x, y, z);
     int step = 0;
     float val = vtkVol->GetScalarComponentAsFloat(x, y, z, 0);
-
+    
     cout << "   found root id " << id << "location " << x << " " << y << " " << z << " val " << (int) data[id] << " voxval " << val << endl;
     cout << " persistance " << evalPersistence(&data, root) << endl;
     //data.convertIndex(data.maxId, x, y, z);
     //cout << "max val id " << data.maxId << "locati " << x << " " << y << " " << z << " with id " << (int) data.maxId << " val " << (int) data[data.maxId] << endl;
-    cout<<" adding persistant branches where persistance is greater than "<<oc->isoRange*0.05<<endl;
-    addPersistentBranches(&data, root, oc->isoRange*0.05);
+    cout << " adding persistant branches as CPs where persistance is greater than " << oc->isoRangeThreshold << endl;
+    addPersistentBranches(&data, root, oc->isoRangeThreshold);
     ctBranch ** map = ct_branchMap(ctx);
+    
     ct_cleanup(ctx);
     
-//    ofstream outfile;
-//    outfile.open(ctDatafile.c_str());
-//    
-//        if (outfile.is_open()) {
-//            cout<<"opened output file "<<ctDatafile<<endl;
-//            vector<CriticalPoint*>::iterator it;
-//            cout<<"cp length "<<oc->volume4D->criticalPoints->size()<<endl;
-//            for (it=oc->volume4D->criticalPoints->begin();it!=oc->volume4D->criticalPoints->end();it++){
-//                cout<<"outputting critical point"<<endl;
-//                outfile<<(*it)->x<<" "<<(*it)->y<<" "<<(*it)->z<<" "<<(*it)->step<<" "<<(*it)->value<<endl;
-//            }
-//        } else {
-//            cerr << "couldn't open output file " << outfile << endl;
-//        }
+    cout << " Total CPs: " << oc->volume4D->criticalPoints->size() << endl;
 
+    //    ofstream outfile;
+    //    outfile.open(ctDatafile.c_str());
+    //    
+    //        if (outfile.is_open()) {
+    //            cout<<"opened output file "<<ctDatafile<<endl;
+    //            vector<CriticalPoint*>::iterator it;
+    //            cout<<"cp length "<<oc->volume4D->criticalPoints->size()<<endl;
+    //            for (it=oc->volume4D->criticalPoints->begin();it!=oc->volume4D->criticalPoints->end();it++){
+    //                cout<<"outputting critical point"<<endl;
+    //                outfile<<(*it)->x<<" "<<(*it)->y<<" "<<(*it)->z<<" "<<(*it)->step<<" "<<(*it)->value<<endl;
+    //            }
+    //        } else {
+    //            cerr << "couldn't open output file " << outfile << endl;
+    //        }
+
+    for (int j = 0; j < 128 * 128 * 128; j++) {
+
+        char a = oc->volume4D->charVol[j];
+    }
 }
 
 void Volume4D::addPersistentBranches(Data* data, ctBranch* b, float thresh) {
     float persistence = evalPersistence(data, b);
     //if(persistence<-0.03) cout<<"warning stronger negative persistence "<<persistence<<endl;
-    cout<<"eval branch of persist "<<persistence<<endl;
+    //cout<<"eval branch of persist "<<persistence<<endl;
     if (persistence > thresh) {
         int extId = b->extremum;
         int sadId = b->saddle;
