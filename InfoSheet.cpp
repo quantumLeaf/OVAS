@@ -38,6 +38,21 @@ void InfoSheet::outputInfoData(const char* filename) {
 
 }
 
+void InfoSheet::printInfo() {
+   
+    cout << oc->numSteps << " " << oc->geoSphere->getNumVs() << endl;
+    
+    for (int i = 0; i < currentInfoTs; i++) {
+        for (int j = 0; j < oc->geoSphere->getNumVs(); j++) {
+            cout << info[i][j] << " ";
+            //cout<< "output"<<info[i][j]<<endl;
+        }
+        cout << endl;
+    }
+    
+
+}
+
 void InfoSheet::loadInfo(const char* filename) {
     cout << "loading " << filename << "\n";
     ifstream inf;
@@ -184,7 +199,10 @@ void InfoSheet::calcMaxInfo() {
 void InfoSheet::addTimeInfo(float* timeInfo) {
     if (currentInfoTs > oc->numSteps) cout << "error exceeding num ts" << endl;
     info[currentInfoTs] = timeInfo;
+    //cout<<" added to step "<<currentInfoTs<<" data starting "<<timeInfo[0]<<endl;
     currentInfoTs++;
+   // printInfo();
+    
     
 }
 

@@ -16,16 +16,28 @@ Volume4D::Volume4D() {
 Volume4D::Volume4D(OVASControl* o) {
     oc = o;
     oc->volActor = vtkSmartPointer<vtkActor>::New();
-
+    oc->volActor->GetProperty()->SetOpacity(0.5);
+    //    vtkSmartPointer<vtkTransform> transform =
+    //    vtkSmartPointer<vtkTransform>::New();
+    //        transform->RotateX(90);
+    //        transform->Translate(90,0,0);
+    //        
+    //
+    //    oc->volActor->SetUserTransform(transform);
     cout << "\t>Creating Vol4D" << endl;
     contourer = vtkSmartPointer<vtkContourFilter>::New();
     vtkVol = vtkSmartPointer<vtkImageData>::New();
+    //    oc->xDim=104;
+    //    oc->yDim=129;
+    //    oc->zDim=129;
     vtkVol->SetDimensions(oc->xDim, oc->yDim, oc->zDim);
     float sp = (float) 1.0 / (oc->xDim - 1);
     vtkVol->SetOrigin(0, 0, 0);
+    //vtkVol->SetSpacing(((float) 0.3 / (oc->xDim - 1)), sp, sp  );
     vtkVol->SetSpacing(sp, sp, sp);
+
     vtkVol->AllocateScalars();
-    oc->currentIso = 1.177;
+    oc->currentIso = 4.2;
     contourer->SetInput(vtkVol);
     contourer->SetValue(0, oc->currentIso);
     contourer->Update();
@@ -37,18 +49,12 @@ Volume4D::Volume4D(OVASControl* o) {
     oc->volActor->GetProperty()->SetSpecular(0); //SetShading(0);
     oc->volActor->GetProperty()->SetInterpolationToFlat();
 
-
-
     charVol = new unsigned char[oc->xDim * oc->yDim * oc->zDim];
-
+    loaded = false;
     //cout << " address of charvol " << (static_cast<const void*> (charVol)) << endl;
 
     int* test = new int[3];
-
-
     //    /cout<<" current dims are "<<oc->xDim<<endl;
-
-
     criticalPoints = new vector<CriticalPoint*>();
 }
 
@@ -60,22 +66,48 @@ Volume4D::~Volume4D() {
 
 void Volume4D::setToStep(int step) {
     cout << "setting vol to step " << step << endl;
-    //    for (int k = 0; k < oc->zDim; k++) {
-    //        for (int j = 0; j < oc->yDim; j++) {
-    //            for (int i = 0; i < oc->xDim; i++) {
-    //                float val = getVoxelValue(i, j, k, step);
-    //                //cout<<" got val "<<val<<endl;
-    //                vtkVol->SetScalarComponentFromFloat(i, j, k, 0, val);
-    //
-    //            }
-    //        }
-    //    }
-    //     createCharVolume();
+            for (int k = 0; k < oc->zDim; k++) {
+                for (int j = 0; j < oc->yDim; j++) {
+                    for (int i = 0; i < oc->xDim; i++) {
+                        float val = getVoxelValue(i, j, k, step);
+                        //cout<<" got val "<<val<<endl;
+                        vtkVol->SetScalarComponentFromFloat(i, j, k, 0, val);
+                        
+                    }
+                }
+            }
+             createCharVolume();
     //loadFloatVolume(oc->volDataFileName);
-    string filename = "./data/ns_000" + to_string(step*3 + 1) + "_r.dat";
-    cout << "loading file " << filename << endl;
+    //string filename = "./data/ns_000" + to_string(step*180 + 1) + "_r.dat";
+    string filename;
+    //filename = "./data/p5/p_5" + to_string((step));
+    //filename = "./data/ns_" + to_string((step)*100 + 1000) + "_e.dat";
+    //filename = "./data/ns_" + to_string((step)*25 + 1000) + "_e.dat";
+    //filename = "./data/ns_" + to_string((step)*50 + 1001) + "_e.dat";
+    //    if (((step)*50 + 651) < 1000) {
+    //        filename = "./data/ns_0" + to_string((step)*50 + 651) + "_e.dat";
+    //    } else {
+    //        filename = "./data/ns_" + to_string((step)*50 + 651) + "_e.dat";
+    //    }
+    //    if(loaded==false){
+    filename = "./data/ns_0751_e.dat";
+    //    
+    //    cout << "loading file " << filename << endl;
+    //
+    //loadFloatVolume(&filename);
+    //loadFloatVolume(oc->volDataFileName);
 
-    loadFloatVolume(&filename);
+
+    //    loaded=true;
+    //    }
+//    oc->isoStep = 25;
+//    oc->currentIso = 254350 + step * (oc->isoStep);
+    oc->isoStep = 0.6;
+    oc->currentIso = 1.5 + step * (oc->isoStep);
+    
+    //oc->currentIso = 254050;
+    contourer->SetValue(0, oc->currentIso);
+    cout << "setting iso to " << oc->currentIso << endl;
     contourer->Update();
     contourer->Modified();
 }
@@ -99,13 +131,35 @@ void Volume4D::loadFloatVolume(string* fileName) {
     }
 
     cout << "total size is " << totalSize * 4 << endl;
+
+
     float * floatData = new float [totalSize];
     infile.read((char*) floatData, totalSize * 4);
+
+    //    //change byte order
+    //    for (int i = 0; i < totalSize; i++) {
+    //        float x=floatData[i];
+    //        float y;
+    //        char* re=reinterpret_cast<char *>(&(floatData[i]));
+    //        char t=re[3];
+    //        re[3]=re[0];
+    //        re[0]=t;
+    //        t=re[2];
+    //        re[2]=re[1];
+    //        re[1]=t;
+    //    }
+
     int voxCount = 0;
     for (int k = 0; k < oc->zDim; k++) {
         for (int j = 0; j < oc->yDim; j++) {
             for (int i = 0; i < oc->xDim; i++) {
+                if(k<3||k>oc->zDim-4||j<3||j>oc->yDim-4||i<3||i>oc->xDim-4){
+                    vtkVol->SetScalarComponentFromFloat(i, j, k, 0, 0);
+                    voxCount++;
+                }
+                else{
                 vtkVol->SetScalarComponentFromFloat(i, j, k, 0, floatData[voxCount++]);
+                }
             }
         }
     }
@@ -129,15 +183,22 @@ void Volume4D::loadFloatVolume(string* fileName) {
         charVol[i] = c;
     }
 
-    for (int i = 0; i < totalSize; i++) {
-        float val = (((floatData[i] - fminValue) / range)*255);
-        unsigned char c = (unsigned char) val;
-        charVol[i] = c;
-    }
+   
 
     std::clog << "loaded vol max value was " << fmaxValue << " and min value was " << fminValue << std::endl;
     oc->isoRange = fmaxValue - fminValue;
-    oc->isoRangeThreshold = oc->isoRange /15;
+    oc->isoRangeThreshold = oc->isoRange / 25;
+
+    cout << "resampling vol" << endl;
+    
+//    vtkImageResample *resample = vtkImageResample::New();
+//    float reductionFactor = 0.5;
+//
+//    resample->SetInput(vtkVol);
+//    resample->SetAxisMagnificationFactor(0, reductionFactor);
+//    resample->SetAxisMagnificationFactor(1, reductionFactor);
+//    resample->SetAxisMagnificationFactor(2, reductionFactor);
+//    vtkVol=resample->GetOutput();
 
     return;
 }
@@ -172,7 +233,13 @@ void Volume4D::createCharVolume() {
 
     std::clog << "loaded vol max value was " << fmaxValue << " and min value was " << fminValue << std::endl;
     oc->isoRange = fmaxValue - fminValue;
-    oc->isoRangeThreshold = oc->isoRange / 10;
+    oc->isoRangeThreshold = oc->isoRange / 40;
+    
+     for (int i = 0; i < totalSize; i++) {
+        float val = (((floatData[i] - fminValue) / range)*255);
+        unsigned char c = (unsigned char) val;
+        charVol[i] = c;
+    }
 
     return;
 }
@@ -220,9 +287,10 @@ void outputTree(std::ofstream & out, ctBranch * b) {
     out << ")";
 }
 
-        void Volume4D::findCritcalPoints() {
+void Volume4D::findCritcalPoints() {
     // setToStep(0);
-    std::fstream infile;
+    if(*oc->volDataFileName!="none"){
+        std::fstream infile;
     string ctDatafile = *oc->volDataFileName + string(".ctData");
     infile.open((ctDatafile).c_str(), std::ios::in);
     //    if (infile.is_open()) {
@@ -231,6 +299,8 @@ void outputTree(std::ofstream & out, ctBranch * b) {
     //    }
     //cout << "unable to load critical points, building contour tree" << endl;
 
+    }
+    
     Data data;
     int i = 0;
 
@@ -253,13 +323,15 @@ void outputTree(std::ofstream & out, ctBranch * b) {
     //create contour tree
     ct_sweepAndMerge(ctx);
     ctBranch * root = ct_decompose(ctx);
-
-    int id = root->extremum;
+    
     unsigned int x, y, z;
+    
+    int id = root->extremum;
+    
     data.convertIndex(id, x, y, z);
     int step = 0;
     float val = vtkVol->GetScalarComponentAsFloat(x, y, z, 0);
-    
+
     cout << "   found root id " << id << "location " << x << " " << y << " " << z << " val " << (int) data[id] << " voxval " << val << endl;
     cout << " persistance " << evalPersistence(&data, root) << endl;
     //data.convertIndex(data.maxId, x, y, z);
@@ -267,9 +339,9 @@ void outputTree(std::ofstream & out, ctBranch * b) {
     cout << " adding persistant branches as CPs where persistance is greater than " << oc->isoRangeThreshold << endl;
     addPersistentBranches(&data, root, oc->isoRangeThreshold);
     ctBranch ** map = ct_branchMap(ctx);
-    
+
     ct_cleanup(ctx);
-    
+
     cout << " Total CPs: " << oc->volume4D->criticalPoints->size() << endl;
 
     //    ofstream outfile;

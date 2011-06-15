@@ -46,6 +46,7 @@ void TemporalChangeFeature2::scoreFeature(GeoPoint* view) {
         framebuffer->grabData();
         float* currentData=framebuffer->getData();
         changePix=0;
+        
         for(int i=0;i<framebuffer->getLen();i++){
             if(prevFrameData[oc->currentView][i*4]!=currentData[i*4]||prevFrameData[oc->currentView][i*4+1]!=currentData[i*4+1]||prevFrameData[oc->currentView][i*4+2]!=currentData[i*4+2]) changePix++;
         }
@@ -55,6 +56,9 @@ void TemporalChangeFeature2::scoreFeature(GeoPoint* view) {
        //cout<<" elevated "<<dArea<<" from "<< oc->currentStep <<" " << oc->currentView  <<" "<<area<< " "<<prevArea<<endl;
      }
     scoreData[oc->currentStep][oc->currentView]=changePix;
+//    if(oc->currentView<4){
+//        cout<<oc->currentView<<" recorded changepix "<<changePix<<endl;
+//    }
 
 
 }

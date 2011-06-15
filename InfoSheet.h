@@ -29,6 +29,7 @@ public:
 
     void loadInfo(const char* filename);
     void outputInfoData(const char* filename);
+    void printInfo();
     void calcMaxInfo();
     void addTimeInfo(float* timeInfo);
     int lookupNeighbourIndex(int,int);

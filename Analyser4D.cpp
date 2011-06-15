@@ -21,6 +21,7 @@ Analyser4D::Analyser4D() {
     // oc->volume4D=new Volume4D(oc);
     oc->a3d = new Analyser3D(oc);
     oc->filename = new string("");
+    oc->volDataFileName=new string("none");
 
     int startTime = time(NULL);
     char *command = new char[100];
@@ -33,6 +34,8 @@ Analyser4D::Analyser4D() {
     sprintf(command, "cp *.cpp /home/zoizoi/psyforge/OVASRunData/run%d/codeDump", (int) startTime);
     system(command);
     sprintf(command, "cp *.h /home/zoizoi/psyforge/OVASRunData/run%d/codeDump", (int) startTime);
+    system(command);
+    sprintf(command, "cp *.txt /home/zoizoi/psyforge/OVASRunData/run%d/codeDump", (int) startTime);
     system(command);
 
     sprintf(dir, "/home/zoizoi/psyforge/OVASRunData/run%d/", (int) startTime);
@@ -94,12 +97,17 @@ void Analyser4D::loadConfig(string filename) {
                 gsfilename = "./sphereData/" + gsfilename;
                 oc->geoSphere->loadGeoSphereFile(gsfilename);
                 cout << " is " << oc->geoSphere->getNumVs() << endl;
-                oc->features->push_back(new Feature(wArea, oc));
-
+               //  oc->features->push_back(new Feature(wArea, oc));
+               // cout<<"added area Feature with weight "<<wArea<<endl;
                 //   oc->features->push_back(new Feature(wCurv,oc));
-                oc->features->push_back(new TemporalChangeFeature2(wtChange, oc));
-                oc->features->push_back(new TopologyFeature(wTop, oc));
-
+                
+                //oc->features->push_back(new TemporalChangeFeature2(wtChange, oc));
+                //cout<<"added temporal change Feature with weight "<<wtChange<<endl;
+                
+                
+                
+               oc->features->push_back(new TopologyFeature(wTop, oc));
+                cout<<"added topology Feature with weight "<<wTop<<endl;
                 if (screenRend == "onScreen") {
                     oc->viewEvaluator->setScreenRenderOn();
                 }
@@ -127,13 +135,13 @@ void Analyser4D::loadConfig(string filename) {
                 //MetaballsVol4D*
                 oc->numSteps = numSteps;
                 oc->xDim = oc->yDim = oc->zDim = dims;
-                oc->volume4D = dynamic_cast<Volume4D*> (new FlyingSaucersVol4D(oc, 5));
+                oc->volume4D = dynamic_cast<Volume4D*> (new FlyingSaucersVol4D(oc, 4));
             }
             if (command == "savedRawVolFloat32") {
                 string* dataFilename = new string();
                 lineStream >> *dataFilename;
 
-                cout << "\tNLoading Vol " << dataFilename << endl;
+                cout << "\tNLoading Vol " << *dataFilename << endl;
                 //MetaballsVol4D*
                 //oc->numSteps = 1;
                 oc->xDim = oc->yDim = oc->zDim = dims;
@@ -145,13 +153,15 @@ void Analyser4D::loadConfig(string filename) {
 
 void Analyser4D::analyse() {
     cout << "analysing all " << numSteps << "steps" << endl;
+    oc->volume4D->setToStep(0);
+    oc->volume4D->findCritcalPoints();
     for (int i = 0; i < numSteps; i++) {
         
+        
         oc->volume4D->setToStep(i);
-
         oc->volume4D->updateActor();
        
-        oc->volume4D->findCritcalPoints();
+        
         
         oc->a3d->evalEachView();
         
@@ -179,7 +189,7 @@ void Analyser4D::findAndOutputPaths() {
     //        }
     findOptimalPath();
     outputPath("change");
-    //outputBVs("bvs");
+    outputBVs("bvs");
     outputPathVis("pathVis.png");
 
     //    f=0;
@@ -230,6 +240,7 @@ void Analyser4D::outputBVs(string filestem) {
         string filename(filestem);
         stringstream s;
         s << i;
+        filename += s.str();    
         filename += ".png";
         oc->viewEvaluator->outputView(oc->geoSphere->getView(oc->bestViews[i]), filename.c_str());
     }
@@ -250,11 +261,11 @@ void Analyser4D::interactSteps() {
     oc->volActor->GetProperty()->SetDiffuse(0.7); //SetShading(0);
     oc->volActor->GetProperty()->SetSpecular(0.7); //SetShading(0);
     oc->volActor->GetProperty()->SetInterpolationToPhong();
-    for (int step = 0; step < 1; step++) {
+    for (int step = 0; step < oc->numSteps; step++) {
         cout << "setting to " << step << endl;
-        //oc->volume4D->setToStep(step);
+        oc->volume4D->setToStep(step);
         oc->volume4D->findCritcalPoints();
-
+        oc->viewEvaluator->readyFeatures();
         oc->volume4D->updateActor();
         cout << "set to " << step << endl;
         oc->viewEvaluator->interact();

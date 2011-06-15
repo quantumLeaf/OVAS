@@ -37,6 +37,6 @@
 #include <vtkVariantArray.h>
 #include <vtkEdgeListIterator.h>
 #include <vtkReebGraphVolumeSkeletonFilter.h>
-
+#include "vtkTransform.h"
 #endif	/* VTKESSENTIALS_H */
 

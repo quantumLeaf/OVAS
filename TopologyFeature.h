@@ -19,6 +19,8 @@ public:
     virtual ~TopologyFeature();
     void scoreFeature(GeoPoint* view);
     bool closeToCriticalIsoVal(float currentIso,CriticalPoint* point);
+     void readyRenderer(vtkSmartPointer<vtkRenderer> _renderer);
+    void climbDown();
 private:
     float pointIsoThreshold;
     

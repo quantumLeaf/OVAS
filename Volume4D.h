@@ -14,6 +14,7 @@
 #include "Mesh.h"
 #include <vector>
 #include "CriticalPoint.h"
+#include "vtkImageResample.h"
 extern "C" 
 {
 #include <tourtre.h>
@@ -59,7 +60,7 @@ protected:
     vtkSmartPointer<vtkImageData> vtkVol;
     vtkSmartPointer<vtkContourFilter> contourer;
     float* isoVal;
-    
+    bool loaded;
     
     
    

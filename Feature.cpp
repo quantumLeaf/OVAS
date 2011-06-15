@@ -23,11 +23,12 @@ Feature::Feature(float weight,OVASControl* o) : weight(weight),oc(o) {
             scoreData[i][j]=0;
         }
     }
-    cout<<" scd "<<oc->numSteps<<" "<<oc->geoSphere->getNumVs()<<" "<<scoreData<<endl;
+    actors=new vector<vtkSmartPointer<vtkActor> >();
+    
     colourB=1;
     colourG=0;
     colourR=0;
-    cout<<"created feature w "<<weight<<endl;
+    //cout<<"created feature w "<<weight<<endl;
  //   Feature();
 }
 
@@ -38,23 +39,25 @@ Feature::~Feature() {
 }
 
 void Feature::readyRenderer(vtkSmartPointer<vtkRenderer> _renderer) {
+    
     //cout<<"ready rend w "<<weight<<endl;
     renderer = _renderer;
     renderWindow = renderer->GetRenderWindow();
     camera = renderer->GetActiveCamera();
-    std::vector< vtkSmartPointer<vtkActor> >::iterator it;
+   // std::vector< vtkSmartPointer<vtkActor> >::iterator it;
 //    for (it = actors.begin(); it != actors.end(); it++) {
 //        renderer->AddActor((*it));
 //    }
     framebuffer = new FrameBuffer(renderer->GetRenderWindow());
+    
 }
 
 void Feature::climbDown() {
 
-    std::vector< vtkSmartPointer<vtkActor> >::const_iterator it;
-    for (it = actors.begin(); it != actors.end(); it++) {
-        renderer->RemoveActor((*it));
-    }
+//    std::vector< vtkSmartPointer<vtkActor> >::iterator it;
+//    for (it = actors.begin(); it != actors.end(); it++) {
+//        renderer->RemoveActor((*it));
+//    }
     delete framebuffer;
 }
 
@@ -70,6 +73,7 @@ void Feature::scoreFeature(GeoPoint* view) {
    
     scoreData[oc->currentStep][oc->currentView]=countColour(framebuffer);
    
+                
 }
 
 int Feature::countColour(float r, float g, float b, FrameBuffer* fb) {
@@ -97,7 +101,8 @@ float* Feature::getEvaluatedStepData(int step){
         float maxValue = log2(300 * 300);
         float value=scoreData[step][i];
         float contribution = 1, dAFactor=1;
-        contribution = weight * (log2(value) / maxValue);
+       // contribution = weight * (log2(value) / maxValue);
+        contribution = weight * value;
         if (value == 0) contribution = 0;
         data[i]=contribution;
     }

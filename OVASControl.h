@@ -78,6 +78,7 @@ public:
     PathVisualiser* pathVisualiser;
     string* resultsPath;
    
+    float isoStep;
     int currentStep;
     int currentView;
     float currentIso;

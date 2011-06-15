@@ -29,8 +29,8 @@ public:
 //    void addActor(vtkSmartPointer<vtkActor> actor){
 //        //actors.push_back(actor);
 //    }
-    void readyRenderer(vtkSmartPointer<vtkRenderer> _renderer);
-    void climbDown();
+    virtual void readyRenderer(vtkSmartPointer<vtkRenderer> _renderer);
+    virtual void climbDown();
     virtual void scoreFeature(GeoPoint* view);
     
     int countColour(float r, float g, float b, FrameBuffer* data);
@@ -43,6 +43,7 @@ public:
     float* getEvaluatedStepData(int step);
     int a;
     int** intScoreData;
+    std::vector< vtkSmartPointer<vtkActor> >* actors;
 private:
     
     
@@ -51,7 +52,7 @@ private:
   //  FeatureType type;
     //vtkActor* actors;
     
-    std::vector< vtkSmartPointer<vtkActor> > actors;
+    
     
 protected:
     vtkSmartPointer<vtkCamera> camera;

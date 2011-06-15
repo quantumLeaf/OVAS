@@ -12,15 +12,31 @@ FlyingSaucersVol4D::FlyingSaucersVol4D(OVASControl* oc, int numSaucers) : Implic
     srand(28);
     for (int i=0;i<numSaucers;i++){
         
-        float x=((float)rand())/RAND_MAX,y=((float)rand())/RAND_MAX,z=((float)rand())/RAND_MAX,vx=(((float)rand())/RAND_MAX)/2-0.25,vy=(vx/5)*((float)rand())/RAND_MAX,vz=(vx/5)*((float)rand())/RAND_MAX;
-        x=0.2;y=0.5;z=0.1;
+        float x,y,z;
+        //float x=((float)rand())/RAND_MAX,y=((float)rand())/RAND_MAX,z=((float)rand())/RAND_MAX,vx=(((float)rand())/RAND_MAX)/2-0.25,vy=(vx/5)*((float)rand())/RAND_MAX,vz=(vx/5)*((float)rand())/RAND_MAX;
+        if(i==0){
+            x=0.1;y=0.2;z=0.5;
+        }
+        if(i==1){
+            x=0.3;y=0.5;z=0.5;
+        }
+        if(i==2){
+            x=0.6;y=0.7;z=0.7;
+        }
+        if(i==3){
+            x=0.8;y=0.7;z=0.5;
+        }
+            
         float sx,sy,sz;
-        sy=sz=10;
-        sx=100;
+        float vx,vy,vz;
+//        sy=sz=10;
+//        sx=400;
+        sx=sy=sz=50;
+        vx=vy=vz=0;
         float w=4;
        
         saucers->push_back(new MovingAAElipsoid(oc,x,y,z,vx,vy,vz,sx,sy,sz,w));
-        cout<<" add saucer "<<x*oc->xDim<<" "<<y*oc->yDim<<" "<<z*oc->zDim<<endl;
+        cout<<" add saucer "<<i<<" "<<x*oc->xDim<<" "<<y*oc->yDim<<" "<<z*oc->zDim<<endl;
     }
     
 }
