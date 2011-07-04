@@ -21,7 +21,7 @@ Analyser4D::Analyser4D() {
     // oc->volume4D=new Volume4D(oc);
     oc->a3d = new Analyser3D(oc);
     oc->filename = new string("");
-    oc->volDataFileName=new string("none");
+    oc->volDataFileName = new string("none");
 
     int startTime = time(NULL);
     char *command = new char[100];
@@ -97,17 +97,17 @@ void Analyser4D::loadConfig(string filename) {
                 gsfilename = "./sphereData/" + gsfilename;
                 oc->geoSphere->loadGeoSphereFile(gsfilename);
                 cout << " is " << oc->geoSphere->getNumVs() << endl;
-               //  oc->features->push_back(new Feature(wArea, oc));
-               // cout<<"added area Feature with weight "<<wArea<<endl;
+                //  oc->features->push_back(new Feature(wArea, oc));
+                // cout<<"added area Feature with weight "<<wArea<<endl;
                 //   oc->features->push_back(new Feature(wCurv,oc));
-                
+
                 //oc->features->push_back(new TemporalChangeFeature2(wtChange, oc));
                 //cout<<"added temporal change Feature with weight "<<wtChange<<endl;
-                
-                
-                
-               oc->features->push_back(new TopologyFeature(wTop, oc));
-                cout<<"added topology Feature with weight "<<wTop<<endl;
+
+
+
+                oc->features->push_back(new TopologyFeature(wTop, oc));
+                cout << "added topology Feature with weight " << wTop << endl;
                 if (screenRend == "onScreen") {
                     oc->viewEvaluator->setScreenRenderOn();
                 }
@@ -155,16 +155,11 @@ void Analyser4D::analyse() {
     cout << "analysing all " << numSteps << "steps" << endl;
     oc->volume4D->setToStep(0);
     oc->volume4D->findCritcalPoints();
+    
     for (int i = 0; i < numSteps; i++) {
-        
-        
         oc->volume4D->setToStep(i);
         oc->volume4D->updateActor();
-       
-        
-        
         oc->a3d->evalEachView();
-        
         cout << " done step" << endl;
         oc->currentStep++;
     }
@@ -225,7 +220,7 @@ void Analyser4D::outputPath(string filestem) {
         s << i;
         filename += s.str();
         filename += ".png";
-        cout<<" outputting step "<<i<<" view "<<oc->path[i]<<endl;
+        cout << " outputting step " << i << " view " << oc->path[i] << endl;
         oc->viewEvaluator->outputView(oc->geoSphere->getView(oc->path[i]), filename.c_str());
 
     }
@@ -240,7 +235,7 @@ void Analyser4D::outputBVs(string filestem) {
         string filename(filestem);
         stringstream s;
         s << i;
-        filename += s.str();    
+        filename += s.str();
         filename += ".png";
         oc->viewEvaluator->outputView(oc->geoSphere->getView(oc->bestViews[i]), filename.c_str());
     }

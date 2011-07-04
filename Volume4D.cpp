@@ -66,17 +66,17 @@ Volume4D::~Volume4D() {
 
 void Volume4D::setToStep(int step) {
     cout << "setting vol to step " << step << endl;
-            for (int k = 0; k < oc->zDim; k++) {
-                for (int j = 0; j < oc->yDim; j++) {
-                    for (int i = 0; i < oc->xDim; i++) {
-                        float val = getVoxelValue(i, j, k, step);
-                        //cout<<" got val "<<val<<endl;
-                        vtkVol->SetScalarComponentFromFloat(i, j, k, 0, val);
-                        
-                    }
-                }
+    for (int k = 0; k < oc->zDim; k++) {
+        for (int j = 0; j < oc->yDim; j++) {
+            for (int i = 0; i < oc->xDim; i++) {
+                float val = getVoxelValue(i, j, k, step);
+                //cout<<" got val "<<val<<endl;
+                vtkVol->SetScalarComponentFromFloat(i, j, k, 0, val);
+
             }
-             createCharVolume();
+        }
+    }
+    createCharVolume();
     //loadFloatVolume(oc->volDataFileName);
     //string filename = "./data/ns_000" + to_string(step*180 + 1) + "_r.dat";
     string filename;
@@ -100,11 +100,11 @@ void Volume4D::setToStep(int step) {
 
     //    loaded=true;
     //    }
-//    oc->isoStep = 25;
-//    oc->currentIso = 254350 + step * (oc->isoStep);
+    //    oc->isoStep = 25;
+    //    oc->currentIso = 254350 + step * (oc->isoStep);
     oc->isoStep = 0.6;
     oc->currentIso = 1.5 + step * (oc->isoStep);
-    
+
     //oc->currentIso = 254050;
     contourer->SetValue(0, oc->currentIso);
     cout << "setting iso to " << oc->currentIso << endl;
@@ -153,12 +153,11 @@ void Volume4D::loadFloatVolume(string* fileName) {
     for (int k = 0; k < oc->zDim; k++) {
         for (int j = 0; j < oc->yDim; j++) {
             for (int i = 0; i < oc->xDim; i++) {
-                if(k<3||k>oc->zDim-4||j<3||j>oc->yDim-4||i<3||i>oc->xDim-4){
+                if (k < 3 || k > oc->zDim - 4 || j < 3 || j > oc->yDim - 4 || i < 3 || i > oc->xDim - 4) {
                     vtkVol->SetScalarComponentFromFloat(i, j, k, 0, 0);
                     voxCount++;
-                }
-                else{
-                vtkVol->SetScalarComponentFromFloat(i, j, k, 0, floatData[voxCount++]);
+                } else {
+                    vtkVol->SetScalarComponentFromFloat(i, j, k, 0, floatData[voxCount++]);
                 }
             }
         }
@@ -183,22 +182,22 @@ void Volume4D::loadFloatVolume(string* fileName) {
         charVol[i] = c;
     }
 
-   
+
 
     std::clog << "loaded vol max value was " << fmaxValue << " and min value was " << fminValue << std::endl;
     oc->isoRange = fmaxValue - fminValue;
     oc->isoRangeThreshold = oc->isoRange / 25;
 
     cout << "resampling vol" << endl;
-    
-//    vtkImageResample *resample = vtkImageResample::New();
-//    float reductionFactor = 0.5;
-//
-//    resample->SetInput(vtkVol);
-//    resample->SetAxisMagnificationFactor(0, reductionFactor);
-//    resample->SetAxisMagnificationFactor(1, reductionFactor);
-//    resample->SetAxisMagnificationFactor(2, reductionFactor);
-//    vtkVol=resample->GetOutput();
+
+    //    vtkImageResample *resample = vtkImageResample::New();
+    //    float reductionFactor = 0.5;
+    //
+    //    resample->SetInput(vtkVol);
+    //    resample->SetAxisMagnificationFactor(0, reductionFactor);
+    //    resample->SetAxisMagnificationFactor(1, reductionFactor);
+    //    resample->SetAxisMagnificationFactor(2, reductionFactor);
+    //    vtkVol=resample->GetOutput();
 
     return;
 }
@@ -219,6 +218,10 @@ void Volume4D::createCharVolume() {
             }
         }
     }
+    
+    
+    
+    
     cout << "created char checking min max" << endl;
 
     float fmaxValue = floatData[0];
@@ -233,9 +236,15 @@ void Volume4D::createCharVolume() {
 
     std::clog << "loaded vol max value was " << fmaxValue << " and min value was " << fminValue << std::endl;
     oc->isoRange = fmaxValue - fminValue;
-    oc->isoRangeThreshold = oc->isoRange / 40;
+    oc->isoRangeThreshold = oc->isoRange / 280;
     
-     for (int i = 0; i < totalSize; i++) {
+    //add noise for testing contour tree simplification
+    for (int i = 0; i < voxCount; i++) {      
+        float randNoise = ((float) rand() / RAND_MAX)*oc->isoRange*0.01;
+        floatData[i]+=randNoise;
+    }
+    
+    for (int i = 0; i < totalSize; i++) {
         float val = (((floatData[i] - fminValue) / range)*255);
         unsigned char c = (unsigned char) val;
         charVol[i] = c;
@@ -289,18 +298,18 @@ void outputTree(std::ofstream & out, ctBranch * b) {
 
 void Volume4D::findCritcalPoints() {
     // setToStep(0);
-    if(*oc->volDataFileName!="none"){
+    if (*oc->volDataFileName != "none") {
         std::fstream infile;
-    string ctDatafile = *oc->volDataFileName + string(".ctData");
-    infile.open((ctDatafile).c_str(), std::ios::in);
-    //    if (infile.is_open()) {
-    //        std::clog << "could not open ctData " << ctDatafile << std::endl;
-    //        return;
-    //    }
-    //cout << "unable to load critical points, building contour tree" << endl;
+        string ctDatafile = *oc->volDataFileName + string(".ctData");
+        infile.open((ctDatafile).c_str(), std::ios::in);
+        //    if (infile.is_open()) {
+        //        std::clog << "could not open ctData " << ctDatafile << std::endl;
+        //        return;
+        //    }
+        //cout << "unable to load critical points, building contour tree" << endl;
 
     }
-    
+
     Data data;
     int i = 0;
 
@@ -323,11 +332,11 @@ void Volume4D::findCritcalPoints() {
     //create contour tree
     ct_sweepAndMerge(ctx);
     ctBranch * root = ct_decompose(ctx);
-    
+
     unsigned int x, y, z;
-    
+
     int id = root->extremum;
-    
+
     data.convertIndex(id, x, y, z);
     int step = 0;
     float val = vtkVol->GetScalarComponentAsFloat(x, y, z, 0);

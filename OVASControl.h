@@ -72,7 +72,7 @@ public:
     Volume4D* volume4D;
     Analyser3D* a3d;
     vector<Feature*>* features;
-    ViewEvaluator* viewEvaluator;
+    ViewEvaluato        r* viewEvaluator;
     StepToParamConverter* stepToParamConverter;
     GeoSphere* geoSphere;
     PathVisualiser* pathVisualiser;

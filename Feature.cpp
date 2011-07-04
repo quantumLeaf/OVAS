@@ -100,9 +100,9 @@ float* Feature::getEvaluatedStepData(int step){
     for(int i=0;i<oc->geoSphere->getNumVs();i++){
         float maxValue = log2(300 * 300);
         float value=scoreData[step][i];
-        float contribution = 1, dAFactor=1;
-       // contribution = weight * (log2(value) / maxValue);
-        contribution = weight * value;
+        float contribution;
+        contribution = weight * (log2(value) / maxValue);
+        //contribution = weight * value;
         if (value == 0) contribution = 0;
         data[i]=contribution;
     }

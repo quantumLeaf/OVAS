@@ -26,16 +26,20 @@
 #include <vtkRenderWindowInteractor.h>
 #include <vtkVertexGlyphFilter.h>
 #include <vtkInteractorStyleTrackballCamera.h>
- 
+#include <vector>
 #include <sstream>
-
+using namespace std;
 class ViewPathClusterFinder {
 public:
-    ViewPathClusterFinder();
+    ViewPathClusterFinder(int plen);
     ViewPathClusterFinder(const ViewPathClusterFinder& orig);
     void testCluserDetection();
     virtual ~ViewPathClusterFinder();
+    void addPath (int* path, int pLength);
+    vector<int*> getPathClusterMeans();
 private:
+    vector<int*>* viewPaths;
+    int pathLength;
 
 };
 

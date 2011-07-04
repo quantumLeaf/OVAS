@@ -30,9 +30,6 @@ void Analyser3D::evalEachView() {
      oc->viewEvaluator->readyFeatures();
     for (view = viewList->begin(); view != viewList->end(); view++) oc->viewEvaluator->evaluate((*view)); 
      oc->viewEvaluator->climbDownFeatures();
-
-     
-
 }
 
 
