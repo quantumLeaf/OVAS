@@ -13,6 +13,11 @@
 #include "Data.h"
 #include "Mesh.h"
 #include <vector>
+#include <stdio.h>
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <sstream>
 #include "CriticalPoint.h"
 #include "vtkImageResample.h"
 extern "C" 
@@ -47,7 +52,7 @@ public:
     void testContourTree();
     void findCritcalPoints();
     float evalPersistence(Data* data,ctBranch* b);
-    void addPersistentBranches(Data*,ctBranch*,float thresh);     
+    void addPersistentBranches(Data*,ctBranch*,float thresh,ctBranch* rootBranch);     
    // void outputTree(std::ofstream & out, ctBranch * b,Data* d);
     int DisplayReebGraph(vtkReebGraph *g);
     int DisplayVolumeSkeleton(vtkUnstructuredGrid* vtkNotUsed(volumeMesh), vtkTable *skeleton);

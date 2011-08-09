@@ -8,7 +8,7 @@
 #include "TopologyFeature.h"
 
 
-TopologyFeature::TopologyFeature(float weight, OVASControl* oc) : Feature(weight, oc) {
+TopologyFeature::TopologyFeature(float weight, OVASControl* oc,string name) : Feature(weight, oc,name) {
     
     intScoreData=ArrayTools::allocate2DArray<int>(oc->numSteps,oc->geoSphere->getNumVs());
     for(int i=0;i<oc->numSteps;i++){
@@ -44,13 +44,13 @@ void TopologyFeature::readyRenderer(vtkSmartPointer<vtkRenderer> _renderer) {
     int redBallCount=0;
     vector<CriticalPoint*>::iterator it;
     for (it=oc->volume4D->criticalPoints->begin();it!=oc->volume4D->criticalPoints->end();it++){
-        
-      //  if (closeToCriticalIsoVal(oc->currentIso,(*it))){
+    
+        if (closeToCriticalIsoVal(oc->currentIso,(*it))){
             redBallCount++;
             renderer->AddActor((*it)->getActor());
             actors->push_back((*it)->getActor());
-            cout<<"adding actor for CP at iso "<<oc->currentIso<<" where cp iso is "<<(*it)->value<<" step "<<oc->currentStep<<endl;
-      //  }
+           // cout<<"adding actor for CP at iso "<<oc->currentIso<<" where cp iso is "<<(*it)->value<<" step "<<oc->currentStep<<endl;
+        }
     }
     cout<<"redball count is "<<redBallCount<<endl;
     

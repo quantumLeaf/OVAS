@@ -11,7 +11,7 @@
 
 class TemporalChangeFeature2 : public Feature{
 public:
-    TemporalChangeFeature2(float weight,OVASControl*);
+    TemporalChangeFeature2(float weight,OVASControl*,string name);
     TemporalChangeFeature2(const TemporalChangeFeature2& orig);
     virtual ~TemporalChangeFeature2();
     void scoreFeature(GeoPoint* view);

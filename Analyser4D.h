@@ -42,18 +42,25 @@ public:
     void analyse();
     void findOptimalPath();
     void findAndOutputPaths();
+    void findPathClusters();
     void testReebGraph();
     void testContourTree();
     void interactSteps();
     void outputView(int view, char* filename);
     void outputPath(string filestem);
+    void outputMeanPaths(string filestem);
+    
     void outputBVs(string filestem);
     void outputPathVis(string filename);
+    void outputFeatureScores();
+    void inputFeatureScores();
     void setFile(string _filename) {
         oc->filename = new string(_filename);
     }
 
-
+    vector<int*>* meanPaths;
+    
+    void vizMeanPaths();
 private:
     int step;
     OVASControl* oc;

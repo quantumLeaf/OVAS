@@ -28,15 +28,34 @@
 #include <vtkInteractorStyleTrackballCamera.h>
 #include <vector>
 #include <sstream>
+
+#include "OVASControl.h"
 using namespace std;
 class ViewPathClusterFinder {
 public:
-    ViewPathClusterFinder(int plen);
+    ViewPathClusterFinder(int plen, OVASControl* oc);
     ViewPathClusterFinder(const ViewPathClusterFinder& orig);
     void testCluserDetection();
     virtual ~ViewPathClusterFinder();
-    void addPath (int* path, int pLength);
-    vector<int*> getPathClusterMeans();
+    void addPath (int* path);
+    void outputPathsToFile();
+    void loadPathsFromFile();
+    int getNumPaths(){
+        return viewPaths->size();
+    }
+    int getNumSteps(){
+        return pathLength;
+    }
+    int getPathViewIndex(int path, int step){
+        return viewPaths->at(path)[step];
+    }
+    vector<int*>* getPathClusterMeans();
+    int* getPathClusters(){
+        return pathClusters;
+    }
+    int* pathClusters;
+    
+    OVASControl* oc;
 private:
     vector<int*>* viewPaths;
     int pathLength;

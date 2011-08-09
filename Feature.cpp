@@ -15,7 +15,7 @@
 Feature::Feature(){
    
 }
-Feature::Feature(float weight,OVASControl* o) : weight(weight),oc(o) {
+Feature::Feature(float weight,OVASControl* o,string name) : weight(weight),oc(o) {
    
     scoreData=ArrayTools::allocate2DArray<float>(oc->numSteps,oc->geoSphere->getNumVs());
     for(int i=0;i<oc->numSteps;i++){
@@ -30,6 +30,7 @@ Feature::Feature(float weight,OVASControl* o) : weight(weight),oc(o) {
     colourR=0;
     //cout<<"created feature w "<<weight<<endl;
  //   Feature();
+    featureName=name;
 }
 
 Feature::Feature(const Feature& orig) {
@@ -72,7 +73,7 @@ void Feature::scoreFeature(GeoPoint* view) {
 //    renderWindowInteractor->Start();
    
     scoreData[oc->currentStep][oc->currentView]=countColour(framebuffer);
-   
+    //cout<<"fscore "<<scoreData[oc->currentStep][oc->currentView]<<endl;
                 
 }
 
@@ -96,6 +97,7 @@ int Feature::countColour(float r, float g, float b, FrameBuffer* fb) {
 
 float* Feature::getEvaluatedStepData(int step){
     //cout<<"weight this is "<<weight<<endl;
+    int zc=0;
     float* data=new float[oc->geoSphere->getNumVs()];
     for(int i=0;i<oc->geoSphere->getNumVs();i++){
         float maxValue = log2(300 * 300);
@@ -103,8 +105,56 @@ float* Feature::getEvaluatedStepData(int step){
         float contribution;
         contribution = weight * (log2(value) / maxValue);
         //contribution = weight * value;
-        if (value == 0) contribution = 0;
+        if (value == 0){
+            contribution = 0;
+            zc++;
+        }
         data[i]=contribution;
+        //cout<<"contrib "<<value<<" "<<weight<<endl;
     }
+    //cout<<" zc "<<zc<<endl;
     return data;
+}
+
+void Feature::saveScoreToFile(){
+    
+    
+    string filename=string("./lastestTempData/")+featureName+string(".scoreData");
+    cout << "outputing file " << filename << "\n";
+    ofstream of;
+    of.open(filename.c_str());
+
+    of << oc->numSteps << " " << oc->geoSphere->getNumVs() << endl;
+    
+    for (int i = 0; i < oc->numSteps; i++) {
+        for (int j = 0; j < oc->geoSphere->getNumVs(); j++) {
+            of << scoreData[i][j] << " ";
+            
+        }
+        of << endl;
+    }
+    of.close();
+    ifstream infile;
+}
+
+void Feature::loadScoreFromFile(){
+    
+    
+    string filename=string("./lastestTempData/")+featureName+string(".scoreData");
+    cout << "loading file " << filename << "\n";
+   
+    ifstream inf;
+    inf.open(filename.c_str());
+    int steps,views;
+    inf >> steps >> views;
+    cout<<"loading "<<steps<<"steps and "<<views<<" views"<<endl;
+    for (int i = 0; i < oc->numSteps; i++) {
+        for (int j = 0; j < oc->geoSphere->getNumVs(); j++) {
+            inf>>scoreData[i][j] ;
+            
+        }
+        
+    }
+    inf.close();
+    
 }

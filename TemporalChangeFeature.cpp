@@ -7,7 +7,7 @@
 
 #include "TemporalChangeFeature.h"
 
-TemporalChangeFeature::TemporalChangeFeature(float weight, OVASControl* oc) : Feature(weight, oc) {
+TemporalChangeFeature::TemporalChangeFeature(float weight, OVASControl* oc,string name) : Feature(weight, oc,name) {
     
     intAreaData = ArrayTools::allocate2DArray<int>(oc->numSteps, oc->geoSphere->getNumVs());
      

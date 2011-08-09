@@ -14,7 +14,7 @@
 class TopologyFeature : public Feature{
 public:
     
-    TopologyFeature(float weight,OVASControl*);
+    TopologyFeature(float weight,OVASControl*,string name);
     TopologyFeature(const TopologyFeature& orig);
     virtual ~TopologyFeature();
     void scoreFeature(GeoPoint* view);

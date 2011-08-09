@@ -11,9 +11,10 @@
 
 InfoData::InfoData(OVASControl* oc) {
     features = oc->features;
-    infoSheet = new InfoSheet(oc);
     numViews = oc->geoSphere->getNumVs();
     numSteps = oc->numSteps;
+    infoSheet = new InfoSheet(oc);
+    
 
     vector<Feature*>::iterator it;
     
@@ -31,8 +32,11 @@ InfoData::InfoData(OVASControl* oc) {
             for (int view = 0; view < numViews; view++) {
                 
                 aggragatedStepData[view] += featureStepData[view];
+                
+               
             //    if(view<4) cout<<" for view "<<view<<" data : "<<aggragatedStepData[view]<<endl;
             }
+            
             delete [] featureStepData;
         }
         infoSheet->addTimeInfo(aggragatedStepData);
@@ -48,7 +52,10 @@ InfoData::~InfoData() {
 }
 
 int* InfoData::findOptimalPath() {
-    infoSheet->outputInfoData("thisData.txt");
+    string filename=string("./lastestTempData/info.data");
+    
+    
+    infoSheet->outputInfoData(filename.c_str());
     //infoSheet->loadInfo("thisData.txt");
 
     //infoSheet->calcMaxInfo();

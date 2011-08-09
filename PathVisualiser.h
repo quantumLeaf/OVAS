@@ -11,6 +11,7 @@
 #include "OVASControl.h"
 #include "GeoSphere.h"
 #include "vtkEssentials.h"
+#include "ViewPathClusterFinder.h"
 
 
 
@@ -20,6 +21,7 @@ public:
     PathVisualiser(const PathVisualiser& orig);
     virtual ~PathVisualiser();
     void VisualisePath(int* path, int len);
+    void vizMeanPaths();
 private:
     OVASControl* oc;
     vtkSmartPointer<vtkCamera> camera;

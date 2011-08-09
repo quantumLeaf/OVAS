@@ -21,7 +21,7 @@ class Feature {
 public:
 
     Feature();
-    Feature(float weight,OVASControl*);
+    Feature(float weight,OVASControl*,string name);
     Feature(const Feature& orig);
     virtual ~Feature();
     
@@ -41,9 +41,13 @@ public:
         weight=w;
     }
     float* getEvaluatedStepData(int step);
+    void saveScoreToFile();
+    void loadScoreFromFile();
     int a;
     int** intScoreData;
     std::vector< vtkSmartPointer<vtkActor> >* actors;
+    
+    string featureName;
 private:
     
     

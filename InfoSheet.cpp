@@ -3,7 +3,7 @@
 
 InfoSheet::InfoSheet(OVASControl* o) {
     oc = o;
-
+    
     this->info = ArrayTools::allocate2DArray<float>(oc->numSteps, oc->geoSphere->getNumVs());
     nextViewIndex = ArrayTools::allocate3DArray<float>(oc->numSteps, oc->geoSphere->getNumVs(), this->numRegions);
     this->maxInfo = ArrayTools::allocate3DArray<float>(oc->numSteps, oc->geoSphere->getNumVs(), this->numRegions);
@@ -21,7 +21,7 @@ InfoSheet::~InfoSheet() {
 }
 
 void InfoSheet::outputInfoData(const char* filename) {
-    cout << "outputing file " << filename << "\n";
+    //cout << "outputing file " << filename << "\n";
     ofstream of;
     of.open(filename);
 
@@ -148,7 +148,7 @@ int* InfoSheet::findPath() {
                        
             reg = lookupNeighbourIndex(pos, path[i]);
         }
-        cout << "step " << i << " pos " <<path[i]<<" "<<oc->numSteps<<endl;;
+       // cout << "step " << i << " pos " <<path[i]<<" "<<oc->numSteps<<endl;;
     }
     
     return path;

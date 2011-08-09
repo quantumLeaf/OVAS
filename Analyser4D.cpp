@@ -1,7 +1,7 @@
-/* 
+/*
  * File:   Analyser4D.cpp
  * Author: zoizoi
- * 
+ *
  * Created on 23 January 2011, 17:51
  */
 
@@ -9,6 +9,7 @@
 #include "InfoData.h"
 #include "PathVisualiser.h"
 #include "TopologyFeature.h"
+#include "ViewPathClusterFinder.h"
 
 Analyser4D::Analyser4D() {
     //TemporalChangeFeature2 a;
@@ -37,11 +38,12 @@ Analyser4D::Analyser4D() {
     system(command);
     sprintf(command, "cp *.txt /home/zoizoi/psyforge/OVASRunData/run%d/codeDump", (int) startTime);
     system(command);
-
+    sprintf(command, "cp *.config /home/zoizoi/psyforge/OVASRunData/run%d/codeDump", (int) startTime);
+    system(command);
+    sprintf(command, "cp ./testOVAS /home/zoizoi/psyforge/OVASRunData/run%d/codeDump", (int) startTime);
+    system(command);
     sprintf(dir, "/home/zoizoi/psyforge/OVASRunData/run%d/", (int) startTime);
     oc->resultsPath = new string(dir);
-
-
 }
 
 Analyser4D::Analyser4D(const Analyser4D& orig) {
@@ -96,8 +98,9 @@ void Analyser4D::loadConfig(string filename) {
 
                 gsfilename = "./sphereData/" + gsfilename;
                 oc->geoSphere->loadGeoSphereFile(gsfilename);
+
                 cout << " is " << oc->geoSphere->getNumVs() << endl;
-                //  oc->features->push_back(new Feature(wArea, oc));
+                oc->features->push_back(new Feature(wArea, oc, "area"));
                 // cout<<"added area Feature with weight "<<wArea<<endl;
                 //   oc->features->push_back(new Feature(wCurv,oc));
 
@@ -106,7 +109,7 @@ void Analyser4D::loadConfig(string filename) {
 
 
 
-                oc->features->push_back(new TopologyFeature(wTop, oc));
+                oc->features->push_back(new TopologyFeature(wTop, oc, "topology"));
                 cout << "added topology Feature with weight " << wTop << endl;
                 if (screenRend == "onScreen") {
                     oc->viewEvaluator->setScreenRenderOn();
@@ -155,7 +158,7 @@ void Analyser4D::analyse() {
     cout << "analysing all " << numSteps << "steps" << endl;
     oc->volume4D->setToStep(0);
     oc->volume4D->findCritcalPoints();
-    
+
     for (int i = 0; i < numSteps; i++) {
         oc->volume4D->setToStep(i);
         oc->volume4D->updateActor();
@@ -168,8 +171,9 @@ void Analyser4D::analyse() {
 void Analyser4D::findOptimalPath() {
 
     InfoData* infoData = new InfoData(oc);
+    //cout<<"np"<<endl;
     oc->path = infoData->findOptimalPath();
-    oc->bestViews = infoData->findBestViews();
+    // oc->bestViews = infoData->findBestViews();
 
 }
 
@@ -205,12 +209,86 @@ void Analyser4D::findAndOutputPaths() {
 
 }
 
+void Analyser4D::findPathClusters() {
+    ViewPathClusterFinder* vpcf = new ViewPathClusterFinder(oc->numSteps, oc);
+    int numFeatures = oc->features->size();
+    cout << numFeatures << " features being considered" << endl;
+    vector<Feature*>::iterator it;
+
+    if (numFeatures == 2) {
+        for (int i = 1; i < 10; i++) {
+            for (int j = 1; j < 10; j++) {
+                //if (i==0&&j==0) j=1;//quick fix for 0 total weight case.
+                //set up path combination
+                float areaW = ((float) i) / 10;
+                float topoW = ((float) j) / 10;
+                it = oc->features->begin();
+                (*it)->setWeight(areaW);
+                it++;
+                (*it)->setWeight(topoW);
+
+                //find path for this combination
+                cout << " finding path where a =" << areaW << " and t= " << topoW << endl;
+                findOptimalPath();
+
+                //save path to vpcf
+                int* path = new int[oc->numSteps];
+                for (int i3 = 0; i3 < oc->numSteps; i3++) {
+                    path[i3] = oc->path[i3];
+                }
+                vpcf->addPath(path);
+            }
+        }
+    } else if (numFeatures == 1) {
+        for (int j = 1; j < 11; j++) {
+
+            //set up path combination
+            float areaW = ((float) j) / 10;
+            it = oc->features->begin();
+            cout << " wei set to " << areaW << endl;
+            (*it)->setWeight(areaW);
+            findOptimalPath();
+
+            //save path to vpcf
+            //            int* path=new int(oc->numSteps);
+            //            for (int i3=0;i3<oc->numSteps;i3++){
+            //                path[i3]=oc->path[i3];
+            //            }
+            //            vpcf->addPath(path);
+        }
+    } else {
+        cout << " incorrect number of features for path combinations!! " << endl;
+        assert(false);
+    }
+    meanPaths = vpcf->getPathClusterMeans();
+    for (int i = 0; i < meanPaths->size(); i++) {
+        cout << " path " << i;
+        for (int j = 0; j < oc->numSteps; j++) {
+            cout << " " << meanPaths->at(i)[j];
+        }
+        cout << endl;
+    }
+    
+    vpcf->outputPathsToFile();
+    
+}
+
 void Analyser4D::outputPathVis(string filename) {
     oc->pathVisualiser->VisualisePath(oc->path, oc->numSteps);
 }
 
-void Analyser4D::outputPath(string filestem) {
+void Analyser4D::outputMeanPaths(string filestem) {
+    for (int i = 0; i < meanPaths->size(); i++) {
+        cout << "outputting path for cluster " << i << endl;
+        stringstream filenameStem;
+        filenameStem << filestem << "cluster" << i;
+        oc->path = meanPaths->at(i);
+        outputPath(filestem);
+    }
 
+}
+
+void Analyser4D::outputPath(string filestem) {
 
     for (int i = 0; i < numSteps; i++) {
         oc->volume4D->setToStep(i);
@@ -222,7 +300,6 @@ void Analyser4D::outputPath(string filestem) {
         filename += ".png";
         cout << " outputting step " << i << " view " << oc->path[i] << endl;
         oc->viewEvaluator->outputView(oc->geoSphere->getView(oc->path[i]), filename.c_str());
-
     }
 }
 
@@ -239,6 +316,22 @@ void Analyser4D::outputBVs(string filestem) {
         filename += ".png";
         oc->viewEvaluator->outputView(oc->geoSphere->getView(oc->bestViews[i]), filename.c_str());
     }
+}
+
+void Analyser4D::outputFeatureScores() {
+    vector<Feature*>::iterator it;
+    for (it = oc->features->begin(); it != oc->features->end(); it++) {
+        (*it)->saveScoreToFile();
+    }
+
+}
+
+void Analyser4D::inputFeatureScores() {
+    vector<Feature*>::iterator it;
+    for (it = oc->features->begin(); it != oc->features->end(); it++) {
+        (*it)->loadScoreFromFile();
+    }
+
 }
 
 void Analyser4D::testContourTree() {
@@ -265,4 +358,9 @@ void Analyser4D::interactSteps() {
         cout << "set to " << step << endl;
         oc->viewEvaluator->interact();
     }
+}
+
+void Analyser4D::vizMeanPaths(){
+    
+    oc->pathVisualiser->vizMeanPaths();
 }
