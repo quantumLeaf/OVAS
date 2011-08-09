@@ -39,5 +39,9 @@
 #include <vtkEdgeListIterator.h>
 #include <vtkReebGraphVolumeSkeletonFilter.h>
 #include "vtkTransform.h"
+#include <vtkTriangle.h>
+#include <vtkCellArray.h>
+#include <vtkPoints.h>
+#include <vtkPolyData.h>
 #endif	/* VTKESSENTIALS_H */
 

@@ -30,13 +30,13 @@ public:
     void setNumViews(int num){
         n_vertices=num;
     }
-   
-private:
-    int n_vertices;
+   int n_vertices;
     int n_faces;
     int n_edges;
     float *vertices;
     int *faces;
+private:
+   
     int** neighbours;
     GeoPoint** views;
 

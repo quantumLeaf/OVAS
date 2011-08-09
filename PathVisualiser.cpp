@@ -152,11 +152,11 @@ void PathVisualiser::vizMeanPaths() {
     int totColours = 256;
     int thisColour;
     renderer->SetBackground(1, 1, 1);
-    int* clusters=vpcf->getPathClusters();
+    int* clusters = vpcf->getPathClusters();
     for (int i = 0; i < numPaths; i++) {
-        for (int j = 0; j < numSteps-1; j++) {
+        for (int j = 0; j < numSteps - 1; j++) {
             int v1Index = vpcf->getPathViewIndex(i, j);
-            int v2Index = vpcf->getPathViewIndex(i, j+1);
+            int v2Index = vpcf->getPathViewIndex(i, j + 1);
             //cout<<"ij "<<i<<" "<<j<<endl;
             GeoPoint* view1 = oc->geoSphere->getView(v1Index);
             GeoPoint* view2 = oc->geoSphere->getView(v2Index);
@@ -168,20 +168,20 @@ void PathVisualiser::vizMeanPaths() {
 
             aViewLineS->SetPoint1(pos1);
             aViewLineS->SetPoint2(pos2);
-            
+
             thisColour = (totColours / len) * i;
 
             float b = 0;
             float g = 0;
             float r = 0;
-            float value = ((float) i)/totColours;
-            
-            
-            if(clusters[i]==0){
-                r=i;
+            float value = ((float) i) / totColours;
+
+
+            if (clusters[i] == 0) {
+                r = i;
             }
-            if(clusters[i]==1){
-                b=i;
+            if (clusters[i] == 1) {
+                b = i;
             }
 
             //cout << " for view " << i << " view " << vIndex << " pos " << pos[0] << " " << pos[1] << " " << pos[2] << " colours " << r << " " << g << " " << b << endl;
@@ -199,8 +199,53 @@ void PathVisualiser::vizMeanPaths() {
             renderer->AddActor(aViewLineActor);
             //cout<<"adding actor at "<<pos[0]<<" "<<pos[1]<<" "<<pos[2]<<endl;
         }
-        
+
     }
+
+
+
+    vtkSmartPointer<vtkPoints> points = vtkSmartPointer<vtkPoints>::New();
+    for (int i = 0; i < oc->geoSphere->n_vertices; i++) {
+        float x = oc->geoSphere->vertices[i * 3];
+        float y = oc->geoSphere->vertices[i * 3 + 1];
+        float z = oc->geoSphere->vertices[i * 3 + 2];
+        points->InsertNextPoint(x, y, z);
+
+
+    }
+    vtkSmartPointer<vtkCellArray> triangles = vtkSmartPointer<vtkCellArray>::New();
+    vtkSmartPointer<vtkTriangle> triangle = vtkSmartPointer<vtkTriangle>::New();
+    //triangle->GetPointIds()->SetId ( 0, 0 );
+    //  triangle->GetPointIds()->SetId ( 1, 1 );
+    //  triangle->GetPointIds()->SetId ( 2, 2 );
+    for (int i = 0; i < oc->geoSphere->n_faces; i++) {
+        vtkSmartPointer<vtkTriangle> triangle = vtkSmartPointer<vtkTriangle>::New();
+
+        triangle->GetPointIds()->SetId(0, oc->geoSphere->faces[i * 3]);
+        triangle->GetPointIds()->SetId(1, oc->geoSphere->faces[i * 3 + 1]);
+        triangle->GetPointIds()->SetId(2, oc->geoSphere->faces[i * 3 + 2]);
+        triangles->InsertNextCell(triangle);
+    }
+
+    //triangles->InsertNextCell ( triangle );
+    //Create a polydata object
+    vtkSmartPointer<vtkPolyData> trianglePolyData = vtkSmartPointer<vtkPolyData>::New();
+
+    //Add the geometry and topology to the polydata
+    trianglePolyData->SetPoints(points);
+    trianglePolyData->SetPolys(triangles);
+
+    //Create mapper and actor
+    vtkSmartPointer<vtkPolyDataMapper> mapper = vtkSmartPointer<vtkPolyDataMapper>::New();
+    mapper->SetInput(trianglePolyData);
+
+    vtkSmartPointer<vtkActor> actor = vtkSmartPointer<vtkActor>::New();
+    actor->GetProperty()->SetColor(0, 0.9, 0.2);
+    actor->GetProperty()->SetOpacity(0.15);
+    actor->SetMapper(mapper);
+
+    renderer->AddActor(actor);
+
     vtkSmartPointer<vtkRenderWindowInteractor> renderWindowInteractor =
             vtkSmartPointer<vtkRenderWindowInteractor>::New();
     renderWindowInteractor->SetRenderWindow(renderWindow);

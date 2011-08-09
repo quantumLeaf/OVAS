@@ -29,7 +29,7 @@ int main(int argc, char** argv) {
 
    // a4d->analyse();
    // a4d->outputFeatureScores();
-    a4d->inputFeatureScores();
+//    a4d->inputFeatureScores();
     //a4d->testReebGraph();
     //a4d->testContourTree();
 
@@ -37,10 +37,10 @@ int main(int argc, char** argv) {
     //a4d->findOptimalPath();
     //a4d->outputPath("outputPath");
     //a4d->findAndOutputPaths();
-    a4d->findPathClusters();
-    //a4d->vizMeanPaths();
+//    a4d->findPathClusters();
+    a4d->vizMeanPaths();
     
-    a4d->outputMeanPaths("clusterMeanPath");
+//    a4d->outputMeanPaths("clusterMeanPath");
     //    
 }
 
