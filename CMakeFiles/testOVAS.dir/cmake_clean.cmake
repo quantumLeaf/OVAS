@@ -1,7 +1,6 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/testOVAS.dir/testOVAS.cpp.o"
   "CMakeFiles/testOVAS.dir/Analyser4D.cpp.o"
-  "CMakeFiles/testOVAS.dir/abstractFeature.cpp.o"
   "CMakeFiles/testOVAS.dir/Feature.cpp.o"
   "CMakeFiles/testOVAS.dir/ImplicitVolume4D.cpp.o"
   "CMakeFiles/testOVAS.dir/Analyser3D.cpp.o"
@@ -17,7 +16,6 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/testOVAS.dir/OVASControl.cpp.o"
   "CMakeFiles/testOVAS.dir/FrameBuffer.cpp.o"
   "CMakeFiles/testOVAS.dir/TemporalChangeFeature.cpp.o"
-  "CMakeFiles/testOVAS.dir/AreaFeature.cpp.o"
   "CMakeFiles/testOVAS.dir/InfoSheet.cpp.o"
   "CMakeFiles/testOVAS.dir/InfoData.cpp.o"
   "CMakeFiles/testOVAS.dir/FlyingSaucersVol4D.cpp.o"
@@ -29,6 +27,8 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/testOVAS.dir/LoadedVol4D.cpp.o"
   "CMakeFiles/testOVAS.dir/CriticalPoint.cpp.o"
   "CMakeFiles/testOVAS.dir/TopologyFeature.cpp.o"
+  "CMakeFiles/testOVAS.dir/CurvatureFeature.cpp.o"
+  "CMakeFiles/testOVAS.dir/ViewPathClusterFinder.cpp.o"
   "testOVAS.pdb"
   "testOVAS"
 )

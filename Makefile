@@ -159,30 +159,6 @@ Analyser4D.cpp.s:
 	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/Analyser4D.cpp.s
 .PHONY : Analyser4D.cpp.s
 
-AreaFeature.o: AreaFeature.cpp.o
-.PHONY : AreaFeature.o
-
-# target to build an object file
-AreaFeature.cpp.o:
-	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/AreaFeature.cpp.o
-.PHONY : AreaFeature.cpp.o
-
-AreaFeature.i: AreaFeature.cpp.i
-.PHONY : AreaFeature.i
-
-# target to preprocess a source file
-AreaFeature.cpp.i:
-	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/AreaFeature.cpp.i
-.PHONY : AreaFeature.cpp.i
-
-AreaFeature.s: AreaFeature.cpp.s
-.PHONY : AreaFeature.s
-
-# target to generate assembly for a file
-AreaFeature.cpp.s:
-	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/AreaFeature.cpp.s
-.PHONY : AreaFeature.cpp.s
-
 CriticalPoint.o: CriticalPoint.cpp.o
 .PHONY : CriticalPoint.o
 
@@ -206,6 +182,30 @@ CriticalPoint.s: CriticalPoint.cpp.s
 CriticalPoint.cpp.s:
 	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/CriticalPoint.cpp.s
 .PHONY : CriticalPoint.cpp.s
+
+CurvatureFeature.o: CurvatureFeature.cpp.o
+.PHONY : CurvatureFeature.o
+
+# target to build an object file
+CurvatureFeature.cpp.o:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/CurvatureFeature.cpp.o
+.PHONY : CurvatureFeature.cpp.o
+
+CurvatureFeature.i: CurvatureFeature.cpp.i
+.PHONY : CurvatureFeature.i
+
+# target to preprocess a source file
+CurvatureFeature.cpp.i:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/CurvatureFeature.cpp.i
+.PHONY : CurvatureFeature.cpp.i
+
+CurvatureFeature.s: CurvatureFeature.cpp.s
+.PHONY : CurvatureFeature.s
+
+# target to generate assembly for a file
+CurvatureFeature.cpp.s:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/CurvatureFeature.cpp.s
+.PHONY : CurvatureFeature.cpp.s
 
 Data.o: Data.cpp.o
 .PHONY : Data.o
@@ -735,6 +735,30 @@ ViewEvaluator.cpp.s:
 	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/ViewEvaluator.cpp.s
 .PHONY : ViewEvaluator.cpp.s
 
+ViewPathClusterFinder.o: ViewPathClusterFinder.cpp.o
+.PHONY : ViewPathClusterFinder.o
+
+# target to build an object file
+ViewPathClusterFinder.cpp.o:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/ViewPathClusterFinder.cpp.o
+.PHONY : ViewPathClusterFinder.cpp.o
+
+ViewPathClusterFinder.i: ViewPathClusterFinder.cpp.i
+.PHONY : ViewPathClusterFinder.i
+
+# target to preprocess a source file
+ViewPathClusterFinder.cpp.i:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/ViewPathClusterFinder.cpp.i
+.PHONY : ViewPathClusterFinder.cpp.i
+
+ViewPathClusterFinder.s: ViewPathClusterFinder.cpp.s
+.PHONY : ViewPathClusterFinder.s
+
+# target to generate assembly for a file
+ViewPathClusterFinder.cpp.s:
+	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/ViewPathClusterFinder.cpp.s
+.PHONY : ViewPathClusterFinder.cpp.s
+
 Volume4D.o: Volume4D.cpp.o
 .PHONY : Volume4D.o
 
@@ -758,30 +782,6 @@ Volume4D.s: Volume4D.cpp.s
 Volume4D.cpp.s:
 	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/Volume4D.cpp.s
 .PHONY : Volume4D.cpp.s
-
-abstractFeature.o: abstractFeature.cpp.o
-.PHONY : abstractFeature.o
-
-# target to build an object file
-abstractFeature.cpp.o:
-	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/abstractFeature.cpp.o
-.PHONY : abstractFeature.cpp.o
-
-abstractFeature.i: abstractFeature.cpp.i
-.PHONY : abstractFeature.i
-
-# target to preprocess a source file
-abstractFeature.cpp.i:
-	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/abstractFeature.cpp.i
-.PHONY : abstractFeature.cpp.i
-
-abstractFeature.s: abstractFeature.cpp.s
-.PHONY : abstractFeature.s
-
-# target to generate assembly for a file
-abstractFeature.cpp.s:
-	$(MAKE) -f CMakeFiles/testOVAS.dir/build.make CMakeFiles/testOVAS.dir/abstractFeature.cpp.s
-.PHONY : abstractFeature.cpp.s
 
 testOVAS.o: testOVAS.cpp.o
 .PHONY : testOVAS.o
@@ -846,12 +846,12 @@ help:
 	@echo "... Analyser4D.o"
 	@echo "... Analyser4D.i"
 	@echo "... Analyser4D.s"
-	@echo "... AreaFeature.o"
-	@echo "... AreaFeature.i"
-	@echo "... AreaFeature.s"
 	@echo "... CriticalPoint.o"
 	@echo "... CriticalPoint.i"
 	@echo "... CriticalPoint.s"
+	@echo "... CurvatureFeature.o"
+	@echo "... CurvatureFeature.i"
+	@echo "... CurvatureFeature.s"
 	@echo "... Data.o"
 	@echo "... Data.i"
 	@echo "... Data.s"
@@ -918,12 +918,12 @@ help:
 	@echo "... ViewEvaluator.o"
 	@echo "... ViewEvaluator.i"
 	@echo "... ViewEvaluator.s"
+	@echo "... ViewPathClusterFinder.o"
+	@echo "... ViewPathClusterFinder.i"
+	@echo "... ViewPathClusterFinder.s"
 	@echo "... Volume4D.o"
 	@echo "... Volume4D.i"
 	@echo "... Volume4D.s"
-	@echo "... abstractFeature.o"
-	@echo "... abstractFeature.i"
-	@echo "... abstractFeature.s"
 	@echo "... testOVAS.o"
 	@echo "... testOVAS.i"
 	@echo "... testOVAS.s"

@@ -6,8 +6,8 @@ SET(CMAKE_DEPENDS_LANGUAGES
 SET(CMAKE_DEPENDS_CHECK_CXX
   "/home/zoizoi/psyforge/OVAS/Analyser3D.cpp" "/home/zoizoi/psyforge/OVAS/CMakeFiles/testOVAS.dir/Analyser3D.cpp.o"
   "/home/zoizoi/psyforge/OVAS/Analyser4D.cpp" "/home/zoizoi/psyforge/OVAS/CMakeFiles/testOVAS.dir/Analyser4D.cpp.o"
-  "/home/zoizoi/psyforge/OVAS/AreaFeature.cpp" "/home/zoizoi/psyforge/OVAS/CMakeFiles/testOVAS.dir/AreaFeature.cpp.o"
   "/home/zoizoi/psyforge/OVAS/CriticalPoint.cpp" "/home/zoizoi/psyforge/OVAS/CMakeFiles/testOVAS.dir/CriticalPoint.cpp.o"
+  "/home/zoizoi/psyforge/OVAS/CurvatureFeature.cpp" "/home/zoizoi/psyforge/OVAS/CMakeFiles/testOVAS.dir/CurvatureFeature.cpp.o"
   "/home/zoizoi/psyforge/OVAS/Data.cpp" "/home/zoizoi/psyforge/OVAS/CMakeFiles/testOVAS.dir/Data.cpp.o"
   "/home/zoizoi/psyforge/OVAS/Feature.cpp" "/home/zoizoi/psyforge/OVAS/CMakeFiles/testOVAS.dir/Feature.cpp.o"
   "/home/zoizoi/psyforge/OVAS/FeatureWeights.cpp" "/home/zoizoi/psyforge/OVAS/CMakeFiles/testOVAS.dir/FeatureWeights.cpp.o"
@@ -30,8 +30,8 @@ SET(CMAKE_DEPENDS_CHECK_CXX
   "/home/zoizoi/psyforge/OVAS/TemporalChangeFeature2.cpp" "/home/zoizoi/psyforge/OVAS/CMakeFiles/testOVAS.dir/TemporalChangeFeature2.cpp.o"
   "/home/zoizoi/psyforge/OVAS/TopologyFeature.cpp" "/home/zoizoi/psyforge/OVAS/CMakeFiles/testOVAS.dir/TopologyFeature.cpp.o"
   "/home/zoizoi/psyforge/OVAS/ViewEvaluator.cpp" "/home/zoizoi/psyforge/OVAS/CMakeFiles/testOVAS.dir/ViewEvaluator.cpp.o"
+  "/home/zoizoi/psyforge/OVAS/ViewPathClusterFinder.cpp" "/home/zoizoi/psyforge/OVAS/CMakeFiles/testOVAS.dir/ViewPathClusterFinder.cpp.o"
   "/home/zoizoi/psyforge/OVAS/Volume4D.cpp" "/home/zoizoi/psyforge/OVAS/CMakeFiles/testOVAS.dir/Volume4D.cpp.o"
-  "/home/zoizoi/psyforge/OVAS/abstractFeature.cpp" "/home/zoizoi/psyforge/OVAS/CMakeFiles/testOVAS.dir/abstractFeature.cpp.o"
   "/home/zoizoi/psyforge/OVAS/testOVAS.cpp" "/home/zoizoi/psyforge/OVAS/CMakeFiles/testOVAS.dir/testOVAS.cpp.o"
   "/home/zoizoi/psyforge/OVAS/testVol4D.cpp" "/home/zoizoi/psyforge/OVAS/CMakeFiles/testOVAS.dir/testVol4D.cpp.o"
   )

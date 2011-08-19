@@ -10,6 +10,7 @@
 #include "PathVisualiser.h"
 #include "TopologyFeature.h"
 #include "ViewPathClusterFinder.h"
+#include "CurvatureFeature.h"
 
 Analyser4D::Analyser4D() {
     //TemporalChangeFeature2 a;
@@ -100,7 +101,7 @@ void Analyser4D::loadConfig(string filename) {
                 oc->geoSphere->loadGeoSphereFile(gsfilename);
 
                 cout << " is " << oc->geoSphere->getNumVs() << endl;
-                oc->features->push_back(new Feature(wArea, oc, "area"));
+                //                oc->features->push_back(new Feature(wArea, oc, "area"));
                 // cout<<"added area Feature with weight "<<wArea<<endl;
                 //   oc->features->push_back(new Feature(wCurv,oc));
 
@@ -109,7 +110,8 @@ void Analyser4D::loadConfig(string filename) {
 
 
 
-                oc->features->push_back(new TopologyFeature(wTop, oc, "topology"));
+                oc->features->push_back(new CurvatureFeature(wTop, oc, "curvature"));
+                //                oc->features->push_back(new TopologyFeature(wTop, oc, "topology"));
                 cout << "added topology Feature with weight " << wTop << endl;
                 if (screenRend == "onScreen") {
                     oc->viewEvaluator->setScreenRenderOn();
@@ -210,34 +212,36 @@ void Analyser4D::findAndOutputPaths() {
 }
 
 void Analyser4D::findPathClusters() {
+    cout << " aaa" << endl;
     ViewPathClusterFinder* vpcf = new ViewPathClusterFinder(oc->numSteps, oc);
     int numFeatures = oc->features->size();
     cout << numFeatures << " features being considered" << endl;
     vector<Feature*>::iterator it;
 
     if (numFeatures == 2) {
-        for (int i = 1; i < 10; i++) {
-            for (int j = 1; j < 10; j++) {
-                //if (i==0&&j==0) j=1;//quick fix for 0 total weight case.
-                //set up path combination
-                float areaW = ((float) i) / 10;
-                float topoW = ((float) j) / 10;
-                it = oc->features->begin();
-                (*it)->setWeight(areaW);
-                it++;
-                (*it)->setWeight(topoW);
+        for (int i = 1; i < 1000; i++) {
+            int j = 1000 - i;
+            // for (int j = 1; j < 10; j++) {
+            //if (i==0&&j==0) j=1;//quick fix for 0 total weight case.
+            //set up path combination
+            float areaW = ((float) i) / 1000;
+            float topoW = ((float) j) / 1000;
+            it = oc->features->begin();
+            (*it)->setWeight(areaW);
+            it++;
+            (*it)->setWeight(topoW);
 
-                //find path for this combination
-                cout << " finding path where a =" << areaW << " and t= " << topoW << endl;
-                findOptimalPath();
+            //find path for this combination
+            cout << " finding path where a =" << areaW << " and t= " << topoW << endl;
+            findOptimalPath();
 
-                //save path to vpcf
-                int* path = new int[oc->numSteps];
-                for (int i3 = 0; i3 < oc->numSteps; i3++) {
-                    path[i3] = oc->path[i3];
-                }
-                vpcf->addPath(path);
+            //save path to vpcf
+            int* path = new int[oc->numSteps];
+            for (int i3 = 0; i3 < oc->numSteps; i3++) {
+                path[i3] = oc->path[i3];
             }
+            vpcf->addPath(path);
+
         }
     } else if (numFeatures == 1) {
         for (int j = 1; j < 11; j++) {
@@ -268,9 +272,9 @@ void Analyser4D::findPathClusters() {
         }
         cout << endl;
     }
-    
+
     vpcf->outputPathsToFile();
-    
+
 }
 
 void Analyser4D::outputPathVis(string filename) {
@@ -345,14 +349,17 @@ void Analyser4D::testReebGraph() {
 }
 
 void Analyser4D::interactSteps() {
-    oc->volActor->GetProperty()->SetAmbient(0.3);
-    oc->volActor->GetProperty()->SetDiffuse(0.7); //SetShading(0);
-    oc->volActor->GetProperty()->SetSpecular(0.7); //SetShading(0);
-    oc->volActor->GetProperty()->SetInterpolationToPhong();
+    oc->volActor->GetProperty()->SetAmbient(1);
+    oc->volActor->GetProperty()->SetDiffuse(0); //SetShading(0);
+    oc->volActor->GetProperty()->SetSpecular(0); //SetShading(0);
+    //oc->volActor->GetProperty()->SetAmbient(0.3);
+    //    oc->volActor->GetProperty()->SetDiffuse(0.7); //SetShading(0);
+    //    oc->volActor->GetProperty()->SetSpecular(0.7); //SetShading(0);
+    oc->volActor->GetProperty()->SetInterpolationToFlat();
     for (int step = 0; step < oc->numSteps; step++) {
         cout << "setting to " << step << endl;
         oc->volume4D->setToStep(step);
-        oc->volume4D->findCritcalPoints();
+        //oc->volume4D->findCritcalPoints();
         oc->viewEvaluator->readyFeatures();
         oc->volume4D->updateActor();
         cout << "set to " << step << endl;
@@ -360,7 +367,96 @@ void Analyser4D::interactSteps() {
     }
 }
 
-void Analyser4D::vizMeanPaths(){
-    
+void Analyser4D::vizMeanPaths() {
+
     oc->pathVisualiser->vizMeanPaths();
+}
+
+void Analyser4D::testFunc() {
+    cout << " test code" << endl;
+
+    vtkSmartPointer<vtkSphereSource> sphereSource = vtkSmartPointer<vtkSphereSource>::New();
+    float radius = 1000;
+    sphereSource->SetCenter(0, 0, 0);
+    sphereSource->SetRadius(radius);
+    sphereSource->SetPhiResolution(500);
+    sphereSource->SetThetaResolution(500);
+
+    sphereSource->Update();
+
+    vtkPolyData* polyd = sphereSource->GetOutput();
+    vtkPointData* pointd = polyd->GetPointData();
+    
+    vtkSmartPointer<vtkUnsignedCharArray> colors = 
+    vtkSmartPointer<vtkUnsignedCharArray>::New();
+  colors->SetNumberOfComponents(3);
+  colors->SetName("Colors");
+    
+    
+    vtkLookupTable* lut = vtkLookupTable::New();
+    lut->SetHueRange(0, 1); //Red to Blue
+    lut->SetAlphaRange(1, 1);
+    lut->SetValueRange(1, 1.0);
+    lut->SetSaturationRange(1.0, 1.0);
+    lut->SetNumberOfTableValues(256 * 256 * 256);
+    lut->SetNumberOfColors(256 * 256 * 256);
+    lut->SetRange(-1000, 1000); //altering range appear not to effect output
+    //        lut->SetTableRange(-100000,10000);
+    lut->Build();
+    
+    
+    for (int i = 0; i < polyd->GetNumberOfPoints(); i++) {
+        double p[3];
+    polyd->GetPoint(i,p);
+ 
+    double dcolor[3];
+    lut->GetColor(p[2], dcolor);
+
+    unsigned char color[3];
+    for(unsigned int j = 0; j < 3; j++)
+      {
+      color[j] = static_cast<unsigned char>(255.0 * dcolor[j]);
+      }
+  
+ 
+    colors->InsertNextTupleValue(color);
+    }
+    pointd->SetScalars(colors);
+   
+    //    
+
+
+    //    
+    vtkSmartPointer<vtkPolyDataMapper> mapper = vtkSmartPointer<vtkPolyDataMapper>::New();
+
+    mapper->SetInputConnection(polyd->GetProducerPort());
+    //mapper->SetLookupTable(lut);
+    vtkSmartPointer<vtkActor> actor = vtkSmartPointer<vtkActor>::New();
+    actor->SetMapper(mapper);
+    actor->GetProperty()->SetAmbient(1); //SetShading(0);
+    actor->GetProperty()->SetDiffuse(0); //SetShading(0);
+    actor->GetProperty()->SetSpecular(0); //SetShading(0);
+    actor->GetProperty()->SetInterpolationToFlat(); //actor->GetProperty()->SetOpacity(0.5);
+    //actor->GetProperty()->SetColor(1, 0, 0);
+
+    //        
+    vtkSmartPointer<vtkRenderer> renderer;
+    vtkSmartPointer<vtkRenderWindow> renderWindow;
+
+    renderer = vtkSmartPointer<vtkRenderer>::New();
+    renderWindow = vtkSmartPointer<vtkRenderWindow>::New();
+    renderer->SetBackground(0, 0, 0);
+    renderWindow->AddRenderer(renderer);
+    renderWindow->SetSize(300, 300);
+
+    
+
+    renderer->SetBackground(0, 0, 0);
+    renderer->AddActor(actor);
+
+    vtkSmartPointer<vtkRenderWindowInteractor> renderWindowInteractor = vtkSmartPointer<vtkRenderWindowInteractor>::New();
+    renderWindowInteractor->SetRenderWindow(renderWindow);
+    renderWindow->Render();
+    renderWindowInteractor->Start();
+
 }

@@ -338,8 +338,10 @@
       <itemPath>GeoSequence.cpp</itemPath>
       <itemPath>GeoSphere.cpp</itemPath>
       <itemPath>ImplicitVolume4D.cpp</itemPath>
+      <itemPath>LoadedVol4D.cpp</itemPath>
       <itemPath>Mesh.cpp</itemPath>
       <itemPath>MetaballsVol4D.cpp</itemPath>
+      <itemPath>PathVisualiser.cpp</itemPath>
       <itemPath>StepToParamConverter.cpp</itemPath>
       <itemPath>TemporalChangeFeature.cpp</itemPath>
       <itemPath>TemporalChangeFeature2.cpp</itemPath>
@@ -371,6 +373,8 @@
     <itemPath>MovingAAElipsoid.cpp</itemPath>
     <itemPath>MovingAAElipsoid.h</itemPath>
     <itemPath>OVASControl.cpp</itemPath>
+    <itemPath>ViewPathClusterFinder.cpp</itemPath>
+    <itemPath>ViewPathClusterFinder.h</itemPath>
     <itemPath>testOVAS.cpp</itemPath>
     <itemPath>testRenderView.cpp</itemPath>
     <itemPath>testRenderView.h</itemPath>

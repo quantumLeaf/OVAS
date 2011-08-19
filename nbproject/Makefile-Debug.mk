@@ -45,10 +45,12 @@ OBJECTFILES= \
 	${OBJECTDIR}/FeatureWeights.o \
 	${OBJECTDIR}/_ext/1579105866/trilinear.o \
 	${OBJECTDIR}/GeoSequence.o \
+	${OBJECTDIR}/ViewPathClusterFinder.o \
 	${OBJECTDIR}/MetaballsVol4D.o \
 	${OBJECTDIR}/TemporalChangeFeature.o \
 	${OBJECTDIR}/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.o \
 	${OBJECTDIR}/_ext/2088469020/tourtre.o \
+	${OBJECTDIR}/LoadedVol4D.o \
 	${OBJECTDIR}/_ext/1008408782/tourtre.o \
 	${OBJECTDIR}/_ext/1008408782/ctComponent.o \
 	${OBJECTDIR}/ViewEvaluator.o \
@@ -86,6 +88,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/testRenderView.o \
 	${OBJECTDIR}/ImplicitVolume4D.o \
 	${OBJECTDIR}/_ext/533639364/trilinear.o \
+	${OBJECTDIR}/PathVisualiser.o \
 	${OBJECTDIR}/Analyser4D.o \
 	${OBJECTDIR}/testVol4D.o \
 	${OBJECTDIR}/Volume4D.o \
@@ -174,6 +177,11 @@ ${OBJECTDIR}/GeoSequence.o: GeoSequence.cpp
 	${RM} $@.d
 	$(COMPILE.cc) -g -I../woven/libtourtre_v15/libtourtre/include -I/usr/local/include/vtk-5.9 -MMD -MP -MF $@.d -o ${OBJECTDIR}/GeoSequence.o GeoSequence.cpp
 
+${OBJECTDIR}/ViewPathClusterFinder.o: ViewPathClusterFinder.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -I../woven/libtourtre_v15/libtourtre/include -I/usr/local/include/vtk-5.9 -MMD -MP -MF $@.d -o ${OBJECTDIR}/ViewPathClusterFinder.o ViewPathClusterFinder.cpp
+
 ${OBJECTDIR}/MetaballsVol4D.o: MetaballsVol4D.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
@@ -193,6 +201,11 @@ ${OBJECTDIR}/_ext/2088469020/tourtre.o: ../woven/libtourtre_v15/libtourtre/_darc
 	${MKDIR} -p ${OBJECTDIR}/_ext/2088469020
 	${RM} $@.d
 	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/2088469020/tourtre.o ../woven/libtourtre_v15/libtourtre/_darcs/pristine/src/tourtre.c
+
+${OBJECTDIR}/LoadedVol4D.o: LoadedVol4D.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -I../woven/libtourtre_v15/libtourtre/include -I/usr/local/include/vtk-5.9 -MMD -MP -MF $@.d -o ${OBJECTDIR}/LoadedVol4D.o LoadedVol4D.cpp
 
 ${OBJECTDIR}/_ext/1008408782/tourtre.o: ../woven/libtourtre_v15/libtourtre/src/tourtre.c 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1008408782
@@ -378,6 +391,11 @@ ${OBJECTDIR}/_ext/533639364/trilinear.o: ../woven/libtourtre_v15/libtourtre/exam
 	${MKDIR} -p ${OBJECTDIR}/_ext/533639364
 	${RM} $@.d
 	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/533639364/trilinear.o ../woven/libtourtre_v15/libtourtre/examples/trilinear/trilinear.c
+
+${OBJECTDIR}/PathVisualiser.o: PathVisualiser.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -I../woven/libtourtre_v15/libtourtre/include -I/usr/local/include/vtk-5.9 -MMD -MP -MF $@.d -o ${OBJECTDIR}/PathVisualiser.o PathVisualiser.cpp
 
 ${OBJECTDIR}/Analyser4D.o: Analyser4D.cpp 
 	${MKDIR} -p ${OBJECTDIR}

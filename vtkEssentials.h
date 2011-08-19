@@ -43,5 +43,12 @@
 #include <vtkCellArray.h>
 #include <vtkPoints.h>
 #include <vtkPolyData.h>
+#include "vtkLookupTable.h"
+#include "vtkXMLPolyDataWriter.h"
+#include "vtkFloatArray.h"
+#include <vtkDelaunay2D.h>
+#include <vtkMath.h>
+#include <vtkVertexGlyphFilter.h>
+#include <vtkXMLPolyDataWriter.h>
 #endif	/* VTKESSENTIALS_H */
 

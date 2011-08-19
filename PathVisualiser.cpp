@@ -148,7 +148,21 @@ void PathVisualiser::vizMeanPaths() {
     int numPaths = vpcf->getNumPaths();
     int numSteps = vpcf->getNumSteps();
     int len = numSteps;
-
+    int numVerts = oc->geoSphere->n_vertices;
+    int** blueEdgesPop = new int*[numVerts]();
+    for (int i = 0; i < numVerts; i++) {
+        blueEdgesPop[i] = new int[numVerts]();
+        for (int j = 0; j < numVerts; j++) {
+            blueEdgesPop[i][j] = 0;
+        }
+    }
+    int** redEdgesPop = new int*[numVerts]();
+    for (int i = 0; i < numVerts; i++) {
+        redEdgesPop[i] = new int[numVerts]();
+        for (int j = 0; j < numVerts; j++) {
+            redEdgesPop[i][j] = 0;
+        }
+    }
     int totColours = 256;
     int thisColour;
     renderer->SetBackground(1, 1, 1);
@@ -157,58 +171,75 @@ void PathVisualiser::vizMeanPaths() {
         for (int j = 0; j < numSteps - 1; j++) {
             int v1Index = vpcf->getPathViewIndex(i, j);
             int v2Index = vpcf->getPathViewIndex(i, j + 1);
-            //cout<<"ij "<<i<<" "<<j<<endl;
-            GeoPoint* view1 = oc->geoSphere->getView(v1Index);
-            GeoPoint* view2 = oc->geoSphere->getView(v2Index);
+            
+            if (clusters[i] == 0) {
+                blueEdgesPop[v1Index][v2Index] += 1;
+            }
+            if (clusters[i] == 1) {
+                redEdgesPop[v1Index][v2Index] += 1;
+                cout<<" added rep at "<<v1Index<<" "<<v2Index<<" "<<redEdgesPop[v1Index][v2Index]<<" nv "<<numVerts<<endl;
+            }
+        }
+    }
+    for (int i = 0; i < numVerts; i++) {
+        for (int j = 0; j < numVerts ; j++) {
+            
+           // cout<<"ij "<<i<<" "<<j<<endl;
+            if (blueEdgesPop[i][j] == 0 && redEdgesPop[i][j] == 0) continue;
+
+            GeoPoint* view1 = oc->geoSphere->getView(i);
+            GeoPoint* view2 = oc->geoSphere->getView(j);
 
             float* pos1 = view1->getPoint();
             float* pos2 = view2->getPoint();
 
-            vtkSmartPointer<vtkLineSource> aViewLineS = vtkSmartPointer<vtkLineSource>::New();
+            for (int c = 0; c < 2; c++) {
+                int** edgesPop;
+                float r,g,b;
+                r=g=b=0;
+                if(c==0){ 
+                    edgesPop = blueEdgesPop;
+                    b=1;
+                }
+                if (c==1){
+                    edgesPop = redEdgesPop;
+                    r=1;
+                }
+                
+                if (edgesPop[i][j] != 0) {
+                    
+                
+                vtkSmartPointer<vtkLineSource> aViewLineS = vtkSmartPointer<vtkLineSource>::New();
 
-            aViewLineS->SetPoint1(pos1);
-            aViewLineS->SetPoint2(pos2);
-
-            thisColour = (totColours / len) * i;
-
-            float b = 0;
-            float g = 0;
-            float r = 0;
-            float value = ((float) i) / totColours;
-
-
-            if (clusters[i] == 0) {
-                r = i;
+                aViewLineS->SetPoint1(pos1);
+                aViewLineS->SetPoint2(pos2);
+                aViewLineS->Update();
+                vtkSmartPointer<vtkPolyDataMapper> mapper = vtkSmartPointer<vtkPolyDataMapper>::New();
+                mapper->SetInputConnection(aViewLineS->GetOutputPort());
+                vtkSmartPointer<vtkActor> aViewLineActor = vtkSmartPointer<vtkActor>::New();
+                aViewLineActor->SetMapper(mapper);
+                aViewLineActor->GetProperty()->SetAmbient(1); //SetShading(0);
+                aViewLineActor->GetProperty()->SetDiffuse(0.5); //SetShading(0);
+                aViewLineActor->GetProperty()->SetSpecular(0.5); //SetShading(0);
+                aViewLineActor->GetProperty()->SetOpacity(1);
+                float width = log(3*edgesPop[i][j] - 1.7);
+                aViewLineActor->GetProperty()->SetLineWidth(width);
+                //cout<<" drawing line width "<<width<<" "<<edgesPop[i][j]<<endl;
+                //aViewLineActor->GetProperty()->SetInterpolationToFlat(); //aViewLineActor->GetProperty()->SetOpacity(0.5);
+                aViewLineActor->GetProperty()->SetColor(r, g, b);
+                renderer->AddActor(aViewLineActor);
+                //cout<<"adding actor at "<<pos[0]<<" "<<pos[1]<<" "<<pos[2]<<endl;
+                }
             }
-            if (clusters[i] == 1) {
-                b = i;
-            }
-
-            //cout << " for view " << i << " view " << vIndex << " pos " << pos[0] << " " << pos[1] << " " << pos[2] << " colours " << r << " " << g << " " << b << endl;
-            aViewLineS->Update();
-            vtkSmartPointer<vtkPolyDataMapper> mapper = vtkSmartPointer<vtkPolyDataMapper>::New();
-            mapper->SetInputConnection(aViewLineS->GetOutputPort());
-            vtkSmartPointer<vtkActor> aViewLineActor = vtkSmartPointer<vtkActor>::New();
-            aViewLineActor->SetMapper(mapper);
-            aViewLineActor->GetProperty()->SetAmbient(1); //SetShading(0);
-            aViewLineActor->GetProperty()->SetDiffuse(0.5); //SetShading(0);
-            aViewLineActor->GetProperty()->SetSpecular(0.5); //SetShading(0);
-            aViewLineActor->GetProperty()->SetOpacity(0.5);
-            //aViewLineActor->GetProperty()->SetInterpolationToFlat(); //aViewLineActor->GetProperty()->SetOpacity(0.5);
-            aViewLineActor->GetProperty()->SetColor(r, g, b);
-            renderer->AddActor(aViewLineActor);
-            //cout<<"adding actor at "<<pos[0]<<" "<<pos[1]<<" "<<pos[2]<<endl;
         }
 
     }
 
-
-
     vtkSmartPointer<vtkPoints> points = vtkSmartPointer<vtkPoints>::New();
     for (int i = 0; i < oc->geoSphere->n_vertices; i++) {
-        float x = oc->geoSphere->vertices[i * 3];
-        float y = oc->geoSphere->vertices[i * 3 + 1];
-        float z = oc->geoSphere->vertices[i * 3 + 2];
+        float x = oc->geoSphere->vertices[i * 3]*0.95;
+        float y = oc->geoSphere->vertices[i * 3 + 1]*0.95;
+        float z = oc->geoSphere->vertices[i * 3 + 2]*0.95;
         points->InsertNextPoint(x, y, z);
 
 
@@ -221,9 +252,9 @@ void PathVisualiser::vizMeanPaths() {
     for (int i = 0; i < oc->geoSphere->n_faces; i++) {
         vtkSmartPointer<vtkTriangle> triangle = vtkSmartPointer<vtkTriangle>::New();
 
-        triangle->GetPointIds()->SetId(0, oc->geoSphere->faces[i * 3]);
-        triangle->GetPointIds()->SetId(1, oc->geoSphere->faces[i * 3 + 1]);
-        triangle->GetPointIds()->SetId(2, oc->geoSphere->faces[i * 3 + 2]);
+        triangle->GetPointIds()->SetId(0, (oc->geoSphere->faces[i * 3]));
+        triangle->GetPointIds()->SetId(1, (oc->geoSphere->faces[i * 3 + 1]));
+        triangle->GetPointIds()->SetId(2, (oc->geoSphere->faces[i * 3 + 2]));
         triangles->InsertNextCell(triangle);
     }
 
@@ -241,7 +272,7 @@ void PathVisualiser::vizMeanPaths() {
 
     vtkSmartPointer<vtkActor> actor = vtkSmartPointer<vtkActor>::New();
     actor->GetProperty()->SetColor(0, 0.9, 0.2);
-    actor->GetProperty()->SetOpacity(0.15);
+    actor->GetProperty()->SetOpacity(0.55);
     actor->SetMapper(mapper);
 
     renderer->AddActor(actor);

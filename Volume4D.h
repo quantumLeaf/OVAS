@@ -60,10 +60,11 @@ public:
 //    size_t neighbors ( size_t v, size_t * nbrs, void * d );
 //    double value ( size_t v, void * d );
     unsigned char* charVol;
+    vtkSmartPointer<vtkContourFilter> contourer;
 protected:
     OVASControl* oc;
     vtkSmartPointer<vtkImageData> vtkVol;
-    vtkSmartPointer<vtkContourFilter> contourer;
+    
     float* isoVal;
     bool loaded;
     

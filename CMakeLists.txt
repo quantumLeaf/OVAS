@@ -23,11 +23,13 @@ INCLUDE(${VTK_USE_FILE})
 include_directories (${VAS_SOURCE_DIR} "/usr/local/include/vxl/core/" "/usr/local/include/vxl/vcl/" "/home/zoizoi/psyforge/woven/libtourtre_v15/libtourtre/include")
 
 
-ADD_EXECUTABLE(testOVAS testOVAS.cpp Analyser4D.cpp abstractFeature.cpp  Feature.cpp ImplicitVolume4D.cpp
-Analyser3D.cpp GeoPoint.cpp StepToParamConverter.cpp
-       GeoSequence.cpp GeoSphere.cpp    Volume4D.cpp MetaballsVol4D FeatureWeights.cpp ViewEvaluator.cpp testVol4D.cpp OVASControl.cpp FrameBuffer.cpp TemporalChangeFeature.cpp arraytools.h AreaFeature.cpp InfoSheet.cpp InfoData.cpp FlyingSaucersVol4D.cpp PathVisualiser.cpp TemporalChangeFeature2.cpp MovingAAElipsoid.cpp Data.cpp Mesh.cpp LoadedVol4D.cpp CriticalPoint.cpp TopologyFeature.cpp
+ADD_EXECUTABLE(testOVAS testOVAS.cpp Analyser4D.cpp Feature.cpp ImplicitVolume4D.cpp Analyser3D.cpp GeoPoint.cpp 
+    StepToParamConverter.cpp GeoSequence.cpp GeoSphere.cpp Volume4D.cpp MetaballsVol4D FeatureWeights.cpp 
+    ViewEvaluator.cpp testVol4D.cpp OVASControl.cpp FrameBuffer.cpp TemporalChangeFeature.cpp arraytools.h 
+    InfoSheet.cpp InfoData.cpp FlyingSaucersVol4D.cpp PathVisualiser.cpp TemporalChangeFeature2.cpp MovingAAElipsoid.cpp 
+    Data.cpp Mesh.cpp LoadedVol4D.cpp CriticalPoint.cpp TopologyFeature.cpp CurvatureFeature.cpp ViewPathClusterFinder.cpp
 ) 
 
 FIND_LIBRARY(TOURTRE_LIBRARY tourtre .)
 MESSAGE(STATUS ${TOURTRE_LIBRARY})
-TARGET_LINK_LIBRARIES(testOVAS vtkWidgets vtkRendering vtkHybrid vnl ${TOURTRE_LIBRARY})
+TARGET_LINK_LIBRARIES(testOVAS vtkWidgets vtkRendering vtkHybrid vnl vtkInfovis ${TOURTRE_LIBRARY})

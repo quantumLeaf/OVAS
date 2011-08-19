@@ -23,13 +23,15 @@ int main(int argc, char** argv) {
     vtkSmartPointer<vtkImageData> vtkVol = vtkSmartPointer<vtkImageData>::New();
     Analyser4D* a4d = new Analyser4D;
     a4d->setFile("./ovas.config");
+    
+    //a4d->testFunc();
     a4d->init();
 
-    //a4d->interactSteps();
+    a4d->interactSteps();
 
-   // a4d->analyse();
+//    a4d->analyse();
    // a4d->outputFeatureScores();
-//    a4d->inputFeatureScores();
+    //a4d->inputFeatureScores();
     //a4d->testReebGraph();
     //a4d->testContourTree();
 
@@ -37,10 +39,9 @@ int main(int argc, char** argv) {
     //a4d->findOptimalPath();
     //a4d->outputPath("outputPath");
     //a4d->findAndOutputPaths();
-//    a4d->findPathClusters();
-    a4d->vizMeanPaths();
+  //  a4d->findPathClusters();
+   // a4d->vizMeanPaths();
     
 //    a4d->outputMeanPaths("clusterMeanPath");
     //    
 }
-

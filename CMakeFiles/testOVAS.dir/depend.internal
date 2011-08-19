@@ -37,6 +37,7 @@ CMakeFiles/testOVAS.dir/Analyser3D.cpp.o
  /usr/local/include/vtk-5.9/vtkAbstractArray.h
  /usr/local/include/vtk-5.9/vtkAbstractMapper.h
  /usr/local/include/vtk-5.9/vtkAbstractMapper3D.h
+ /usr/local/include/vtk-5.9/vtkAbstractTransform.h
  /usr/local/include/vtk-5.9/vtkActor.h
  /usr/local/include/vtk-5.9/vtkActorCollection.h
  /usr/local/include/vtk-5.9/vtkAlgorithm.h
@@ -47,6 +48,7 @@ CMakeFiles/testOVAS.dir/Analyser3D.cpp.o
  /usr/local/include/vtk-5.9/vtkArrayIteratorTemplateImplicit.txx
  /usr/local/include/vtk-5.9/vtkCamera.h
  /usr/local/include/vtk-5.9/vtkCell.h
+ /usr/local/include/vtk-5.9/vtkCellArray.h
  /usr/local/include/vtk-5.9/vtkCellLinks.h
  /usr/local/include/vtk-5.9/vtkCellType.h
  /usr/local/include/vtk-5.9/vtkCellTypes.h
@@ -66,18 +68,24 @@ CMakeFiles/testOVAS.dir/Analyser3D.cpp.o
  /usr/local/include/vtk-5.9/vtkDataSetAttributes.h
  /usr/local/include/vtk-5.9/vtkDataSetTriangleFilter.h
  /usr/local/include/vtk-5.9/vtkDebugLeaksManager.h
+ /usr/local/include/vtk-5.9/vtkDelaunay2D.h
  /usr/local/include/vtk-5.9/vtkDirectedGraph.h
  /usr/local/include/vtk-5.9/vtkDirectedGraphAlgorithm.h
  /usr/local/include/vtk-5.9/vtkDoubleArray.h
  /usr/local/include/vtk-5.9/vtkEdgeListIterator.h
  /usr/local/include/vtk-5.9/vtkFieldData.h
+ /usr/local/include/vtk-5.9/vtkFloatArray.h
  /usr/local/include/vtk-5.9/vtkGeometryFilter.h
  /usr/local/include/vtk-5.9/vtkGraph.h
+ /usr/local/include/vtk-5.9/vtkHomogeneousTransform.h
  /usr/local/include/vtk-5.9/vtkIOStream.h
  /usr/local/include/vtk-5.9/vtkIOStreamFwd.h
  /usr/local/include/vtk-5.9/vtkIdList.h
+ /usr/local/include/vtk-5.9/vtkIdTypeArray.h
  /usr/local/include/vtk-5.9/vtkImageAlgorithm.h
  /usr/local/include/vtk-5.9/vtkImageData.h
+ /usr/local/include/vtk-5.9/vtkImageResample.h
+ /usr/local/include/vtk-5.9/vtkImageReslice.h
  /usr/local/include/vtk-5.9/vtkImageWriter.h
  /usr/local/include/vtk-5.9/vtkIndent.h
  /usr/local/include/vtk-5.9/vtkInformation.h
@@ -86,7 +94,12 @@ CMakeFiles/testOVAS.dir/Analyser3D.cpp.o
  /usr/local/include/vtk-5.9/vtkInformationKey.h
  /usr/local/include/vtk-5.9/vtkInformationVector.h
  /usr/local/include/vtk-5.9/vtkIntArray.h
+ /usr/local/include/vtk-5.9/vtkLineSource.h
+ /usr/local/include/vtk-5.9/vtkLinearTransform.h
+ /usr/local/include/vtk-5.9/vtkLookupTable.h
  /usr/local/include/vtk-5.9/vtkMapper.h
+ /usr/local/include/vtk-5.9/vtkMath.h
+ /usr/local/include/vtk-5.9/vtkMatrix4x4.h
  /usr/local/include/vtk-5.9/vtkMutableDirectedGraph.h
  /usr/local/include/vtk-5.9/vtkOStrStreamWrapper.h
  /usr/local/include/vtk-5.9/vtkOStreamWrapper.h
@@ -100,6 +113,7 @@ CMakeFiles/testOVAS.dir/Analyser3D.cpp.o
  /usr/local/include/vtk-5.9/vtkPolyData.h
  /usr/local/include/vtk-5.9/vtkPolyDataAlgorithm.h
  /usr/local/include/vtk-5.9/vtkPolyDataMapper.h
+ /usr/local/include/vtk-5.9/vtkPolynomialSolversUnivariate.h
  /usr/local/include/vtk-5.9/vtkProp.h
  /usr/local/include/vtk-5.9/vtkProp3D.h
  /usr/local/include/vtk-5.9/vtkPropCollection.h
@@ -121,8 +135,11 @@ CMakeFiles/testOVAS.dir/Analyser3D.cpp.o
  /usr/local/include/vtk-5.9/vtkSystemIncludes.h
  /usr/local/include/vtk-5.9/vtkTable.h
  /usr/local/include/vtk-5.9/vtkTexture.h
+ /usr/local/include/vtk-5.9/vtkThreadedImageAlgorithm.h
  /usr/local/include/vtk-5.9/vtkThreshold.h
  /usr/local/include/vtk-5.9/vtkTimeStamp.h
+ /usr/local/include/vtk-5.9/vtkTransform.h
+ /usr/local/include/vtk-5.9/vtkTriangle.h
  /usr/local/include/vtk-5.9/vtkType.h
  /usr/local/include/vtk-5.9/vtkTypeTraits.h
  /usr/local/include/vtk-5.9/vtkUnicodeString.h
@@ -133,6 +150,7 @@ CMakeFiles/testOVAS.dir/Analyser3D.cpp.o
  /usr/local/include/vtk-5.9/vtkVariant.h
  /usr/local/include/vtk-5.9/vtkVariantArray.h
  /usr/local/include/vtk-5.9/vtkVariantInlineOperators.h
+ /usr/local/include/vtk-5.9/vtkVertexGlyphFilter.h
  /usr/local/include/vtk-5.9/vtkViewport.h
  /usr/local/include/vtk-5.9/vtkVolume.h
  /usr/local/include/vtk-5.9/vtkVolumeCollection.h
@@ -140,6 +158,9 @@ CMakeFiles/testOVAS.dir/Analyser3D.cpp.o
  /usr/local/include/vtk-5.9/vtkWin32Header.h
  /usr/local/include/vtk-5.9/vtkWindow.h
  /usr/local/include/vtk-5.9/vtkWindowToImageFilter.h
+ /usr/local/include/vtk-5.9/vtkXMLPolyDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLUnstructuredDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLWriter.h
  /usr/local/include/vtk-5.9/vtkstd/algorithm
  /usr/local/include/vtk-5.9/vtkstd/exception
  /usr/local/include/vtk-5.9/vtkstd/map
@@ -235,6 +256,7 @@ CMakeFiles/testOVAS.dir/Analyser4D.cpp.o
  /home/zoizoi/psyforge/OVAS/Analyser4D.cpp
  /home/zoizoi/psyforge/OVAS/Analyser4D.h
  /home/zoizoi/psyforge/OVAS/CriticalPoint.h
+ /home/zoizoi/psyforge/OVAS/CurvatureFeature.h
  /home/zoizoi/psyforge/OVAS/Data.h
  /home/zoizoi/psyforge/OVAS/Feature.h
  /home/zoizoi/psyforge/OVAS/FeatureWeights.h
@@ -258,6 +280,7 @@ CMakeFiles/testOVAS.dir/Analyser4D.cpp.o
  /home/zoizoi/psyforge/OVAS/TemporalChangeFeature2.h
  /home/zoizoi/psyforge/OVAS/TopologyFeature.h
  /home/zoizoi/psyforge/OVAS/ViewEvaluator.h
+ /home/zoizoi/psyforge/OVAS/ViewPathClusterFinder.h
  /home/zoizoi/psyforge/OVAS/Volume4D.h
  /home/zoizoi/psyforge/OVAS/arraytools.h
  /home/zoizoi/psyforge/OVAS/testVol4D.h
@@ -270,6 +293,7 @@ CMakeFiles/testOVAS.dir/Analyser4D.cpp.o
  /usr/local/include/vtk-5.9/vtkAbstractArray.h
  /usr/local/include/vtk-5.9/vtkAbstractMapper.h
  /usr/local/include/vtk-5.9/vtkAbstractMapper3D.h
+ /usr/local/include/vtk-5.9/vtkAbstractTransform.h
  /usr/local/include/vtk-5.9/vtkActor.h
  /usr/local/include/vtk-5.9/vtkActorCollection.h
  /usr/local/include/vtk-5.9/vtkAlgorithm.h
@@ -280,15 +304,18 @@ CMakeFiles/testOVAS.dir/Analyser4D.cpp.o
  /usr/local/include/vtk-5.9/vtkArrayIteratorTemplateImplicit.txx
  /usr/local/include/vtk-5.9/vtkCamera.h
  /usr/local/include/vtk-5.9/vtkCell.h
+ /usr/local/include/vtk-5.9/vtkCellArray.h
  /usr/local/include/vtk-5.9/vtkCellLinks.h
  /usr/local/include/vtk-5.9/vtkCellType.h
  /usr/local/include/vtk-5.9/vtkCellTypes.h
  /usr/local/include/vtk-5.9/vtkCollection.h
  /usr/local/include/vtk-5.9/vtkCommonInformationKeyManager.h
+ /usr/local/include/vtk-5.9/vtkCompositeDataSet.h
  /usr/local/include/vtk-5.9/vtkConeSource.h
  /usr/local/include/vtk-5.9/vtkConfigure.h
  /usr/local/include/vtk-5.9/vtkContourFilter.h
  /usr/local/include/vtk-5.9/vtkContourValues.h
+ /usr/local/include/vtk-5.9/vtkCurvatures.h
  /usr/local/include/vtk-5.9/vtkDataArray.h
  /usr/local/include/vtk-5.9/vtkDataArrayTemplate.h
  /usr/local/include/vtk-5.9/vtkDataArrayTemplate.txx
@@ -299,18 +326,24 @@ CMakeFiles/testOVAS.dir/Analyser4D.cpp.o
  /usr/local/include/vtk-5.9/vtkDataSetAttributes.h
  /usr/local/include/vtk-5.9/vtkDataSetTriangleFilter.h
  /usr/local/include/vtk-5.9/vtkDebugLeaksManager.h
+ /usr/local/include/vtk-5.9/vtkDelaunay2D.h
  /usr/local/include/vtk-5.9/vtkDirectedGraph.h
  /usr/local/include/vtk-5.9/vtkDirectedGraphAlgorithm.h
  /usr/local/include/vtk-5.9/vtkDoubleArray.h
  /usr/local/include/vtk-5.9/vtkEdgeListIterator.h
  /usr/local/include/vtk-5.9/vtkFieldData.h
+ /usr/local/include/vtk-5.9/vtkFloatArray.h
  /usr/local/include/vtk-5.9/vtkGeometryFilter.h
  /usr/local/include/vtk-5.9/vtkGraph.h
+ /usr/local/include/vtk-5.9/vtkHomogeneousTransform.h
  /usr/local/include/vtk-5.9/vtkIOStream.h
  /usr/local/include/vtk-5.9/vtkIOStreamFwd.h
  /usr/local/include/vtk-5.9/vtkIdList.h
+ /usr/local/include/vtk-5.9/vtkIdTypeArray.h
  /usr/local/include/vtk-5.9/vtkImageAlgorithm.h
  /usr/local/include/vtk-5.9/vtkImageData.h
+ /usr/local/include/vtk-5.9/vtkImageResample.h
+ /usr/local/include/vtk-5.9/vtkImageReslice.h
  /usr/local/include/vtk-5.9/vtkImageWriter.h
  /usr/local/include/vtk-5.9/vtkIndent.h
  /usr/local/include/vtk-5.9/vtkInformation.h
@@ -319,7 +352,17 @@ CMakeFiles/testOVAS.dir/Analyser4D.cpp.o
  /usr/local/include/vtk-5.9/vtkInformationKey.h
  /usr/local/include/vtk-5.9/vtkInformationVector.h
  /usr/local/include/vtk-5.9/vtkIntArray.h
+ /usr/local/include/vtk-5.9/vtkInteractorObserver.h
+ /usr/local/include/vtk-5.9/vtkInteractorStyle.h
+ /usr/local/include/vtk-5.9/vtkInteractorStyleTrackballCamera.h
+ /usr/local/include/vtk-5.9/vtkKMeansStatistics.h
+ /usr/local/include/vtk-5.9/vtkLineSource.h
+ /usr/local/include/vtk-5.9/vtkLinearTransform.h
+ /usr/local/include/vtk-5.9/vtkLookupTable.h
  /usr/local/include/vtk-5.9/vtkMapper.h
+ /usr/local/include/vtk-5.9/vtkMath.h
+ /usr/local/include/vtk-5.9/vtkMatrix4x4.h
+ /usr/local/include/vtk-5.9/vtkMultiBlockDataSet.h
  /usr/local/include/vtk-5.9/vtkMutableDirectedGraph.h
  /usr/local/include/vtk-5.9/vtkOStrStreamWrapper.h
  /usr/local/include/vtk-5.9/vtkOStreamWrapper.h
@@ -333,6 +376,7 @@ CMakeFiles/testOVAS.dir/Analyser4D.cpp.o
  /usr/local/include/vtk-5.9/vtkPolyData.h
  /usr/local/include/vtk-5.9/vtkPolyDataAlgorithm.h
  /usr/local/include/vtk-5.9/vtkPolyDataMapper.h
+ /usr/local/include/vtk-5.9/vtkPolynomialSolversUnivariate.h
  /usr/local/include/vtk-5.9/vtkProp.h
  /usr/local/include/vtk-5.9/vtkProp3D.h
  /usr/local/include/vtk-5.9/vtkPropCollection.h
@@ -349,13 +393,18 @@ CMakeFiles/testOVAS.dir/Analyser4D.cpp.o
  /usr/local/include/vtk-5.9/vtkSmartPointerBase.h
  /usr/local/include/vtk-5.9/vtkSortDataArray.h
  /usr/local/include/vtk-5.9/vtkSphereSource.h
+ /usr/local/include/vtk-5.9/vtkStatisticsAlgorithm.h
  /usr/local/include/vtk-5.9/vtkStdString.h
  /usr/local/include/vtk-5.9/vtkStructuredData.h
  /usr/local/include/vtk-5.9/vtkSystemIncludes.h
  /usr/local/include/vtk-5.9/vtkTable.h
+ /usr/local/include/vtk-5.9/vtkTableAlgorithm.h
  /usr/local/include/vtk-5.9/vtkTexture.h
+ /usr/local/include/vtk-5.9/vtkThreadedImageAlgorithm.h
  /usr/local/include/vtk-5.9/vtkThreshold.h
  /usr/local/include/vtk-5.9/vtkTimeStamp.h
+ /usr/local/include/vtk-5.9/vtkTransform.h
+ /usr/local/include/vtk-5.9/vtkTriangle.h
  /usr/local/include/vtk-5.9/vtkType.h
  /usr/local/include/vtk-5.9/vtkTypeTraits.h
  /usr/local/include/vtk-5.9/vtkUnicodeString.h
@@ -366,6 +415,7 @@ CMakeFiles/testOVAS.dir/Analyser4D.cpp.o
  /usr/local/include/vtk-5.9/vtkVariant.h
  /usr/local/include/vtk-5.9/vtkVariantArray.h
  /usr/local/include/vtk-5.9/vtkVariantInlineOperators.h
+ /usr/local/include/vtk-5.9/vtkVertexGlyphFilter.h
  /usr/local/include/vtk-5.9/vtkViewport.h
  /usr/local/include/vtk-5.9/vtkVolume.h
  /usr/local/include/vtk-5.9/vtkVolumeCollection.h
@@ -373,6 +423,9 @@ CMakeFiles/testOVAS.dir/Analyser4D.cpp.o
  /usr/local/include/vtk-5.9/vtkWin32Header.h
  /usr/local/include/vtk-5.9/vtkWindow.h
  /usr/local/include/vtk-5.9/vtkWindowToImageFilter.h
+ /usr/local/include/vtk-5.9/vtkXMLPolyDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLUnstructuredDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLWriter.h
  /usr/local/include/vtk-5.9/vtkstd/algorithm
  /usr/local/include/vtk-5.9/vtkstd/exception
  /usr/local/include/vtk-5.9/vtkstd/map
@@ -463,20 +516,106 @@ CMakeFiles/testOVAS.dir/Analyser4D.cpp.o
  /usr/local/include/vxl/vcl/win32-vc70/vcl_cmath.h
  /usr/local/include/vxl/vcl/win32-vc70/vcl_complex.h
  /usr/local/include/vxl/vcl/win32-vc70/vcl_cstdlib.h
-CMakeFiles/testOVAS.dir/AreaFeature.cpp.o
- /home/zoizoi/psyforge/OVAS/AreaFeature.cpp
- /home/zoizoi/psyforge/OVAS/AreaFeature.h
- /home/zoizoi/psyforge/OVAS/Feature.h
- /home/zoizoi/psyforge/OVAS/FrameBuffer.h
- /home/zoizoi/psyforge/OVAS/GeoPoint.h
- /home/zoizoi/psyforge/OVAS/GeoSphere.h
- /home/zoizoi/psyforge/OVAS/OVASControl.h
- /home/zoizoi/psyforge/OVAS/arraytools.h
- /home/zoizoi/psyforge/OVAS/vtkEssentials.h
+CMakeFiles/testOVAS.dir/CriticalPoint.cpp.o
+ /home/zoizoi/psyforge/OVAS/CriticalPoint.cpp
+ /home/zoizoi/psyforge/OVAS/CriticalPoint.h
  /usr/local/include/vtk-5.9/vtkABI.h
  /usr/local/include/vtk-5.9/vtkAbstractArray.h
  /usr/local/include/vtk-5.9/vtkAbstractMapper.h
  /usr/local/include/vtk-5.9/vtkAbstractMapper3D.h
+ /usr/local/include/vtk-5.9/vtkActor.h
+ /usr/local/include/vtk-5.9/vtkAlgorithm.h
+ /usr/local/include/vtk-5.9/vtkArrayIterator.h
+ /usr/local/include/vtk-5.9/vtkArrayIteratorTemplate.h
+ /usr/local/include/vtk-5.9/vtkArrayIteratorTemplate.txx
+ /usr/local/include/vtk-5.9/vtkArrayIteratorTemplateImplicit.txx
+ /usr/local/include/vtk-5.9/vtkCellLinks.h
+ /usr/local/include/vtk-5.9/vtkCellType.h
+ /usr/local/include/vtk-5.9/vtkCellTypes.h
+ /usr/local/include/vtk-5.9/vtkCommonInformationKeyManager.h
+ /usr/local/include/vtk-5.9/vtkConfigure.h
+ /usr/local/include/vtk-5.9/vtkDataArray.h
+ /usr/local/include/vtk-5.9/vtkDataArrayTemplate.h
+ /usr/local/include/vtk-5.9/vtkDataArrayTemplate.txx
+ /usr/local/include/vtk-5.9/vtkDataArrayTemplateImplicit.txx
+ /usr/local/include/vtk-5.9/vtkDataObject.h
+ /usr/local/include/vtk-5.9/vtkDataSet.h
+ /usr/local/include/vtk-5.9/vtkDebugLeaksManager.h
+ /usr/local/include/vtk-5.9/vtkIOStream.h
+ /usr/local/include/vtk-5.9/vtkIOStreamFwd.h
+ /usr/local/include/vtk-5.9/vtkIdList.h
+ /usr/local/include/vtk-5.9/vtkImageAlgorithm.h
+ /usr/local/include/vtk-5.9/vtkIndent.h
+ /usr/local/include/vtk-5.9/vtkInformation.h
+ /usr/local/include/vtk-5.9/vtkInformationDoubleVectorKey.h
+ /usr/local/include/vtk-5.9/vtkInformationInformationVectorKey.h
+ /usr/local/include/vtk-5.9/vtkInformationKey.h
+ /usr/local/include/vtk-5.9/vtkInformationVector.h
+ /usr/local/include/vtk-5.9/vtkIntArray.h
+ /usr/local/include/vtk-5.9/vtkMapper.h
+ /usr/local/include/vtk-5.9/vtkOStrStreamWrapper.h
+ /usr/local/include/vtk-5.9/vtkOStreamWrapper.h
+ /usr/local/include/vtk-5.9/vtkObject.h
+ /usr/local/include/vtk-5.9/vtkObjectBase.h
+ /usr/local/include/vtk-5.9/vtkObjectFactory.h
+ /usr/local/include/vtk-5.9/vtkPointSet.h
+ /usr/local/include/vtk-5.9/vtkPoints.h
+ /usr/local/include/vtk-5.9/vtkPolyData.h
+ /usr/local/include/vtk-5.9/vtkPolyDataAlgorithm.h
+ /usr/local/include/vtk-5.9/vtkPolyDataMapper.h
+ /usr/local/include/vtk-5.9/vtkProp.h
+ /usr/local/include/vtk-5.9/vtkProp3D.h
+ /usr/local/include/vtk-5.9/vtkProperty.h
+ /usr/local/include/vtk-5.9/vtkScalarsToColors.h
+ /usr/local/include/vtk-5.9/vtkSetGet.h
+ /usr/local/include/vtk-5.9/vtkSmartPointer.h
+ /usr/local/include/vtk-5.9/vtkSmartPointerBase.h
+ /usr/local/include/vtk-5.9/vtkSortDataArray.h
+ /usr/local/include/vtk-5.9/vtkSphereSource.h
+ /usr/local/include/vtk-5.9/vtkStdString.h
+ /usr/local/include/vtk-5.9/vtkSystemIncludes.h
+ /usr/local/include/vtk-5.9/vtkTexture.h
+ /usr/local/include/vtk-5.9/vtkTimeStamp.h
+ /usr/local/include/vtk-5.9/vtkType.h
+ /usr/local/include/vtk-5.9/vtkTypeTraits.h
+ /usr/local/include/vtk-5.9/vtkUnicodeString.h
+ /usr/local/include/vtk-5.9/vtkUnsignedCharArray.h
+ /usr/local/include/vtk-5.9/vtkVariant.h
+ /usr/local/include/vtk-5.9/vtkVariantInlineOperators.h
+ /usr/local/include/vtk-5.9/vtkWeakPointerBase.h
+ /usr/local/include/vtk-5.9/vtkWin32Header.h
+ /usr/local/include/vtk-5.9/vtkstd/algorithm
+ /usr/local/include/vtk-5.9/vtkstd/exception
+ /usr/local/include/vtk-5.9/vtkstd/map
+ /usr/local/include/vtk-5.9/vtkstd/new
+ /usr/local/include/vtk-5.9/vtkstd/string
+ /usr/local/include/vtk-5.9/vtkstd/utility
+ /usr/local/include/vtk-5.9/vtkstd/vector
+CMakeFiles/testOVAS.dir/CurvatureFeature.cpp.o
+ /home/zoizoi/psyforge/OVAS/CriticalPoint.h
+ /home/zoizoi/psyforge/OVAS/CurvatureFeature.cpp
+ /home/zoizoi/psyforge/OVAS/CurvatureFeature.h
+ /home/zoizoi/psyforge/OVAS/Data.h
+ /home/zoizoi/psyforge/OVAS/Feature.h
+ /home/zoizoi/psyforge/OVAS/FrameBuffer.h
+ /home/zoizoi/psyforge/OVAS/GeoPoint.h
+ /home/zoizoi/psyforge/OVAS/GeoSphere.h
+ /home/zoizoi/psyforge/OVAS/Global.h
+ /home/zoizoi/psyforge/OVAS/Mesh.h
+ /home/zoizoi/psyforge/OVAS/OVASControl.h
+ /home/zoizoi/psyforge/OVAS/StepToParamConverter.h
+ /home/zoizoi/psyforge/OVAS/Volume4D.h
+ /home/zoizoi/psyforge/OVAS/arraytools.h
+ /home/zoizoi/psyforge/OVAS/vtkEssentials.h
+ /home/zoizoi/psyforge/woven/libtourtre_v15/libtourtre/include/ctArc.h
+ /home/zoizoi/psyforge/woven/libtourtre_v15/libtourtre/include/ctBranch.h
+ /home/zoizoi/psyforge/woven/libtourtre_v15/libtourtre/include/ctNode.h
+ /home/zoizoi/psyforge/woven/libtourtre_v15/libtourtre/include/tourtre.h
+ /usr/local/include/vtk-5.9/vtkABI.h
+ /usr/local/include/vtk-5.9/vtkAbstractArray.h
+ /usr/local/include/vtk-5.9/vtkAbstractMapper.h
+ /usr/local/include/vtk-5.9/vtkAbstractMapper3D.h
+ /usr/local/include/vtk-5.9/vtkAbstractTransform.h
  /usr/local/include/vtk-5.9/vtkActor.h
  /usr/local/include/vtk-5.9/vtkActorCollection.h
  /usr/local/include/vtk-5.9/vtkAlgorithm.h
@@ -487,6 +626,7 @@ CMakeFiles/testOVAS.dir/AreaFeature.cpp.o
  /usr/local/include/vtk-5.9/vtkArrayIteratorTemplateImplicit.txx
  /usr/local/include/vtk-5.9/vtkCamera.h
  /usr/local/include/vtk-5.9/vtkCell.h
+ /usr/local/include/vtk-5.9/vtkCellArray.h
  /usr/local/include/vtk-5.9/vtkCellLinks.h
  /usr/local/include/vtk-5.9/vtkCellType.h
  /usr/local/include/vtk-5.9/vtkCellTypes.h
@@ -496,6 +636,7 @@ CMakeFiles/testOVAS.dir/AreaFeature.cpp.o
  /usr/local/include/vtk-5.9/vtkConfigure.h
  /usr/local/include/vtk-5.9/vtkContourFilter.h
  /usr/local/include/vtk-5.9/vtkContourValues.h
+ /usr/local/include/vtk-5.9/vtkCurvatures.h
  /usr/local/include/vtk-5.9/vtkDataArray.h
  /usr/local/include/vtk-5.9/vtkDataArrayTemplate.h
  /usr/local/include/vtk-5.9/vtkDataArrayTemplate.txx
@@ -506,18 +647,24 @@ CMakeFiles/testOVAS.dir/AreaFeature.cpp.o
  /usr/local/include/vtk-5.9/vtkDataSetAttributes.h
  /usr/local/include/vtk-5.9/vtkDataSetTriangleFilter.h
  /usr/local/include/vtk-5.9/vtkDebugLeaksManager.h
+ /usr/local/include/vtk-5.9/vtkDelaunay2D.h
  /usr/local/include/vtk-5.9/vtkDirectedGraph.h
  /usr/local/include/vtk-5.9/vtkDirectedGraphAlgorithm.h
  /usr/local/include/vtk-5.9/vtkDoubleArray.h
  /usr/local/include/vtk-5.9/vtkEdgeListIterator.h
  /usr/local/include/vtk-5.9/vtkFieldData.h
+ /usr/local/include/vtk-5.9/vtkFloatArray.h
  /usr/local/include/vtk-5.9/vtkGeometryFilter.h
  /usr/local/include/vtk-5.9/vtkGraph.h
+ /usr/local/include/vtk-5.9/vtkHomogeneousTransform.h
  /usr/local/include/vtk-5.9/vtkIOStream.h
  /usr/local/include/vtk-5.9/vtkIOStreamFwd.h
  /usr/local/include/vtk-5.9/vtkIdList.h
+ /usr/local/include/vtk-5.9/vtkIdTypeArray.h
  /usr/local/include/vtk-5.9/vtkImageAlgorithm.h
  /usr/local/include/vtk-5.9/vtkImageData.h
+ /usr/local/include/vtk-5.9/vtkImageResample.h
+ /usr/local/include/vtk-5.9/vtkImageReslice.h
  /usr/local/include/vtk-5.9/vtkImageWriter.h
  /usr/local/include/vtk-5.9/vtkIndent.h
  /usr/local/include/vtk-5.9/vtkInformation.h
@@ -526,7 +673,12 @@ CMakeFiles/testOVAS.dir/AreaFeature.cpp.o
  /usr/local/include/vtk-5.9/vtkInformationKey.h
  /usr/local/include/vtk-5.9/vtkInformationVector.h
  /usr/local/include/vtk-5.9/vtkIntArray.h
+ /usr/local/include/vtk-5.9/vtkLineSource.h
+ /usr/local/include/vtk-5.9/vtkLinearTransform.h
+ /usr/local/include/vtk-5.9/vtkLookupTable.h
  /usr/local/include/vtk-5.9/vtkMapper.h
+ /usr/local/include/vtk-5.9/vtkMath.h
+ /usr/local/include/vtk-5.9/vtkMatrix4x4.h
  /usr/local/include/vtk-5.9/vtkMutableDirectedGraph.h
  /usr/local/include/vtk-5.9/vtkOStrStreamWrapper.h
  /usr/local/include/vtk-5.9/vtkOStreamWrapper.h
@@ -540,6 +692,7 @@ CMakeFiles/testOVAS.dir/AreaFeature.cpp.o
  /usr/local/include/vtk-5.9/vtkPolyData.h
  /usr/local/include/vtk-5.9/vtkPolyDataAlgorithm.h
  /usr/local/include/vtk-5.9/vtkPolyDataMapper.h
+ /usr/local/include/vtk-5.9/vtkPolynomialSolversUnivariate.h
  /usr/local/include/vtk-5.9/vtkProp.h
  /usr/local/include/vtk-5.9/vtkProp3D.h
  /usr/local/include/vtk-5.9/vtkPropCollection.h
@@ -561,8 +714,11 @@ CMakeFiles/testOVAS.dir/AreaFeature.cpp.o
  /usr/local/include/vtk-5.9/vtkSystemIncludes.h
  /usr/local/include/vtk-5.9/vtkTable.h
  /usr/local/include/vtk-5.9/vtkTexture.h
+ /usr/local/include/vtk-5.9/vtkThreadedImageAlgorithm.h
  /usr/local/include/vtk-5.9/vtkThreshold.h
  /usr/local/include/vtk-5.9/vtkTimeStamp.h
+ /usr/local/include/vtk-5.9/vtkTransform.h
+ /usr/local/include/vtk-5.9/vtkTriangle.h
  /usr/local/include/vtk-5.9/vtkType.h
  /usr/local/include/vtk-5.9/vtkTypeTraits.h
  /usr/local/include/vtk-5.9/vtkUnicodeString.h
@@ -573,6 +729,7 @@ CMakeFiles/testOVAS.dir/AreaFeature.cpp.o
  /usr/local/include/vtk-5.9/vtkVariant.h
  /usr/local/include/vtk-5.9/vtkVariantArray.h
  /usr/local/include/vtk-5.9/vtkVariantInlineOperators.h
+ /usr/local/include/vtk-5.9/vtkVertexGlyphFilter.h
  /usr/local/include/vtk-5.9/vtkViewport.h
  /usr/local/include/vtk-5.9/vtkVolume.h
  /usr/local/include/vtk-5.9/vtkVolumeCollection.h
@@ -580,73 +737,9 @@ CMakeFiles/testOVAS.dir/AreaFeature.cpp.o
  /usr/local/include/vtk-5.9/vtkWin32Header.h
  /usr/local/include/vtk-5.9/vtkWindow.h
  /usr/local/include/vtk-5.9/vtkWindowToImageFilter.h
- /usr/local/include/vtk-5.9/vtkstd/algorithm
- /usr/local/include/vtk-5.9/vtkstd/exception
- /usr/local/include/vtk-5.9/vtkstd/map
- /usr/local/include/vtk-5.9/vtkstd/new
- /usr/local/include/vtk-5.9/vtkstd/string
- /usr/local/include/vtk-5.9/vtkstd/utility
- /usr/local/include/vtk-5.9/vtkstd/vector
-CMakeFiles/testOVAS.dir/CriticalPoint.cpp.o
- /home/zoizoi/psyforge/OVAS/CriticalPoint.cpp
- /home/zoizoi/psyforge/OVAS/CriticalPoint.h
- /usr/local/include/vtk-5.9/vtkABI.h
- /usr/local/include/vtk-5.9/vtkAbstractArray.h
- /usr/local/include/vtk-5.9/vtkActor.h
- /usr/local/include/vtk-5.9/vtkAlgorithm.h
- /usr/local/include/vtk-5.9/vtkArrayIterator.h
- /usr/local/include/vtk-5.9/vtkArrayIteratorTemplate.h
- /usr/local/include/vtk-5.9/vtkArrayIteratorTemplate.txx
- /usr/local/include/vtk-5.9/vtkArrayIteratorTemplateImplicit.txx
- /usr/local/include/vtk-5.9/vtkCellLinks.h
- /usr/local/include/vtk-5.9/vtkCellType.h
- /usr/local/include/vtk-5.9/vtkCellTypes.h
- /usr/local/include/vtk-5.9/vtkCommonInformationKeyManager.h
- /usr/local/include/vtk-5.9/vtkConfigure.h
- /usr/local/include/vtk-5.9/vtkDataArray.h
- /usr/local/include/vtk-5.9/vtkDataArrayTemplate.h
- /usr/local/include/vtk-5.9/vtkDataArrayTemplate.txx
- /usr/local/include/vtk-5.9/vtkDataArrayTemplateImplicit.txx
- /usr/local/include/vtk-5.9/vtkDataObject.h
- /usr/local/include/vtk-5.9/vtkDataSet.h
- /usr/local/include/vtk-5.9/vtkDebugLeaksManager.h
- /usr/local/include/vtk-5.9/vtkIOStream.h
- /usr/local/include/vtk-5.9/vtkIOStreamFwd.h
- /usr/local/include/vtk-5.9/vtkIdList.h
- /usr/local/include/vtk-5.9/vtkIndent.h
- /usr/local/include/vtk-5.9/vtkInformation.h
- /usr/local/include/vtk-5.9/vtkInformationDoubleVectorKey.h
- /usr/local/include/vtk-5.9/vtkInformationInformationVectorKey.h
- /usr/local/include/vtk-5.9/vtkInformationKey.h
- /usr/local/include/vtk-5.9/vtkInformationVector.h
- /usr/local/include/vtk-5.9/vtkIntArray.h
- /usr/local/include/vtk-5.9/vtkOStrStreamWrapper.h
- /usr/local/include/vtk-5.9/vtkOStreamWrapper.h
- /usr/local/include/vtk-5.9/vtkObject.h
- /usr/local/include/vtk-5.9/vtkObjectBase.h
- /usr/local/include/vtk-5.9/vtkObjectFactory.h
- /usr/local/include/vtk-5.9/vtkPointSet.h
- /usr/local/include/vtk-5.9/vtkPoints.h
- /usr/local/include/vtk-5.9/vtkPolyData.h
- /usr/local/include/vtk-5.9/vtkPolyDataAlgorithm.h
- /usr/local/include/vtk-5.9/vtkProp.h
- /usr/local/include/vtk-5.9/vtkProp3D.h
- /usr/local/include/vtk-5.9/vtkSetGet.h
- /usr/local/include/vtk-5.9/vtkSmartPointer.h
- /usr/local/include/vtk-5.9/vtkSmartPointerBase.h
- /usr/local/include/vtk-5.9/vtkSortDataArray.h
- /usr/local/include/vtk-5.9/vtkSphereSource.h
- /usr/local/include/vtk-5.9/vtkStdString.h
- /usr/local/include/vtk-5.9/vtkSystemIncludes.h
- /usr/local/include/vtk-5.9/vtkTimeStamp.h
- /usr/local/include/vtk-5.9/vtkType.h
- /usr/local/include/vtk-5.9/vtkTypeTraits.h
- /usr/local/include/vtk-5.9/vtkUnicodeString.h
- /usr/local/include/vtk-5.9/vtkUnsignedCharArray.h
- /usr/local/include/vtk-5.9/vtkVariant.h
- /usr/local/include/vtk-5.9/vtkVariantInlineOperators.h
- /usr/local/include/vtk-5.9/vtkWeakPointerBase.h
- /usr/local/include/vtk-5.9/vtkWin32Header.h
+ /usr/local/include/vtk-5.9/vtkXMLPolyDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLUnstructuredDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLWriter.h
  /usr/local/include/vtk-5.9/vtkstd/algorithm
  /usr/local/include/vtk-5.9/vtkstd/exception
  /usr/local/include/vtk-5.9/vtkstd/map
@@ -664,6 +757,7 @@ CMakeFiles/testOVAS.dir/Data.cpp.o
  /usr/local/include/vtk-5.9/vtkAbstractArray.h
  /usr/local/include/vtk-5.9/vtkAbstractMapper.h
  /usr/local/include/vtk-5.9/vtkAbstractMapper3D.h
+ /usr/local/include/vtk-5.9/vtkAbstractTransform.h
  /usr/local/include/vtk-5.9/vtkActor.h
  /usr/local/include/vtk-5.9/vtkActorCollection.h
  /usr/local/include/vtk-5.9/vtkAlgorithm.h
@@ -674,6 +768,7 @@ CMakeFiles/testOVAS.dir/Data.cpp.o
  /usr/local/include/vtk-5.9/vtkArrayIteratorTemplateImplicit.txx
  /usr/local/include/vtk-5.9/vtkCamera.h
  /usr/local/include/vtk-5.9/vtkCell.h
+ /usr/local/include/vtk-5.9/vtkCellArray.h
  /usr/local/include/vtk-5.9/vtkCellLinks.h
  /usr/local/include/vtk-5.9/vtkCellType.h
  /usr/local/include/vtk-5.9/vtkCellTypes.h
@@ -693,16 +788,20 @@ CMakeFiles/testOVAS.dir/Data.cpp.o
  /usr/local/include/vtk-5.9/vtkDataSetAttributes.h
  /usr/local/include/vtk-5.9/vtkDataSetTriangleFilter.h
  /usr/local/include/vtk-5.9/vtkDebugLeaksManager.h
+ /usr/local/include/vtk-5.9/vtkDelaunay2D.h
  /usr/local/include/vtk-5.9/vtkDirectedGraph.h
  /usr/local/include/vtk-5.9/vtkDirectedGraphAlgorithm.h
  /usr/local/include/vtk-5.9/vtkDoubleArray.h
  /usr/local/include/vtk-5.9/vtkEdgeListIterator.h
  /usr/local/include/vtk-5.9/vtkFieldData.h
+ /usr/local/include/vtk-5.9/vtkFloatArray.h
  /usr/local/include/vtk-5.9/vtkGeometryFilter.h
  /usr/local/include/vtk-5.9/vtkGraph.h
+ /usr/local/include/vtk-5.9/vtkHomogeneousTransform.h
  /usr/local/include/vtk-5.9/vtkIOStream.h
  /usr/local/include/vtk-5.9/vtkIOStreamFwd.h
  /usr/local/include/vtk-5.9/vtkIdList.h
+ /usr/local/include/vtk-5.9/vtkIdTypeArray.h
  /usr/local/include/vtk-5.9/vtkImageAlgorithm.h
  /usr/local/include/vtk-5.9/vtkImageData.h
  /usr/local/include/vtk-5.9/vtkImageWriter.h
@@ -713,7 +812,12 @@ CMakeFiles/testOVAS.dir/Data.cpp.o
  /usr/local/include/vtk-5.9/vtkInformationKey.h
  /usr/local/include/vtk-5.9/vtkInformationVector.h
  /usr/local/include/vtk-5.9/vtkIntArray.h
+ /usr/local/include/vtk-5.9/vtkLineSource.h
+ /usr/local/include/vtk-5.9/vtkLinearTransform.h
+ /usr/local/include/vtk-5.9/vtkLookupTable.h
  /usr/local/include/vtk-5.9/vtkMapper.h
+ /usr/local/include/vtk-5.9/vtkMath.h
+ /usr/local/include/vtk-5.9/vtkMatrix4x4.h
  /usr/local/include/vtk-5.9/vtkMutableDirectedGraph.h
  /usr/local/include/vtk-5.9/vtkOStrStreamWrapper.h
  /usr/local/include/vtk-5.9/vtkOStreamWrapper.h
@@ -727,6 +831,7 @@ CMakeFiles/testOVAS.dir/Data.cpp.o
  /usr/local/include/vtk-5.9/vtkPolyData.h
  /usr/local/include/vtk-5.9/vtkPolyDataAlgorithm.h
  /usr/local/include/vtk-5.9/vtkPolyDataMapper.h
+ /usr/local/include/vtk-5.9/vtkPolynomialSolversUnivariate.h
  /usr/local/include/vtk-5.9/vtkProp.h
  /usr/local/include/vtk-5.9/vtkProp3D.h
  /usr/local/include/vtk-5.9/vtkPropCollection.h
@@ -750,6 +855,8 @@ CMakeFiles/testOVAS.dir/Data.cpp.o
  /usr/local/include/vtk-5.9/vtkTexture.h
  /usr/local/include/vtk-5.9/vtkThreshold.h
  /usr/local/include/vtk-5.9/vtkTimeStamp.h
+ /usr/local/include/vtk-5.9/vtkTransform.h
+ /usr/local/include/vtk-5.9/vtkTriangle.h
  /usr/local/include/vtk-5.9/vtkType.h
  /usr/local/include/vtk-5.9/vtkTypeTraits.h
  /usr/local/include/vtk-5.9/vtkUnicodeString.h
@@ -760,6 +867,7 @@ CMakeFiles/testOVAS.dir/Data.cpp.o
  /usr/local/include/vtk-5.9/vtkVariant.h
  /usr/local/include/vtk-5.9/vtkVariantArray.h
  /usr/local/include/vtk-5.9/vtkVariantInlineOperators.h
+ /usr/local/include/vtk-5.9/vtkVertexGlyphFilter.h
  /usr/local/include/vtk-5.9/vtkViewport.h
  /usr/local/include/vtk-5.9/vtkVolume.h
  /usr/local/include/vtk-5.9/vtkVolumeCollection.h
@@ -767,6 +875,9 @@ CMakeFiles/testOVAS.dir/Data.cpp.o
  /usr/local/include/vtk-5.9/vtkWin32Header.h
  /usr/local/include/vtk-5.9/vtkWindow.h
  /usr/local/include/vtk-5.9/vtkWindowToImageFilter.h
+ /usr/local/include/vtk-5.9/vtkXMLPolyDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLUnstructuredDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLWriter.h
  /usr/local/include/vtk-5.9/vtkstd/algorithm
  /usr/local/include/vtk-5.9/vtkstd/exception
  /usr/local/include/vtk-5.9/vtkstd/map
@@ -798,6 +909,7 @@ CMakeFiles/testOVAS.dir/Feature.cpp.o
  /usr/local/include/vtk-5.9/vtkAbstractArray.h
  /usr/local/include/vtk-5.9/vtkAbstractMapper.h
  /usr/local/include/vtk-5.9/vtkAbstractMapper3D.h
+ /usr/local/include/vtk-5.9/vtkAbstractTransform.h
  /usr/local/include/vtk-5.9/vtkActor.h
  /usr/local/include/vtk-5.9/vtkActorCollection.h
  /usr/local/include/vtk-5.9/vtkAlgorithm.h
@@ -808,6 +920,7 @@ CMakeFiles/testOVAS.dir/Feature.cpp.o
  /usr/local/include/vtk-5.9/vtkArrayIteratorTemplateImplicit.txx
  /usr/local/include/vtk-5.9/vtkCamera.h
  /usr/local/include/vtk-5.9/vtkCell.h
+ /usr/local/include/vtk-5.9/vtkCellArray.h
  /usr/local/include/vtk-5.9/vtkCellLinks.h
  /usr/local/include/vtk-5.9/vtkCellType.h
  /usr/local/include/vtk-5.9/vtkCellTypes.h
@@ -827,18 +940,24 @@ CMakeFiles/testOVAS.dir/Feature.cpp.o
  /usr/local/include/vtk-5.9/vtkDataSetAttributes.h
  /usr/local/include/vtk-5.9/vtkDataSetTriangleFilter.h
  /usr/local/include/vtk-5.9/vtkDebugLeaksManager.h
+ /usr/local/include/vtk-5.9/vtkDelaunay2D.h
  /usr/local/include/vtk-5.9/vtkDirectedGraph.h
  /usr/local/include/vtk-5.9/vtkDirectedGraphAlgorithm.h
  /usr/local/include/vtk-5.9/vtkDoubleArray.h
  /usr/local/include/vtk-5.9/vtkEdgeListIterator.h
  /usr/local/include/vtk-5.9/vtkFieldData.h
+ /usr/local/include/vtk-5.9/vtkFloatArray.h
  /usr/local/include/vtk-5.9/vtkGeometryFilter.h
  /usr/local/include/vtk-5.9/vtkGraph.h
+ /usr/local/include/vtk-5.9/vtkHomogeneousTransform.h
  /usr/local/include/vtk-5.9/vtkIOStream.h
  /usr/local/include/vtk-5.9/vtkIOStreamFwd.h
  /usr/local/include/vtk-5.9/vtkIdList.h
+ /usr/local/include/vtk-5.9/vtkIdTypeArray.h
  /usr/local/include/vtk-5.9/vtkImageAlgorithm.h
  /usr/local/include/vtk-5.9/vtkImageData.h
+ /usr/local/include/vtk-5.9/vtkImageResample.h
+ /usr/local/include/vtk-5.9/vtkImageReslice.h
  /usr/local/include/vtk-5.9/vtkImageWriter.h
  /usr/local/include/vtk-5.9/vtkIndent.h
  /usr/local/include/vtk-5.9/vtkInformation.h
@@ -847,7 +966,12 @@ CMakeFiles/testOVAS.dir/Feature.cpp.o
  /usr/local/include/vtk-5.9/vtkInformationKey.h
  /usr/local/include/vtk-5.9/vtkInformationVector.h
  /usr/local/include/vtk-5.9/vtkIntArray.h
+ /usr/local/include/vtk-5.9/vtkLineSource.h
+ /usr/local/include/vtk-5.9/vtkLinearTransform.h
+ /usr/local/include/vtk-5.9/vtkLookupTable.h
  /usr/local/include/vtk-5.9/vtkMapper.h
+ /usr/local/include/vtk-5.9/vtkMath.h
+ /usr/local/include/vtk-5.9/vtkMatrix4x4.h
  /usr/local/include/vtk-5.9/vtkMutableDirectedGraph.h
  /usr/local/include/vtk-5.9/vtkOStrStreamWrapper.h
  /usr/local/include/vtk-5.9/vtkOStreamWrapper.h
@@ -861,6 +985,7 @@ CMakeFiles/testOVAS.dir/Feature.cpp.o
  /usr/local/include/vtk-5.9/vtkPolyData.h
  /usr/local/include/vtk-5.9/vtkPolyDataAlgorithm.h
  /usr/local/include/vtk-5.9/vtkPolyDataMapper.h
+ /usr/local/include/vtk-5.9/vtkPolynomialSolversUnivariate.h
  /usr/local/include/vtk-5.9/vtkProp.h
  /usr/local/include/vtk-5.9/vtkProp3D.h
  /usr/local/include/vtk-5.9/vtkPropCollection.h
@@ -882,8 +1007,11 @@ CMakeFiles/testOVAS.dir/Feature.cpp.o
  /usr/local/include/vtk-5.9/vtkSystemIncludes.h
  /usr/local/include/vtk-5.9/vtkTable.h
  /usr/local/include/vtk-5.9/vtkTexture.h
+ /usr/local/include/vtk-5.9/vtkThreadedImageAlgorithm.h
  /usr/local/include/vtk-5.9/vtkThreshold.h
  /usr/local/include/vtk-5.9/vtkTimeStamp.h
+ /usr/local/include/vtk-5.9/vtkTransform.h
+ /usr/local/include/vtk-5.9/vtkTriangle.h
  /usr/local/include/vtk-5.9/vtkType.h
  /usr/local/include/vtk-5.9/vtkTypeTraits.h
  /usr/local/include/vtk-5.9/vtkUnicodeString.h
@@ -894,6 +1022,7 @@ CMakeFiles/testOVAS.dir/Feature.cpp.o
  /usr/local/include/vtk-5.9/vtkVariant.h
  /usr/local/include/vtk-5.9/vtkVariantArray.h
  /usr/local/include/vtk-5.9/vtkVariantInlineOperators.h
+ /usr/local/include/vtk-5.9/vtkVertexGlyphFilter.h
  /usr/local/include/vtk-5.9/vtkViewport.h
  /usr/local/include/vtk-5.9/vtkVolume.h
  /usr/local/include/vtk-5.9/vtkVolumeCollection.h
@@ -901,6 +1030,9 @@ CMakeFiles/testOVAS.dir/Feature.cpp.o
  /usr/local/include/vtk-5.9/vtkWin32Header.h
  /usr/local/include/vtk-5.9/vtkWindow.h
  /usr/local/include/vtk-5.9/vtkWindowToImageFilter.h
+ /usr/local/include/vtk-5.9/vtkXMLPolyDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLUnstructuredDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLWriter.h
  /usr/local/include/vtk-5.9/vtkstd/algorithm
  /usr/local/include/vtk-5.9/vtkstd/exception
  /usr/local/include/vtk-5.9/vtkstd/map
@@ -932,6 +1064,7 @@ CMakeFiles/testOVAS.dir/FlyingSaucersVol4D.cpp.o
  /usr/local/include/vtk-5.9/vtkAbstractArray.h
  /usr/local/include/vtk-5.9/vtkAbstractMapper.h
  /usr/local/include/vtk-5.9/vtkAbstractMapper3D.h
+ /usr/local/include/vtk-5.9/vtkAbstractTransform.h
  /usr/local/include/vtk-5.9/vtkActor.h
  /usr/local/include/vtk-5.9/vtkActorCollection.h
  /usr/local/include/vtk-5.9/vtkAlgorithm.h
@@ -942,6 +1075,7 @@ CMakeFiles/testOVAS.dir/FlyingSaucersVol4D.cpp.o
  /usr/local/include/vtk-5.9/vtkArrayIteratorTemplateImplicit.txx
  /usr/local/include/vtk-5.9/vtkCamera.h
  /usr/local/include/vtk-5.9/vtkCell.h
+ /usr/local/include/vtk-5.9/vtkCellArray.h
  /usr/local/include/vtk-5.9/vtkCellLinks.h
  /usr/local/include/vtk-5.9/vtkCellType.h
  /usr/local/include/vtk-5.9/vtkCellTypes.h
@@ -961,18 +1095,24 @@ CMakeFiles/testOVAS.dir/FlyingSaucersVol4D.cpp.o
  /usr/local/include/vtk-5.9/vtkDataSetAttributes.h
  /usr/local/include/vtk-5.9/vtkDataSetTriangleFilter.h
  /usr/local/include/vtk-5.9/vtkDebugLeaksManager.h
+ /usr/local/include/vtk-5.9/vtkDelaunay2D.h
  /usr/local/include/vtk-5.9/vtkDirectedGraph.h
  /usr/local/include/vtk-5.9/vtkDirectedGraphAlgorithm.h
  /usr/local/include/vtk-5.9/vtkDoubleArray.h
  /usr/local/include/vtk-5.9/vtkEdgeListIterator.h
  /usr/local/include/vtk-5.9/vtkFieldData.h
+ /usr/local/include/vtk-5.9/vtkFloatArray.h
  /usr/local/include/vtk-5.9/vtkGeometryFilter.h
  /usr/local/include/vtk-5.9/vtkGraph.h
+ /usr/local/include/vtk-5.9/vtkHomogeneousTransform.h
  /usr/local/include/vtk-5.9/vtkIOStream.h
  /usr/local/include/vtk-5.9/vtkIOStreamFwd.h
  /usr/local/include/vtk-5.9/vtkIdList.h
+ /usr/local/include/vtk-5.9/vtkIdTypeArray.h
  /usr/local/include/vtk-5.9/vtkImageAlgorithm.h
  /usr/local/include/vtk-5.9/vtkImageData.h
+ /usr/local/include/vtk-5.9/vtkImageResample.h
+ /usr/local/include/vtk-5.9/vtkImageReslice.h
  /usr/local/include/vtk-5.9/vtkImageWriter.h
  /usr/local/include/vtk-5.9/vtkIndent.h
  /usr/local/include/vtk-5.9/vtkInformation.h
@@ -981,7 +1121,12 @@ CMakeFiles/testOVAS.dir/FlyingSaucersVol4D.cpp.o
  /usr/local/include/vtk-5.9/vtkInformationKey.h
  /usr/local/include/vtk-5.9/vtkInformationVector.h
  /usr/local/include/vtk-5.9/vtkIntArray.h
+ /usr/local/include/vtk-5.9/vtkLineSource.h
+ /usr/local/include/vtk-5.9/vtkLinearTransform.h
+ /usr/local/include/vtk-5.9/vtkLookupTable.h
  /usr/local/include/vtk-5.9/vtkMapper.h
+ /usr/local/include/vtk-5.9/vtkMath.h
+ /usr/local/include/vtk-5.9/vtkMatrix4x4.h
  /usr/local/include/vtk-5.9/vtkMutableDirectedGraph.h
  /usr/local/include/vtk-5.9/vtkOStrStreamWrapper.h
  /usr/local/include/vtk-5.9/vtkOStreamWrapper.h
@@ -995,6 +1140,7 @@ CMakeFiles/testOVAS.dir/FlyingSaucersVol4D.cpp.o
  /usr/local/include/vtk-5.9/vtkPolyData.h
  /usr/local/include/vtk-5.9/vtkPolyDataAlgorithm.h
  /usr/local/include/vtk-5.9/vtkPolyDataMapper.h
+ /usr/local/include/vtk-5.9/vtkPolynomialSolversUnivariate.h
  /usr/local/include/vtk-5.9/vtkProp.h
  /usr/local/include/vtk-5.9/vtkProp3D.h
  /usr/local/include/vtk-5.9/vtkPropCollection.h
@@ -1016,8 +1162,11 @@ CMakeFiles/testOVAS.dir/FlyingSaucersVol4D.cpp.o
  /usr/local/include/vtk-5.9/vtkSystemIncludes.h
  /usr/local/include/vtk-5.9/vtkTable.h
  /usr/local/include/vtk-5.9/vtkTexture.h
+ /usr/local/include/vtk-5.9/vtkThreadedImageAlgorithm.h
  /usr/local/include/vtk-5.9/vtkThreshold.h
  /usr/local/include/vtk-5.9/vtkTimeStamp.h
+ /usr/local/include/vtk-5.9/vtkTransform.h
+ /usr/local/include/vtk-5.9/vtkTriangle.h
  /usr/local/include/vtk-5.9/vtkType.h
  /usr/local/include/vtk-5.9/vtkTypeTraits.h
  /usr/local/include/vtk-5.9/vtkUnicodeString.h
@@ -1028,6 +1177,7 @@ CMakeFiles/testOVAS.dir/FlyingSaucersVol4D.cpp.o
  /usr/local/include/vtk-5.9/vtkVariant.h
  /usr/local/include/vtk-5.9/vtkVariantArray.h
  /usr/local/include/vtk-5.9/vtkVariantInlineOperators.h
+ /usr/local/include/vtk-5.9/vtkVertexGlyphFilter.h
  /usr/local/include/vtk-5.9/vtkViewport.h
  /usr/local/include/vtk-5.9/vtkVolume.h
  /usr/local/include/vtk-5.9/vtkVolumeCollection.h
@@ -1035,6 +1185,9 @@ CMakeFiles/testOVAS.dir/FlyingSaucersVol4D.cpp.o
  /usr/local/include/vtk-5.9/vtkWin32Header.h
  /usr/local/include/vtk-5.9/vtkWindow.h
  /usr/local/include/vtk-5.9/vtkWindowToImageFilter.h
+ /usr/local/include/vtk-5.9/vtkXMLPolyDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLUnstructuredDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLWriter.h
  /usr/local/include/vtk-5.9/vtkstd/algorithm
  /usr/local/include/vtk-5.9/vtkstd/exception
  /usr/local/include/vtk-5.9/vtkstd/map
@@ -1133,6 +1286,7 @@ CMakeFiles/testOVAS.dir/FrameBuffer.cpp.o
  /usr/local/include/vtk-5.9/vtkAbstractArray.h
  /usr/local/include/vtk-5.9/vtkAbstractMapper.h
  /usr/local/include/vtk-5.9/vtkAbstractMapper3D.h
+ /usr/local/include/vtk-5.9/vtkAbstractTransform.h
  /usr/local/include/vtk-5.9/vtkActor.h
  /usr/local/include/vtk-5.9/vtkActorCollection.h
  /usr/local/include/vtk-5.9/vtkAlgorithm.h
@@ -1143,6 +1297,7 @@ CMakeFiles/testOVAS.dir/FrameBuffer.cpp.o
  /usr/local/include/vtk-5.9/vtkArrayIteratorTemplateImplicit.txx
  /usr/local/include/vtk-5.9/vtkCamera.h
  /usr/local/include/vtk-5.9/vtkCell.h
+ /usr/local/include/vtk-5.9/vtkCellArray.h
  /usr/local/include/vtk-5.9/vtkCellLinks.h
  /usr/local/include/vtk-5.9/vtkCellType.h
  /usr/local/include/vtk-5.9/vtkCellTypes.h
@@ -1162,16 +1317,20 @@ CMakeFiles/testOVAS.dir/FrameBuffer.cpp.o
  /usr/local/include/vtk-5.9/vtkDataSetAttributes.h
  /usr/local/include/vtk-5.9/vtkDataSetTriangleFilter.h
  /usr/local/include/vtk-5.9/vtkDebugLeaksManager.h
+ /usr/local/include/vtk-5.9/vtkDelaunay2D.h
  /usr/local/include/vtk-5.9/vtkDirectedGraph.h
  /usr/local/include/vtk-5.9/vtkDirectedGraphAlgorithm.h
  /usr/local/include/vtk-5.9/vtkDoubleArray.h
  /usr/local/include/vtk-5.9/vtkEdgeListIterator.h
  /usr/local/include/vtk-5.9/vtkFieldData.h
+ /usr/local/include/vtk-5.9/vtkFloatArray.h
  /usr/local/include/vtk-5.9/vtkGeometryFilter.h
  /usr/local/include/vtk-5.9/vtkGraph.h
+ /usr/local/include/vtk-5.9/vtkHomogeneousTransform.h
  /usr/local/include/vtk-5.9/vtkIOStream.h
  /usr/local/include/vtk-5.9/vtkIOStreamFwd.h
  /usr/local/include/vtk-5.9/vtkIdList.h
+ /usr/local/include/vtk-5.9/vtkIdTypeArray.h
  /usr/local/include/vtk-5.9/vtkImageAlgorithm.h
  /usr/local/include/vtk-5.9/vtkImageData.h
  /usr/local/include/vtk-5.9/vtkImageWriter.h
@@ -1182,7 +1341,12 @@ CMakeFiles/testOVAS.dir/FrameBuffer.cpp.o
  /usr/local/include/vtk-5.9/vtkInformationKey.h
  /usr/local/include/vtk-5.9/vtkInformationVector.h
  /usr/local/include/vtk-5.9/vtkIntArray.h
+ /usr/local/include/vtk-5.9/vtkLineSource.h
+ /usr/local/include/vtk-5.9/vtkLinearTransform.h
+ /usr/local/include/vtk-5.9/vtkLookupTable.h
  /usr/local/include/vtk-5.9/vtkMapper.h
+ /usr/local/include/vtk-5.9/vtkMath.h
+ /usr/local/include/vtk-5.9/vtkMatrix4x4.h
  /usr/local/include/vtk-5.9/vtkMutableDirectedGraph.h
  /usr/local/include/vtk-5.9/vtkOStrStreamWrapper.h
  /usr/local/include/vtk-5.9/vtkOStreamWrapper.h
@@ -1196,6 +1360,7 @@ CMakeFiles/testOVAS.dir/FrameBuffer.cpp.o
  /usr/local/include/vtk-5.9/vtkPolyData.h
  /usr/local/include/vtk-5.9/vtkPolyDataAlgorithm.h
  /usr/local/include/vtk-5.9/vtkPolyDataMapper.h
+ /usr/local/include/vtk-5.9/vtkPolynomialSolversUnivariate.h
  /usr/local/include/vtk-5.9/vtkProp.h
  /usr/local/include/vtk-5.9/vtkProp3D.h
  /usr/local/include/vtk-5.9/vtkPropCollection.h
@@ -1219,6 +1384,8 @@ CMakeFiles/testOVAS.dir/FrameBuffer.cpp.o
  /usr/local/include/vtk-5.9/vtkTexture.h
  /usr/local/include/vtk-5.9/vtkThreshold.h
  /usr/local/include/vtk-5.9/vtkTimeStamp.h
+ /usr/local/include/vtk-5.9/vtkTransform.h
+ /usr/local/include/vtk-5.9/vtkTriangle.h
  /usr/local/include/vtk-5.9/vtkType.h
  /usr/local/include/vtk-5.9/vtkTypeTraits.h
  /usr/local/include/vtk-5.9/vtkUnicodeString.h
@@ -1229,6 +1396,7 @@ CMakeFiles/testOVAS.dir/FrameBuffer.cpp.o
  /usr/local/include/vtk-5.9/vtkVariant.h
  /usr/local/include/vtk-5.9/vtkVariantArray.h
  /usr/local/include/vtk-5.9/vtkVariantInlineOperators.h
+ /usr/local/include/vtk-5.9/vtkVertexGlyphFilter.h
  /usr/local/include/vtk-5.9/vtkViewport.h
  /usr/local/include/vtk-5.9/vtkVolume.h
  /usr/local/include/vtk-5.9/vtkVolumeCollection.h
@@ -1236,6 +1404,9 @@ CMakeFiles/testOVAS.dir/FrameBuffer.cpp.o
  /usr/local/include/vtk-5.9/vtkWin32Header.h
  /usr/local/include/vtk-5.9/vtkWindow.h
  /usr/local/include/vtk-5.9/vtkWindowToImageFilter.h
+ /usr/local/include/vtk-5.9/vtkXMLPolyDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLUnstructuredDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLWriter.h
  /usr/local/include/vtk-5.9/vtkstd/algorithm
  /usr/local/include/vtk-5.9/vtkstd/exception
  /usr/local/include/vtk-5.9/vtkstd/map
@@ -1274,6 +1445,7 @@ CMakeFiles/testOVAS.dir/ImplicitVolume4D.cpp.o
  /usr/local/include/vtk-5.9/vtkAbstractArray.h
  /usr/local/include/vtk-5.9/vtkAbstractMapper.h
  /usr/local/include/vtk-5.9/vtkAbstractMapper3D.h
+ /usr/local/include/vtk-5.9/vtkAbstractTransform.h
  /usr/local/include/vtk-5.9/vtkActor.h
  /usr/local/include/vtk-5.9/vtkActorCollection.h
  /usr/local/include/vtk-5.9/vtkAlgorithm.h
@@ -1284,6 +1456,7 @@ CMakeFiles/testOVAS.dir/ImplicitVolume4D.cpp.o
  /usr/local/include/vtk-5.9/vtkArrayIteratorTemplateImplicit.txx
  /usr/local/include/vtk-5.9/vtkCamera.h
  /usr/local/include/vtk-5.9/vtkCell.h
+ /usr/local/include/vtk-5.9/vtkCellArray.h
  /usr/local/include/vtk-5.9/vtkCellLinks.h
  /usr/local/include/vtk-5.9/vtkCellType.h
  /usr/local/include/vtk-5.9/vtkCellTypes.h
@@ -1303,18 +1476,24 @@ CMakeFiles/testOVAS.dir/ImplicitVolume4D.cpp.o
  /usr/local/include/vtk-5.9/vtkDataSetAttributes.h
  /usr/local/include/vtk-5.9/vtkDataSetTriangleFilter.h
  /usr/local/include/vtk-5.9/vtkDebugLeaksManager.h
+ /usr/local/include/vtk-5.9/vtkDelaunay2D.h
  /usr/local/include/vtk-5.9/vtkDirectedGraph.h
  /usr/local/include/vtk-5.9/vtkDirectedGraphAlgorithm.h
  /usr/local/include/vtk-5.9/vtkDoubleArray.h
  /usr/local/include/vtk-5.9/vtkEdgeListIterator.h
  /usr/local/include/vtk-5.9/vtkFieldData.h
+ /usr/local/include/vtk-5.9/vtkFloatArray.h
  /usr/local/include/vtk-5.9/vtkGeometryFilter.h
  /usr/local/include/vtk-5.9/vtkGraph.h
+ /usr/local/include/vtk-5.9/vtkHomogeneousTransform.h
  /usr/local/include/vtk-5.9/vtkIOStream.h
  /usr/local/include/vtk-5.9/vtkIOStreamFwd.h
  /usr/local/include/vtk-5.9/vtkIdList.h
+ /usr/local/include/vtk-5.9/vtkIdTypeArray.h
  /usr/local/include/vtk-5.9/vtkImageAlgorithm.h
  /usr/local/include/vtk-5.9/vtkImageData.h
+ /usr/local/include/vtk-5.9/vtkImageResample.h
+ /usr/local/include/vtk-5.9/vtkImageReslice.h
  /usr/local/include/vtk-5.9/vtkImageWriter.h
  /usr/local/include/vtk-5.9/vtkIndent.h
  /usr/local/include/vtk-5.9/vtkInformation.h
@@ -1323,7 +1502,12 @@ CMakeFiles/testOVAS.dir/ImplicitVolume4D.cpp.o
  /usr/local/include/vtk-5.9/vtkInformationKey.h
  /usr/local/include/vtk-5.9/vtkInformationVector.h
  /usr/local/include/vtk-5.9/vtkIntArray.h
+ /usr/local/include/vtk-5.9/vtkLineSource.h
+ /usr/local/include/vtk-5.9/vtkLinearTransform.h
+ /usr/local/include/vtk-5.9/vtkLookupTable.h
  /usr/local/include/vtk-5.9/vtkMapper.h
+ /usr/local/include/vtk-5.9/vtkMath.h
+ /usr/local/include/vtk-5.9/vtkMatrix4x4.h
  /usr/local/include/vtk-5.9/vtkMutableDirectedGraph.h
  /usr/local/include/vtk-5.9/vtkOStrStreamWrapper.h
  /usr/local/include/vtk-5.9/vtkOStreamWrapper.h
@@ -1337,6 +1521,7 @@ CMakeFiles/testOVAS.dir/ImplicitVolume4D.cpp.o
  /usr/local/include/vtk-5.9/vtkPolyData.h
  /usr/local/include/vtk-5.9/vtkPolyDataAlgorithm.h
  /usr/local/include/vtk-5.9/vtkPolyDataMapper.h
+ /usr/local/include/vtk-5.9/vtkPolynomialSolversUnivariate.h
  /usr/local/include/vtk-5.9/vtkProp.h
  /usr/local/include/vtk-5.9/vtkProp3D.h
  /usr/local/include/vtk-5.9/vtkPropCollection.h
@@ -1358,8 +1543,11 @@ CMakeFiles/testOVAS.dir/ImplicitVolume4D.cpp.o
  /usr/local/include/vtk-5.9/vtkSystemIncludes.h
  /usr/local/include/vtk-5.9/vtkTable.h
  /usr/local/include/vtk-5.9/vtkTexture.h
+ /usr/local/include/vtk-5.9/vtkThreadedImageAlgorithm.h
  /usr/local/include/vtk-5.9/vtkThreshold.h
  /usr/local/include/vtk-5.9/vtkTimeStamp.h
+ /usr/local/include/vtk-5.9/vtkTransform.h
+ /usr/local/include/vtk-5.9/vtkTriangle.h
  /usr/local/include/vtk-5.9/vtkType.h
  /usr/local/include/vtk-5.9/vtkTypeTraits.h
  /usr/local/include/vtk-5.9/vtkUnicodeString.h
@@ -1370,6 +1558,7 @@ CMakeFiles/testOVAS.dir/ImplicitVolume4D.cpp.o
  /usr/local/include/vtk-5.9/vtkVariant.h
  /usr/local/include/vtk-5.9/vtkVariantArray.h
  /usr/local/include/vtk-5.9/vtkVariantInlineOperators.h
+ /usr/local/include/vtk-5.9/vtkVertexGlyphFilter.h
  /usr/local/include/vtk-5.9/vtkViewport.h
  /usr/local/include/vtk-5.9/vtkVolume.h
  /usr/local/include/vtk-5.9/vtkVolumeCollection.h
@@ -1377,6 +1566,9 @@ CMakeFiles/testOVAS.dir/ImplicitVolume4D.cpp.o
  /usr/local/include/vtk-5.9/vtkWin32Header.h
  /usr/local/include/vtk-5.9/vtkWindow.h
  /usr/local/include/vtk-5.9/vtkWindowToImageFilter.h
+ /usr/local/include/vtk-5.9/vtkXMLPolyDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLUnstructuredDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLWriter.h
  /usr/local/include/vtk-5.9/vtkstd/algorithm
  /usr/local/include/vtk-5.9/vtkstd/exception
  /usr/local/include/vtk-5.9/vtkstd/map
@@ -1410,6 +1602,7 @@ CMakeFiles/testOVAS.dir/InfoData.cpp.o
  /usr/local/include/vtk-5.9/vtkAbstractArray.h
  /usr/local/include/vtk-5.9/vtkAbstractMapper.h
  /usr/local/include/vtk-5.9/vtkAbstractMapper3D.h
+ /usr/local/include/vtk-5.9/vtkAbstractTransform.h
  /usr/local/include/vtk-5.9/vtkActor.h
  /usr/local/include/vtk-5.9/vtkActorCollection.h
  /usr/local/include/vtk-5.9/vtkAlgorithm.h
@@ -1420,6 +1613,7 @@ CMakeFiles/testOVAS.dir/InfoData.cpp.o
  /usr/local/include/vtk-5.9/vtkArrayIteratorTemplateImplicit.txx
  /usr/local/include/vtk-5.9/vtkCamera.h
  /usr/local/include/vtk-5.9/vtkCell.h
+ /usr/local/include/vtk-5.9/vtkCellArray.h
  /usr/local/include/vtk-5.9/vtkCellLinks.h
  /usr/local/include/vtk-5.9/vtkCellType.h
  /usr/local/include/vtk-5.9/vtkCellTypes.h
@@ -1439,18 +1633,24 @@ CMakeFiles/testOVAS.dir/InfoData.cpp.o
  /usr/local/include/vtk-5.9/vtkDataSetAttributes.h
  /usr/local/include/vtk-5.9/vtkDataSetTriangleFilter.h
  /usr/local/include/vtk-5.9/vtkDebugLeaksManager.h
+ /usr/local/include/vtk-5.9/vtkDelaunay2D.h
  /usr/local/include/vtk-5.9/vtkDirectedGraph.h
  /usr/local/include/vtk-5.9/vtkDirectedGraphAlgorithm.h
  /usr/local/include/vtk-5.9/vtkDoubleArray.h
  /usr/local/include/vtk-5.9/vtkEdgeListIterator.h
  /usr/local/include/vtk-5.9/vtkFieldData.h
+ /usr/local/include/vtk-5.9/vtkFloatArray.h
  /usr/local/include/vtk-5.9/vtkGeometryFilter.h
  /usr/local/include/vtk-5.9/vtkGraph.h
+ /usr/local/include/vtk-5.9/vtkHomogeneousTransform.h
  /usr/local/include/vtk-5.9/vtkIOStream.h
  /usr/local/include/vtk-5.9/vtkIOStreamFwd.h
  /usr/local/include/vtk-5.9/vtkIdList.h
+ /usr/local/include/vtk-5.9/vtkIdTypeArray.h
  /usr/local/include/vtk-5.9/vtkImageAlgorithm.h
  /usr/local/include/vtk-5.9/vtkImageData.h
+ /usr/local/include/vtk-5.9/vtkImageResample.h
+ /usr/local/include/vtk-5.9/vtkImageReslice.h
  /usr/local/include/vtk-5.9/vtkImageWriter.h
  /usr/local/include/vtk-5.9/vtkIndent.h
  /usr/local/include/vtk-5.9/vtkInformation.h
@@ -1459,7 +1659,12 @@ CMakeFiles/testOVAS.dir/InfoData.cpp.o
  /usr/local/include/vtk-5.9/vtkInformationKey.h
  /usr/local/include/vtk-5.9/vtkInformationVector.h
  /usr/local/include/vtk-5.9/vtkIntArray.h
+ /usr/local/include/vtk-5.9/vtkLineSource.h
+ /usr/local/include/vtk-5.9/vtkLinearTransform.h
+ /usr/local/include/vtk-5.9/vtkLookupTable.h
  /usr/local/include/vtk-5.9/vtkMapper.h
+ /usr/local/include/vtk-5.9/vtkMath.h
+ /usr/local/include/vtk-5.9/vtkMatrix4x4.h
  /usr/local/include/vtk-5.9/vtkMutableDirectedGraph.h
  /usr/local/include/vtk-5.9/vtkOStrStreamWrapper.h
  /usr/local/include/vtk-5.9/vtkOStreamWrapper.h
@@ -1473,6 +1678,7 @@ CMakeFiles/testOVAS.dir/InfoData.cpp.o
  /usr/local/include/vtk-5.9/vtkPolyData.h
  /usr/local/include/vtk-5.9/vtkPolyDataAlgorithm.h
  /usr/local/include/vtk-5.9/vtkPolyDataMapper.h
+ /usr/local/include/vtk-5.9/vtkPolynomialSolversUnivariate.h
  /usr/local/include/vtk-5.9/vtkProp.h
  /usr/local/include/vtk-5.9/vtkProp3D.h
  /usr/local/include/vtk-5.9/vtkPropCollection.h
@@ -1494,8 +1700,11 @@ CMakeFiles/testOVAS.dir/InfoData.cpp.o
  /usr/local/include/vtk-5.9/vtkSystemIncludes.h
  /usr/local/include/vtk-5.9/vtkTable.h
  /usr/local/include/vtk-5.9/vtkTexture.h
+ /usr/local/include/vtk-5.9/vtkThreadedImageAlgorithm.h
  /usr/local/include/vtk-5.9/vtkThreshold.h
  /usr/local/include/vtk-5.9/vtkTimeStamp.h
+ /usr/local/include/vtk-5.9/vtkTransform.h
+ /usr/local/include/vtk-5.9/vtkTriangle.h
  /usr/local/include/vtk-5.9/vtkType.h
  /usr/local/include/vtk-5.9/vtkTypeTraits.h
  /usr/local/include/vtk-5.9/vtkUnicodeString.h
@@ -1506,6 +1715,7 @@ CMakeFiles/testOVAS.dir/InfoData.cpp.o
  /usr/local/include/vtk-5.9/vtkVariant.h
  /usr/local/include/vtk-5.9/vtkVariantArray.h
  /usr/local/include/vtk-5.9/vtkVariantInlineOperators.h
+ /usr/local/include/vtk-5.9/vtkVertexGlyphFilter.h
  /usr/local/include/vtk-5.9/vtkViewport.h
  /usr/local/include/vtk-5.9/vtkVolume.h
  /usr/local/include/vtk-5.9/vtkVolumeCollection.h
@@ -1513,6 +1723,9 @@ CMakeFiles/testOVAS.dir/InfoData.cpp.o
  /usr/local/include/vtk-5.9/vtkWin32Header.h
  /usr/local/include/vtk-5.9/vtkWindow.h
  /usr/local/include/vtk-5.9/vtkWindowToImageFilter.h
+ /usr/local/include/vtk-5.9/vtkXMLPolyDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLUnstructuredDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLWriter.h
  /usr/local/include/vtk-5.9/vtkstd/algorithm
  /usr/local/include/vtk-5.9/vtkstd/exception
  /usr/local/include/vtk-5.9/vtkstd/map
@@ -1532,6 +1745,7 @@ CMakeFiles/testOVAS.dir/InfoSheet.cpp.o
  /usr/local/include/vtk-5.9/vtkAbstractArray.h
  /usr/local/include/vtk-5.9/vtkAbstractMapper.h
  /usr/local/include/vtk-5.9/vtkAbstractMapper3D.h
+ /usr/local/include/vtk-5.9/vtkAbstractTransform.h
  /usr/local/include/vtk-5.9/vtkActor.h
  /usr/local/include/vtk-5.9/vtkActorCollection.h
  /usr/local/include/vtk-5.9/vtkAlgorithm.h
@@ -1542,6 +1756,7 @@ CMakeFiles/testOVAS.dir/InfoSheet.cpp.o
  /usr/local/include/vtk-5.9/vtkArrayIteratorTemplateImplicit.txx
  /usr/local/include/vtk-5.9/vtkCamera.h
  /usr/local/include/vtk-5.9/vtkCell.h
+ /usr/local/include/vtk-5.9/vtkCellArray.h
  /usr/local/include/vtk-5.9/vtkCellLinks.h
  /usr/local/include/vtk-5.9/vtkCellType.h
  /usr/local/include/vtk-5.9/vtkCellTypes.h
@@ -1561,16 +1776,20 @@ CMakeFiles/testOVAS.dir/InfoSheet.cpp.o
  /usr/local/include/vtk-5.9/vtkDataSetAttributes.h
  /usr/local/include/vtk-5.9/vtkDataSetTriangleFilter.h
  /usr/local/include/vtk-5.9/vtkDebugLeaksManager.h
+ /usr/local/include/vtk-5.9/vtkDelaunay2D.h
  /usr/local/include/vtk-5.9/vtkDirectedGraph.h
  /usr/local/include/vtk-5.9/vtkDirectedGraphAlgorithm.h
  /usr/local/include/vtk-5.9/vtkDoubleArray.h
  /usr/local/include/vtk-5.9/vtkEdgeListIterator.h
  /usr/local/include/vtk-5.9/vtkFieldData.h
+ /usr/local/include/vtk-5.9/vtkFloatArray.h
  /usr/local/include/vtk-5.9/vtkGeometryFilter.h
  /usr/local/include/vtk-5.9/vtkGraph.h
+ /usr/local/include/vtk-5.9/vtkHomogeneousTransform.h
  /usr/local/include/vtk-5.9/vtkIOStream.h
  /usr/local/include/vtk-5.9/vtkIOStreamFwd.h
  /usr/local/include/vtk-5.9/vtkIdList.h
+ /usr/local/include/vtk-5.9/vtkIdTypeArray.h
  /usr/local/include/vtk-5.9/vtkImageAlgorithm.h
  /usr/local/include/vtk-5.9/vtkImageData.h
  /usr/local/include/vtk-5.9/vtkImageWriter.h
@@ -1581,7 +1800,12 @@ CMakeFiles/testOVAS.dir/InfoSheet.cpp.o
  /usr/local/include/vtk-5.9/vtkInformationKey.h
  /usr/local/include/vtk-5.9/vtkInformationVector.h
  /usr/local/include/vtk-5.9/vtkIntArray.h
+ /usr/local/include/vtk-5.9/vtkLineSource.h
+ /usr/local/include/vtk-5.9/vtkLinearTransform.h
+ /usr/local/include/vtk-5.9/vtkLookupTable.h
  /usr/local/include/vtk-5.9/vtkMapper.h
+ /usr/local/include/vtk-5.9/vtkMath.h
+ /usr/local/include/vtk-5.9/vtkMatrix4x4.h
  /usr/local/include/vtk-5.9/vtkMutableDirectedGraph.h
  /usr/local/include/vtk-5.9/vtkOStrStreamWrapper.h
  /usr/local/include/vtk-5.9/vtkOStreamWrapper.h
@@ -1595,6 +1819,7 @@ CMakeFiles/testOVAS.dir/InfoSheet.cpp.o
  /usr/local/include/vtk-5.9/vtkPolyData.h
  /usr/local/include/vtk-5.9/vtkPolyDataAlgorithm.h
  /usr/local/include/vtk-5.9/vtkPolyDataMapper.h
+ /usr/local/include/vtk-5.9/vtkPolynomialSolversUnivariate.h
  /usr/local/include/vtk-5.9/vtkProp.h
  /usr/local/include/vtk-5.9/vtkProp3D.h
  /usr/local/include/vtk-5.9/vtkPropCollection.h
@@ -1618,6 +1843,8 @@ CMakeFiles/testOVAS.dir/InfoSheet.cpp.o
  /usr/local/include/vtk-5.9/vtkTexture.h
  /usr/local/include/vtk-5.9/vtkThreshold.h
  /usr/local/include/vtk-5.9/vtkTimeStamp.h
+ /usr/local/include/vtk-5.9/vtkTransform.h
+ /usr/local/include/vtk-5.9/vtkTriangle.h
  /usr/local/include/vtk-5.9/vtkType.h
  /usr/local/include/vtk-5.9/vtkTypeTraits.h
  /usr/local/include/vtk-5.9/vtkUnicodeString.h
@@ -1628,6 +1855,7 @@ CMakeFiles/testOVAS.dir/InfoSheet.cpp.o
  /usr/local/include/vtk-5.9/vtkVariant.h
  /usr/local/include/vtk-5.9/vtkVariantArray.h
  /usr/local/include/vtk-5.9/vtkVariantInlineOperators.h
+ /usr/local/include/vtk-5.9/vtkVertexGlyphFilter.h
  /usr/local/include/vtk-5.9/vtkViewport.h
  /usr/local/include/vtk-5.9/vtkVolume.h
  /usr/local/include/vtk-5.9/vtkVolumeCollection.h
@@ -1635,6 +1863,9 @@ CMakeFiles/testOVAS.dir/InfoSheet.cpp.o
  /usr/local/include/vtk-5.9/vtkWin32Header.h
  /usr/local/include/vtk-5.9/vtkWindow.h
  /usr/local/include/vtk-5.9/vtkWindowToImageFilter.h
+ /usr/local/include/vtk-5.9/vtkXMLPolyDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLUnstructuredDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLWriter.h
  /usr/local/include/vtk-5.9/vtkstd/algorithm
  /usr/local/include/vtk-5.9/vtkstd/exception
  /usr/local/include/vtk-5.9/vtkstd/map
@@ -1662,6 +1893,7 @@ CMakeFiles/testOVAS.dir/LoadedVol4D.cpp.o
  /usr/local/include/vtk-5.9/vtkAbstractArray.h
  /usr/local/include/vtk-5.9/vtkAbstractMapper.h
  /usr/local/include/vtk-5.9/vtkAbstractMapper3D.h
+ /usr/local/include/vtk-5.9/vtkAbstractTransform.h
  /usr/local/include/vtk-5.9/vtkActor.h
  /usr/local/include/vtk-5.9/vtkActorCollection.h
  /usr/local/include/vtk-5.9/vtkAlgorithm.h
@@ -1672,6 +1904,7 @@ CMakeFiles/testOVAS.dir/LoadedVol4D.cpp.o
  /usr/local/include/vtk-5.9/vtkArrayIteratorTemplateImplicit.txx
  /usr/local/include/vtk-5.9/vtkCamera.h
  /usr/local/include/vtk-5.9/vtkCell.h
+ /usr/local/include/vtk-5.9/vtkCellArray.h
  /usr/local/include/vtk-5.9/vtkCellLinks.h
  /usr/local/include/vtk-5.9/vtkCellType.h
  /usr/local/include/vtk-5.9/vtkCellTypes.h
@@ -1691,18 +1924,24 @@ CMakeFiles/testOVAS.dir/LoadedVol4D.cpp.o
  /usr/local/include/vtk-5.9/vtkDataSetAttributes.h
  /usr/local/include/vtk-5.9/vtkDataSetTriangleFilter.h
  /usr/local/include/vtk-5.9/vtkDebugLeaksManager.h
+ /usr/local/include/vtk-5.9/vtkDelaunay2D.h
  /usr/local/include/vtk-5.9/vtkDirectedGraph.h
  /usr/local/include/vtk-5.9/vtkDirectedGraphAlgorithm.h
  /usr/local/include/vtk-5.9/vtkDoubleArray.h
  /usr/local/include/vtk-5.9/vtkEdgeListIterator.h
  /usr/local/include/vtk-5.9/vtkFieldData.h
+ /usr/local/include/vtk-5.9/vtkFloatArray.h
  /usr/local/include/vtk-5.9/vtkGeometryFilter.h
  /usr/local/include/vtk-5.9/vtkGraph.h
+ /usr/local/include/vtk-5.9/vtkHomogeneousTransform.h
  /usr/local/include/vtk-5.9/vtkIOStream.h
  /usr/local/include/vtk-5.9/vtkIOStreamFwd.h
  /usr/local/include/vtk-5.9/vtkIdList.h
+ /usr/local/include/vtk-5.9/vtkIdTypeArray.h
  /usr/local/include/vtk-5.9/vtkImageAlgorithm.h
  /usr/local/include/vtk-5.9/vtkImageData.h
+ /usr/local/include/vtk-5.9/vtkImageResample.h
+ /usr/local/include/vtk-5.9/vtkImageReslice.h
  /usr/local/include/vtk-5.9/vtkImageWriter.h
  /usr/local/include/vtk-5.9/vtkIndent.h
  /usr/local/include/vtk-5.9/vtkInformation.h
@@ -1711,7 +1950,12 @@ CMakeFiles/testOVAS.dir/LoadedVol4D.cpp.o
  /usr/local/include/vtk-5.9/vtkInformationKey.h
  /usr/local/include/vtk-5.9/vtkInformationVector.h
  /usr/local/include/vtk-5.9/vtkIntArray.h
+ /usr/local/include/vtk-5.9/vtkLineSource.h
+ /usr/local/include/vtk-5.9/vtkLinearTransform.h
+ /usr/local/include/vtk-5.9/vtkLookupTable.h
  /usr/local/include/vtk-5.9/vtkMapper.h
+ /usr/local/include/vtk-5.9/vtkMath.h
+ /usr/local/include/vtk-5.9/vtkMatrix4x4.h
  /usr/local/include/vtk-5.9/vtkMutableDirectedGraph.h
  /usr/local/include/vtk-5.9/vtkOStrStreamWrapper.h
  /usr/local/include/vtk-5.9/vtkOStreamWrapper.h
@@ -1725,6 +1969,7 @@ CMakeFiles/testOVAS.dir/LoadedVol4D.cpp.o
  /usr/local/include/vtk-5.9/vtkPolyData.h
  /usr/local/include/vtk-5.9/vtkPolyDataAlgorithm.h
  /usr/local/include/vtk-5.9/vtkPolyDataMapper.h
+ /usr/local/include/vtk-5.9/vtkPolynomialSolversUnivariate.h
  /usr/local/include/vtk-5.9/vtkProp.h
  /usr/local/include/vtk-5.9/vtkProp3D.h
  /usr/local/include/vtk-5.9/vtkPropCollection.h
@@ -1746,8 +1991,11 @@ CMakeFiles/testOVAS.dir/LoadedVol4D.cpp.o
  /usr/local/include/vtk-5.9/vtkSystemIncludes.h
  /usr/local/include/vtk-5.9/vtkTable.h
  /usr/local/include/vtk-5.9/vtkTexture.h
+ /usr/local/include/vtk-5.9/vtkThreadedImageAlgorithm.h
  /usr/local/include/vtk-5.9/vtkThreshold.h
  /usr/local/include/vtk-5.9/vtkTimeStamp.h
+ /usr/local/include/vtk-5.9/vtkTransform.h
+ /usr/local/include/vtk-5.9/vtkTriangle.h
  /usr/local/include/vtk-5.9/vtkType.h
  /usr/local/include/vtk-5.9/vtkTypeTraits.h
  /usr/local/include/vtk-5.9/vtkUnicodeString.h
@@ -1758,6 +2006,7 @@ CMakeFiles/testOVAS.dir/LoadedVol4D.cpp.o
  /usr/local/include/vtk-5.9/vtkVariant.h
  /usr/local/include/vtk-5.9/vtkVariantArray.h
  /usr/local/include/vtk-5.9/vtkVariantInlineOperators.h
+ /usr/local/include/vtk-5.9/vtkVertexGlyphFilter.h
  /usr/local/include/vtk-5.9/vtkViewport.h
  /usr/local/include/vtk-5.9/vtkVolume.h
  /usr/local/include/vtk-5.9/vtkVolumeCollection.h
@@ -1765,6 +2014,9 @@ CMakeFiles/testOVAS.dir/LoadedVol4D.cpp.o
  /usr/local/include/vtk-5.9/vtkWin32Header.h
  /usr/local/include/vtk-5.9/vtkWindow.h
  /usr/local/include/vtk-5.9/vtkWindowToImageFilter.h
+ /usr/local/include/vtk-5.9/vtkXMLPolyDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLUnstructuredDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLWriter.h
  /usr/local/include/vtk-5.9/vtkstd/algorithm
  /usr/local/include/vtk-5.9/vtkstd/exception
  /usr/local/include/vtk-5.9/vtkstd/map
@@ -1798,6 +2050,7 @@ CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.o
  /usr/local/include/vtk-5.9/vtkAbstractArray.h
  /usr/local/include/vtk-5.9/vtkAbstractMapper.h
  /usr/local/include/vtk-5.9/vtkAbstractMapper3D.h
+ /usr/local/include/vtk-5.9/vtkAbstractTransform.h
  /usr/local/include/vtk-5.9/vtkActor.h
  /usr/local/include/vtk-5.9/vtkActorCollection.h
  /usr/local/include/vtk-5.9/vtkAlgorithm.h
@@ -1808,6 +2061,7 @@ CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.o
  /usr/local/include/vtk-5.9/vtkArrayIteratorTemplateImplicit.txx
  /usr/local/include/vtk-5.9/vtkCamera.h
  /usr/local/include/vtk-5.9/vtkCell.h
+ /usr/local/include/vtk-5.9/vtkCellArray.h
  /usr/local/include/vtk-5.9/vtkCellLinks.h
  /usr/local/include/vtk-5.9/vtkCellType.h
  /usr/local/include/vtk-5.9/vtkCellTypes.h
@@ -1827,18 +2081,24 @@ CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.o
  /usr/local/include/vtk-5.9/vtkDataSetAttributes.h
  /usr/local/include/vtk-5.9/vtkDataSetTriangleFilter.h
  /usr/local/include/vtk-5.9/vtkDebugLeaksManager.h
+ /usr/local/include/vtk-5.9/vtkDelaunay2D.h
  /usr/local/include/vtk-5.9/vtkDirectedGraph.h
  /usr/local/include/vtk-5.9/vtkDirectedGraphAlgorithm.h
  /usr/local/include/vtk-5.9/vtkDoubleArray.h
  /usr/local/include/vtk-5.9/vtkEdgeListIterator.h
  /usr/local/include/vtk-5.9/vtkFieldData.h
+ /usr/local/include/vtk-5.9/vtkFloatArray.h
  /usr/local/include/vtk-5.9/vtkGeometryFilter.h
  /usr/local/include/vtk-5.9/vtkGraph.h
+ /usr/local/include/vtk-5.9/vtkHomogeneousTransform.h
  /usr/local/include/vtk-5.9/vtkIOStream.h
  /usr/local/include/vtk-5.9/vtkIOStreamFwd.h
  /usr/local/include/vtk-5.9/vtkIdList.h
+ /usr/local/include/vtk-5.9/vtkIdTypeArray.h
  /usr/local/include/vtk-5.9/vtkImageAlgorithm.h
  /usr/local/include/vtk-5.9/vtkImageData.h
+ /usr/local/include/vtk-5.9/vtkImageResample.h
+ /usr/local/include/vtk-5.9/vtkImageReslice.h
  /usr/local/include/vtk-5.9/vtkImageWriter.h
  /usr/local/include/vtk-5.9/vtkIndent.h
  /usr/local/include/vtk-5.9/vtkInformation.h
@@ -1847,7 +2107,12 @@ CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.o
  /usr/local/include/vtk-5.9/vtkInformationKey.h
  /usr/local/include/vtk-5.9/vtkInformationVector.h
  /usr/local/include/vtk-5.9/vtkIntArray.h
+ /usr/local/include/vtk-5.9/vtkLineSource.h
+ /usr/local/include/vtk-5.9/vtkLinearTransform.h
+ /usr/local/include/vtk-5.9/vtkLookupTable.h
  /usr/local/include/vtk-5.9/vtkMapper.h
+ /usr/local/include/vtk-5.9/vtkMath.h
+ /usr/local/include/vtk-5.9/vtkMatrix4x4.h
  /usr/local/include/vtk-5.9/vtkMutableDirectedGraph.h
  /usr/local/include/vtk-5.9/vtkOStrStreamWrapper.h
  /usr/local/include/vtk-5.9/vtkOStreamWrapper.h
@@ -1861,6 +2126,7 @@ CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.o
  /usr/local/include/vtk-5.9/vtkPolyData.h
  /usr/local/include/vtk-5.9/vtkPolyDataAlgorithm.h
  /usr/local/include/vtk-5.9/vtkPolyDataMapper.h
+ /usr/local/include/vtk-5.9/vtkPolynomialSolversUnivariate.h
  /usr/local/include/vtk-5.9/vtkProp.h
  /usr/local/include/vtk-5.9/vtkProp3D.h
  /usr/local/include/vtk-5.9/vtkPropCollection.h
@@ -1882,8 +2148,11 @@ CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.o
  /usr/local/include/vtk-5.9/vtkSystemIncludes.h
  /usr/local/include/vtk-5.9/vtkTable.h
  /usr/local/include/vtk-5.9/vtkTexture.h
+ /usr/local/include/vtk-5.9/vtkThreadedImageAlgorithm.h
  /usr/local/include/vtk-5.9/vtkThreshold.h
  /usr/local/include/vtk-5.9/vtkTimeStamp.h
+ /usr/local/include/vtk-5.9/vtkTransform.h
+ /usr/local/include/vtk-5.9/vtkTriangle.h
  /usr/local/include/vtk-5.9/vtkType.h
  /usr/local/include/vtk-5.9/vtkTypeTraits.h
  /usr/local/include/vtk-5.9/vtkUnicodeString.h
@@ -1894,6 +2163,7 @@ CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.o
  /usr/local/include/vtk-5.9/vtkVariant.h
  /usr/local/include/vtk-5.9/vtkVariantArray.h
  /usr/local/include/vtk-5.9/vtkVariantInlineOperators.h
+ /usr/local/include/vtk-5.9/vtkVertexGlyphFilter.h
  /usr/local/include/vtk-5.9/vtkViewport.h
  /usr/local/include/vtk-5.9/vtkVolume.h
  /usr/local/include/vtk-5.9/vtkVolumeCollection.h
@@ -1901,6 +2171,9 @@ CMakeFiles/testOVAS.dir/MetaballsVol4D.cpp.o
  /usr/local/include/vtk-5.9/vtkWin32Header.h
  /usr/local/include/vtk-5.9/vtkWindow.h
  /usr/local/include/vtk-5.9/vtkWindowToImageFilter.h
+ /usr/local/include/vtk-5.9/vtkXMLPolyDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLUnstructuredDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLWriter.h
  /usr/local/include/vtk-5.9/vtkstd/algorithm
  /usr/local/include/vtk-5.9/vtkstd/exception
  /usr/local/include/vtk-5.9/vtkstd/map
@@ -2001,6 +2274,7 @@ CMakeFiles/testOVAS.dir/MovingAAElipsoid.cpp.o
  /usr/local/include/vtk-5.9/vtkAbstractArray.h
  /usr/local/include/vtk-5.9/vtkAbstractMapper.h
  /usr/local/include/vtk-5.9/vtkAbstractMapper3D.h
+ /usr/local/include/vtk-5.9/vtkAbstractTransform.h
  /usr/local/include/vtk-5.9/vtkActor.h
  /usr/local/include/vtk-5.9/vtkActorCollection.h
  /usr/local/include/vtk-5.9/vtkAlgorithm.h
@@ -2011,6 +2285,7 @@ CMakeFiles/testOVAS.dir/MovingAAElipsoid.cpp.o
  /usr/local/include/vtk-5.9/vtkArrayIteratorTemplateImplicit.txx
  /usr/local/include/vtk-5.9/vtkCamera.h
  /usr/local/include/vtk-5.9/vtkCell.h
+ /usr/local/include/vtk-5.9/vtkCellArray.h
  /usr/local/include/vtk-5.9/vtkCellLinks.h
  /usr/local/include/vtk-5.9/vtkCellType.h
  /usr/local/include/vtk-5.9/vtkCellTypes.h
@@ -2030,16 +2305,20 @@ CMakeFiles/testOVAS.dir/MovingAAElipsoid.cpp.o
  /usr/local/include/vtk-5.9/vtkDataSetAttributes.h
  /usr/local/include/vtk-5.9/vtkDataSetTriangleFilter.h
  /usr/local/include/vtk-5.9/vtkDebugLeaksManager.h
+ /usr/local/include/vtk-5.9/vtkDelaunay2D.h
  /usr/local/include/vtk-5.9/vtkDirectedGraph.h
  /usr/local/include/vtk-5.9/vtkDirectedGraphAlgorithm.h
  /usr/local/include/vtk-5.9/vtkDoubleArray.h
  /usr/local/include/vtk-5.9/vtkEdgeListIterator.h
  /usr/local/include/vtk-5.9/vtkFieldData.h
+ /usr/local/include/vtk-5.9/vtkFloatArray.h
  /usr/local/include/vtk-5.9/vtkGeometryFilter.h
  /usr/local/include/vtk-5.9/vtkGraph.h
+ /usr/local/include/vtk-5.9/vtkHomogeneousTransform.h
  /usr/local/include/vtk-5.9/vtkIOStream.h
  /usr/local/include/vtk-5.9/vtkIOStreamFwd.h
  /usr/local/include/vtk-5.9/vtkIdList.h
+ /usr/local/include/vtk-5.9/vtkIdTypeArray.h
  /usr/local/include/vtk-5.9/vtkImageAlgorithm.h
  /usr/local/include/vtk-5.9/vtkImageData.h
  /usr/local/include/vtk-5.9/vtkImageWriter.h
@@ -2050,7 +2329,12 @@ CMakeFiles/testOVAS.dir/MovingAAElipsoid.cpp.o
  /usr/local/include/vtk-5.9/vtkInformationKey.h
  /usr/local/include/vtk-5.9/vtkInformationVector.h
  /usr/local/include/vtk-5.9/vtkIntArray.h
+ /usr/local/include/vtk-5.9/vtkLineSource.h
+ /usr/local/include/vtk-5.9/vtkLinearTransform.h
+ /usr/local/include/vtk-5.9/vtkLookupTable.h
  /usr/local/include/vtk-5.9/vtkMapper.h
+ /usr/local/include/vtk-5.9/vtkMath.h
+ /usr/local/include/vtk-5.9/vtkMatrix4x4.h
  /usr/local/include/vtk-5.9/vtkMutableDirectedGraph.h
  /usr/local/include/vtk-5.9/vtkOStrStreamWrapper.h
  /usr/local/include/vtk-5.9/vtkOStreamWrapper.h
@@ -2064,6 +2348,7 @@ CMakeFiles/testOVAS.dir/MovingAAElipsoid.cpp.o
  /usr/local/include/vtk-5.9/vtkPolyData.h
  /usr/local/include/vtk-5.9/vtkPolyDataAlgorithm.h
  /usr/local/include/vtk-5.9/vtkPolyDataMapper.h
+ /usr/local/include/vtk-5.9/vtkPolynomialSolversUnivariate.h
  /usr/local/include/vtk-5.9/vtkProp.h
  /usr/local/include/vtk-5.9/vtkProp3D.h
  /usr/local/include/vtk-5.9/vtkPropCollection.h
@@ -2087,6 +2372,8 @@ CMakeFiles/testOVAS.dir/MovingAAElipsoid.cpp.o
  /usr/local/include/vtk-5.9/vtkTexture.h
  /usr/local/include/vtk-5.9/vtkThreshold.h
  /usr/local/include/vtk-5.9/vtkTimeStamp.h
+ /usr/local/include/vtk-5.9/vtkTransform.h
+ /usr/local/include/vtk-5.9/vtkTriangle.h
  /usr/local/include/vtk-5.9/vtkType.h
  /usr/local/include/vtk-5.9/vtkTypeTraits.h
  /usr/local/include/vtk-5.9/vtkUnicodeString.h
@@ -2097,6 +2384,7 @@ CMakeFiles/testOVAS.dir/MovingAAElipsoid.cpp.o
  /usr/local/include/vtk-5.9/vtkVariant.h
  /usr/local/include/vtk-5.9/vtkVariantArray.h
  /usr/local/include/vtk-5.9/vtkVariantInlineOperators.h
+ /usr/local/include/vtk-5.9/vtkVertexGlyphFilter.h
  /usr/local/include/vtk-5.9/vtkViewport.h
  /usr/local/include/vtk-5.9/vtkVolume.h
  /usr/local/include/vtk-5.9/vtkVolumeCollection.h
@@ -2104,6 +2392,9 @@ CMakeFiles/testOVAS.dir/MovingAAElipsoid.cpp.o
  /usr/local/include/vtk-5.9/vtkWin32Header.h
  /usr/local/include/vtk-5.9/vtkWindow.h
  /usr/local/include/vtk-5.9/vtkWindowToImageFilter.h
+ /usr/local/include/vtk-5.9/vtkXMLPolyDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLUnstructuredDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLWriter.h
  /usr/local/include/vtk-5.9/vtkstd/algorithm
  /usr/local/include/vtk-5.9/vtkstd/exception
  /usr/local/include/vtk-5.9/vtkstd/map
@@ -2148,6 +2439,7 @@ CMakeFiles/testOVAS.dir/OVASControl.cpp.o
  /usr/local/include/vtk-5.9/vtkAbstractArray.h
  /usr/local/include/vtk-5.9/vtkAbstractMapper.h
  /usr/local/include/vtk-5.9/vtkAbstractMapper3D.h
+ /usr/local/include/vtk-5.9/vtkAbstractTransform.h
  /usr/local/include/vtk-5.9/vtkActor.h
  /usr/local/include/vtk-5.9/vtkActorCollection.h
  /usr/local/include/vtk-5.9/vtkAlgorithm.h
@@ -2158,6 +2450,7 @@ CMakeFiles/testOVAS.dir/OVASControl.cpp.o
  /usr/local/include/vtk-5.9/vtkArrayIteratorTemplateImplicit.txx
  /usr/local/include/vtk-5.9/vtkCamera.h
  /usr/local/include/vtk-5.9/vtkCell.h
+ /usr/local/include/vtk-5.9/vtkCellArray.h
  /usr/local/include/vtk-5.9/vtkCellLinks.h
  /usr/local/include/vtk-5.9/vtkCellType.h
  /usr/local/include/vtk-5.9/vtkCellTypes.h
@@ -2177,18 +2470,24 @@ CMakeFiles/testOVAS.dir/OVASControl.cpp.o
  /usr/local/include/vtk-5.9/vtkDataSetAttributes.h
  /usr/local/include/vtk-5.9/vtkDataSetTriangleFilter.h
  /usr/local/include/vtk-5.9/vtkDebugLeaksManager.h
+ /usr/local/include/vtk-5.9/vtkDelaunay2D.h
  /usr/local/include/vtk-5.9/vtkDirectedGraph.h
  /usr/local/include/vtk-5.9/vtkDirectedGraphAlgorithm.h
  /usr/local/include/vtk-5.9/vtkDoubleArray.h
  /usr/local/include/vtk-5.9/vtkEdgeListIterator.h
  /usr/local/include/vtk-5.9/vtkFieldData.h
+ /usr/local/include/vtk-5.9/vtkFloatArray.h
  /usr/local/include/vtk-5.9/vtkGeometryFilter.h
  /usr/local/include/vtk-5.9/vtkGraph.h
+ /usr/local/include/vtk-5.9/vtkHomogeneousTransform.h
  /usr/local/include/vtk-5.9/vtkIOStream.h
  /usr/local/include/vtk-5.9/vtkIOStreamFwd.h
  /usr/local/include/vtk-5.9/vtkIdList.h
+ /usr/local/include/vtk-5.9/vtkIdTypeArray.h
  /usr/local/include/vtk-5.9/vtkImageAlgorithm.h
  /usr/local/include/vtk-5.9/vtkImageData.h
+ /usr/local/include/vtk-5.9/vtkImageResample.h
+ /usr/local/include/vtk-5.9/vtkImageReslice.h
  /usr/local/include/vtk-5.9/vtkImageWriter.h
  /usr/local/include/vtk-5.9/vtkIndent.h
  /usr/local/include/vtk-5.9/vtkInformation.h
@@ -2197,7 +2496,12 @@ CMakeFiles/testOVAS.dir/OVASControl.cpp.o
  /usr/local/include/vtk-5.9/vtkInformationKey.h
  /usr/local/include/vtk-5.9/vtkInformationVector.h
  /usr/local/include/vtk-5.9/vtkIntArray.h
+ /usr/local/include/vtk-5.9/vtkLineSource.h
+ /usr/local/include/vtk-5.9/vtkLinearTransform.h
+ /usr/local/include/vtk-5.9/vtkLookupTable.h
  /usr/local/include/vtk-5.9/vtkMapper.h
+ /usr/local/include/vtk-5.9/vtkMath.h
+ /usr/local/include/vtk-5.9/vtkMatrix4x4.h
  /usr/local/include/vtk-5.9/vtkMutableDirectedGraph.h
  /usr/local/include/vtk-5.9/vtkOStrStreamWrapper.h
  /usr/local/include/vtk-5.9/vtkOStreamWrapper.h
@@ -2211,6 +2515,7 @@ CMakeFiles/testOVAS.dir/OVASControl.cpp.o
  /usr/local/include/vtk-5.9/vtkPolyData.h
  /usr/local/include/vtk-5.9/vtkPolyDataAlgorithm.h
  /usr/local/include/vtk-5.9/vtkPolyDataMapper.h
+ /usr/local/include/vtk-5.9/vtkPolynomialSolversUnivariate.h
  /usr/local/include/vtk-5.9/vtkProp.h
  /usr/local/include/vtk-5.9/vtkProp3D.h
  /usr/local/include/vtk-5.9/vtkPropCollection.h
@@ -2232,8 +2537,11 @@ CMakeFiles/testOVAS.dir/OVASControl.cpp.o
  /usr/local/include/vtk-5.9/vtkSystemIncludes.h
  /usr/local/include/vtk-5.9/vtkTable.h
  /usr/local/include/vtk-5.9/vtkTexture.h
+ /usr/local/include/vtk-5.9/vtkThreadedImageAlgorithm.h
  /usr/local/include/vtk-5.9/vtkThreshold.h
  /usr/local/include/vtk-5.9/vtkTimeStamp.h
+ /usr/local/include/vtk-5.9/vtkTransform.h
+ /usr/local/include/vtk-5.9/vtkTriangle.h
  /usr/local/include/vtk-5.9/vtkType.h
  /usr/local/include/vtk-5.9/vtkTypeTraits.h
  /usr/local/include/vtk-5.9/vtkUnicodeString.h
@@ -2244,6 +2552,7 @@ CMakeFiles/testOVAS.dir/OVASControl.cpp.o
  /usr/local/include/vtk-5.9/vtkVariant.h
  /usr/local/include/vtk-5.9/vtkVariantArray.h
  /usr/local/include/vtk-5.9/vtkVariantInlineOperators.h
+ /usr/local/include/vtk-5.9/vtkVertexGlyphFilter.h
  /usr/local/include/vtk-5.9/vtkViewport.h
  /usr/local/include/vtk-5.9/vtkVolume.h
  /usr/local/include/vtk-5.9/vtkVolumeCollection.h
@@ -2251,6 +2560,9 @@ CMakeFiles/testOVAS.dir/OVASControl.cpp.o
  /usr/local/include/vtk-5.9/vtkWin32Header.h
  /usr/local/include/vtk-5.9/vtkWindow.h
  /usr/local/include/vtk-5.9/vtkWindowToImageFilter.h
+ /usr/local/include/vtk-5.9/vtkXMLPolyDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLUnstructuredDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLWriter.h
  /usr/local/include/vtk-5.9/vtkstd/algorithm
  /usr/local/include/vtk-5.9/vtkstd/exception
  /usr/local/include/vtk-5.9/vtkstd/map
@@ -2347,11 +2659,13 @@ CMakeFiles/testOVAS.dir/PathVisualiser.cpp.o
  /home/zoizoi/psyforge/OVAS/OVASControl.h
  /home/zoizoi/psyforge/OVAS/PathVisualiser.cpp
  /home/zoizoi/psyforge/OVAS/PathVisualiser.h
+ /home/zoizoi/psyforge/OVAS/ViewPathClusterFinder.h
  /home/zoizoi/psyforge/OVAS/vtkEssentials.h
  /usr/local/include/vtk-5.9/vtkABI.h
  /usr/local/include/vtk-5.9/vtkAbstractArray.h
  /usr/local/include/vtk-5.9/vtkAbstractMapper.h
  /usr/local/include/vtk-5.9/vtkAbstractMapper3D.h
+ /usr/local/include/vtk-5.9/vtkAbstractTransform.h
  /usr/local/include/vtk-5.9/vtkActor.h
  /usr/local/include/vtk-5.9/vtkActorCollection.h
  /usr/local/include/vtk-5.9/vtkAlgorithm.h
@@ -2362,11 +2676,13 @@ CMakeFiles/testOVAS.dir/PathVisualiser.cpp.o
  /usr/local/include/vtk-5.9/vtkArrayIteratorTemplateImplicit.txx
  /usr/local/include/vtk-5.9/vtkCamera.h
  /usr/local/include/vtk-5.9/vtkCell.h
+ /usr/local/include/vtk-5.9/vtkCellArray.h
  /usr/local/include/vtk-5.9/vtkCellLinks.h
  /usr/local/include/vtk-5.9/vtkCellType.h
  /usr/local/include/vtk-5.9/vtkCellTypes.h
  /usr/local/include/vtk-5.9/vtkCollection.h
  /usr/local/include/vtk-5.9/vtkCommonInformationKeyManager.h
+ /usr/local/include/vtk-5.9/vtkCompositeDataSet.h
  /usr/local/include/vtk-5.9/vtkConeSource.h
  /usr/local/include/vtk-5.9/vtkConfigure.h
  /usr/local/include/vtk-5.9/vtkContourFilter.h
@@ -2381,16 +2697,20 @@ CMakeFiles/testOVAS.dir/PathVisualiser.cpp.o
  /usr/local/include/vtk-5.9/vtkDataSetAttributes.h
  /usr/local/include/vtk-5.9/vtkDataSetTriangleFilter.h
  /usr/local/include/vtk-5.9/vtkDebugLeaksManager.h
+ /usr/local/include/vtk-5.9/vtkDelaunay2D.h
  /usr/local/include/vtk-5.9/vtkDirectedGraph.h
  /usr/local/include/vtk-5.9/vtkDirectedGraphAlgorithm.h
  /usr/local/include/vtk-5.9/vtkDoubleArray.h
  /usr/local/include/vtk-5.9/vtkEdgeListIterator.h
  /usr/local/include/vtk-5.9/vtkFieldData.h
+ /usr/local/include/vtk-5.9/vtkFloatArray.h
  /usr/local/include/vtk-5.9/vtkGeometryFilter.h
  /usr/local/include/vtk-5.9/vtkGraph.h
+ /usr/local/include/vtk-5.9/vtkHomogeneousTransform.h
  /usr/local/include/vtk-5.9/vtkIOStream.h
  /usr/local/include/vtk-5.9/vtkIOStreamFwd.h
  /usr/local/include/vtk-5.9/vtkIdList.h
+ /usr/local/include/vtk-5.9/vtkIdTypeArray.h
  /usr/local/include/vtk-5.9/vtkImageAlgorithm.h
  /usr/local/include/vtk-5.9/vtkImageData.h
  /usr/local/include/vtk-5.9/vtkImageWriter.h
@@ -2401,7 +2721,17 @@ CMakeFiles/testOVAS.dir/PathVisualiser.cpp.o
  /usr/local/include/vtk-5.9/vtkInformationKey.h
  /usr/local/include/vtk-5.9/vtkInformationVector.h
  /usr/local/include/vtk-5.9/vtkIntArray.h
+ /usr/local/include/vtk-5.9/vtkInteractorObserver.h
+ /usr/local/include/vtk-5.9/vtkInteractorStyle.h
+ /usr/local/include/vtk-5.9/vtkInteractorStyleTrackballCamera.h
+ /usr/local/include/vtk-5.9/vtkKMeansStatistics.h
+ /usr/local/include/vtk-5.9/vtkLineSource.h
+ /usr/local/include/vtk-5.9/vtkLinearTransform.h
+ /usr/local/include/vtk-5.9/vtkLookupTable.h
  /usr/local/include/vtk-5.9/vtkMapper.h
+ /usr/local/include/vtk-5.9/vtkMath.h
+ /usr/local/include/vtk-5.9/vtkMatrix4x4.h
+ /usr/local/include/vtk-5.9/vtkMultiBlockDataSet.h
  /usr/local/include/vtk-5.9/vtkMutableDirectedGraph.h
  /usr/local/include/vtk-5.9/vtkOStrStreamWrapper.h
  /usr/local/include/vtk-5.9/vtkOStreamWrapper.h
@@ -2415,6 +2745,7 @@ CMakeFiles/testOVAS.dir/PathVisualiser.cpp.o
  /usr/local/include/vtk-5.9/vtkPolyData.h
  /usr/local/include/vtk-5.9/vtkPolyDataAlgorithm.h
  /usr/local/include/vtk-5.9/vtkPolyDataMapper.h
+ /usr/local/include/vtk-5.9/vtkPolynomialSolversUnivariate.h
  /usr/local/include/vtk-5.9/vtkProp.h
  /usr/local/include/vtk-5.9/vtkProp3D.h
  /usr/local/include/vtk-5.9/vtkPropCollection.h
@@ -2431,13 +2762,17 @@ CMakeFiles/testOVAS.dir/PathVisualiser.cpp.o
  /usr/local/include/vtk-5.9/vtkSmartPointerBase.h
  /usr/local/include/vtk-5.9/vtkSortDataArray.h
  /usr/local/include/vtk-5.9/vtkSphereSource.h
+ /usr/local/include/vtk-5.9/vtkStatisticsAlgorithm.h
  /usr/local/include/vtk-5.9/vtkStdString.h
  /usr/local/include/vtk-5.9/vtkStructuredData.h
  /usr/local/include/vtk-5.9/vtkSystemIncludes.h
  /usr/local/include/vtk-5.9/vtkTable.h
+ /usr/local/include/vtk-5.9/vtkTableAlgorithm.h
  /usr/local/include/vtk-5.9/vtkTexture.h
  /usr/local/include/vtk-5.9/vtkThreshold.h
  /usr/local/include/vtk-5.9/vtkTimeStamp.h
+ /usr/local/include/vtk-5.9/vtkTransform.h
+ /usr/local/include/vtk-5.9/vtkTriangle.h
  /usr/local/include/vtk-5.9/vtkType.h
  /usr/local/include/vtk-5.9/vtkTypeTraits.h
  /usr/local/include/vtk-5.9/vtkUnicodeString.h
@@ -2448,6 +2783,7 @@ CMakeFiles/testOVAS.dir/PathVisualiser.cpp.o
  /usr/local/include/vtk-5.9/vtkVariant.h
  /usr/local/include/vtk-5.9/vtkVariantArray.h
  /usr/local/include/vtk-5.9/vtkVariantInlineOperators.h
+ /usr/local/include/vtk-5.9/vtkVertexGlyphFilter.h
  /usr/local/include/vtk-5.9/vtkViewport.h
  /usr/local/include/vtk-5.9/vtkVolume.h
  /usr/local/include/vtk-5.9/vtkVolumeCollection.h
@@ -2455,6 +2791,9 @@ CMakeFiles/testOVAS.dir/PathVisualiser.cpp.o
  /usr/local/include/vtk-5.9/vtkWin32Header.h
  /usr/local/include/vtk-5.9/vtkWindow.h
  /usr/local/include/vtk-5.9/vtkWindowToImageFilter.h
+ /usr/local/include/vtk-5.9/vtkXMLPolyDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLUnstructuredDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLWriter.h
  /usr/local/include/vtk-5.9/vtkstd/algorithm
  /usr/local/include/vtk-5.9/vtkstd/exception
  /usr/local/include/vtk-5.9/vtkstd/map
@@ -2479,6 +2818,7 @@ CMakeFiles/testOVAS.dir/TemporalChangeFeature.cpp.o
  /usr/local/include/vtk-5.9/vtkAbstractArray.h
  /usr/local/include/vtk-5.9/vtkAbstractMapper.h
  /usr/local/include/vtk-5.9/vtkAbstractMapper3D.h
+ /usr/local/include/vtk-5.9/vtkAbstractTransform.h
  /usr/local/include/vtk-5.9/vtkActor.h
  /usr/local/include/vtk-5.9/vtkActorCollection.h
  /usr/local/include/vtk-5.9/vtkAlgorithm.h
@@ -2489,6 +2829,7 @@ CMakeFiles/testOVAS.dir/TemporalChangeFeature.cpp.o
  /usr/local/include/vtk-5.9/vtkArrayIteratorTemplateImplicit.txx
  /usr/local/include/vtk-5.9/vtkCamera.h
  /usr/local/include/vtk-5.9/vtkCell.h
+ /usr/local/include/vtk-5.9/vtkCellArray.h
  /usr/local/include/vtk-5.9/vtkCellLinks.h
  /usr/local/include/vtk-5.9/vtkCellType.h
  /usr/local/include/vtk-5.9/vtkCellTypes.h
@@ -2508,16 +2849,20 @@ CMakeFiles/testOVAS.dir/TemporalChangeFeature.cpp.o
  /usr/local/include/vtk-5.9/vtkDataSetAttributes.h
  /usr/local/include/vtk-5.9/vtkDataSetTriangleFilter.h
  /usr/local/include/vtk-5.9/vtkDebugLeaksManager.h
+ /usr/local/include/vtk-5.9/vtkDelaunay2D.h
  /usr/local/include/vtk-5.9/vtkDirectedGraph.h
  /usr/local/include/vtk-5.9/vtkDirectedGraphAlgorithm.h
  /usr/local/include/vtk-5.9/vtkDoubleArray.h
  /usr/local/include/vtk-5.9/vtkEdgeListIterator.h
  /usr/local/include/vtk-5.9/vtkFieldData.h
+ /usr/local/include/vtk-5.9/vtkFloatArray.h
  /usr/local/include/vtk-5.9/vtkGeometryFilter.h
  /usr/local/include/vtk-5.9/vtkGraph.h
+ /usr/local/include/vtk-5.9/vtkHomogeneousTransform.h
  /usr/local/include/vtk-5.9/vtkIOStream.h
  /usr/local/include/vtk-5.9/vtkIOStreamFwd.h
  /usr/local/include/vtk-5.9/vtkIdList.h
+ /usr/local/include/vtk-5.9/vtkIdTypeArray.h
  /usr/local/include/vtk-5.9/vtkImageAlgorithm.h
  /usr/local/include/vtk-5.9/vtkImageData.h
  /usr/local/include/vtk-5.9/vtkImageWriter.h
@@ -2528,7 +2873,12 @@ CMakeFiles/testOVAS.dir/TemporalChangeFeature.cpp.o
  /usr/local/include/vtk-5.9/vtkInformationKey.h
  /usr/local/include/vtk-5.9/vtkInformationVector.h
  /usr/local/include/vtk-5.9/vtkIntArray.h
+ /usr/local/include/vtk-5.9/vtkLineSource.h
+ /usr/local/include/vtk-5.9/vtkLinearTransform.h
+ /usr/local/include/vtk-5.9/vtkLookupTable.h
  /usr/local/include/vtk-5.9/vtkMapper.h
+ /usr/local/include/vtk-5.9/vtkMath.h
+ /usr/local/include/vtk-5.9/vtkMatrix4x4.h
  /usr/local/include/vtk-5.9/vtkMutableDirectedGraph.h
  /usr/local/include/vtk-5.9/vtkOStrStreamWrapper.h
  /usr/local/include/vtk-5.9/vtkOStreamWrapper.h
@@ -2542,6 +2892,7 @@ CMakeFiles/testOVAS.dir/TemporalChangeFeature.cpp.o
  /usr/local/include/vtk-5.9/vtkPolyData.h
  /usr/local/include/vtk-5.9/vtkPolyDataAlgorithm.h
  /usr/local/include/vtk-5.9/vtkPolyDataMapper.h
+ /usr/local/include/vtk-5.9/vtkPolynomialSolversUnivariate.h
  /usr/local/include/vtk-5.9/vtkProp.h
  /usr/local/include/vtk-5.9/vtkProp3D.h
  /usr/local/include/vtk-5.9/vtkPropCollection.h
@@ -2565,6 +2916,8 @@ CMakeFiles/testOVAS.dir/TemporalChangeFeature.cpp.o
  /usr/local/include/vtk-5.9/vtkTexture.h
  /usr/local/include/vtk-5.9/vtkThreshold.h
  /usr/local/include/vtk-5.9/vtkTimeStamp.h
+ /usr/local/include/vtk-5.9/vtkTransform.h
+ /usr/local/include/vtk-5.9/vtkTriangle.h
  /usr/local/include/vtk-5.9/vtkType.h
  /usr/local/include/vtk-5.9/vtkTypeTraits.h
  /usr/local/include/vtk-5.9/vtkUnicodeString.h
@@ -2575,6 +2928,7 @@ CMakeFiles/testOVAS.dir/TemporalChangeFeature.cpp.o
  /usr/local/include/vtk-5.9/vtkVariant.h
  /usr/local/include/vtk-5.9/vtkVariantArray.h
  /usr/local/include/vtk-5.9/vtkVariantInlineOperators.h
+ /usr/local/include/vtk-5.9/vtkVertexGlyphFilter.h
  /usr/local/include/vtk-5.9/vtkViewport.h
  /usr/local/include/vtk-5.9/vtkVolume.h
  /usr/local/include/vtk-5.9/vtkVolumeCollection.h
@@ -2582,6 +2936,9 @@ CMakeFiles/testOVAS.dir/TemporalChangeFeature.cpp.o
  /usr/local/include/vtk-5.9/vtkWin32Header.h
  /usr/local/include/vtk-5.9/vtkWindow.h
  /usr/local/include/vtk-5.9/vtkWindowToImageFilter.h
+ /usr/local/include/vtk-5.9/vtkXMLPolyDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLUnstructuredDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLWriter.h
  /usr/local/include/vtk-5.9/vtkstd/algorithm
  /usr/local/include/vtk-5.9/vtkstd/exception
  /usr/local/include/vtk-5.9/vtkstd/map
@@ -2603,6 +2960,7 @@ CMakeFiles/testOVAS.dir/TemporalChangeFeature2.cpp.o
  /usr/local/include/vtk-5.9/vtkAbstractArray.h
  /usr/local/include/vtk-5.9/vtkAbstractMapper.h
  /usr/local/include/vtk-5.9/vtkAbstractMapper3D.h
+ /usr/local/include/vtk-5.9/vtkAbstractTransform.h
  /usr/local/include/vtk-5.9/vtkActor.h
  /usr/local/include/vtk-5.9/vtkActorCollection.h
  /usr/local/include/vtk-5.9/vtkAlgorithm.h
@@ -2613,6 +2971,7 @@ CMakeFiles/testOVAS.dir/TemporalChangeFeature2.cpp.o
  /usr/local/include/vtk-5.9/vtkArrayIteratorTemplateImplicit.txx
  /usr/local/include/vtk-5.9/vtkCamera.h
  /usr/local/include/vtk-5.9/vtkCell.h
+ /usr/local/include/vtk-5.9/vtkCellArray.h
  /usr/local/include/vtk-5.9/vtkCellLinks.h
  /usr/local/include/vtk-5.9/vtkCellType.h
  /usr/local/include/vtk-5.9/vtkCellTypes.h
@@ -2632,16 +2991,20 @@ CMakeFiles/testOVAS.dir/TemporalChangeFeature2.cpp.o
  /usr/local/include/vtk-5.9/vtkDataSetAttributes.h
  /usr/local/include/vtk-5.9/vtkDataSetTriangleFilter.h
  /usr/local/include/vtk-5.9/vtkDebugLeaksManager.h
+ /usr/local/include/vtk-5.9/vtkDelaunay2D.h
  /usr/local/include/vtk-5.9/vtkDirectedGraph.h
  /usr/local/include/vtk-5.9/vtkDirectedGraphAlgorithm.h
  /usr/local/include/vtk-5.9/vtkDoubleArray.h
  /usr/local/include/vtk-5.9/vtkEdgeListIterator.h
  /usr/local/include/vtk-5.9/vtkFieldData.h
+ /usr/local/include/vtk-5.9/vtkFloatArray.h
  /usr/local/include/vtk-5.9/vtkGeometryFilter.h
  /usr/local/include/vtk-5.9/vtkGraph.h
+ /usr/local/include/vtk-5.9/vtkHomogeneousTransform.h
  /usr/local/include/vtk-5.9/vtkIOStream.h
  /usr/local/include/vtk-5.9/vtkIOStreamFwd.h
  /usr/local/include/vtk-5.9/vtkIdList.h
+ /usr/local/include/vtk-5.9/vtkIdTypeArray.h
  /usr/local/include/vtk-5.9/vtkImageAlgorithm.h
  /usr/local/include/vtk-5.9/vtkImageData.h
  /usr/local/include/vtk-5.9/vtkImageWriter.h
@@ -2652,7 +3015,12 @@ CMakeFiles/testOVAS.dir/TemporalChangeFeature2.cpp.o
  /usr/local/include/vtk-5.9/vtkInformationKey.h
  /usr/local/include/vtk-5.9/vtkInformationVector.h
  /usr/local/include/vtk-5.9/vtkIntArray.h
+ /usr/local/include/vtk-5.9/vtkLineSource.h
+ /usr/local/include/vtk-5.9/vtkLinearTransform.h
+ /usr/local/include/vtk-5.9/vtkLookupTable.h
  /usr/local/include/vtk-5.9/vtkMapper.h
+ /usr/local/include/vtk-5.9/vtkMath.h
+ /usr/local/include/vtk-5.9/vtkMatrix4x4.h
  /usr/local/include/vtk-5.9/vtkMutableDirectedGraph.h
  /usr/local/include/vtk-5.9/vtkOStrStreamWrapper.h
  /usr/local/include/vtk-5.9/vtkOStreamWrapper.h
@@ -2666,6 +3034,7 @@ CMakeFiles/testOVAS.dir/TemporalChangeFeature2.cpp.o
  /usr/local/include/vtk-5.9/vtkPolyData.h
  /usr/local/include/vtk-5.9/vtkPolyDataAlgorithm.h
  /usr/local/include/vtk-5.9/vtkPolyDataMapper.h
+ /usr/local/include/vtk-5.9/vtkPolynomialSolversUnivariate.h
  /usr/local/include/vtk-5.9/vtkProp.h
  /usr/local/include/vtk-5.9/vtkProp3D.h
  /usr/local/include/vtk-5.9/vtkPropCollection.h
@@ -2689,6 +3058,8 @@ CMakeFiles/testOVAS.dir/TemporalChangeFeature2.cpp.o
  /usr/local/include/vtk-5.9/vtkTexture.h
  /usr/local/include/vtk-5.9/vtkThreshold.h
  /usr/local/include/vtk-5.9/vtkTimeStamp.h
+ /usr/local/include/vtk-5.9/vtkTransform.h
+ /usr/local/include/vtk-5.9/vtkTriangle.h
  /usr/local/include/vtk-5.9/vtkType.h
  /usr/local/include/vtk-5.9/vtkTypeTraits.h
  /usr/local/include/vtk-5.9/vtkUnicodeString.h
@@ -2699,6 +3070,7 @@ CMakeFiles/testOVAS.dir/TemporalChangeFeature2.cpp.o
  /usr/local/include/vtk-5.9/vtkVariant.h
  /usr/local/include/vtk-5.9/vtkVariantArray.h
  /usr/local/include/vtk-5.9/vtkVariantInlineOperators.h
+ /usr/local/include/vtk-5.9/vtkVertexGlyphFilter.h
  /usr/local/include/vtk-5.9/vtkViewport.h
  /usr/local/include/vtk-5.9/vtkVolume.h
  /usr/local/include/vtk-5.9/vtkVolumeCollection.h
@@ -2706,6 +3078,9 @@ CMakeFiles/testOVAS.dir/TemporalChangeFeature2.cpp.o
  /usr/local/include/vtk-5.9/vtkWin32Header.h
  /usr/local/include/vtk-5.9/vtkWindow.h
  /usr/local/include/vtk-5.9/vtkWindowToImageFilter.h
+ /usr/local/include/vtk-5.9/vtkXMLPolyDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLUnstructuredDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLWriter.h
  /usr/local/include/vtk-5.9/vtkstd/algorithm
  /usr/local/include/vtk-5.9/vtkstd/exception
  /usr/local/include/vtk-5.9/vtkstd/map
@@ -2737,6 +3112,7 @@ CMakeFiles/testOVAS.dir/TopologyFeature.cpp.o
  /usr/local/include/vtk-5.9/vtkAbstractArray.h
  /usr/local/include/vtk-5.9/vtkAbstractMapper.h
  /usr/local/include/vtk-5.9/vtkAbstractMapper3D.h
+ /usr/local/include/vtk-5.9/vtkAbstractTransform.h
  /usr/local/include/vtk-5.9/vtkActor.h
  /usr/local/include/vtk-5.9/vtkActorCollection.h
  /usr/local/include/vtk-5.9/vtkAlgorithm.h
@@ -2747,6 +3123,7 @@ CMakeFiles/testOVAS.dir/TopologyFeature.cpp.o
  /usr/local/include/vtk-5.9/vtkArrayIteratorTemplateImplicit.txx
  /usr/local/include/vtk-5.9/vtkCamera.h
  /usr/local/include/vtk-5.9/vtkCell.h
+ /usr/local/include/vtk-5.9/vtkCellArray.h
  /usr/local/include/vtk-5.9/vtkCellLinks.h
  /usr/local/include/vtk-5.9/vtkCellType.h
  /usr/local/include/vtk-5.9/vtkCellTypes.h
@@ -2766,18 +3143,24 @@ CMakeFiles/testOVAS.dir/TopologyFeature.cpp.o
  /usr/local/include/vtk-5.9/vtkDataSetAttributes.h
  /usr/local/include/vtk-5.9/vtkDataSetTriangleFilter.h
  /usr/local/include/vtk-5.9/vtkDebugLeaksManager.h
+ /usr/local/include/vtk-5.9/vtkDelaunay2D.h
  /usr/local/include/vtk-5.9/vtkDirectedGraph.h
  /usr/local/include/vtk-5.9/vtkDirectedGraphAlgorithm.h
  /usr/local/include/vtk-5.9/vtkDoubleArray.h
  /usr/local/include/vtk-5.9/vtkEdgeListIterator.h
  /usr/local/include/vtk-5.9/vtkFieldData.h
+ /usr/local/include/vtk-5.9/vtkFloatArray.h
  /usr/local/include/vtk-5.9/vtkGeometryFilter.h
  /usr/local/include/vtk-5.9/vtkGraph.h
+ /usr/local/include/vtk-5.9/vtkHomogeneousTransform.h
  /usr/local/include/vtk-5.9/vtkIOStream.h
  /usr/local/include/vtk-5.9/vtkIOStreamFwd.h
  /usr/local/include/vtk-5.9/vtkIdList.h
+ /usr/local/include/vtk-5.9/vtkIdTypeArray.h
  /usr/local/include/vtk-5.9/vtkImageAlgorithm.h
  /usr/local/include/vtk-5.9/vtkImageData.h
+ /usr/local/include/vtk-5.9/vtkImageResample.h
+ /usr/local/include/vtk-5.9/vtkImageReslice.h
  /usr/local/include/vtk-5.9/vtkImageWriter.h
  /usr/local/include/vtk-5.9/vtkIndent.h
  /usr/local/include/vtk-5.9/vtkInformation.h
@@ -2786,7 +3169,12 @@ CMakeFiles/testOVAS.dir/TopologyFeature.cpp.o
  /usr/local/include/vtk-5.9/vtkInformationKey.h
  /usr/local/include/vtk-5.9/vtkInformationVector.h
  /usr/local/include/vtk-5.9/vtkIntArray.h
+ /usr/local/include/vtk-5.9/vtkLineSource.h
+ /usr/local/include/vtk-5.9/vtkLinearTransform.h
+ /usr/local/include/vtk-5.9/vtkLookupTable.h
  /usr/local/include/vtk-5.9/vtkMapper.h
+ /usr/local/include/vtk-5.9/vtkMath.h
+ /usr/local/include/vtk-5.9/vtkMatrix4x4.h
  /usr/local/include/vtk-5.9/vtkMutableDirectedGraph.h
  /usr/local/include/vtk-5.9/vtkOStrStreamWrapper.h
  /usr/local/include/vtk-5.9/vtkOStreamWrapper.h
@@ -2800,6 +3188,7 @@ CMakeFiles/testOVAS.dir/TopologyFeature.cpp.o
  /usr/local/include/vtk-5.9/vtkPolyData.h
  /usr/local/include/vtk-5.9/vtkPolyDataAlgorithm.h
  /usr/local/include/vtk-5.9/vtkPolyDataMapper.h
+ /usr/local/include/vtk-5.9/vtkPolynomialSolversUnivariate.h
  /usr/local/include/vtk-5.9/vtkProp.h
  /usr/local/include/vtk-5.9/vtkProp3D.h
  /usr/local/include/vtk-5.9/vtkPropCollection.h
@@ -2821,8 +3210,11 @@ CMakeFiles/testOVAS.dir/TopologyFeature.cpp.o
  /usr/local/include/vtk-5.9/vtkSystemIncludes.h
  /usr/local/include/vtk-5.9/vtkTable.h
  /usr/local/include/vtk-5.9/vtkTexture.h
+ /usr/local/include/vtk-5.9/vtkThreadedImageAlgorithm.h
  /usr/local/include/vtk-5.9/vtkThreshold.h
  /usr/local/include/vtk-5.9/vtkTimeStamp.h
+ /usr/local/include/vtk-5.9/vtkTransform.h
+ /usr/local/include/vtk-5.9/vtkTriangle.h
  /usr/local/include/vtk-5.9/vtkType.h
  /usr/local/include/vtk-5.9/vtkTypeTraits.h
  /usr/local/include/vtk-5.9/vtkUnicodeString.h
@@ -2833,6 +3225,7 @@ CMakeFiles/testOVAS.dir/TopologyFeature.cpp.o
  /usr/local/include/vtk-5.9/vtkVariant.h
  /usr/local/include/vtk-5.9/vtkVariantArray.h
  /usr/local/include/vtk-5.9/vtkVariantInlineOperators.h
+ /usr/local/include/vtk-5.9/vtkVertexGlyphFilter.h
  /usr/local/include/vtk-5.9/vtkViewport.h
  /usr/local/include/vtk-5.9/vtkVolume.h
  /usr/local/include/vtk-5.9/vtkVolumeCollection.h
@@ -2840,6 +3233,9 @@ CMakeFiles/testOVAS.dir/TopologyFeature.cpp.o
  /usr/local/include/vtk-5.9/vtkWin32Header.h
  /usr/local/include/vtk-5.9/vtkWindow.h
  /usr/local/include/vtk-5.9/vtkWindowToImageFilter.h
+ /usr/local/include/vtk-5.9/vtkXMLPolyDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLUnstructuredDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLWriter.h
  /usr/local/include/vtk-5.9/vtkstd/algorithm
  /usr/local/include/vtk-5.9/vtkstd/exception
  /usr/local/include/vtk-5.9/vtkstd/map
@@ -2883,6 +3279,7 @@ CMakeFiles/testOVAS.dir/ViewEvaluator.cpp.o
  /usr/local/include/vtk-5.9/vtkAbstractArray.h
  /usr/local/include/vtk-5.9/vtkAbstractMapper.h
  /usr/local/include/vtk-5.9/vtkAbstractMapper3D.h
+ /usr/local/include/vtk-5.9/vtkAbstractTransform.h
  /usr/local/include/vtk-5.9/vtkActor.h
  /usr/local/include/vtk-5.9/vtkActorCollection.h
  /usr/local/include/vtk-5.9/vtkAlgorithm.h
@@ -2893,6 +3290,7 @@ CMakeFiles/testOVAS.dir/ViewEvaluator.cpp.o
  /usr/local/include/vtk-5.9/vtkArrayIteratorTemplateImplicit.txx
  /usr/local/include/vtk-5.9/vtkCamera.h
  /usr/local/include/vtk-5.9/vtkCell.h
+ /usr/local/include/vtk-5.9/vtkCellArray.h
  /usr/local/include/vtk-5.9/vtkCellLinks.h
  /usr/local/include/vtk-5.9/vtkCellType.h
  /usr/local/include/vtk-5.9/vtkCellTypes.h
@@ -2912,18 +3310,24 @@ CMakeFiles/testOVAS.dir/ViewEvaluator.cpp.o
  /usr/local/include/vtk-5.9/vtkDataSetAttributes.h
  /usr/local/include/vtk-5.9/vtkDataSetTriangleFilter.h
  /usr/local/include/vtk-5.9/vtkDebugLeaksManager.h
+ /usr/local/include/vtk-5.9/vtkDelaunay2D.h
  /usr/local/include/vtk-5.9/vtkDirectedGraph.h
  /usr/local/include/vtk-5.9/vtkDirectedGraphAlgorithm.h
  /usr/local/include/vtk-5.9/vtkDoubleArray.h
  /usr/local/include/vtk-5.9/vtkEdgeListIterator.h
  /usr/local/include/vtk-5.9/vtkFieldData.h
+ /usr/local/include/vtk-5.9/vtkFloatArray.h
  /usr/local/include/vtk-5.9/vtkGeometryFilter.h
  /usr/local/include/vtk-5.9/vtkGraph.h
+ /usr/local/include/vtk-5.9/vtkHomogeneousTransform.h
  /usr/local/include/vtk-5.9/vtkIOStream.h
  /usr/local/include/vtk-5.9/vtkIOStreamFwd.h
  /usr/local/include/vtk-5.9/vtkIdList.h
+ /usr/local/include/vtk-5.9/vtkIdTypeArray.h
  /usr/local/include/vtk-5.9/vtkImageAlgorithm.h
  /usr/local/include/vtk-5.9/vtkImageData.h
+ /usr/local/include/vtk-5.9/vtkImageResample.h
+ /usr/local/include/vtk-5.9/vtkImageReslice.h
  /usr/local/include/vtk-5.9/vtkImageWriter.h
  /usr/local/include/vtk-5.9/vtkIndent.h
  /usr/local/include/vtk-5.9/vtkInformation.h
@@ -2932,7 +3336,12 @@ CMakeFiles/testOVAS.dir/ViewEvaluator.cpp.o
  /usr/local/include/vtk-5.9/vtkInformationKey.h
  /usr/local/include/vtk-5.9/vtkInformationVector.h
  /usr/local/include/vtk-5.9/vtkIntArray.h
+ /usr/local/include/vtk-5.9/vtkLineSource.h
+ /usr/local/include/vtk-5.9/vtkLinearTransform.h
+ /usr/local/include/vtk-5.9/vtkLookupTable.h
  /usr/local/include/vtk-5.9/vtkMapper.h
+ /usr/local/include/vtk-5.9/vtkMath.h
+ /usr/local/include/vtk-5.9/vtkMatrix4x4.h
  /usr/local/include/vtk-5.9/vtkMutableDirectedGraph.h
  /usr/local/include/vtk-5.9/vtkOStrStreamWrapper.h
  /usr/local/include/vtk-5.9/vtkOStreamWrapper.h
@@ -2946,6 +3355,7 @@ CMakeFiles/testOVAS.dir/ViewEvaluator.cpp.o
  /usr/local/include/vtk-5.9/vtkPolyData.h
  /usr/local/include/vtk-5.9/vtkPolyDataAlgorithm.h
  /usr/local/include/vtk-5.9/vtkPolyDataMapper.h
+ /usr/local/include/vtk-5.9/vtkPolynomialSolversUnivariate.h
  /usr/local/include/vtk-5.9/vtkProp.h
  /usr/local/include/vtk-5.9/vtkProp3D.h
  /usr/local/include/vtk-5.9/vtkPropCollection.h
@@ -2967,8 +3377,11 @@ CMakeFiles/testOVAS.dir/ViewEvaluator.cpp.o
  /usr/local/include/vtk-5.9/vtkSystemIncludes.h
  /usr/local/include/vtk-5.9/vtkTable.h
  /usr/local/include/vtk-5.9/vtkTexture.h
+ /usr/local/include/vtk-5.9/vtkThreadedImageAlgorithm.h
  /usr/local/include/vtk-5.9/vtkThreshold.h
  /usr/local/include/vtk-5.9/vtkTimeStamp.h
+ /usr/local/include/vtk-5.9/vtkTransform.h
+ /usr/local/include/vtk-5.9/vtkTriangle.h
  /usr/local/include/vtk-5.9/vtkType.h
  /usr/local/include/vtk-5.9/vtkTypeTraits.h
  /usr/local/include/vtk-5.9/vtkUnicodeString.h
@@ -2979,6 +3392,7 @@ CMakeFiles/testOVAS.dir/ViewEvaluator.cpp.o
  /usr/local/include/vtk-5.9/vtkVariant.h
  /usr/local/include/vtk-5.9/vtkVariantArray.h
  /usr/local/include/vtk-5.9/vtkVariantInlineOperators.h
+ /usr/local/include/vtk-5.9/vtkVertexGlyphFilter.h
  /usr/local/include/vtk-5.9/vtkViewport.h
  /usr/local/include/vtk-5.9/vtkVolume.h
  /usr/local/include/vtk-5.9/vtkVolumeCollection.h
@@ -2986,6 +3400,9 @@ CMakeFiles/testOVAS.dir/ViewEvaluator.cpp.o
  /usr/local/include/vtk-5.9/vtkWin32Header.h
  /usr/local/include/vtk-5.9/vtkWindow.h
  /usr/local/include/vtk-5.9/vtkWindowToImageFilter.h
+ /usr/local/include/vtk-5.9/vtkXMLPolyDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLUnstructuredDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLWriter.h
  /usr/local/include/vtk-5.9/vtkstd/algorithm
  /usr/local/include/vtk-5.9/vtkstd/exception
  /usr/local/include/vtk-5.9/vtkstd/map
@@ -3076,6 +3493,153 @@ CMakeFiles/testOVAS.dir/ViewEvaluator.cpp.o
  /usr/local/include/vxl/vcl/win32-vc70/vcl_cmath.h
  /usr/local/include/vxl/vcl/win32-vc70/vcl_complex.h
  /usr/local/include/vxl/vcl/win32-vc70/vcl_cstdlib.h
+CMakeFiles/testOVAS.dir/ViewPathClusterFinder.cpp.o
+ /home/zoizoi/psyforge/OVAS/GeoPoint.h
+ /home/zoizoi/psyforge/OVAS/GeoSphere.h
+ /home/zoizoi/psyforge/OVAS/OVASControl.h
+ /home/zoizoi/psyforge/OVAS/ViewPathClusterFinder.cpp
+ /home/zoizoi/psyforge/OVAS/ViewPathClusterFinder.h
+ /home/zoizoi/psyforge/OVAS/vtkEssentials.h
+ /usr/local/include/vtk-5.9/vtkABI.h
+ /usr/local/include/vtk-5.9/vtkAbstractArray.h
+ /usr/local/include/vtk-5.9/vtkAbstractMapper.h
+ /usr/local/include/vtk-5.9/vtkAbstractMapper3D.h
+ /usr/local/include/vtk-5.9/vtkAbstractTransform.h
+ /usr/local/include/vtk-5.9/vtkActor.h
+ /usr/local/include/vtk-5.9/vtkActorCollection.h
+ /usr/local/include/vtk-5.9/vtkAlgorithm.h
+ /usr/local/include/vtk-5.9/vtkAppendFilter.h
+ /usr/local/include/vtk-5.9/vtkArrayIterator.h
+ /usr/local/include/vtk-5.9/vtkArrayIteratorTemplate.h
+ /usr/local/include/vtk-5.9/vtkArrayIteratorTemplate.txx
+ /usr/local/include/vtk-5.9/vtkArrayIteratorTemplateImplicit.txx
+ /usr/local/include/vtk-5.9/vtkCamera.h
+ /usr/local/include/vtk-5.9/vtkCell.h
+ /usr/local/include/vtk-5.9/vtkCellArray.h
+ /usr/local/include/vtk-5.9/vtkCellLinks.h
+ /usr/local/include/vtk-5.9/vtkCellType.h
+ /usr/local/include/vtk-5.9/vtkCellTypes.h
+ /usr/local/include/vtk-5.9/vtkCollection.h
+ /usr/local/include/vtk-5.9/vtkCommonInformationKeyManager.h
+ /usr/local/include/vtk-5.9/vtkCompositeDataSet.h
+ /usr/local/include/vtk-5.9/vtkConeSource.h
+ /usr/local/include/vtk-5.9/vtkConfigure.h
+ /usr/local/include/vtk-5.9/vtkContourFilter.h
+ /usr/local/include/vtk-5.9/vtkContourValues.h
+ /usr/local/include/vtk-5.9/vtkDataArray.h
+ /usr/local/include/vtk-5.9/vtkDataArrayTemplate.h
+ /usr/local/include/vtk-5.9/vtkDataArrayTemplate.txx
+ /usr/local/include/vtk-5.9/vtkDataArrayTemplateImplicit.txx
+ /usr/local/include/vtk-5.9/vtkDataObject.h
+ /usr/local/include/vtk-5.9/vtkDataObjectAlgorithm.h
+ /usr/local/include/vtk-5.9/vtkDataSet.h
+ /usr/local/include/vtk-5.9/vtkDataSetAttributes.h
+ /usr/local/include/vtk-5.9/vtkDataSetTriangleFilter.h
+ /usr/local/include/vtk-5.9/vtkDebugLeaksManager.h
+ /usr/local/include/vtk-5.9/vtkDelaunay2D.h
+ /usr/local/include/vtk-5.9/vtkDirectedGraph.h
+ /usr/local/include/vtk-5.9/vtkDirectedGraphAlgorithm.h
+ /usr/local/include/vtk-5.9/vtkDoubleArray.h
+ /usr/local/include/vtk-5.9/vtkEdgeListIterator.h
+ /usr/local/include/vtk-5.9/vtkFieldData.h
+ /usr/local/include/vtk-5.9/vtkFloatArray.h
+ /usr/local/include/vtk-5.9/vtkGeometryFilter.h
+ /usr/local/include/vtk-5.9/vtkGraph.h
+ /usr/local/include/vtk-5.9/vtkHomogeneousTransform.h
+ /usr/local/include/vtk-5.9/vtkIOStream.h
+ /usr/local/include/vtk-5.9/vtkIOStreamFwd.h
+ /usr/local/include/vtk-5.9/vtkIdList.h
+ /usr/local/include/vtk-5.9/vtkIdTypeArray.h
+ /usr/local/include/vtk-5.9/vtkImageAlgorithm.h
+ /usr/local/include/vtk-5.9/vtkImageData.h
+ /usr/local/include/vtk-5.9/vtkImageWriter.h
+ /usr/local/include/vtk-5.9/vtkIndent.h
+ /usr/local/include/vtk-5.9/vtkInformation.h
+ /usr/local/include/vtk-5.9/vtkInformationDoubleVectorKey.h
+ /usr/local/include/vtk-5.9/vtkInformationInformationVectorKey.h
+ /usr/local/include/vtk-5.9/vtkInformationKey.h
+ /usr/local/include/vtk-5.9/vtkInformationVector.h
+ /usr/local/include/vtk-5.9/vtkIntArray.h
+ /usr/local/include/vtk-5.9/vtkInteractorObserver.h
+ /usr/local/include/vtk-5.9/vtkInteractorStyle.h
+ /usr/local/include/vtk-5.9/vtkInteractorStyleTrackballCamera.h
+ /usr/local/include/vtk-5.9/vtkKMeansStatistics.h
+ /usr/local/include/vtk-5.9/vtkLineSource.h
+ /usr/local/include/vtk-5.9/vtkLinearTransform.h
+ /usr/local/include/vtk-5.9/vtkLookupTable.h
+ /usr/local/include/vtk-5.9/vtkMapper.h
+ /usr/local/include/vtk-5.9/vtkMath.h
+ /usr/local/include/vtk-5.9/vtkMatrix4x4.h
+ /usr/local/include/vtk-5.9/vtkMultiBlockDataSet.h
+ /usr/local/include/vtk-5.9/vtkMutableDirectedGraph.h
+ /usr/local/include/vtk-5.9/vtkOStrStreamWrapper.h
+ /usr/local/include/vtk-5.9/vtkOStreamWrapper.h
+ /usr/local/include/vtk-5.9/vtkObject.h
+ /usr/local/include/vtk-5.9/vtkObjectBase.h
+ /usr/local/include/vtk-5.9/vtkObjectFactory.h
+ /usr/local/include/vtk-5.9/vtkPNGWriter.h
+ /usr/local/include/vtk-5.9/vtkPointData.h
+ /usr/local/include/vtk-5.9/vtkPointSet.h
+ /usr/local/include/vtk-5.9/vtkPoints.h
+ /usr/local/include/vtk-5.9/vtkPolyData.h
+ /usr/local/include/vtk-5.9/vtkPolyDataAlgorithm.h
+ /usr/local/include/vtk-5.9/vtkPolyDataMapper.h
+ /usr/local/include/vtk-5.9/vtkPolynomialSolversUnivariate.h
+ /usr/local/include/vtk-5.9/vtkProp.h
+ /usr/local/include/vtk-5.9/vtkProp3D.h
+ /usr/local/include/vtk-5.9/vtkPropCollection.h
+ /usr/local/include/vtk-5.9/vtkProperty.h
+ /usr/local/include/vtk-5.9/vtkReebGraph.h
+ /usr/local/include/vtk-5.9/vtkReebGraphSimplificationFilter.h
+ /usr/local/include/vtk-5.9/vtkReebGraphVolumeSkeletonFilter.h
+ /usr/local/include/vtk-5.9/vtkRenderWindow.h
+ /usr/local/include/vtk-5.9/vtkRenderWindowInteractor.h
+ /usr/local/include/vtk-5.9/vtkRenderer.h
+ /usr/local/include/vtk-5.9/vtkScalarsToColors.h
+ /usr/local/include/vtk-5.9/vtkSetGet.h
+ /usr/local/include/vtk-5.9/vtkSmartPointer.h
+ /usr/local/include/vtk-5.9/vtkSmartPointerBase.h
+ /usr/local/include/vtk-5.9/vtkSortDataArray.h
+ /usr/local/include/vtk-5.9/vtkSphereSource.h
+ /usr/local/include/vtk-5.9/vtkStatisticsAlgorithm.h
+ /usr/local/include/vtk-5.9/vtkStdString.h
+ /usr/local/include/vtk-5.9/vtkStructuredData.h
+ /usr/local/include/vtk-5.9/vtkSystemIncludes.h
+ /usr/local/include/vtk-5.9/vtkTable.h
+ /usr/local/include/vtk-5.9/vtkTableAlgorithm.h
+ /usr/local/include/vtk-5.9/vtkTexture.h
+ /usr/local/include/vtk-5.9/vtkThreshold.h
+ /usr/local/include/vtk-5.9/vtkTimeStamp.h
+ /usr/local/include/vtk-5.9/vtkTransform.h
+ /usr/local/include/vtk-5.9/vtkTriangle.h
+ /usr/local/include/vtk-5.9/vtkType.h
+ /usr/local/include/vtk-5.9/vtkTypeTraits.h
+ /usr/local/include/vtk-5.9/vtkUnicodeString.h
+ /usr/local/include/vtk-5.9/vtkUnsignedCharArray.h
+ /usr/local/include/vtk-5.9/vtkUnstructuredGrid.h
+ /usr/local/include/vtk-5.9/vtkUnstructuredGridAlgorithm.h
+ /usr/local/include/vtk-5.9/vtkUnstructuredGridToReebGraphFilter.h
+ /usr/local/include/vtk-5.9/vtkVariant.h
+ /usr/local/include/vtk-5.9/vtkVariantArray.h
+ /usr/local/include/vtk-5.9/vtkVariantInlineOperators.h
+ /usr/local/include/vtk-5.9/vtkVertexGlyphFilter.h
+ /usr/local/include/vtk-5.9/vtkViewport.h
+ /usr/local/include/vtk-5.9/vtkVolume.h
+ /usr/local/include/vtk-5.9/vtkVolumeCollection.h
+ /usr/local/include/vtk-5.9/vtkWeakPointerBase.h
+ /usr/local/include/vtk-5.9/vtkWin32Header.h
+ /usr/local/include/vtk-5.9/vtkWindow.h
+ /usr/local/include/vtk-5.9/vtkWindowToImageFilter.h
+ /usr/local/include/vtk-5.9/vtkXMLPolyDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLUnstructuredDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLWriter.h
+ /usr/local/include/vtk-5.9/vtkstd/algorithm
+ /usr/local/include/vtk-5.9/vtkstd/exception
+ /usr/local/include/vtk-5.9/vtkstd/map
+ /usr/local/include/vtk-5.9/vtkstd/new
+ /usr/local/include/vtk-5.9/vtkstd/string
+ /usr/local/include/vtk-5.9/vtkstd/utility
+ /usr/local/include/vtk-5.9/vtkstd/vector
 CMakeFiles/testOVAS.dir/Volume4D.cpp.o
  /home/zoizoi/psyforge/OVAS/CriticalPoint.h
  /home/zoizoi/psyforge/OVAS/Data.h
@@ -3095,155 +3659,7 @@ CMakeFiles/testOVAS.dir/Volume4D.cpp.o
  /usr/local/include/vtk-5.9/vtkAbstractArray.h
  /usr/local/include/vtk-5.9/vtkAbstractMapper.h
  /usr/local/include/vtk-5.9/vtkAbstractMapper3D.h
- /usr/local/include/vtk-5.9/vtkActor.h
- /usr/local/include/vtk-5.9/vtkActorCollection.h
- /usr/local/include/vtk-5.9/vtkAlgorithm.h
- /usr/local/include/vtk-5.9/vtkAppendFilter.h
- /usr/local/include/vtk-5.9/vtkArrayIterator.h
- /usr/local/include/vtk-5.9/vtkArrayIteratorTemplate.h
- /usr/local/include/vtk-5.9/vtkArrayIteratorTemplate.txx
- /usr/local/include/vtk-5.9/vtkArrayIteratorTemplateImplicit.txx
- /usr/local/include/vtk-5.9/vtkCamera.h
- /usr/local/include/vtk-5.9/vtkCell.h
- /usr/local/include/vtk-5.9/vtkCellLinks.h
- /usr/local/include/vtk-5.9/vtkCellType.h
- /usr/local/include/vtk-5.9/vtkCellTypes.h
- /usr/local/include/vtk-5.9/vtkCollection.h
- /usr/local/include/vtk-5.9/vtkCommonInformationKeyManager.h
- /usr/local/include/vtk-5.9/vtkConeSource.h
- /usr/local/include/vtk-5.9/vtkConfigure.h
- /usr/local/include/vtk-5.9/vtkContourFilter.h
- /usr/local/include/vtk-5.9/vtkContourValues.h
- /usr/local/include/vtk-5.9/vtkDataArray.h
- /usr/local/include/vtk-5.9/vtkDataArrayTemplate.h
- /usr/local/include/vtk-5.9/vtkDataArrayTemplate.txx
- /usr/local/include/vtk-5.9/vtkDataArrayTemplateImplicit.txx
- /usr/local/include/vtk-5.9/vtkDataObject.h
- /usr/local/include/vtk-5.9/vtkDataObjectAlgorithm.h
- /usr/local/include/vtk-5.9/vtkDataSet.h
- /usr/local/include/vtk-5.9/vtkDataSetAttributes.h
- /usr/local/include/vtk-5.9/vtkDataSetTriangleFilter.h
- /usr/local/include/vtk-5.9/vtkDebugLeaksManager.h
- /usr/local/include/vtk-5.9/vtkDirectedGraph.h
- /usr/local/include/vtk-5.9/vtkDirectedGraphAlgorithm.h
- /usr/local/include/vtk-5.9/vtkDoubleArray.h
- /usr/local/include/vtk-5.9/vtkEdgeListIterator.h
- /usr/local/include/vtk-5.9/vtkFieldData.h
- /usr/local/include/vtk-5.9/vtkGeometryFilter.h
- /usr/local/include/vtk-5.9/vtkGraph.h
- /usr/local/include/vtk-5.9/vtkIOStream.h
- /usr/local/include/vtk-5.9/vtkIOStreamFwd.h
- /usr/local/include/vtk-5.9/vtkIdList.h
- /usr/local/include/vtk-5.9/vtkImageAlgorithm.h
- /usr/local/include/vtk-5.9/vtkImageData.h
- /usr/local/include/vtk-5.9/vtkImageWriter.h
- /usr/local/include/vtk-5.9/vtkIndent.h
- /usr/local/include/vtk-5.9/vtkInformation.h
- /usr/local/include/vtk-5.9/vtkInformationDoubleVectorKey.h
- /usr/local/include/vtk-5.9/vtkInformationInformationVectorKey.h
- /usr/local/include/vtk-5.9/vtkInformationKey.h
- /usr/local/include/vtk-5.9/vtkInformationVector.h
- /usr/local/include/vtk-5.9/vtkIntArray.h
- /usr/local/include/vtk-5.9/vtkMapper.h
- /usr/local/include/vtk-5.9/vtkMutableDirectedGraph.h
- /usr/local/include/vtk-5.9/vtkOStrStreamWrapper.h
- /usr/local/include/vtk-5.9/vtkOStreamWrapper.h
- /usr/local/include/vtk-5.9/vtkObject.h
- /usr/local/include/vtk-5.9/vtkObjectBase.h
- /usr/local/include/vtk-5.9/vtkObjectFactory.h
- /usr/local/include/vtk-5.9/vtkPNGWriter.h
- /usr/local/include/vtk-5.9/vtkPointData.h
- /usr/local/include/vtk-5.9/vtkPointSet.h
- /usr/local/include/vtk-5.9/vtkPoints.h
- /usr/local/include/vtk-5.9/vtkPolyData.h
- /usr/local/include/vtk-5.9/vtkPolyDataAlgorithm.h
- /usr/local/include/vtk-5.9/vtkPolyDataMapper.h
- /usr/local/include/vtk-5.9/vtkProp.h
- /usr/local/include/vtk-5.9/vtkProp3D.h
- /usr/local/include/vtk-5.9/vtkPropCollection.h
- /usr/local/include/vtk-5.9/vtkProperty.h
- /usr/local/include/vtk-5.9/vtkReebGraph.h
- /usr/local/include/vtk-5.9/vtkReebGraphSimplificationFilter.h
- /usr/local/include/vtk-5.9/vtkReebGraphVolumeSkeletonFilter.h
- /usr/local/include/vtk-5.9/vtkRenderWindow.h
- /usr/local/include/vtk-5.9/vtkRenderWindowInteractor.h
- /usr/local/include/vtk-5.9/vtkRenderer.h
- /usr/local/include/vtk-5.9/vtkScalarsToColors.h
- /usr/local/include/vtk-5.9/vtkSetGet.h
- /usr/local/include/vtk-5.9/vtkSmartPointer.h
- /usr/local/include/vtk-5.9/vtkSmartPointerBase.h
- /usr/local/include/vtk-5.9/vtkSortDataArray.h
- /usr/local/include/vtk-5.9/vtkSphereSource.h
- /usr/local/include/vtk-5.9/vtkStdString.h
- /usr/local/include/vtk-5.9/vtkStructuredData.h
- /usr/local/include/vtk-5.9/vtkSystemIncludes.h
- /usr/local/include/vtk-5.9/vtkTable.h
- /usr/local/include/vtk-5.9/vtkTexture.h
- /usr/local/include/vtk-5.9/vtkThreshold.h
- /usr/local/include/vtk-5.9/vtkTimeStamp.h
- /usr/local/include/vtk-5.9/vtkType.h
- /usr/local/include/vtk-5.9/vtkTypeTraits.h
- /usr/local/include/vtk-5.9/vtkUnicodeString.h
- /usr/local/include/vtk-5.9/vtkUnsignedCharArray.h
- /usr/local/include/vtk-5.9/vtkUnstructuredGrid.h
- /usr/local/include/vtk-5.9/vtkUnstructuredGridAlgorithm.h
- /usr/local/include/vtk-5.9/vtkUnstructuredGridToReebGraphFilter.h
- /usr/local/include/vtk-5.9/vtkVariant.h
- /usr/local/include/vtk-5.9/vtkVariantArray.h
- /usr/local/include/vtk-5.9/vtkVariantInlineOperators.h
- /usr/local/include/vtk-5.9/vtkViewport.h
- /usr/local/include/vtk-5.9/vtkVolume.h
- /usr/local/include/vtk-5.9/vtkVolumeCollection.h
- /usr/local/include/vtk-5.9/vtkWeakPointerBase.h
- /usr/local/include/vtk-5.9/vtkWin32Header.h
- /usr/local/include/vtk-5.9/vtkWindow.h
- /usr/local/include/vtk-5.9/vtkWindowToImageFilter.h
- /usr/local/include/vtk-5.9/vtkstd/algorithm
- /usr/local/include/vtk-5.9/vtkstd/exception
- /usr/local/include/vtk-5.9/vtkstd/map
- /usr/local/include/vtk-5.9/vtkstd/new
- /usr/local/include/vtk-5.9/vtkstd/string
- /usr/local/include/vtk-5.9/vtkstd/utility
- /usr/local/include/vtk-5.9/vtkstd/vector
-CMakeFiles/testOVAS.dir/abstractFeature.cpp.o
- /home/zoizoi/psyforge/OVAS/abstractFeature.cpp
- /home/zoizoi/psyforge/OVAS/abstractFeature.h
-CMakeFiles/testOVAS.dir/testOVAS.cpp.o
- /home/zoizoi/psyforge/OVAS/Analyser3D.h
- /home/zoizoi/psyforge/OVAS/Analyser4D.h
- /home/zoizoi/psyforge/OVAS/CriticalPoint.h
- /home/zoizoi/psyforge/OVAS/Data.h
- /home/zoizoi/psyforge/OVAS/Feature.h
- /home/zoizoi/psyforge/OVAS/FeatureWeights.h
- /home/zoizoi/psyforge/OVAS/FlyingSaucersVol4D.h
- /home/zoizoi/psyforge/OVAS/FrameBuffer.h
- /home/zoizoi/psyforge/OVAS/GeoPoint.h
- /home/zoizoi/psyforge/OVAS/GeoSequence.h
- /home/zoizoi/psyforge/OVAS/GeoSphere.h
- /home/zoizoi/psyforge/OVAS/Global.h
- /home/zoizoi/psyforge/OVAS/ImplicitVolume4D.h
- /home/zoizoi/psyforge/OVAS/LoadedVol4D.h
- /home/zoizoi/psyforge/OVAS/Mesh.h
- /home/zoizoi/psyforge/OVAS/MetaballsVol4D.h
- /home/zoizoi/psyforge/OVAS/MovingAAElipsoid.h
- /home/zoizoi/psyforge/OVAS/OVASControl.h
- /home/zoizoi/psyforge/OVAS/StepToParamConverter.h
- /home/zoizoi/psyforge/OVAS/TemporalChangeFeature.h
- /home/zoizoi/psyforge/OVAS/TemporalChangeFeature2.h
- /home/zoizoi/psyforge/OVAS/ViewEvaluator.h
- /home/zoizoi/psyforge/OVAS/Volume4D.h
- /home/zoizoi/psyforge/OVAS/arraytools.h
- /home/zoizoi/psyforge/OVAS/testOVAS.cpp
- /home/zoizoi/psyforge/OVAS/testVol4D.h
- /home/zoizoi/psyforge/OVAS/vtkEssentials.h
- /home/zoizoi/psyforge/woven/libtourtre_v15/libtourtre/include/ctArc.h
- /home/zoizoi/psyforge/woven/libtourtre_v15/libtourtre/include/ctBranch.h
- /home/zoizoi/psyforge/woven/libtourtre_v15/libtourtre/include/ctNode.h
- /home/zoizoi/psyforge/woven/libtourtre_v15/libtourtre/include/tourtre.h
- /usr/local/include/vtk-5.9/vtkABI.h
- /usr/local/include/vtk-5.9/vtkAbstractArray.h
- /usr/local/include/vtk-5.9/vtkAbstractMapper.h
- /usr/local/include/vtk-5.9/vtkAbstractMapper3D.h
+ /usr/local/include/vtk-5.9/vtkAbstractTransform.h
  /usr/local/include/vtk-5.9/vtkActor.h
  /usr/local/include/vtk-5.9/vtkActorCollection.h
  /usr/local/include/vtk-5.9/vtkAlgorithm.h
@@ -3274,19 +3690,24 @@ CMakeFiles/testOVAS.dir/testOVAS.cpp.o
  /usr/local/include/vtk-5.9/vtkDataSetAttributes.h
  /usr/local/include/vtk-5.9/vtkDataSetTriangleFilter.h
  /usr/local/include/vtk-5.9/vtkDebugLeaksManager.h
+ /usr/local/include/vtk-5.9/vtkDelaunay2D.h
  /usr/local/include/vtk-5.9/vtkDirectedGraph.h
  /usr/local/include/vtk-5.9/vtkDirectedGraphAlgorithm.h
  /usr/local/include/vtk-5.9/vtkDoubleArray.h
  /usr/local/include/vtk-5.9/vtkEdgeListIterator.h
  /usr/local/include/vtk-5.9/vtkFieldData.h
+ /usr/local/include/vtk-5.9/vtkFloatArray.h
  /usr/local/include/vtk-5.9/vtkGeometryFilter.h
  /usr/local/include/vtk-5.9/vtkGraph.h
+ /usr/local/include/vtk-5.9/vtkHomogeneousTransform.h
  /usr/local/include/vtk-5.9/vtkIOStream.h
  /usr/local/include/vtk-5.9/vtkIOStreamFwd.h
  /usr/local/include/vtk-5.9/vtkIdList.h
  /usr/local/include/vtk-5.9/vtkIdTypeArray.h
  /usr/local/include/vtk-5.9/vtkImageAlgorithm.h
  /usr/local/include/vtk-5.9/vtkImageData.h
+ /usr/local/include/vtk-5.9/vtkImageResample.h
+ /usr/local/include/vtk-5.9/vtkImageReslice.h
  /usr/local/include/vtk-5.9/vtkImageWriter.h
  /usr/local/include/vtk-5.9/vtkIndent.h
  /usr/local/include/vtk-5.9/vtkInformation.h
@@ -3295,7 +3716,12 @@ CMakeFiles/testOVAS.dir/testOVAS.cpp.o
  /usr/local/include/vtk-5.9/vtkInformationKey.h
  /usr/local/include/vtk-5.9/vtkInformationVector.h
  /usr/local/include/vtk-5.9/vtkIntArray.h
+ /usr/local/include/vtk-5.9/vtkLineSource.h
+ /usr/local/include/vtk-5.9/vtkLinearTransform.h
+ /usr/local/include/vtk-5.9/vtkLookupTable.h
  /usr/local/include/vtk-5.9/vtkMapper.h
+ /usr/local/include/vtk-5.9/vtkMath.h
+ /usr/local/include/vtk-5.9/vtkMatrix4x4.h
  /usr/local/include/vtk-5.9/vtkMutableDirectedGraph.h
  /usr/local/include/vtk-5.9/vtkOStrStreamWrapper.h
  /usr/local/include/vtk-5.9/vtkOStreamWrapper.h
@@ -3309,6 +3735,7 @@ CMakeFiles/testOVAS.dir/testOVAS.cpp.o
  /usr/local/include/vtk-5.9/vtkPolyData.h
  /usr/local/include/vtk-5.9/vtkPolyDataAlgorithm.h
  /usr/local/include/vtk-5.9/vtkPolyDataMapper.h
+ /usr/local/include/vtk-5.9/vtkPolynomialSolversUnivariate.h
  /usr/local/include/vtk-5.9/vtkProp.h
  /usr/local/include/vtk-5.9/vtkProp3D.h
  /usr/local/include/vtk-5.9/vtkPropCollection.h
@@ -3330,8 +3757,11 @@ CMakeFiles/testOVAS.dir/testOVAS.cpp.o
  /usr/local/include/vtk-5.9/vtkSystemIncludes.h
  /usr/local/include/vtk-5.9/vtkTable.h
  /usr/local/include/vtk-5.9/vtkTexture.h
+ /usr/local/include/vtk-5.9/vtkThreadedImageAlgorithm.h
  /usr/local/include/vtk-5.9/vtkThreshold.h
  /usr/local/include/vtk-5.9/vtkTimeStamp.h
+ /usr/local/include/vtk-5.9/vtkTransform.h
+ /usr/local/include/vtk-5.9/vtkTriangle.h
  /usr/local/include/vtk-5.9/vtkType.h
  /usr/local/include/vtk-5.9/vtkTypeTraits.h
  /usr/local/include/vtk-5.9/vtkUnicodeString.h
@@ -3342,6 +3772,7 @@ CMakeFiles/testOVAS.dir/testOVAS.cpp.o
  /usr/local/include/vtk-5.9/vtkVariant.h
  /usr/local/include/vtk-5.9/vtkVariantArray.h
  /usr/local/include/vtk-5.9/vtkVariantInlineOperators.h
+ /usr/local/include/vtk-5.9/vtkVertexGlyphFilter.h
  /usr/local/include/vtk-5.9/vtkViewport.h
  /usr/local/include/vtk-5.9/vtkVolume.h
  /usr/local/include/vtk-5.9/vtkVolumeCollection.h
@@ -3349,6 +3780,185 @@ CMakeFiles/testOVAS.dir/testOVAS.cpp.o
  /usr/local/include/vtk-5.9/vtkWin32Header.h
  /usr/local/include/vtk-5.9/vtkWindow.h
  /usr/local/include/vtk-5.9/vtkWindowToImageFilter.h
+ /usr/local/include/vtk-5.9/vtkXMLPolyDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLUnstructuredDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLWriter.h
+ /usr/local/include/vtk-5.9/vtkstd/algorithm
+ /usr/local/include/vtk-5.9/vtkstd/exception
+ /usr/local/include/vtk-5.9/vtkstd/map
+ /usr/local/include/vtk-5.9/vtkstd/new
+ /usr/local/include/vtk-5.9/vtkstd/string
+ /usr/local/include/vtk-5.9/vtkstd/utility
+ /usr/local/include/vtk-5.9/vtkstd/vector
+CMakeFiles/testOVAS.dir/testOVAS.cpp.o
+ /home/zoizoi/psyforge/OVAS/Analyser3D.h
+ /home/zoizoi/psyforge/OVAS/Analyser4D.h
+ /home/zoizoi/psyforge/OVAS/CriticalPoint.h
+ /home/zoizoi/psyforge/OVAS/Data.h
+ /home/zoizoi/psyforge/OVAS/Feature.h
+ /home/zoizoi/psyforge/OVAS/FeatureWeights.h
+ /home/zoizoi/psyforge/OVAS/FlyingSaucersVol4D.h
+ /home/zoizoi/psyforge/OVAS/FrameBuffer.h
+ /home/zoizoi/psyforge/OVAS/GeoPoint.h
+ /home/zoizoi/psyforge/OVAS/GeoSequence.h
+ /home/zoizoi/psyforge/OVAS/GeoSphere.h
+ /home/zoizoi/psyforge/OVAS/Global.h
+ /home/zoizoi/psyforge/OVAS/ImplicitVolume4D.h
+ /home/zoizoi/psyforge/OVAS/LoadedVol4D.h
+ /home/zoizoi/psyforge/OVAS/Mesh.h
+ /home/zoizoi/psyforge/OVAS/MetaballsVol4D.h
+ /home/zoizoi/psyforge/OVAS/MovingAAElipsoid.h
+ /home/zoizoi/psyforge/OVAS/OVASControl.h
+ /home/zoizoi/psyforge/OVAS/StepToParamConverter.h
+ /home/zoizoi/psyforge/OVAS/TemporalChangeFeature.h
+ /home/zoizoi/psyforge/OVAS/TemporalChangeFeature2.h
+ /home/zoizoi/psyforge/OVAS/ViewEvaluator.h
+ /home/zoizoi/psyforge/OVAS/ViewPathClusterFinder.h
+ /home/zoizoi/psyforge/OVAS/Volume4D.h
+ /home/zoizoi/psyforge/OVAS/arraytools.h
+ /home/zoizoi/psyforge/OVAS/testOVAS.cpp
+ /home/zoizoi/psyforge/OVAS/testVol4D.h
+ /home/zoizoi/psyforge/OVAS/vtkEssentials.h
+ /home/zoizoi/psyforge/woven/libtourtre_v15/libtourtre/include/ctArc.h
+ /home/zoizoi/psyforge/woven/libtourtre_v15/libtourtre/include/ctBranch.h
+ /home/zoizoi/psyforge/woven/libtourtre_v15/libtourtre/include/ctNode.h
+ /home/zoizoi/psyforge/woven/libtourtre_v15/libtourtre/include/tourtre.h
+ /usr/local/include/vtk-5.9/vtkABI.h
+ /usr/local/include/vtk-5.9/vtkAbstractArray.h
+ /usr/local/include/vtk-5.9/vtkAbstractMapper.h
+ /usr/local/include/vtk-5.9/vtkAbstractMapper3D.h
+ /usr/local/include/vtk-5.9/vtkAbstractTransform.h
+ /usr/local/include/vtk-5.9/vtkActor.h
+ /usr/local/include/vtk-5.9/vtkActorCollection.h
+ /usr/local/include/vtk-5.9/vtkAlgorithm.h
+ /usr/local/include/vtk-5.9/vtkAppendFilter.h
+ /usr/local/include/vtk-5.9/vtkArrayIterator.h
+ /usr/local/include/vtk-5.9/vtkArrayIteratorTemplate.h
+ /usr/local/include/vtk-5.9/vtkArrayIteratorTemplate.txx
+ /usr/local/include/vtk-5.9/vtkArrayIteratorTemplateImplicit.txx
+ /usr/local/include/vtk-5.9/vtkCamera.h
+ /usr/local/include/vtk-5.9/vtkCell.h
+ /usr/local/include/vtk-5.9/vtkCellArray.h
+ /usr/local/include/vtk-5.9/vtkCellLinks.h
+ /usr/local/include/vtk-5.9/vtkCellType.h
+ /usr/local/include/vtk-5.9/vtkCellTypes.h
+ /usr/local/include/vtk-5.9/vtkCollection.h
+ /usr/local/include/vtk-5.9/vtkCommonInformationKeyManager.h
+ /usr/local/include/vtk-5.9/vtkCompositeDataSet.h
+ /usr/local/include/vtk-5.9/vtkConeSource.h
+ /usr/local/include/vtk-5.9/vtkConfigure.h
+ /usr/local/include/vtk-5.9/vtkContourFilter.h
+ /usr/local/include/vtk-5.9/vtkContourValues.h
+ /usr/local/include/vtk-5.9/vtkDataArray.h
+ /usr/local/include/vtk-5.9/vtkDataArrayTemplate.h
+ /usr/local/include/vtk-5.9/vtkDataArrayTemplate.txx
+ /usr/local/include/vtk-5.9/vtkDataArrayTemplateImplicit.txx
+ /usr/local/include/vtk-5.9/vtkDataObject.h
+ /usr/local/include/vtk-5.9/vtkDataObjectAlgorithm.h
+ /usr/local/include/vtk-5.9/vtkDataSet.h
+ /usr/local/include/vtk-5.9/vtkDataSetAttributes.h
+ /usr/local/include/vtk-5.9/vtkDataSetTriangleFilter.h
+ /usr/local/include/vtk-5.9/vtkDebugLeaksManager.h
+ /usr/local/include/vtk-5.9/vtkDelaunay2D.h
+ /usr/local/include/vtk-5.9/vtkDirectedGraph.h
+ /usr/local/include/vtk-5.9/vtkDirectedGraphAlgorithm.h
+ /usr/local/include/vtk-5.9/vtkDoubleArray.h
+ /usr/local/include/vtk-5.9/vtkEdgeListIterator.h
+ /usr/local/include/vtk-5.9/vtkFieldData.h
+ /usr/local/include/vtk-5.9/vtkFloatArray.h
+ /usr/local/include/vtk-5.9/vtkGeometryFilter.h
+ /usr/local/include/vtk-5.9/vtkGraph.h
+ /usr/local/include/vtk-5.9/vtkHomogeneousTransform.h
+ /usr/local/include/vtk-5.9/vtkIOStream.h
+ /usr/local/include/vtk-5.9/vtkIOStreamFwd.h
+ /usr/local/include/vtk-5.9/vtkIdList.h
+ /usr/local/include/vtk-5.9/vtkIdTypeArray.h
+ /usr/local/include/vtk-5.9/vtkImageAlgorithm.h
+ /usr/local/include/vtk-5.9/vtkImageData.h
+ /usr/local/include/vtk-5.9/vtkImageResample.h
+ /usr/local/include/vtk-5.9/vtkImageReslice.h
+ /usr/local/include/vtk-5.9/vtkImageWriter.h
+ /usr/local/include/vtk-5.9/vtkIndent.h
+ /usr/local/include/vtk-5.9/vtkInformation.h
+ /usr/local/include/vtk-5.9/vtkInformationDoubleVectorKey.h
+ /usr/local/include/vtk-5.9/vtkInformationInformationVectorKey.h
+ /usr/local/include/vtk-5.9/vtkInformationKey.h
+ /usr/local/include/vtk-5.9/vtkInformationVector.h
+ /usr/local/include/vtk-5.9/vtkIntArray.h
+ /usr/local/include/vtk-5.9/vtkInteractorObserver.h
+ /usr/local/include/vtk-5.9/vtkInteractorStyle.h
+ /usr/local/include/vtk-5.9/vtkInteractorStyleTrackballCamera.h
+ /usr/local/include/vtk-5.9/vtkKMeansStatistics.h
+ /usr/local/include/vtk-5.9/vtkLineSource.h
+ /usr/local/include/vtk-5.9/vtkLinearTransform.h
+ /usr/local/include/vtk-5.9/vtkLookupTable.h
+ /usr/local/include/vtk-5.9/vtkMapper.h
+ /usr/local/include/vtk-5.9/vtkMath.h
+ /usr/local/include/vtk-5.9/vtkMatrix4x4.h
+ /usr/local/include/vtk-5.9/vtkMultiBlockDataSet.h
+ /usr/local/include/vtk-5.9/vtkMutableDirectedGraph.h
+ /usr/local/include/vtk-5.9/vtkOStrStreamWrapper.h
+ /usr/local/include/vtk-5.9/vtkOStreamWrapper.h
+ /usr/local/include/vtk-5.9/vtkObject.h
+ /usr/local/include/vtk-5.9/vtkObjectBase.h
+ /usr/local/include/vtk-5.9/vtkObjectFactory.h
+ /usr/local/include/vtk-5.9/vtkPNGWriter.h
+ /usr/local/include/vtk-5.9/vtkPointData.h
+ /usr/local/include/vtk-5.9/vtkPointSet.h
+ /usr/local/include/vtk-5.9/vtkPoints.h
+ /usr/local/include/vtk-5.9/vtkPolyData.h
+ /usr/local/include/vtk-5.9/vtkPolyDataAlgorithm.h
+ /usr/local/include/vtk-5.9/vtkPolyDataMapper.h
+ /usr/local/include/vtk-5.9/vtkPolynomialSolversUnivariate.h
+ /usr/local/include/vtk-5.9/vtkProp.h
+ /usr/local/include/vtk-5.9/vtkProp3D.h
+ /usr/local/include/vtk-5.9/vtkPropCollection.h
+ /usr/local/include/vtk-5.9/vtkProperty.h
+ /usr/local/include/vtk-5.9/vtkReebGraph.h
+ /usr/local/include/vtk-5.9/vtkReebGraphSimplificationFilter.h
+ /usr/local/include/vtk-5.9/vtkReebGraphVolumeSkeletonFilter.h
+ /usr/local/include/vtk-5.9/vtkRenderWindow.h
+ /usr/local/include/vtk-5.9/vtkRenderWindowInteractor.h
+ /usr/local/include/vtk-5.9/vtkRenderer.h
+ /usr/local/include/vtk-5.9/vtkScalarsToColors.h
+ /usr/local/include/vtk-5.9/vtkSetGet.h
+ /usr/local/include/vtk-5.9/vtkSmartPointer.h
+ /usr/local/include/vtk-5.9/vtkSmartPointerBase.h
+ /usr/local/include/vtk-5.9/vtkSortDataArray.h
+ /usr/local/include/vtk-5.9/vtkSphereSource.h
+ /usr/local/include/vtk-5.9/vtkStatisticsAlgorithm.h
+ /usr/local/include/vtk-5.9/vtkStdString.h
+ /usr/local/include/vtk-5.9/vtkStructuredData.h
+ /usr/local/include/vtk-5.9/vtkSystemIncludes.h
+ /usr/local/include/vtk-5.9/vtkTable.h
+ /usr/local/include/vtk-5.9/vtkTableAlgorithm.h
+ /usr/local/include/vtk-5.9/vtkTexture.h
+ /usr/local/include/vtk-5.9/vtkThreadedImageAlgorithm.h
+ /usr/local/include/vtk-5.9/vtkThreshold.h
+ /usr/local/include/vtk-5.9/vtkTimeStamp.h
+ /usr/local/include/vtk-5.9/vtkTransform.h
+ /usr/local/include/vtk-5.9/vtkTriangle.h
+ /usr/local/include/vtk-5.9/vtkType.h
+ /usr/local/include/vtk-5.9/vtkTypeTraits.h
+ /usr/local/include/vtk-5.9/vtkUnicodeString.h
+ /usr/local/include/vtk-5.9/vtkUnsignedCharArray.h
+ /usr/local/include/vtk-5.9/vtkUnstructuredGrid.h
+ /usr/local/include/vtk-5.9/vtkUnstructuredGridAlgorithm.h
+ /usr/local/include/vtk-5.9/vtkUnstructuredGridToReebGraphFilter.h
+ /usr/local/include/vtk-5.9/vtkVariant.h
+ /usr/local/include/vtk-5.9/vtkVariantArray.h
+ /usr/local/include/vtk-5.9/vtkVariantInlineOperators.h
+ /usr/local/include/vtk-5.9/vtkVertexGlyphFilter.h
+ /usr/local/include/vtk-5.9/vtkViewport.h
+ /usr/local/include/vtk-5.9/vtkVolume.h
+ /usr/local/include/vtk-5.9/vtkVolumeCollection.h
+ /usr/local/include/vtk-5.9/vtkWeakPointerBase.h
+ /usr/local/include/vtk-5.9/vtkWin32Header.h
+ /usr/local/include/vtk-5.9/vtkWindow.h
+ /usr/local/include/vtk-5.9/vtkWindowToImageFilter.h
+ /usr/local/include/vtk-5.9/vtkXMLPolyDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLUnstructuredDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLWriter.h
  /usr/local/include/vtk-5.9/vtkstd/algorithm
  /usr/local/include/vtk-5.9/vtkstd/exception
  /usr/local/include/vtk-5.9/vtkstd/map
@@ -3458,6 +4068,7 @@ CMakeFiles/testOVAS.dir/testVol4D.cpp.o
  /usr/local/include/vtk-5.9/vtkAbstractArray.h
  /usr/local/include/vtk-5.9/vtkAbstractMapper.h
  /usr/local/include/vtk-5.9/vtkAbstractMapper3D.h
+ /usr/local/include/vtk-5.9/vtkAbstractTransform.h
  /usr/local/include/vtk-5.9/vtkActor.h
  /usr/local/include/vtk-5.9/vtkActorCollection.h
  /usr/local/include/vtk-5.9/vtkAlgorithm.h
@@ -3468,6 +4079,7 @@ CMakeFiles/testOVAS.dir/testVol4D.cpp.o
  /usr/local/include/vtk-5.9/vtkArrayIteratorTemplateImplicit.txx
  /usr/local/include/vtk-5.9/vtkCamera.h
  /usr/local/include/vtk-5.9/vtkCell.h
+ /usr/local/include/vtk-5.9/vtkCellArray.h
  /usr/local/include/vtk-5.9/vtkCellLinks.h
  /usr/local/include/vtk-5.9/vtkCellType.h
  /usr/local/include/vtk-5.9/vtkCellTypes.h
@@ -3487,18 +4099,24 @@ CMakeFiles/testOVAS.dir/testVol4D.cpp.o
  /usr/local/include/vtk-5.9/vtkDataSetAttributes.h
  /usr/local/include/vtk-5.9/vtkDataSetTriangleFilter.h
  /usr/local/include/vtk-5.9/vtkDebugLeaksManager.h
+ /usr/local/include/vtk-5.9/vtkDelaunay2D.h
  /usr/local/include/vtk-5.9/vtkDirectedGraph.h
  /usr/local/include/vtk-5.9/vtkDirectedGraphAlgorithm.h
  /usr/local/include/vtk-5.9/vtkDoubleArray.h
  /usr/local/include/vtk-5.9/vtkEdgeListIterator.h
  /usr/local/include/vtk-5.9/vtkFieldData.h
+ /usr/local/include/vtk-5.9/vtkFloatArray.h
  /usr/local/include/vtk-5.9/vtkGeometryFilter.h
  /usr/local/include/vtk-5.9/vtkGraph.h
+ /usr/local/include/vtk-5.9/vtkHomogeneousTransform.h
  /usr/local/include/vtk-5.9/vtkIOStream.h
  /usr/local/include/vtk-5.9/vtkIOStreamFwd.h
  /usr/local/include/vtk-5.9/vtkIdList.h
+ /usr/local/include/vtk-5.9/vtkIdTypeArray.h
  /usr/local/include/vtk-5.9/vtkImageAlgorithm.h
  /usr/local/include/vtk-5.9/vtkImageData.h
+ /usr/local/include/vtk-5.9/vtkImageResample.h
+ /usr/local/include/vtk-5.9/vtkImageReslice.h
  /usr/local/include/vtk-5.9/vtkImageWriter.h
  /usr/local/include/vtk-5.9/vtkIndent.h
  /usr/local/include/vtk-5.9/vtkInformation.h
@@ -3507,7 +4125,12 @@ CMakeFiles/testOVAS.dir/testVol4D.cpp.o
  /usr/local/include/vtk-5.9/vtkInformationKey.h
  /usr/local/include/vtk-5.9/vtkInformationVector.h
  /usr/local/include/vtk-5.9/vtkIntArray.h
+ /usr/local/include/vtk-5.9/vtkLineSource.h
+ /usr/local/include/vtk-5.9/vtkLinearTransform.h
+ /usr/local/include/vtk-5.9/vtkLookupTable.h
  /usr/local/include/vtk-5.9/vtkMapper.h
+ /usr/local/include/vtk-5.9/vtkMath.h
+ /usr/local/include/vtk-5.9/vtkMatrix4x4.h
  /usr/local/include/vtk-5.9/vtkMutableDirectedGraph.h
  /usr/local/include/vtk-5.9/vtkOStrStreamWrapper.h
  /usr/local/include/vtk-5.9/vtkOStreamWrapper.h
@@ -3521,6 +4144,7 @@ CMakeFiles/testOVAS.dir/testVol4D.cpp.o
  /usr/local/include/vtk-5.9/vtkPolyData.h
  /usr/local/include/vtk-5.9/vtkPolyDataAlgorithm.h
  /usr/local/include/vtk-5.9/vtkPolyDataMapper.h
+ /usr/local/include/vtk-5.9/vtkPolynomialSolversUnivariate.h
  /usr/local/include/vtk-5.9/vtkProp.h
  /usr/local/include/vtk-5.9/vtkProp3D.h
  /usr/local/include/vtk-5.9/vtkPropCollection.h
@@ -3542,8 +4166,11 @@ CMakeFiles/testOVAS.dir/testVol4D.cpp.o
  /usr/local/include/vtk-5.9/vtkSystemIncludes.h
  /usr/local/include/vtk-5.9/vtkTable.h
  /usr/local/include/vtk-5.9/vtkTexture.h
+ /usr/local/include/vtk-5.9/vtkThreadedImageAlgorithm.h
  /usr/local/include/vtk-5.9/vtkThreshold.h
  /usr/local/include/vtk-5.9/vtkTimeStamp.h
+ /usr/local/include/vtk-5.9/vtkTransform.h
+ /usr/local/include/vtk-5.9/vtkTriangle.h
  /usr/local/include/vtk-5.9/vtkType.h
  /usr/local/include/vtk-5.9/vtkTypeTraits.h
  /usr/local/include/vtk-5.9/vtkUnicodeString.h
@@ -3554,6 +4181,7 @@ CMakeFiles/testOVAS.dir/testVol4D.cpp.o
  /usr/local/include/vtk-5.9/vtkVariant.h
  /usr/local/include/vtk-5.9/vtkVariantArray.h
  /usr/local/include/vtk-5.9/vtkVariantInlineOperators.h
+ /usr/local/include/vtk-5.9/vtkVertexGlyphFilter.h
  /usr/local/include/vtk-5.9/vtkViewport.h
  /usr/local/include/vtk-5.9/vtkVolume.h
  /usr/local/include/vtk-5.9/vtkVolumeCollection.h
@@ -3561,6 +4189,9 @@ CMakeFiles/testOVAS.dir/testVol4D.cpp.o
  /usr/local/include/vtk-5.9/vtkWin32Header.h
  /usr/local/include/vtk-5.9/vtkWindow.h
  /usr/local/include/vtk-5.9/vtkWindowToImageFilter.h
+ /usr/local/include/vtk-5.9/vtkXMLPolyDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLUnstructuredDataWriter.h
+ /usr/local/include/vtk-5.9/vtkXMLWriter.h
  /usr/local/include/vtk-5.9/vtkstd/algorithm
  /usr/local/include/vtk-5.9/vtkstd/exception
  /usr/local/include/vtk-5.9/vtkstd/map
