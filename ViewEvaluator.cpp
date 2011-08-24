@@ -37,7 +37,7 @@ ViewEvaluator::~ViewEvaluator() {
 }
 
 void ViewEvaluator::init() {
-    renderer->AddActor(oc->volActor);
+    //renderer->AddActor(oc->volActor);
 }
 
 void ViewEvaluator::readyFeatures() {
